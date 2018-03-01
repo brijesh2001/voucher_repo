@@ -126,16 +126,16 @@ class PteController extends Controller
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
         curl_setopt($ch, CURLOPT_HTTPHEADER,
-            array("X-Api-Key:4b3ab11a54e5b85da7893b10f4fde169",
-                "X-Auth-Token:01f2f923def1bd1ca18a6e5a2543f3f8"));
+            array("X-Api-Key:36703c0ed20e303cc560d62233408859",
+                "X-Auth-Token:a736dc788e3bc6b8d5bd885bc45acacc"));
         $payload = Array(
             'purpose' => 'PTE Voucher Payment',
             'amount' => $request_data['amount'],
             'phone' => $request_data['mobile'],
             'buyer_name' => $request_data['name'],
-            'redirect_url' => 'http://ptetutorialsonline.com/pte/redirect',
+            'redirect_url' => 'https://www.ptevouchercode.com/pte/redirect',
             'send_email' => false,
-            'webhook' => 'http://ptetutorialsonline.com/pte/webhook',
+            'webhook' => 'https://www.ptevouchercode.com/pte/webhook',
             'send_sms' => false,
             'email' => $request_data['email'],
             'allow_repeated_payments' => false
@@ -202,8 +202,8 @@ class PteController extends Controller
                 curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
                 curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
                 curl_setopt($ch, CURLOPT_HTTPHEADER,
-                    array("X-Api-Key:4b3ab11a54e5b85da7893b10f4fde169",
-                        "X-Auth-Token:01f2f923def1bd1ca18a6e5a2543f3f8"));
+                    array("X-Api-Key:36703c0ed20e303cc560d62233408859",
+                        "X-Auth-Token:a736dc788e3bc6b8d5bd885bc45acacc"));
 
                 $response = curl_exec($ch);
                 curl_close($ch);
@@ -330,7 +330,7 @@ class PteController extends Controller
      */
     public function sendSms($voucher_code,$mobile)
     {
-        $sms = "Your PTE Exam Promo Code :$voucher_code\nPlease share ptepromocode.com to your friends & help them to save money on PTE Exam Booking.";
+        $sms = "Your PTE Exam Voucher Code : $voucher_code\nPlease share ptevouchercode.com to your friends & help them to save money on PTE Exam Booking\nRegards\nHitesh Patel";
         //Your authentication key
         $authKey = "134556AZbJqzDsxSk585abcb1";
 

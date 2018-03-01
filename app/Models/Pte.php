@@ -48,9 +48,9 @@ class Pte extends Authenticatable
             'amount' => $request['amount'],
             'phone' => $request['mobile'],
             'buyer_name' => $request['name'],
-            'redirect_url' => 'https://host.pte.com/rdirect',
+            'redirect_url' => 'https://www.ptevouchercode.com/pte/redirect',
             'send_email' => false,
-            'webhook' => 'https://host.pte.com/webhook',
+            'webhook' => 'https://www.ptevouchercode.com/pte/webhook',
             'send_sms' => false,
             'email' => $request['email'],
             'allow_repeated_payments' => false

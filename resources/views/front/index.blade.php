@@ -83,6 +83,7 @@
                     <div class="">
                         <h5 style="color:#fff;"><b>Note:</b> Code will be sent to your email immediately.</h5>
                     </div>
+                    {{ csrf_field() }}
                 </form>
 
 
@@ -92,8 +93,6 @@
         </div>
     </div>
     <!-- /banner-->
-
-
     <div class="services-w3" id="services">
         <div class="container"><h3>Services</h3><label class="line"></label>
             <p class="top-p">We Provide Following Services With PTE Exam Voucher.</p>
