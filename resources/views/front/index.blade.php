@@ -5,7 +5,7 @@
     <!-- banner-->
     @if (count($errors) > 0)
         <div class="alert alert-danger">
-            <ul>
+            <ul id = 'error-list'>
                 @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                 @endforeach
@@ -36,7 +36,7 @@
             </div>
 
             <div class="banner-text-agileinfo">
-                <form class="pay-form" method="post" action="{{url('pte/payment-request')}}">
+                <form class="pay-form" method="post" id="pay-form" action="{{url('pte/payment-request')}}">
                     <div class="frm-grp">
                         <select class="form-control2" name="state" id="state" style="margin-bottom: 1em;color:#fff;" required>
                             <option value="">State</option>
@@ -77,7 +77,7 @@
                         </select>
 
                     </div>
-                    <div class="frm-grp"><input type="submit" name="save" value="Buy Now" class="btn"
+                    <div class="frm-grp"><input type="submit" name="save" id="save" value="Buy Now" class="btn"
                                                 style="text-align:center;background-color:#0080aa;margin-bottom: 1em;color:#fff;front-size:1.2em;width:94%">
                     </div>
                     <div class="">
@@ -468,6 +468,10 @@
 
 @push('script')
 <script>
-
+    $('#pay-form').submit(function(ev) {
+        if ($('#error-list li').length == 0) {
+            $("#save").attr("disabled", true);
+        }
+    });
 </script>
 @endpush

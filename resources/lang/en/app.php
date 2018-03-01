@@ -32,6 +32,7 @@ return [
     //Translation of layouts folder in views
     'available' => 'Available',
     'my_profile' => 'My Profile',
+    'change_password' => 'Change Password',
     'logout' => 'Logout',
     'menu' => 'Menu',
     'daily_activity_report' => 'Daily activity Report',
