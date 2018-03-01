@@ -338,7 +338,7 @@ class PteController extends Controller
         $mobileNumber = $mobile;
 
         //Sender ID,While using route4 sender id should be 6 characters long.
-        $senderId = "PTEPRC";
+        $senderId = "Vouchr";
 
         //Your message to send, Add URL encoding here.
         $message = urlencode($sms);
