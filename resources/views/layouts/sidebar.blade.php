@@ -93,7 +93,7 @@
                             <a href="{{url('expense/list')}}">Expense Data</a>
                         </li>
                         @endif
-                        <li title="Reports"><a href="https://www.ptepromocode.com/backend"><i class="icon fa fa-reply-all"
+                        <li title="Reports"><a href="https://www.ptepromocode.com/backend" target="_blank"><i class="icon fa fa-reply-all"
                                                                                  aria-hidden="true"></i><span>PROMO</span></a>
                         </li>
 
