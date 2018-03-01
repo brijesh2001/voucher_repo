@@ -426,3 +426,48 @@
 
 @endsection
 
+@section('extra')
+    <div class="bf">
+        <h5 class="fh">Save up to Rs. on each exam booking</h5>
+        <p>If you are a PTE Academic aspirant and preparing hard to clear the exam, PTEVoucherCode.com can help you in
+            reducing the amount you are going to spend on it. At our website, PTE vouchers are available at considerably low
+            prices (Lowest in India).</p>
+        <h5 class="fh">Why Youth Prefers PTE Academic at Discounted Price?</h5>
+        <p>Gone are the times when youngsters were satisfied with where they are. Now-a-day everyone seeks for flourishing
+            career in UK or US based university or companies. Studying or working in other countries requires your ability
+            to converse in their language and understand what they say. For this purpose, Pearson PTE exam had been
+            designed. But the trouble is with the sky-high of Pearson PTE exam which acts as a barrier between you and your
+            dreams. So, to give you chances of improvement PTE exam online has come up with us. Get you PTE exam voucher now
+            to practice in the best possible way.</p>
+        <h5 class="fh">PTE Academic exam and Benefits of Booking it with us</h5>
+        <p>To test your command on the English language as a non-native English speaker Pearson comes up with PTE Academic
+            exam. You are tested on various parameters like reading, speaking, writing and speaking. To check, if you can
+            converse in English speaking countries in English or not, PTE online has designed an exam so that you can
+            practice more to improve your score in Pearson PTE score. With us, you will get 5 free mock tests and reference
+            material and saving of Rs.  on Booking PTE Exam India Wide.</p>
+        <h5 class="fh">100% Purchase Assistance and Payment Security</h5>
+        <p>We are available 24/7 interested students can book their test anytime anywhere. To avail the best of our
+            services, you can reach our website and get the PTE exam voucher at the lowest price in India. Your improvement
+            will motivate us to serve more. We are the final destination of PTE practice aspirants. PTE exam voucher will
+            help you to save your money and practice more.</p>
+        <h5 class="fh">Advantages of PTE Academic Exam </h5>
+        <ul>
+            <li>You can prove your command over the English language.</li>
+            <li>It is acceptable worldwide.</li>
+        </ul>
+        <h5 class="fh">Why us?</h5>
+        <p>We help you to save you Rs. on Booking PTE Exam India </p>
+
+
+        <h5 class="fh">How to use voucher code</h5>
+        <p>Visit Pearson’s website and sign up. Schedule your test by filling all the details. At the time of payment, apply
+            the PTE Academic Voucher Code that you received from us and you will need not pay anything but the price you’ve
+            already paid for discounted voucher will be considered there.</p>
+    </div>
+@endsection
+
+@push('script')
+<script>
+
+</script>
+@endpush

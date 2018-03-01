@@ -84,7 +84,7 @@
 </div>
 
 
-{{--<div class="bf">
+{{--{{--<div class="bf">
     <h5 class="fh">Save up to Rs. on each exam booking</h5>
     <p>If you are a PTE Academic aspirant and preparing hard to clear the exam, PTEVoucherCode.com can help you in
         reducing the amount you are going to spend on it. At our website, PTE vouchers are available at considerably low

@@ -93,10 +93,9 @@
                             <a href="{{url('expense/list')}}">Expense Data</a>
                         </li>
                         @endif
-                        <li title="Reports"><a href="{{url('/maintanance')}}"><i class="icon fa fa-file-text-o"
-                                                                                 aria-hidden="true"></i><span>{{trans('app.reports')}}</span></a>
+                        <li title="Reports"><a href="https://www.ptepromocode.com/backend"><i class="icon fa fa-reply-all"
+                                                                                 aria-hidden="true"></i><span>PROMO</span></a>
                         </li>
-
 
                     </ul>
 

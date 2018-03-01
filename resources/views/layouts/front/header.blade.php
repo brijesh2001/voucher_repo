@@ -25,7 +25,7 @@
                     <li><a href="https://www.ptevouchercode.com">Buy PTE Voucher</a></li>
                     <li><a href={{url('infographics')}}>PTE Infographic</a></li>
                     <li><a href={{url('refund-policy')}}>Refund Policy</a></li>
-                    <li><a href="https://www.ptepromocode.com/blog">Blog</a></li>
+                    <li><a href="https://www.ptevouchercode.com/blog">Blog</a></li>
                     <li><a href={{url('about-us')}}>About us</a></li>
                     <li><a href={{url('contact-us')}}>Contact</a></li>
                 </ul>

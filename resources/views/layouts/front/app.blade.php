@@ -158,7 +158,7 @@
 </div>
 @yield('content')
 @include('layouts.front.footer')
-
+@yield('extra')
 <!-- Scripts -->
 
 @stack('external_script')

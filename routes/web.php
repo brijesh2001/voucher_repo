@@ -20,7 +20,9 @@ Route::get('/refund-policy', 'Auth\LoginController@refundPolicy');
 Route::get('/contact-us', 'Auth\LoginController@contactUs');
 Route::get('/thankyou', 'Auth\LoginController@thankYou');
 Route::get('/about-us', 'Auth\LoginController@aboutUs');
-
+Route::get('/buy', function () {
+    return Redirect::to('/');
+});
 Route::get('/backend', function () {
     return Redirect::to('login');
 });

@@ -24,7 +24,7 @@
         <div class="main-content container-fluid">
             <div class="splash-container">
                 <div class="panel panel-default panel-border-color panel-border-color-primary">
-                    <div class="panel-heading img-resposive"><img src="{{url('img/mainlogo.png')}}" alt="logo" width="102" height="27" class="logo-img"><span class="splash-description">{{trans('app.login_throttle')}}</span></div>
+                    <div class="panel-heading img-resposive"><img src="{{url('img/voucherlogo.png')}}" alt="logo" width="102" height="27" class="logo-img"><span class="splash-description">{{trans('app.login_throttle')}}</span></div>
                     <div class="panel-body">
                         <form action="{{ url('/login') }}" method="post">
                             {{ csrf_field() }}

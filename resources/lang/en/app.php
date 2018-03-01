@@ -14,7 +14,7 @@ return [
     */
 
      //Translation of General words
-     'app_name' => 'Pte Promocode',
+     'app_name' => 'Pte Voucher',
      'change_password' => ':app_name | Change Password',
      'admin_home' => 'Dashboard',
      'management' => 'Management',
@@ -32,7 +32,6 @@ return [
     //Translation of layouts folder in views
     'available' => 'Available',
     'my_profile' => 'My Profile',
-    'change_password' => 'Change Password',
     'logout' => 'Logout',
     'menu' => 'Menu',
     'daily_activity_report' => 'Daily activity Report',
