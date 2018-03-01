@@ -147,7 +147,7 @@ class PteController extends Controller
 
         $result = json_decode($response, true);
         if(isset($result["payment_request"]["id"])) {
-            $request_data['payment_request_id'] = $result["payment_request"]["id"].'?embed=form';
+            $request_data['payment_request_id'] = $result["payment_request"]["id"];
         }else {
             $request->session()->flash('alert-danger', 'Problem occurred while creating payment id please try after some time');
             return redirect('/')->withInput(); 
@@ -179,7 +179,7 @@ class PteController extends Controller
             $this->pendingVoucher->addPendingVoucher($request_pending_data);
 
         }
-        return redirect($result["payment_request"]["longurl"]);
+        return redirect($result["payment_request"]["longurl"].'?embed=form');
 
     }
 
