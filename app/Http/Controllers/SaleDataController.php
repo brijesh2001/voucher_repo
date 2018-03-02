@@ -207,7 +207,7 @@ class SaleDataController extends Controller
             $row[] = $saledataData->voucher_code;
             $row[] = $saledataData->number_of_voucher;
             $row[] = $saledataData->payment_code;
-            $row[] = ($amount_paid*100)/118;
+            $row[] = number_format(($amount_paid*100)/118);
             $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'SGST:'.number_format(($amount_paid*100)/59) : '-' ;
             $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'CGST:'.number_format(($amount_paid*100)/59) : '-' ;
             $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? '-' :  'IGST:' .number_format(($amount_paid*100)/118);
@@ -249,7 +249,7 @@ class SaleDataController extends Controller
             $row['Voucher'] = $requestData->voucher_code;
             $row['Number Of Voucher'] = $requestData->number_of_voucher;
             $row['Transaction Id'] = $requestData->payment_code;
-            $row['Before GST'] =  ($amount_paid*100)/118;
+            $row['Before GST'] =  number_format(($amount_paid*100)/118);
             $row['SGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? 'SGST:'.number_format(($amount_paid*100)/59 ): '-' ;
             $row['CGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? 'CGST:'.number_format(($amount_paid*100)/59 ) : '-' ;
             $row['IGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? '-' :  'IGST:' .number_format(($amount_paid*100)/118 );
