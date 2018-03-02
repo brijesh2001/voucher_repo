@@ -14,7 +14,8 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
-        Commands\UpdateUnusedVoucher::class
+        Commands\UpdateUnusedVoucher::class,
+        Commands\InformVoucherOver::class
     ];
 
     /**
@@ -29,6 +30,8 @@ class Kernel extends ConsoleKernel
         //          ->hourly();
         $schedule->command('update:unusedvoucher')
             ->everyTenMinutes();
+        $schedule->command('inform:owner')
+            ->everyMinute();
     }
 
     /**
