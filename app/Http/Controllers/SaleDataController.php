@@ -207,10 +207,10 @@ class SaleDataController extends Controller
             $row[] = $saledataData->voucher_code;
             $row[] = $saledataData->number_of_voucher;
             $row[] = $saledataData->payment_code;
-            $row[] = $amount_paid - ($saledataData->amount_paid * 0.18);
-            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'SGST:'.$amount_paid * 0.09 : '-' ;
-            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'CGST:'.$amount_paid * 0.09 : '-' ;
-            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? '-' :  'IGST:' .$amount_paid * 0.18;
+            $row[] = ($amount_paid*100)/118;
+            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'SGST:'.number_format(($amount_paid*100)/59) : '-' ;
+            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'CGST:'.number_format(($amount_paid*100)/59) : '-' ;
+            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? '-' :  'IGST:' .number_format(($amount_paid*100)/118);
             $row[] = $saledataData->amount_paid;
             $row[] =  $saledataData->state ;
 
@@ -250,9 +250,9 @@ class SaleDataController extends Controller
             $row['Number Of Voucher'] = $requestData->number_of_voucher;
             $row['Transaction Id'] = $requestData->payment_code;
             $row['Before GST'] =  ($amount_paid*100)/118;
-            $row['SGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? 'SGST:'.($amount_paid*100)/59 : '-' ;
-            $row['CGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? 'CGST:'.($amount_paid*100)/59 : '-' ;
-            $row['IGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? '-' :  'IGST:' .($amount_paid*100)/118;
+            $row['SGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? 'SGST:'.number_format(($amount_paid*100)/59 ): '-' ;
+            $row['CGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? 'CGST:'.number_format(($amount_paid*100)/59 ) : '-' ;
+            $row['IGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? '-' :  'IGST:' .number_format(($amount_paid*100)/118 );
             $row['After GST'] = $requestData->amount_paid;
             $row['State'] =  $requestData->state ;
             $appData[] = $row;
