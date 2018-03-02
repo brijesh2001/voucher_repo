@@ -197,6 +197,8 @@ class SaleDataController extends Controller
 
             $row = array();
             $amount_paid = $saledataData->amount_paid;
+            $before_gst = ($amount_paid*100)/118;
+            $IGST = $amount_paid - $before_gst;
             $row[] = date("d-m-Y H:i:s", strtotime($saledataData->created_at));
             $row[] = $saledataData->invoice_number;
             $row[] = (isset($saledataData->Enquiry)) ? $saledataData->Enquiry->name : "---";
@@ -210,7 +212,7 @@ class SaleDataController extends Controller
             $row[] = number_format(($amount_paid*100)/118);
             $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'SGST:'.number_format(($amount_paid*100)/59) : '-' ;
             $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'CGST:'.number_format(($amount_paid*100)/59) : '-' ;
-            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? '-' :  'IGST:' .number_format(($amount_paid*100)/118);
+            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? '-' :  'IGST:' .$IGST;
             $row[] = $saledataData->amount_paid;
             $row[] =  $saledataData->state ;
 
@@ -239,6 +241,8 @@ class SaleDataController extends Controller
         $appData = array();
         foreach ($data as $requestData) {
             $amount_paid = $requestData->amount_paid;
+            $before_gst = ($amount_paid*100)/118;
+            $IGST = $amount_paid - $before_gst;
             $row['Date'] = date("d-m-Y H:i:s", strtotime($requestData->created_at));
             $row['Invoice No'] = $requestData->invoice_number;
             $row['Name'] = (isset($requestData->Enquiry)) ? $requestData->Enquiry->name : "---";
@@ -252,7 +256,7 @@ class SaleDataController extends Controller
             $row['Before GST'] =  number_format(($amount_paid*100)/118);
             $row['SGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? 'SGST:'.number_format(($amount_paid*100)/59 ): '-' ;
             $row['CGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? 'CGST:'.number_format(($amount_paid*100)/59 ) : '-' ;
-            $row['IGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? '-' :  'IGST:' .number_format(($amount_paid*100)/118 );
+            $row['IGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? '-' :  number_format($IGST);
             $row['After GST'] = $requestData->amount_paid;
             $row['State'] =  $requestData->state ;
             $appData[] = $row;
