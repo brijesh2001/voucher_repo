@@ -31,7 +31,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('update:unusedvoucher')
             ->everyTenMinutes();
         $schedule->command('inform:owner')
-            ->everyMinute();
+            ->everyThirtyMinutes();
     }
 
     /**
