@@ -184,7 +184,55 @@ class LoginController extends Controller
      */
     public function thankYou()
     {
-        return view('thankyou');
+        return view('front.thankyou');
+    }
+
+    /**
+     * contactUs view page
+     *
+     */
+    public function buy(Request $request)
+    {
+        $user_id = $request->all();
+        if(isset($user_id) && !empty($user_id)) {
+            $state_model = new State();
+            $data['state'] = $state_model->getCollection();
+            $data['user_id'] = $user_id['user_id'];
+            $detail_model = new Detail();
+            //For saved prize and detail
+            $data_saved_prize = $detail_model->getData();
+            if(!empty($data_saved_prize)) {
+                $data['title'] = $data_saved_prize->page_title;
+                $data['saved_prize'] = floor($data_saved_prize->saved_prize);
+            }
+            $user_detail = new Agent();
+            $user_data = $user_detail->getAgentByField($user_id['user_id'],'id');
+            if(!empty($user_data)) {
+                $data['rate'] =   floor($user_data->amount);
+                $data['email'] =   $user_data->email;
+                $data['name'] =   $user_data->name;
+                $data['mobile'] =   $user_data->mobile;
+            }
+
+        }else {
+            $state_model = new State();
+            $data['state'] = $state_model->getCollection();
+            $detail_model = new Detail();
+            //For saved prize and detail
+            $data_saved_prize = $detail_model->getData();
+            if(!empty($data_saved_prize)) {
+                $data['title'] = $data_saved_prize->page_title;
+                $data['saved_prize'] = $data_saved_prize->saved_prize;
+            }
+            //For prize
+            $prize_model = new Prize();
+            $prize_data = $prize_model->getFirstPrize();
+            if(!empty($prize_data)) {
+                $data['rate'] =   floor($prize_data->rate);
+            }
+        }
+
+        return view('front.buy',$data);
     }
 
 }

@@ -29,8 +29,11 @@ return [
 
     "promoDataTableFieldArray" => [
 
+        "",
         "voucher_code",
-        ""
+        "",
+        "",
+        "",
     ],
     "enquiryDataTableFieldArray" => [
 

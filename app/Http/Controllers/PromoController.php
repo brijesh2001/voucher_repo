@@ -100,6 +100,8 @@ class PromoController extends Controller
             $row = array();
             $row[] = $i;
             $row[] = $promoData->voucher_code;
+            $row[] = ($promoData->status == 2) ? 'ONHALT': "FREE";
+            $row[] = date("d-m-Y H:i:s", strtotime($promoData->updated_at));
             $row[] = view('datatable.action', ['module' => "voucher",'type' => $promoData->id, 'id' => $promoData->id])->render();
             $appData[] = $row;
             $i++;

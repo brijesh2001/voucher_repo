@@ -73,6 +73,8 @@
                                         <tr>
                                             <th class="no-sort">Sr no</th>
                                             <th>Voucher Code</th>
+                                            <th>Status</th>
+                                            <th>Updated At</th>
                                             <th class="no-sort">Action</th>
                                         </tr>
 
@@ -84,7 +86,8 @@
                                                 <input type="text" name="filter[voucher_code]" style="width: 80px;" id="
                                                        voucher_code" value="" />
                                             </th>
-                                      
+                                            <th></th>
+                                            <th></th>
                                             <th></th>
                                         </tr>
                                         </thead>

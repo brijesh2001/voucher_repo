@@ -36,7 +36,7 @@ class Promo extends Authenticatable
     {
 
          $promo = Promo::select('tbl_promo_voucher.*');
-            $promo->where('status',0);
+            $promo->where('status','!=',1);
         return $promo->get();
     }
 
@@ -47,7 +47,7 @@ class Promo extends Authenticatable
      */
     public function getDatatableCollection()
     {
-       return Promo::select('tbl_promo_voucher.*')->where('status',0);
+       return Promo::select('tbl_promo_voucher.*')->where('status','!=',1);
     }
 
     /**

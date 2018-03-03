@@ -22,7 +22,7 @@
             {{--<a class="navbar-brand" href="https://www.ptevouchercode.com/"><img src={{url('css/front/images/logo.png')}}></a></div>--}}
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav link-effect">
-                    <li><a href="https://www.ptevouchercode.com">Buy PTE Voucher</a></li>
+                    <li><a href={{url('buy')}}>Buy PTE Voucher</a></li>
                     <li><a href={{url('infographics')}}>PTE Infographic</a></li>
                     <li><a href={{url('refund-policy')}}>Refund Policy</a></li>
                     <li><a href="https://www.ptevouchercode.com/blog">Blog</a></li>

@@ -7,7 +7,7 @@
             <h3>Quick Links</h3>
             <label class="line" style="width:10%;"></label>
 
-            <h5 style=""><a href="https://www.ptevouchercode.com/" style="color:#fff;">Buy PTE Voucher</a></h5>
+            <h5 style=""><a style="color:#fff;" href={{url('buy')}}>Buy PTE Voucher</a></h5>
             <div class="clearfix" style="min-height:10px;"></div>
             <h5 style="color:#fff"><a style="color:#fff;" href={{url('infographics')}}>PTE Infographic</a></h5>
             <div class="clearfix" style="min-height:10px;"></div>
