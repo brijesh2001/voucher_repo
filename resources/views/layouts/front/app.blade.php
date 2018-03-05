@@ -27,7 +27,7 @@
     <meta name="twitter:card" value="summary"/>
     <meta name="twitter:url" value="https://www.ptevouchercode.com/"/>
     <meta name="twitter:title" value="PTEVocuherCode"/>
-    <meta name="twitter:site" value="@{{$rate or ''}}PteVoucherCode"/>
+    <meta name="twitter:site" value="@ {{$rate or ''}}PteVoucherCode"/>
     <meta name="twitter:creator" value="@ {{$rate or ''}}PteVoucherCode"/>
     {{--<link rel="shortcut icon" type="image/png" href="https://www.ptevouchercode.com/images/favicon.png"/>--}}
     <link rel="shortcut icon" type="image/png" href="{{url('css/front/images/favicon.png')}}"/>
