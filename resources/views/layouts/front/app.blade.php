@@ -8,10 +8,10 @@
     <meta name="google-site-verification" content="L2gJ62ywY2rfXEJ5JMJQm0_k75ys4Omm-TifSdh-V_w"/>
     <title>Buy PTE Voucher @ ₹ {{$rate or ''}} including GST & Save ₹ {{$saved_prize or ''}} in India</title>
     <meta name="description"
-          content="Book PTE Exam from PTE Voucher Code at ₹ & Save ₹ in India. Get 5 Free Mock Test of PTE exam. Get Instant Discount Voucher in your email."/>
+          content="Book PTE Exam from PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹ {{$saved_prize or ''}} in India. Get 5 Free Mock Test of PTE exam. Get Instant Discount Voucher in your email."/>
     <meta name="keywords"
           content="PTE Promo Code, PTE Exam Voucher, PTE Exam Discount Voucher, PTE Discount Voucher Code"/>
-    <meta property="og:title" content="PTE Voucher Code - Book PTE Exam Online ₹- Lowest Price in India"/>
+    <meta property="og:title" content="PTE Voucher Code - Book PTE Exam Online ₹ {{$rate or ''}}- Lowest Price in India"/>
     <meta property="og:description"
           content="Buy PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹.{{$saved_prize or ''}} Book Your Exam at any centre in India & get 5 Free Mock Test. Lowest price in India. Get Instant Voucher in your email."/>
     <meta property="og:url" content="https://www.ptevouchercode.com/"/>
@@ -27,8 +27,8 @@
     <meta name="twitter:card" value="summary"/>
     <meta name="twitter:url" value="https://www.ptevouchercode.com/"/>
     <meta name="twitter:title" value="PTEVocuherCode"/>
-    <meta name="twitter:site" value="@PteVoucherCode"/>
-    <meta name="twitter:creator" value="@PteVoucherCode"/>
+    <meta name="twitter:site" value="@{{$rate or ''}}PteVoucherCode"/>
+    <meta name="twitter:creator" value="@ {{$rate or ''}}PteVoucherCode"/>
     {{--<link rel="shortcut icon" type="image/png" href="https://www.ptevouchercode.com/images/favicon.png"/>--}}
     <link rel="shortcut icon" type="image/png" href="{{url('css/front/images/favicon.png')}}"/>
     <script type="application/x-javascript"> addEventListener("load", function () {
