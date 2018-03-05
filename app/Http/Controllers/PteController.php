@@ -101,7 +101,6 @@ class PteController extends Controller
                 $current_prize = $agent_data->amount;
                 $request_data['rate'] = $agent_data->amount;
                 $request_data['amount'] = $buying_quantity * $current_prize;
-                dd($request_data);
             } else {
                 $request->session()->flash('alert-danger', 'Voucher prize is not available please visit after some time');
                 return redirect('/')->withInput();
