@@ -6,9 +6,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="L2gJ62ywY2rfXEJ5JMJQm0_k75ys4Omm-TifSdh-V_w"/>
-    <title>Buy PTE Voucher @ ₹ {{$rate or ''}} including GST & Save ₹ {{$saved_prize or ''}} in India</title>
-    <meta name="description"
-          content="Book PTE Exam from PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹ {{$saved_prize or ''}} in India. Get 5 Free Mock Test of PTE exam. Get Instant Discount Voucher in your email."/>
+    <title>Buy PTE Voucher @ {{$rate or ''}} + 11 Free Scored Mock Tests</title>
+          <meta name = "description" content = "Want to book PTE Academic Exam? Buy PTE Voucher Online @ ₹{{$rate or ''}} and Get 11 Free Scored Mock Tests in India. Limited Time Offer.
+"/>
     <meta name="keywords"
           content="PTE Promo Code, PTE Exam Voucher, PTE Exam Discount Voucher, PTE Discount Voucher Code"/>
     <meta property="og:title" content="PTE Voucher Code - Book PTE Exam Online ₹ {{$rate or ''}}- Lowest Price in India"/>

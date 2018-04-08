@@ -26,14 +26,14 @@
         <div class="col-md-3" style="padding-left:35px;">
             <h3>Blog</h3>
             <label class="line" style="width:10%;"></label>
-            <h5 style=""><a href="https://www.ptepromocode.com/blog/10-things-must-know-pte-exam" style="color:#fff;" >About The Exam </a></h5>
+            <h5 style=""><a href="https://www.ptevouchercode.com/blog/10-things-must-know-pte-exam" style="color:#fff;" >About The Exam </a></h5>
             <div class="clearfix" style="min-height:10px;"></div>
-            <h5 style=""><a href="https://www.ptepromocode.com/blog/pte-exam-registration-fee-discounts-eligibility/" style="color:#fff;">Exam Registration</a></h5>
+            <h5 style=""><a href="https://www.ptevouchercode.com/blog/pte-exam-registration-fee-discounts-eligibility/" style="color:#fff;">Exam Registration</a></h5>
             <div class="clearfix" style="min-height:10px;"></div>
 
-            <h5 style=""><a href="https://www.ptepromocode.com/blog/pte-faqs/" style="color:#fff;">PTE FAQ's</a></h5>
+            <h5 style=""><a href="https://www.ptevouchercode.com/blog/pte-faqs/" style="color:#fff;">PTE FAQ's</a></h5>
             <div class="clearfix" style="min-height:10px;"></div>
-            <h5 style=""><a href="https://www.ptepromocode.com/blog/pte-academic-exam-scoring-pattern/" style="color:#fff;">PTE Scroing Pattern</a>
+            <h5 style=""><a href="https://www.ptevouchercode.com/blog/pte-academic-exam-scoring-pattern/" style="color:#fff;">PTE Scroing Pattern</a>
             </h5>
             <div class="clearfix" style="min-height:10px;"></div>
             <div class="clearfix" style="min-height:10px;"></div>
