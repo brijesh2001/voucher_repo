@@ -17,7 +17,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel panel-default panel-border-color panel-border-color-primary">
-                        <div class="panel-heading panel-heading-divider"> {{trans('app.add_new_agent_payment')}}</div>
+                        <div class="panel-heading panel-heading-divider"> Add Offline Payment</div>
                         <div class="panel-body">
                             @if (count($errors) > 0)
                                 <div class="alert alert-danger">
@@ -52,6 +52,20 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label class="col-sm-4 control-label">Payment Date<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="payment_date" id="payment_date" placeholder="Payment Date" class="form-control input-sm required" value="{{old('payment_date')}}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Voucher Code<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="voucher_code" id="voucher_code" placeholder="Voucher Code" class="form-control input-sm required" value="{{old('voucher_code')}}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <label class="col-sm-4 control-label">Number Of Voucher<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
                                         <input type="number" name="number_of_voucher" id="number_of_voucher" placeholder="Number Of Voucher" class="form-control input-sm required" value="{{old('number_of_voucher')}}" />
@@ -61,21 +75,21 @@
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label">Rate<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
-                                        <input type="text" name="rate" id="rate" placeholder="Rate" class="form-control input-sm required" value="{{old('rate')}}" />
+                                        <input type="text" name="rate_after_gst" id="rate_after_gst" placeholder="Rate" class="form-control input-sm required" value="{{old('rate_after_gst')}}" />
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-4 control-label">Payment Id<span class="error">*</span></label>
+                                    <label class="col-sm-4 control-label">Transaction Id<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
-                                        <input type="text" name="payment_id" id="payment_id" placeholder="Payment Id" class="form-control input-sm required" value="{{old('payment_id')}}" />
+                                        <input type="text" name="transaction_id" id="transaction_id" placeholder="Transaction Id" class="form-control input-sm " value="{{old('transaction_id')}}" />
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label">GSTN<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
-                                        <input type="text" name="client_gstn" id="client_gstn" placeholder="GSTN" class="form-control input-sm required" maxlength="15" value="{{old('client_gstn')}}" />
+                                        <input type="text" name="gstn" id="gstn" placeholder="GSTN" class="form-control input-sm" maxlength="15" value="{{old('gstn')}}" />
                                     </div>
                                 </div>
 
@@ -98,7 +112,7 @@
                                 <div class="col-sm-6 col-md-8 savebtn">
                                     <p class="text-right">
                                         <button type="submit" class="btn btn-space btn-info btn-lg">{{trans('app.add')}} Payment</button>
-                                        <a href="{{url('/offline/add-new-agent')}}" class="btn btn-space btn-danger btn-lg">Cancel</a>
+                                        <a href="{{url('/offline/list')}}" class="btn btn-space btn-danger btn-lg">Cancel</a>
                                     </p>
                                 </div>
                             </form>
@@ -109,4 +123,11 @@
         </div>
     </div>
 @endsection
-
+@push('externalJsLoad')
+<script src="{{url('js/plugins/jquery.datetimepicker.js')}}" type="text/javascript"></script>
+<script>
+    $( function() {
+        $( "#payment_date" ).datepicker({dateFormat: 'dd-mm-yy'});
+    } );
+</script>
+@endpush

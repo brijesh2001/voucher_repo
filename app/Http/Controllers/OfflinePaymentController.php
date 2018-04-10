@@ -115,7 +115,7 @@ class OfflinePaymentController extends Controller
         if (isset(config('constant.offlinePaymentDataTableFieldArray')[$request->order['0']['column']])) {
             $offlinePaymentData = $offlinePaymentData->SortOfflinePaymentData($request);
         } else {
-            $offlinePaymentData = $offlinePaymentData->SortDefaultDataByRaw('tbl_offline_agent.id', 'desc');
+            $offlinePaymentData = $offlinePaymentData->SortDefaultDataByRaw('tbl_offline_payment.id', 'desc');
         }
 
         /**
@@ -128,9 +128,22 @@ class OfflinePaymentController extends Controller
         $appData = array();
         foreach ($offlinePaymentData as $offlinePaymentData) {
             $row = array();
-            $row[] = $offlinePaymentData->email;
+            $row[] = date("d-m-Y", strtotime($offlinePaymentData->payment_date));
+            $row[] = $offlinePaymentData->invoice_no;
             $row[] = $offlinePaymentData->name;
+            $row[] = $offlinePaymentData->email;
             $row[] = $offlinePaymentData->mobile;
+            $row[] = $offlinePaymentData->gstn;
+            $row[] = $offlinePaymentData->hsn;
+            $row[] = $offlinePaymentData->voucher_code;
+            $row[] = $offlinePaymentData->number_of_voucher;
+            $row[] = $offlinePaymentData->transaction_id;
+            $row[] = $offlinePaymentData->rate_before_gst;
+            $row[] = $offlinePaymentData->sgst;
+            $row[] = $offlinePaymentData->cgst;
+            $row[] = $offlinePaymentData->igst;
+            $row[] = $offlinePaymentData->rate_after_gst;
+            $row[] = $offlinePaymentData->state_name;
             $row[] = view('datatable.action', ['module' => "offline",'type' => $offlinePaymentData->id, 'id' => $offlinePaymentData->id])->render();
             $appData[] = $row;
         }
@@ -152,36 +165,17 @@ class OfflinePaymentController extends Controller
      */
     public function customeValidate($data, $mode)
     {
-        $rules = array(
-            'name' => 'required',
-            'email' => 'required|email',
-            'mobile' => 'required',
-            'number_of_voucher' => 'required',
-            'rate' => 'required',
-            'state' => 'required',
-            'payment_id' => 'required',
-            'client_gstn' => 'required',
-        );
         if ($mode == 'add-new-agent') {
             $rules = array(
                 'name' => 'required',
                 'email' => 'required|email',
                 'mobile' => 'required',
                 'number_of_voucher' => 'required',
-                'rate' => 'required',
+                'voucher_code' => 'required',
+                'rate_after_gst' => 'required',
                 'state' => 'required',
-                'payment_id' => 'required',
-                'client_gstn' => 'required',
-            );
-        }
-
-        if ($mode == 'add-existing-agent') {
-            $rules = array(
-                'user_id' => 'required',
-                'number_of_voucher' => 'required',
-                'rate' => 'required',
-                'payment_id' => 'required',
-
+                'payment_date' => 'required',
+                'transaction_id' => 'required',
 
             );
         }
@@ -189,11 +183,14 @@ class OfflinePaymentController extends Controller
                 $rules = array(
 
                     'name' => 'required',
-                    'user_id' => 'required',
-                    'state' => 'required',
                     'email' => 'required|email',
                     'mobile' => 'required',
-                    'client_gstn' => 'required',
+                    'number_of_voucher' => 'required',
+                    'voucher_code' => 'required',
+                    'rate_after_gst' => 'required',
+                    'state' => 'required',
+                    'payment_date' => 'required',
+                    'transaction_id' => 'required',
                 );
             }
 
@@ -215,12 +212,10 @@ class OfflinePaymentController extends Controller
             return false;
         }
 
-        /**
-         * Store a newly created prize in storage.
-         *
-         * @param  \Illuminate\Http\Request $request
-         * @return \Illuminate\Http\Response
-         */
+    /**
+     * @param Request $request
+     * @return $this|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|mixed
+     */
         public function storeNewAgentPayment(request $request)
         {
 
@@ -245,49 +240,13 @@ class OfflinePaymentController extends Controller
             if ($addagent) {
                 //Event::fire(new SendMail($addprize));
                 $request->session()->flash('alert-success', __('app.default_add_success', ["module" => __('app.offline_payment_managment')]));
-                return redirect('offline/add-new-agent');
+                return redirect('offline/list');
             } else {
                 $request->session()->flash('alert-danger', __('app.default_error', ["module" => __('app.offline_payment_managment'), "action" => __('app.add')]));
                 return redirect('offline/add-new-agent')->withInput();
             }
         }
 
-        /**
-         * Store a newly created prize in storage.
-         *
-         * @param  \Illuminate\Http\Request $request
-         * @return \Illuminate\Http\Response
-         */
-        public function storeExistingAgentPayment(request $request)
-        {
-
-            $validations = $this->customeValidate($request->all(), 'add-existing-agent');
-            if ($validations) {
-                return $validations;
-            }
-
-            // Start Communicate with database
-            DB::beginTransaction();
-            try {
-                $addagent = $this->offlinePayment->storeExistingAgentPayment($request->all());
-                DB::commit();
-            } catch (\Exception $e) {
-                //exception handling
-                DB::rollback();
-                $errorMessage = '<a target="_blank" href="https://stackoverflow.com/search?q=' . $e->getMessage() . '">' . $e->getMessage() . '</a>';
-                $request->session()->flash('alert-danger', $errorMessage);
-                return redirect('offline/list')->withInput();
-
-            }
-            if ($addagent) {
-                //Event::fire(new SendMail($addprize));
-                $request->session()->flash('alert-success', __('app.default_add_success', ["module" => __('app.offline_payment_managment')]));
-                return redirect('offline/list');
-            } else {
-                $request->session()->flash('alert-danger', __('app.default_error', ["module" => __('app.offline_payment_managment'), "action" => __('app.add')]));
-                return redirect('offline/list')->withInput();
-            }
-        }
 
         /**
          * Delete the specified promo in storage.
@@ -299,7 +258,7 @@ class OfflinePaymentController extends Controller
         {
             $deletePromo = $this->offlinePayment->deleteAgent($request->id);
             if ($deletePromo) {
-                $request->session()->flash('alert-success', __('app.default_delete_success', ["module" => __('app.voucher')]));
+                $request->session()->flash('alert-success',"Entry deleted successfully");
             } else {
                 $request->session()->flash('alert-danger', __('app.default_error', ["module" => __('app.voucher'), "action" => __('app.delete')]));
             }

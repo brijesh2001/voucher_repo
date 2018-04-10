@@ -31,23 +31,9 @@
                             <form action="{{url('/offline/update-agent-payment')}}" name="app_add_form" id="app_form" style="border-radius: 0px;" method="post" class="form-horizontal group-border-dashed">
 
                                 <div class="form-group">
-                                    <label class="col-sm-4 control-label">Agent List <span class="error">*</span></label>
-                                    <div class="col-sm-6 col-md-4">
-                                        <select class="form-control input-sm required" name="user_id" id="user_id">
-                                            <option value="">{{trans('app.select')}} Agent</option>
-                                            @if(count($agentData) > 0)
-                                                @foreach($agentData as $row)
-                                                    <option value="{{$row->id}}" @if($details->id == $row->id){{"selected"}}@endif>{{$row->name}}- {{$row->email}}</option>
-                                                @endforeach
-                                            @endif
-                                        </select>
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
                                     <label class="col-sm-4 control-label">Name<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
-                                        <input type="text" name="name" id="name" placeholder="name" class="form-control input-sm required" value="{{$details->name}}" />
+                                        <input type="text" name="name" id="name" placeholder="Name" class="form-control input-sm required" value="{{$details->name}}" />
                                     </div>
                                 </div>
 
@@ -59,16 +45,51 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-4 control-label">Moile<span class="error">*</span></label>
+                                    <label class="col-sm-4 control-label">Mobile<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
-                                        <input type="number" name="mobile" id="mobile" placeholder="Mobile" class="form-control input-sm required" value="{{$details->mobile}}" />
+                                        <input type="text" name="mobile" id="mobile" placeholder="Mobile" class="form-control input-sm required" value="{{$details->mobile}}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Payment Date<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="payment_date" id="payment_date" placeholder="Payment Date" class="form-control input-sm required" value="{{$details->payment_date}}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Voucher Code<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="voucher_code" id="voucher_code" placeholder="Voucher Code" class="form-control input-sm required" value="{{$details->voucher_code}}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Number Of Voucher<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="number" name="number_of_voucher" id="number_of_voucher" placeholder="Number Of Voucher" class="form-control input-sm required" value="{{$details->number_of_voucher}}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Rate<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="rate_after_gst" id="rate_after_gst" placeholder="Rate" class="form-control input-sm required" value="{{$details->rate_after_gst}}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Transaction Id<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="transaction_id" id="transaction_id" placeholder="Transaction Id" class="form-control input-sm " value="{{$details->transaction_id}}" />
                                     </div>
                                 </div>
 
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label">GSTN<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
-                                        <input type="text" name="client_gstn" id="client_gstn" placeholder="GSTN" class="form-control input-sm required" maxlength="15" value="{{$details->client_gstn}}" />
+                                        <input type="text" name="gstn" id="gstn" placeholder="GSTN" class="form-control input-sm" maxlength="15" value="{{$details->gstn}}" />
                                     </div>
                                 </div>
 
@@ -79,7 +100,7 @@
                                             <option value="">State</option>
                                             @if(count($state) > 0)
                                                 @foreach($state as $row)
-                                                    <option value="{{$row->id}}" @if($details->id == $row->id){{"selected"}}@endif>{{$row->name}}</option>
+                                                    <option value="{{$row->id}}" @if($details->state == $row->id){{"selected"}}@endif>{{$row->name}}</option>
                                                 @endforeach
                                             @endif
                                         </select>
@@ -87,13 +108,15 @@
                                 </div>
 
                                 <input type="hidden" name="id" id="id"  value="{{$details->id}}" />
+                                <input type="hidden" name="hsn" id="hsn"  value="{{$details->hsn}}" />
+                                <input type="hidden" name="invoice_no" id="invoice_no"  value="{{$details->invoice_no}}" />
 
                                 {{ csrf_field() }}
 
                                 <div class="col-sm-6 col-md-8 savebtn">
                                     <p class="text-right">
                                         <button type="submit" class="btn btn-space btn-info btn-lg">{{trans('app.edit')}} Payment</button>
-                                        <a href="{{url('/offline/add-existing-agent-payment')}}" class="btn btn-space btn-danger btn-lg">Cancel</a>
+                                        <a href="{{url('/offline/list')}}" class="btn btn-space btn-danger btn-lg">Cancel</a>
                                     </p>
                                 </div>
                             </form>
@@ -104,4 +127,11 @@
         </div>
     </div>
 @endsection
-
+@push('externalJsLoad')
+<script src="{{url('js/plugins/jquery.datetimepicker.js')}}" type="text/javascript"></script>
+<script>
+    $( function() {
+        $( "#payment_date" ).datepicker({dateFormat: 'dd-mm-yy'});
+    } );
+</script>
+@endpush

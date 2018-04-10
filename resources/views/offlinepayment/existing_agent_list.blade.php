@@ -38,7 +38,7 @@
                                    style="margin-left: 10px;">Reset</a>
                             </div>
                             <div class="addreport pull-right">
-                                <a href="{{url('/offline/add-existing-agent-payment')}}">
+                                <a href="{{url('/offline/add-new-agent')}}">
                                     <button class="btn btn-space btn-primary"><i
                                                 class="icon mdi mdi-plus "></i> Add new payment
                                     </button>
@@ -59,28 +59,48 @@
                                         <thead>
 
                                         <tr>
-                                            <th>Email</th>
+                                            <th class="no-sort">Date</th>
+                                            <th class="no-sort">Invoice No</th>
                                             <th>Name</th>
+                                            <th>Email</th>
                                             <th>Mobile</th>
-                                            <th class="no-sort">Action</th>
+                                            <th>GSTN</th>
+                                            <th>HSN/SAC</th>
+                                            <th>Voucher</th>
+                                            <th>Quantity</th>
+                                            <th>Trans Id</th>
+                                            <th>Before GST</th>
+                                            <th>SGST</th>
+                                            <th>CGST</th>
+                                            <th>IGST</th>
+                                            <th>After GST</th>
+                                            <th>State</th>
+                                            <th>Actions</th>
+
+
                                         </tr>
 
                                         </thead>
                                         <thead>
                                         <tr>
-                                            <th>
-                                                <input type="text" name="filter[email]" style="width: 80px;" id="
-                                                       email" value="" />
-                                            </th>
-                                            <th>
-                                                <input type="text" name="filter[name]" style="width: 80px;" id="
-                                                       name" value="" />
-                                            </th>
-                                            <th>
-                                                <input type="text" name="filter[mobile]" style="width: 80px;" id="
-                                                       mobile" value="" />
-                                            </th>
-                                            <th></th>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <input type="hidden" name="filterExport[export_excel]"  id="export_excel" value="0" />
                                         </tr>
                                         </thead>
 

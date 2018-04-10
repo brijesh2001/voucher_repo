@@ -47,10 +47,23 @@ return [
 
     "offlinePaymentDataTableFieldArray" => [
 
-        "email",
-        "name",
-        "mobile",
-        ""
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
     ],
     "saledataDataTableFieldArray" => [
 

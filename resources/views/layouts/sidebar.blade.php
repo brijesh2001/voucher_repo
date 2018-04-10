@@ -74,16 +74,16 @@
                                 <li class="{{$addNewAgentPaymentTab or ''}}">
                                     <a href="{{url('offline/add-new-agent')}}">{{trans('app.add_new_agent_payment')}}</a>
                                 </li>
-                                <li class="{{$addExistingAgentPaymentTab or ''}}">
+                               {{-- <li class="{{$addExistingAgentPaymentTab or ''}}">
                                     <a href="{{url('offline/list')}}">Add exiting agent payment</a>
-                                </li>
+                                </li>--}}
                             </ul>
                         </li>
                         <li class="{{$agentTab or ''}}">
                             <a href="{{url('agent/list')}}">Discount Link Management</a>
                         </li>
                         @endif
-                        @if(in_array("purchase_data",$userPermission))
+                        {{--@if(in_array("purchase_data",$userPermission))
                         <li class="{{$purchasedataTab or ''}}">
                             <a href="{{url('purchase/list')}}">Purchase Data</a>
                         </li>
@@ -92,7 +92,7 @@
                         <li class="{{$expenseDataTab or ''}}">
                             <a href="{{url('expense/list')}}">Expense Data</a>
                         </li>
-                        @endif
+                        @endif--}}
                         <li title="Reports"><a href="https://www.ptepromocode.com/backend" target="_blank"><i class="icon fa fa-reply-all"
                                                                                  aria-hidden="true"></i><span>PROMO</span></a>
                         </li>
