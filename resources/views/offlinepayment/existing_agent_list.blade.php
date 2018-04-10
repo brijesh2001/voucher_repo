@@ -44,6 +44,13 @@
                                     </button>
                                 </a>
                             </div>
+                            <div class="addreport pull-right">
+                                <a href="javascript:void(0);" class="export">
+                                    <button class="btn btn-space btn-primary"><i
+                                                class="icon mdi mdi-plus "></i> Export
+                                    </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -51,6 +58,8 @@
                     <div class="row">
                         <div class="col-sm-12">
                             <div class="panel panel-default panel-table">
+                                <label>TO:</label> <input type="text" name="filterDate[tbl_offline_payment.payment_date]" id="date1" style="width: 100px;" value="" />
+                                <label>FROM:</label> <input type="text" name="filterDate1[tbl_offline_payment.payment_date]" id="date2" style="width: 100px;" value="" />
                                 <div class="panel-body">
                                     <table id="dataTable"
                                            class="table display dt-responsive responsive nowrap table-striped table-hover table-fw-widget"
@@ -121,9 +130,24 @@
 @push('externalJsLoad')
 <script src="{{url('js/appDatatable.js')}}"></script>
 <script src="{{url('js/modules/offlinepayment.js')}}"></script>
+<script src="{{url('js/plugins/jquery.datetimepicker.js')}}" type="text/javascript"></script>
+<script>
+    $( function() {
+        $( "#date1" ).datepicker({dateFormat: 'dd-mm-yy'});
+        $( "#date2" ).datepicker({dateFormat: 'dd-mm-yy'});
+    } );
+</script>
 @endpush
 @push('internalJsLoad')
 <script>
     app.offlinepayment.init();
+    $(document).ready(function () {
+        $(document).on('click', '.export', function () {
+            $('#export_excel').val('1');
+            dataTable.ajax.reload();
+            $('#export_excel').val('0');
+        });
+
+    });
 </script>
 @endpush

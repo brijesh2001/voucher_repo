@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\OfflinePayment;
 use Validator;
 use DB;
+use Excel;
 
 
 class OfflinePaymentController extends Controller
@@ -124,7 +125,18 @@ class OfflinePaymentController extends Controller
          * @param  \Illuminate\Http\Request $request
          * @return mixed
          */
-        $offlinePaymentData = $offlinePaymentData->GetOfflinePaymentData($request);
+        $url = '';
+        if($request['filterExport']['export_excel'] == 0) {
+            $offlinePaymentData = $offlinePaymentData->GetOfflinePaymentData($request);
+        }else {
+            $excelraw = $offlinePaymentData->GetFilteredOfflinePaymentData();
+            $offlinePaymentData = $offlinePaymentData->GetFilteredOfflinePaymentData($request);
+            $file_name =  $this->generateExcel($excelraw);
+            if(!empty($file_name)) {
+                $url = $file_name['file'];
+            }
+
+        }
         $appData = array();
         foreach ($offlinePaymentData as $offlinePaymentData) {
             $row = array();
@@ -148,12 +160,16 @@ class OfflinePaymentController extends Controller
             $appData[] = $row;
         }
 
-        return [
+        $return_data =  [
             'draw' => $request->draw,
             'recordsTotal' => $offlinePaymentCount,
             'recordsFiltered' => $offlinePaymentCount,
             'data' => $appData,
         ];
+        if($request['filterExport']['export_excel'] == 1) {
+            $return_data['url'] = $url;
+        }
+        return $return_data;
     }
 
     /**
@@ -326,5 +342,46 @@ class OfflinePaymentController extends Controller
                 return redirect('offline/edit/' . $request->get('id'))->withInput();
             }
         }
+
+    /**
+     * generate the excel sheet
+     * */
+    public function generateExcel($data)
+    {
+        $appData = array();
+        foreach ($data as $requestData) {
+            $row['Date'] = date("d-m-Y", strtotime($requestData->payment_date));
+            $row['Invoice No'] = $requestData->invoice_no;
+            $row['Name'] = $requestData->name;
+            $row['Email'] = $requestData->email;
+            $row['Mobile'] = $requestData->mobile;
+            $row['GSTN'] = $requestData->gstn;
+            $row['HSN/SAC'] = $requestData->hsn;
+            $row['Voucher'] = $requestData->voucher_code;
+            $row['Number Of Voucher'] = $requestData->number_of_voucher;
+            $row['Transaction Id'] = $requestData->transaction_id;
+            $row['Before GST'] =  $requestData->rate_before_gst;
+            $row['SGST'] = $requestData->sgst;
+            $row['CGST'] = $requestData->cgst;
+            $row['IGST'] = $requestData->igst;
+            $row['After GST'] = $requestData->rate_after_gst;
+            $row['State'] =  $requestData->state_name;
+            $appData[] = $row;
+        }
+
+        if (!empty($appData)) {
+
+            $file_name = rand();
+            $storage_path = Excel::create($file_name, function($excel) use($appData) {
+                $excel->sheet('Sheet 1', function($sheet) use($appData) {
+                    $sheet->fromArray($appData);
+                });
+            })->store('xls',false,true);
+            return $storage_path;
+        }
+
+        return false;
+
+    }
 
 }
