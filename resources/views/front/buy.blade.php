@@ -30,7 +30,7 @@
             </div>
             <div class="txt-blink visible-xs visible-sm" style="width:100%;">
 
-                <h2 class="blink" style="margin-left:0;">Get 11 Free Mock Test</h2>
+                <h2 class="blink" style="margin-left:0;">11 Free Scored Mock Test</h2>
                 <h3 class="blink" style="margin-left:0;">Free Reference Material</h3>
                 <h3 class="blink" style="margin-left:0;">24 x 7 Support</h3>
             </div>

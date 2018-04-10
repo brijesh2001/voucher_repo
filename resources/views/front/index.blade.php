@@ -22,7 +22,7 @@
 
             <div class="txt-blink hidden-xs hidden-sm" style="float: left;min-width:560px;">
 
-                <h2 class="blink">Get 11 Free Mock Test</h2>
+                <h2 class="blink">11 Free Scored Mock Test</h2>
                 <h3 class="blink">Free Reference Material</h3>
                 <h3 class="blink">24 x 7 Support</h3>
 
@@ -30,7 +30,7 @@
             </div>
             <div class="txt-blink visible-xs visible-sm" style="width:100%;">
 
-                <h2 class="blink" style="margin-left:0;">Get 11 Free Mock Test</h2>
+                <h2 class="blink" style="margin-left:0;">11 Free Scored Mock Test</h2>
                 <h3 class="blink" style="margin-left:0;">Free Reference Material</h3>
                 <h3 class="blink" style="margin-left:0;">24 x 7 Support</h3>
             </div>
@@ -78,6 +78,7 @@
                     <div class="">
                         <h5 style="color:#fff;"><b>Note:</b> Code will be sent to your email immediately.</h5>
                     </div>
+                    <input type="hidden" name="user_id" value="{{$user_id or ''}}">
                     {{ csrf_field() }}
                 </form>
 
@@ -91,9 +92,9 @@
     <div class="services-w3" id="services">
         <div class="container"><h3>Services</h3><label class="line"></label>
             <p class="top-p">We Provide Following Services With PTE Exam Voucher.</p>
-            <div class="col-md-4 services-grids-w3l"><img style="width:initial;height: 109px;" src={{url('css/front/images/ci1.jpg')}}><h4>Free 5 Mock
+            <div class="col-md-4 services-grids-w3l"><img style="width:initial;height: 109px;" src={{url('css/front/images/ci1.jpg')}}><h4>Free 11 Scored Mock
                     Test</h4>
-                <p>Get 11 free complete Mock Test along with the Voucher</p></div>
+                <p>Get 11 free complete Scored Mock Test along with the Voucher</p></div>
 
 
 
@@ -206,7 +207,7 @@
                 Too at Reasonable Price as We Are Authorized Sellers of PTE Exam Vouchers. <br><br>On Booking Your PTE
                 Exam
                 Through Us, You Will Be Getting the Highest Discount on Your Application Fee in India. For Further
-                Countenance, We Are Providing 5 Mock Test Papers And Experts Counseling for Beginners. If You Are
+                Countenance, We Are Providing 11 Scored Mock Test Papers And Experts Counseling for Beginners. If You Are
                 Looking
                 for An Opportunity to Study in Foreign, Then Look Further Because PteVoucherCode Is the Best Destination
                 to
