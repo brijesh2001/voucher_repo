@@ -22,7 +22,7 @@
 
             <div class="txt-blink hidden-xs hidden-sm" style="float: left;min-width:560px;">
 
-                <h2 class="blink">Get 5 Free Mock Test</h2>
+                <h2 class="blink">Get 11 Free Mock Test</h2>
                 <h3 class="blink">Free Reference Material</h3>
                 <h3 class="blink">24 x 7 Support</h3>
 
@@ -30,7 +30,7 @@
             </div>
             <div class="txt-blink visible-xs visible-sm" style="width:100%;">
 
-                <h2 class="blink" style="margin-left:0;">Get 5 Free Mock Test</h2>
+                <h2 class="blink" style="margin-left:0;">Get 11 Free Mock Test</h2>
                 <h3 class="blink" style="margin-left:0;">Free Reference Material</h3>
                 <h3 class="blink" style="margin-left:0;">24 x 7 Support</h3>
             </div>
@@ -69,12 +69,7 @@
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
-                        </select>
+                       </select>
 
                     </div>
                     <div class="frm-grp"><input type="submit" name="save" id="save" value="Buy Now" class="btn"

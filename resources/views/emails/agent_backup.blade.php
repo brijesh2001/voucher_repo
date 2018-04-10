@@ -127,9 +127,9 @@
                                                                 Phone : &nbsp;+91-9687646863<br>
                                                                 &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
                                                                 +91-9687646861<br>
-                                                                E-Mail : &nbsp;<a href="mailto:info@ptepromocode.com"
+                                                                E-Mail : &nbsp;<a href="mailto:info@compassoverseas.com"
                                                                                   target="_blank"
-                                                                                  style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #00ADD8;font-weight: normal;text-decoration: underline;">info@ptepromocode
+                                                                                  style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #00ADD8;font-weight: normal;text-decoration: underline;">info@compassoverseas
                                                                     .com</a></p>
 
                                                         </td>

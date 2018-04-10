@@ -44,7 +44,7 @@
                     <td>
                         <img style="height:32px; width:32px;"  src={{url('css/front/images/email-em.png')}}>
                     </td>
-                    <td>help@ptevouchercode.com</td>
+                    <td>help@compassoverseas.com</td>
                 </tr>
             </table>
         </td>

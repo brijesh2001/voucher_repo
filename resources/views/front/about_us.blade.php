@@ -34,7 +34,7 @@
                 Consultant is acting as a ladder of success for thousands of students who are thriving towards their
                 goals of better educational facilities and thus, the better career. Candidates of PTE Academic are given
                 special discounts and guidance for study material so that they can stay in developed countries like USA,
-                UK, Canada and New Zealand for success Endeavour of gaining skills, knowledge and a better life!
+                UK, Canada and New Zealand for success Endeavor of gaining skills, knowledge and a better life!
             </p>
         </div>
     </div>

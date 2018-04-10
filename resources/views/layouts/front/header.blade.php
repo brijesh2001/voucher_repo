@@ -5,7 +5,7 @@
                                                                                    aria-hidden="true"></i> Authorised
             Re-seller of PTE-A Voucher</p>
         <p style="float:right;width: 225px;text-align:right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                    class="glyphicon glyphicon-envelope"></span> help@ptevouchercode.com</p>
+                    class="glyphicon glyphicon-envelope"></span>info@compassoverseas.com</p>
         <p style="float:right;margin-left:20px;"><span class="glyphicon glyphicon-phone-alt"></span> +91-79-8448-5740
         </p>
         <p style="float:right;"><span class="glyphicon glyphicon-earphone"></span> +91-97250-53310</p></div>

@@ -15,14 +15,14 @@
     <div class="banner-agile" style="padding:0;">
         <div style="background: rgba(0,0,0,0.6);padding-top:30px;min-height: 632px;">
             <div class="moto">
-                <h1 style="text-align:center;font-weight:bold;color:#fff;">Buy PTE Voucher Online for
+                <h1 style="text-align:center;font-weight:bold;color:#fff;">Buy PTE Voucher Online at
                     ₹ {{$rate or ''}} </h1>
             </div>
 
 
             <div class="txt-blink hidden-xs hidden-sm" style="float: left;min-width:560px;">
 
-                <h2 class="blink">Get 5 Free Mock Test</h2>
+                <h2 class="blink">Get 11 Free Mock Test</h2>
                 <h3 class="blink">Free Reference Material</h3>
                 <h3 class="blink">24 x 7 Support</h3>
 
@@ -30,7 +30,7 @@
             </div>
             <div class="txt-blink visible-xs visible-sm" style="width:100%;">
 
-                <h2 class="blink" style="margin-left:0;">Get 5 Free Mock Test</h2>
+                <h2 class="blink" style="margin-left:0;">Get 11 Free Mock Test</h2>
                 <h3 class="blink" style="margin-left:0;">Free Reference Material</h3>
                 <h3 class="blink" style="margin-left:0;">24 x 7 Support</h3>
             </div>
@@ -69,11 +69,6 @@
                             <option value="3">3</option>
                             <option value="4">4</option>
                             <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option>
-                            <option value="10">10</option>
                         </select>
 
                     </div>
@@ -98,7 +93,7 @@
             <p class="top-p">We Provide Following Services With PTE Exam Voucher.</p>
             <div class="col-md-4 services-grids-w3l"><img style="width:initial;height: 109px;" src={{url('css/front/images/ci1.jpg')}}><h4>Free 5 Mock
                     Test</h4>
-                <p>Get 5 free complete Mock Test along with the Voucher</p></div>
+                <p>Get 11 free complete Mock Test along with the Voucher</p></div>
 
 
 
@@ -134,7 +129,7 @@
                     <div style="min-height:121px;"><img style="height:110px;width:95px;" src={{url('css/front/images/service2.png')}}></div>
 
                     <h4>Date &amp; Location</h4>
-                    <p>Book your preffered Exam date and Location.</p></div>
+                    <p>Book your preferred Exam date and Location.</p></div>
                 <div style="width:10%;float:right;padding-top:20px;font-size:38px;"><span
                             class="glyphicon glyphicon-chevron-right visible-md visible-lg"
                             aria-hidden="true"></span><span
@@ -182,7 +177,7 @@
 
                 <div style="height:115px;"><img style="height:109px;width:117px;" src={{url('css/front/images/why3.png')}}></div>
                 <h4>Lowest Price
-                    <p>PTE Academic Cost Rs. 12,101 in India. Purchase Voucher Code from us &amp; Save
+                    <p>PTE Academic Cost Rs. 13,101 in India. Purchase Voucher Code from us &amp; Save
                         Rs. .</p></h4>
             </div>
             <div class="col-md-3 services-grids-w3l">
@@ -428,7 +423,7 @@
 
 @section('extra')
     <div class="bf">
-        <h5 class="fh">Save up to Rs. on each exam booking</h5>
+        <h5 class="fh">Save up to Rs. {{$saved_prize or ''}} on each exam booking</h5>
         <p>If you are a PTE Academic aspirant and preparing hard to clear the exam, PTEVoucherCode.com can help you in
             reducing the amount you are going to spend on it. At our website, PTE vouchers are available at considerably low
             prices (Lowest in India).</p>
@@ -443,7 +438,7 @@
         <p>To test your command on the English language as a non-native English speaker Pearson comes up with PTE Academic
             exam. You are tested on various parameters like reading, speaking, writing and speaking. To check, if you can
             converse in English speaking countries in English or not, PTE online has designed an exam so that you can
-            practice more to improve your score in Pearson PTE score. With us, you will get 5 free mock tests and reference
+            practice more to improve your score in Pearson PTE score. With us, you will get 11 free mock tests and reference
             material and saving of Rs.  on Booking PTE Exam India Wide.</p>
         <h5 class="fh">100% Purchase Assistance and Payment Security</h5>
         <p>We are available 24/7 interested students can book their test anytime anywhere. To avail the best of our
@@ -456,7 +451,7 @@
             <li>It is acceptable worldwide.</li>
         </ul>
         <h5 class="fh">Why us?</h5>
-        <p>We help you to save you Rs. on Booking PTE Exam India </p>
+        <p>We help you to save you Rs. {{$saved_prize or ''}} on Booking PTE Exam India </p>
 
 
         <h5 class="fh">How to use voucher code</h5>
