@@ -4,3 +4,4 @@
 .env
 Homestead.json
 Homestead.yaml
+/vendor

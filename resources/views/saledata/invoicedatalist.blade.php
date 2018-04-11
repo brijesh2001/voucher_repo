@@ -78,6 +78,7 @@
                                             <th>IGST</th>
                                             <th>After GST</th>
                                             <th>State</th>
+                                            <th>PDF</th>
 
 
                                         </tr>
@@ -85,6 +86,7 @@
                                         </thead>
                                         <thead>
                                         <tr>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
@@ -141,6 +143,21 @@
             dataTable.ajax.reload();
             $('#export_excel').val('0');
         });
+
+        $(document).on('click','.download_pdf',function () {
+            var id = $(this).attr('rel');
+            $.ajax({
+                type: "POST",
+                url: app.config.SITE_PATH + 'saledata/download-pdf',
+                data: {id: id, _token: csrf_token},
+                success: function (response) {
+                    console.log(response)
+                },
+                error:function (error) {
+                    console.log(error)
+                }
+            });
+        })
 
     });
 </script>

@@ -376,4 +376,21 @@ class SaleData extends Authenticatable
         return $count;
     }
 
+    /**
+     * Get all data from id
+     *
+     * @return mixed
+     */
+    public function getSaleDataFromId($id)
+    {
+
+        $result =  DB::select('select tbs.*,tbq.name,tbq.email,tbq.mobile,tbs.created_at,ss.name as state_name,ss.id as state_id 
+                            from tbl_sale_data tbs
+                            LEFT JOIN tbl_enquiry tbq ON tbq.id = tbs.enquiry_id
+                            LEFT JOIN tbl_state ss ON ss.id = tbq.state
+                            where tbs.id = :id',
+                            ['id' =>$id]);
+        return (!empty($result)) ? $result[0]: [];
+    }
+
 }

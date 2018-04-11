@@ -181,4 +181,5 @@ Route::group(['prefix' => 'saledata'], function () {
     Route::post('/datatable', 'SaleDataController@datatable');
     Route::post('/invoie-datatable', 'SaleDataController@invoiceDatatable');
     Route::post('/delete', 'SaleDataController@delete');
+    Route::post('/download-pdf', 'SaleDataController@downloadpdf');
 });

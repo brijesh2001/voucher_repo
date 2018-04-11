@@ -134,6 +134,11 @@ class SaleDataController extends Controller
         $data['invoicedataTab'] = "active";
         return view('saledata.invoicedatalist', $data);
     }
+    /**
+     * Display a listing of the invoicedata
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function invoiceDatatable(Request $request)
     {
         // default count of saledata $saledataCount
@@ -215,6 +220,7 @@ class SaleDataController extends Controller
             $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? '-' :  'IGST:' .$IGST;
             $row[] = $saledataData->amount_paid;
             $row[] =  $saledataData->state ;
+            $row[] = view('datatable.pdf', ['module' => "agent",'type' => $saledataData->id, 'id' => $saledataData->id])->render();
 
             $appData[] = $row;
         }
@@ -275,6 +281,30 @@ class SaleDataController extends Controller
 
         return false;
 
+    }
+
+    public function downloadpdf(request $request)
+    {
+        $requestData = $request->all();
+        if(!empty($requestData)) {
+            $id = $requestData['id'];
+            $data = (array)$this->saledata->getSaleDataFromId($id);
+            if(!empty($data)) {
+                $rateBeforeGst = $data['amount_paid']*100/118;
+                $IGST = $data['amount_paid'] -  $rateBeforeGst;
+                if($data['state_id'] == 5){
+                    $cgstSgst = $IGST/2;
+                    $data['cgst'] = $data['sgst'] = number_format($cgstSgst,2);
+                    $data['igst'] = 0;
+                }else {
+                    $data['cgst'] = $data['sgst'] = 0;
+                    $data['igst'] = number_format($IGST,2);
+                }
+            }
+            echo'<pre>';
+            print_r($data);
+            die();
+        }
     }
 
 }
