@@ -77,8 +77,7 @@
         <td>
             <table style="width:536px; background-color:#ccc; border-top:5px solid #6d9d31; font-size:20px;">
                 <tr style="text-align:left;">
-                    <td width="110px"> <img style="height:100px; width:100px; border-radius:50%;"  src={{url('css/front/images/honor.png')}}></td>
-                    <td><p>Cheers,<br />Hitesh Patel<br />Customer Success<br /><a href="#">ptevouchercode.com</a></p></td>
+                    <td><p>Cheers,<br />Pte Voucher<br />Customer Success<br /><a href="#">ptevouchercode.com</a></p></td>
                 </tr>
             </table>
         </td>

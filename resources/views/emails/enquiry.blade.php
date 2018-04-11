@@ -25,21 +25,9 @@
             <table style=" width:536px; padding-bottom:20px; padding-left:150px; font-size:20px;">
                 <tr style="text-align:left;">
                     <td width="40px"><img style="height:32px; width:32px;"  src={{url('css/front/images/smartphone-em.png')}}></td>
-                    <td>+91 9725053310</td>
+                    <td>+91 81404 43300</td>
                 </tr>
-                <tr style="text-align:left;">
-                    <td>
 
-                        <img style="height:32px; width:32px;"  src={{url('css/front/images/whatsapp-em.png')}}>
-                    </td>
-                    <td>+91 9725053310</td>
-                </tr>
-                <tr style="text-align:left;">
-                    <td>
-                        <img style="height:32px; width:32px;"  src={{url('css/front/images/skype-em.png')}}>
-                    </td>
-                    <td>hitesh.53310</td>
-                </tr>
                 <tr style="text-align:left;">
                     <td>
                         <img style="height:32px; width:32px;"  src={{url('css/front/images/email-em.png')}}>
@@ -53,10 +41,7 @@
         <td>
             <table style="width:536px; background-color:#ccc; border-top:5px solid #6d9d31; font-size:20px;">
                 <tr style="text-align:left;">
-                    <td width="110px">
-                        <img style="height:100px; width:100px; border-radius:50%;"  src={{url('css/front/images/honor.png')}}>
-                    </td>
-                    <td><p>Cheers,<br />Hitesh Patel<br />Customer Success<br /><a href="#">ptevouchercode.com</a></p></td>
+                    <td><p>Cheers,<br />Pte Voucher<br />Customer Success<br /><a href="#">ptevouchercode.com</a></p></td>
                 </tr>
             </table>
         </td>

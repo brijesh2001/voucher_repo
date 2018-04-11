@@ -52,8 +52,7 @@
         <td>
             <table style="width:100%; background-color:#ccc; border-top:5px solid #6d9d31; font-size:20px;">
                 <tr style="text-align:left;">
-                    <td width="110px"><img style="height:100px; width:100px; border-radius:50%;"  src={{url('css/front/images/honor.png')}}></td>
-                    <td><p>Regards,<br />Hitesh Patel<br />+91 9725053310<br /><a href="#">ptevouchercode.com</a></p></td>
+                    <td><p>Regards,<br />Pte Voucher<br />+91 81404 43300<br /><a href="#">ptevouchercode.com</a></p></td>
                 </tr>
             </table>
         </td>
