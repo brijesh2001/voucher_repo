@@ -65,10 +65,7 @@
             <div class="clearfix" style="min-height:25px;"></div>
             <div class="clearfix" style="min-height:11px;"></div>
             <h5 style="width:8%;float:left;"><span class="glyphicon glyphicon-earphone"></span></h5><h5
-                    style="width:92%;float:right;text-align:left;">+91-97250-53310</h5>
-            <div class="clearfix" style="min-height:25px;"></div>
-            <h5 style="width:8%;float:left;"><span class="glyphicon glyphicon-phone-alt"></span></h5><h5
-                    style="width:92%;float:right;text-align:left;">+91-79-8448-5740</h5>
+                    style="width:92%;float:right;text-align:left;">+91-81404 43300</h5>
             <div class="clearfix" style="min-height:25px;"></div>
             <h5 style="width:8%;float:left;"><span class="glyphicon glyphicon-envelope"></span></h5><h5
                     style="width:92%;float:right;text-align:left;">info@compassoverseas.com</h5>
