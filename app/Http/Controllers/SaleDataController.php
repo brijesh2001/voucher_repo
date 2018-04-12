@@ -308,7 +308,7 @@ class SaleDataController extends Controller
                         $data['igst'] = number_format($IGST,2);
                     }
                     $pdf = PDF::loadView('emails.invoice', $data);
-                    return $pdf->setPaper('a4')->download('invoice.pdf');
+                    return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                 }
             }elseif ($requestData['type'] == 'offline') {
                 $id = $requestData['id'];
@@ -319,7 +319,7 @@ class SaleDataController extends Controller
                    $data['created_at '] = $data['payment_date'];
                    $data['invoice_number'] = $data['invoice_no'];
                     $pdf = PDF::loadView('emails.invoice', $data);
-                    return $pdf->setPaper('a4')->download('invoice.pdf');
+                    return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                 }
             }
         }
