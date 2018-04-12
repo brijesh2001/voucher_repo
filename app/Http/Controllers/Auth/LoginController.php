@@ -175,7 +175,7 @@ class LoginController extends Controller
         $request_data = $request->all();
         Mail::send(new SuccessMail($request_data));
         $request->session()->flash('alert-success','Thanks admin will contact you within 24 hours.');
-        return redirect('/send-query');
+        return redirect('/');
     }
 
     /**

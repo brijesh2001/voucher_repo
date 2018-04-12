@@ -710,7 +710,7 @@
             <td colspan=2 class="tr0 td4"><P class="p3 ft1">Invoice Date</P></td>
             <td class="tr0 td5">
                 <P class="p4 ft1">
-                    <nobr>11-02-2018</nobr>
+                    <nobr>{{$created_at}}</nobr>
                 </P>
             </td>
         </tr>
@@ -722,7 +722,7 @@
             <td colspan=2 class="tr1 td4"><P class="p3 ft1">Invoice No.</P></td>
             <td class="tr1 td5">
                 <P class="p4 ft1">
-                    <nobr>20180211-13</nobr>
+                    <nobr>{{$invoice_number}}</nobr>
                 </P>
             </td>
         </tr>

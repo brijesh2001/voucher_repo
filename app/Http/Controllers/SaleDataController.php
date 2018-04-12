@@ -3,16 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
 use App\Models\SaleData;
 use App\Models\Role;
-use Illuminate\Support\Facades\Auth;
 use Validator;
 use Event;
 use Hash;
-use App\Events\SendMail;
 use DB;
 use Excel;
+use PDF;
 class SaleDataController extends Controller
 {
 
@@ -283,6 +281,11 @@ class SaleDataController extends Controller
 
     }
 
+    /**
+     * @param Request $request
+     * @return mixed
+     * @desc download pdf
+     */
     public function downloadpdf(request $request)
     {
         $requestData = $request->all();
@@ -301,9 +304,8 @@ class SaleDataController extends Controller
                     $data['igst'] = number_format($IGST,2);
                 }
             }
-            echo'<pre>';
-            print_r($data);
-            die();
+            $pdf = PDF::loadView('emails.invoice', $data);
+            return $pdf->download('invoice.pdf');
         }
     }
 

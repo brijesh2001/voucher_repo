@@ -238,7 +238,7 @@ class OfflinePayment extends Authenticatable
             // For invoice number
             $invoiceSeries = new OfflineInvoiceSeries();
             if(isset($data['invoice_no'])) {
-                $returnData['invoice_no'] = $data['invoice_no']   ;
+                $returnData['invoice_no'] = $data['invoice_no'];
             }else {
                 $invoice_number = $invoiceSeries->getLastInsertedInvoiceId();
                 $current_year = date('Y');

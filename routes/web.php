@@ -21,6 +21,7 @@ Route::get('/contact-us', 'Auth\LoginController@contactUs');
 Route::get('/thankyou', 'Auth\LoginController@thankYou');
 Route::get('/about-us', 'Auth\LoginController@aboutUs');
 Route::get('/buy', 'Auth\LoginController@buy');
+Route::post('/send-query', 'Auth\LoginController@sendQuery');
 Route::get('/backend', function () {
     return Redirect::to('login');
 });
