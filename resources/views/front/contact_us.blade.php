@@ -24,6 +24,7 @@
                                             placeholder="Email" required="" class="form-control2"></div>
                 <div class="frm-grp"><textarea class="form-control2" name="Message" placeholder="Message"
                                                style="margin-bottom: 1em;color:#fff;"></textarea></div>
+                <input type="hidden" name="type" value="send_query">
                 <div class="frm-grp"><input type="submit" value="Send" class="btn"
                                             style="text-align:center;background-color:#df4914;margin-bottom: 1em;color:#fff;front-size:1.2em;width:94%"
                                             type="submit"></div>
