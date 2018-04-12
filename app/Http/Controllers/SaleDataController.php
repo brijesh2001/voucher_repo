@@ -208,7 +208,7 @@ class SaleDataController extends Controller
             $row[] = (isset($saledataData->Enquiry)) ? $saledataData->Enquiry->email : "---";
             $row[] = (isset($saledataData->Enquiry)) ? $saledataData->Enquiry->mobile : "---";
             $row[] = $saledataData->client_gstn;
-            $row[] = 'HSN/SAC';
+            $row[] = '8532';
             $row[] = $saledataData->voucher_code;
             $row[] = $saledataData->number_of_voucher;
             $row[] = $saledataData->payment_code;
@@ -253,7 +253,7 @@ class SaleDataController extends Controller
             $row['Email'] = (isset($requestData->Enquiry)) ? $requestData->Enquiry->email : "---";
             $row['Mobile'] = (isset($requestData->Enquiry)) ? $requestData->Enquiry->mobile : "---";
             $row['GSTN'] = $requestData->client_gstn;
-            $row['HSN/SAC'] = 'HSN/SAC';
+            $row['HSN/SAC'] = '8532';
             $row['Voucher'] = $requestData->voucher_code;
             $row['Number Of Voucher'] = $requestData->number_of_voucher;
             $row['Transaction Id'] = $requestData->payment_code;
