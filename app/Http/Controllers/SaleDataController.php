@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\OfflinePayment;
 use Illuminate\Http\Request;
 use App\Models\SaleData;
 use App\Models\Role;
@@ -16,17 +17,19 @@ class SaleDataController extends Controller
 
     protected $saledata;
     protected $role;
+    protected $offlinePayment;
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(SaleData $saledata, Role $role)
+    public function __construct(SaleData $saledata, Role $role,OfflinePayment $offlinePayment)
     {
         $this->middleware(['auth', 'checkRole']);
         $this->saledata = $saledata;
         $this->role = $role;
+        $this->offlinePayment = $offlinePayment;
     }
 
     /**
@@ -218,7 +221,7 @@ class SaleDataController extends Controller
             $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? '-' :  'IGST:' .$IGST;
             $row[] = $saledataData->amount_paid;
             $row[] =  $saledataData->state ;
-            $row[] = view('datatable.pdf', ['module' => "agent",'type' => $saledataData->id, 'id' => $saledataData->id])->render();
+            $row[] = view('datatable.pdf', ['module' => "agent",'type' => 'online', 'id' => $saledataData->id])->render();
 
             $appData[] = $row;
         }
@@ -290,22 +293,35 @@ class SaleDataController extends Controller
     {
         $requestData = $request->all();
         if(!empty($requestData)) {
-            $id = $requestData['id'];
-            $data = (array)$this->saledata->getSaleDataFromId($id);
-            if(!empty($data)) {
-                $rateBeforeGst = $data['amount_paid']*100/118;
-                $IGST = $data['amount_paid'] -  $rateBeforeGst;
-                if($data['state_id'] == 5){
-                    $cgstSgst = $IGST/2;
-                    $data['cgst'] = $data['sgst'] = number_format($cgstSgst,2);
-                    $data['igst'] = 0;
-                }else {
-                    $data['cgst'] = $data['sgst'] = 0;
-                    $data['igst'] = number_format($IGST,2);
+            if($requestData['type'] == 'online') {
+                $id = $requestData['id'];
+                $data = (array)$this->saledata->getSaleDataFromId($id);
+                if(!empty($data)) {
+                    $rateBeforeGst = $data['amount_paid']*100/118;
+                    $IGST = $data['amount_paid'] -  $rateBeforeGst;
+                    if($data['state_id'] == 5){
+                        $cgstSgst = $IGST/2;
+                        $data['cgst'] = $data['sgst'] = number_format($cgstSgst,2);
+                        $data['igst'] = 0;
+                    }else {
+                        $data['cgst'] = $data['sgst'] = 0;
+                        $data['igst'] = number_format($IGST,2);
+                    }
+                    $pdf = PDF::loadView('emails.invoice', $data);
+                    return $pdf->setPaper('a4')->download('invoice.pdf');
+                }
+            }elseif ($requestData['type'] == 'offline') {
+                $id = $requestData['id'];
+                $data = (array)$this->offlinePayment->getOfflinePaymentForPdfDownload($id);
+                if(!empty($data)) {
+                    //typecasting the variable like above array for pdf download
+                   $data['amount_paid'] = $data['rate_after_gst'];
+                   $data['created_at '] = $data['payment_date'];
+                   $data['invoice_number'] = $data['invoice_no'];
+                    $pdf = PDF::loadView('emails.invoice', $data);
+                    return $pdf->setPaper('a4')->download('invoice.pdf');
                 }
             }
-            $pdf = PDF::loadView('emails.invoice', $data);
-            return $pdf->download('invoice.pdf');
         }
     }
 

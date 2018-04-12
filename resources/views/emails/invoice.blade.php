@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=8">
     <title>INVOICE</title>
     <!-- #include virtual="/convert-pdf-to-html/includes/pdf-to-word-head-tag.htm" -->
-    <meta name="generator" content="BCL easyConverter SDK 5.0.08">
     <style type="text/css">
 
         body {
@@ -13,7 +12,7 @@
             margin-left: 0px;
         }
 
-        #page_1 {
+       /* #page_1 {
             position: relative;
             overflow: hidden;
             margin: 21px 0px 40px 20px;
@@ -21,7 +20,7 @@
             border: none;
             width: 773px;
             height: 1062px;
-        }
+        }*/
 
         #page_1 #p1dimg1 {
             position: absolute;

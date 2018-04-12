@@ -157,6 +157,7 @@ class OfflinePaymentController extends Controller
             $row[] = $offlinePaymentData->rate_after_gst;
             $row[] = $offlinePaymentData->state_name;
             $row[] = view('datatable.action', ['module' => "offline",'type' => $offlinePaymentData->id, 'id' => $offlinePaymentData->id])->render();
+            $row[] = view('datatable.pdf', ['module' => "agent",'type' => 'offline', 'id' => $offlinePaymentData->id])->render();
             $appData[] = $row;
         }
 

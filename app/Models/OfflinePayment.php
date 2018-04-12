@@ -6,7 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Auth;
 use Mail;
-use App\Mail\SuccessMail;
+use DB;
 
 
 
@@ -325,7 +325,20 @@ class OfflinePayment extends Authenticatable
 
     }
 
-
-
+    /**
+     * @param $id
+     * @return array
+     *
+     * @desc get pdf download for offline payment
+     */
+    public function getOfflinePaymentForPdfDownload($id)
+    {
+        $result =  DB::select('select tbo.*, ss.name as state_name,ss.id as state_id 
+                            from tbl_offline_payment tbo
+                            LEFT JOIN tbl_state ss ON ss.id = tbo.state
+                            where tbo.id = :id',
+            ['id' =>$id]);
+        return (!empty($result)) ? $result[0]: [];
+    }
 
 }

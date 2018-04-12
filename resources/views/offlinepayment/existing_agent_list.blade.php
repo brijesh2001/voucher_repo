@@ -85,6 +85,7 @@
                                             <th>After GST</th>
                                             <th>State</th>
                                             <th>Actions</th>
+                                            <th>PDF Download</th>
 
 
                                         </tr>
@@ -92,6 +93,7 @@
                                         </thead>
                                         <thead>
                                         <tr>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
