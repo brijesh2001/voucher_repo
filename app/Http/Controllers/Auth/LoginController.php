@@ -12,6 +12,7 @@ use Auth;
 use App\Models\State;
 use Mail;
 use App\Mail\SuccessMail;
+use Kyranb\Footprints\TrackRegistrationAttribution;
 
 
 class LoginController extends Controller
@@ -27,7 +28,7 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    use AuthenticatesUsers,TrackRegistrationAttribution;
 
     /**
      * Where to redirect users after login.
@@ -81,8 +82,7 @@ class LoginController extends Controller
     public function welcome(Request $request)
     {
        $user_id = $request->all();
-
-        if(isset($user_id) && !empty($user_id)) {
+        if(isset($user_id['user_id']) && !empty($user_id['user_id'])) {
             $state_model = new State();
             $data['state'] = $state_model->getCollection();
             $data['user_id'] = $user_id['user_id'];
