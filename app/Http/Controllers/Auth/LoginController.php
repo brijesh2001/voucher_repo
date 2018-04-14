@@ -194,7 +194,7 @@ class LoginController extends Controller
     public function buy(Request $request)
     {
         $user_id = $request->all();
-        if(isset($user_id) && !empty($user_id)) {
+        if(isset($user_id['user_id']) && !empty($user_id['user_id'])) {
             $state_model = new State();
             $data['state'] = $state_model->getCollection();
             $data['user_id'] = $user_id['user_id'];
