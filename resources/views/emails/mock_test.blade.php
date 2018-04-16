@@ -52,7 +52,7 @@
         <td>
             <table style="width:100%; background-color:#ccc; border-top:5px solid #6d9d31; font-size:20px;">
                 <tr style="text-align:left;">
-                    <td><p>Regards,<br />Pte Voucher<br />+91 81404 43300<br /><a href="#">ptevouchercode.com</a></p></td>
+                    <td><p>Regards,<br />Pte Voucher<br />+91-9099-500-925<br /><a href="#">ptevouchercode.com</a></p></td>
                 </tr>
             </table>
         </td>

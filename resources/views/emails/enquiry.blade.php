@@ -25,7 +25,7 @@
             <table style=" width:536px; padding-bottom:20px; padding-left:150px; font-size:20px;">
                 <tr style="text-align:left;">
                     <td width="40px"><img style="height:32px; width:32px;"  src={{url('css/front/images/smartphone-em.png')}}></td>
-                    <td>+91 81404 43300</td>
+                    <td>+91-9099-500-925</td>
                 </tr>
 
                 <tr style="text-align:left;">
