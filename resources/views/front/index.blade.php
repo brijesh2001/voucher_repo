@@ -166,7 +166,7 @@
 
                 <div style="height:115px;"><img style="height:105px;width:81px;" src={{url('css/front/images/why1.png')}}></div>
                 <h4>24X7 Customer Care</h4>
-                <p>We are available to assist you on call &amp; Whats App 24X7 on +91-81404 43300</p></div>
+                <p>We are available to assist you on call &amp; Whats App 24X7 on +91-9099-500-925</p></div>
             <div class="col-md-3 services-grids-w3l">
 
 

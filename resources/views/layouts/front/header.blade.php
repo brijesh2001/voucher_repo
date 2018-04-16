@@ -6,7 +6,7 @@
             Re-seller of PTE-A Voucher</p>
         <p style="float:right;width: 225px;text-align:right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
                     class="glyphicon glyphicon-envelope"></span>info@compassoverseas.com</p>
-        <p style="float:right;margin-left:20px;"><span class="glyphicon glyphicon-earphone"></span> +91-81404 43300
+        <p style="float:right;margin-left:20px;"><span class="glyphicon glyphicon-earphone"></span> +91-9099-500-925
         </p>
         <p style="float:right;">24 X 7 Support</p></div>
 </div>
