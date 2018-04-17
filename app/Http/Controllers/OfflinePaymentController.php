@@ -155,6 +155,7 @@ class OfflinePaymentController extends Controller
             $row[] = $offlinePaymentData->cgst;
             $row[] = $offlinePaymentData->igst;
             $row[] = $offlinePaymentData->rate_after_gst;
+            $row[] = $offlinePaymentData->payment_type;
             $row[] = $offlinePaymentData->state_name;
             $row[] = view('datatable.action', ['module' => "offline",'type' => $offlinePaymentData->id, 'id' => $offlinePaymentData->id])->render();
             $row[] = view('datatable.pdf', ['module' => "agent",'type' => 'offline', 'id' => $offlinePaymentData->id])->render();
@@ -366,6 +367,7 @@ class OfflinePaymentController extends Controller
             $row['CGST'] = $requestData->cgst;
             $row['IGST'] = $requestData->igst;
             $row['After GST'] = $requestData->rate_after_gst;
+            $row['Payment Type'] = $requestData->payment_type;
             $row['State'] =  $requestData->state_name;
             $appData[] = $row;
         }

@@ -40,7 +40,7 @@ class SuccessMail extends Mailable
         }elseif ($this->successData['type'] == 'customer'){
             $to = $this->successData['email'];
             $view = 'emails.success_customer';
-            $subject = 'PTE Promo Code';
+            $subject = 'PTE Voucher Code';
         }elseif($this->successData['type'] == 'send_query'){
             $to = 'info@compassoverseas.com';
             $view = 'emails.customer_contactus';

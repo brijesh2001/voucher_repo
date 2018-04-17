@@ -26,7 +26,7 @@ class OfflinePayment extends Authenticatable
      */
     protected $fillable = [
         'email', 'name','mobile','state', 'payment_date','invoice_no','gstn','hsn','voucher_code','number_of_voucher','transaction_id',
-        'rate_before_gst','rate_after_gst','cgst','sgst','igst','state'
+        'rate_before_gst','rate_after_gst','cgst','sgst','igst','state','payment_type'
     ];
 
     
@@ -191,6 +191,7 @@ class OfflinePayment extends Authenticatable
            'email' => $models['email'],
            'mobile' => $models['mobile'],
            'gstn' => $models['gstn'],
+           'payment_type' => $models['payment_type'],
            'hsn' => 'HSN',
            'voucher_code' => $models['voucher_code'],
            'number_of_voucher' => $models['number_of_voucher'],
@@ -276,6 +277,7 @@ class OfflinePayment extends Authenticatable
         $agent_data->mobile = $models['mobile'];
         $agent_data->gstn = $models['gstn'];
         $agent_data->hsn = $models['hsn'];
+        $agent_data->payment_type = $models['payment_type'];
         $agent_data->voucher_code = $models['voucher_code'];
         $agent_data->number_of_voucher = $models['number_of_voucher'];
         $agent_data->transaction_id = $models['transaction_id'];

@@ -94,6 +94,19 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label class="col-sm-4 control-label">Payment Type<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <select name="payment_type" class="form-control input-sm required" id="payment_type">
+                                            <option value="">{{trans('app.select')}}</option>
+                                            <option value="Online Payment">Online Payment</option>
+                                            <option value="Bank Payment">Bank Payment</option>
+                                            <option value="Cash On Hand">Cash On Hand</option>
+                                            <option value="Cash Deposit">Cash Deposit</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <label class="col-sm-4 control-label">State <span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
                                         <select class="form-control input-sm required" name="state" id="state">

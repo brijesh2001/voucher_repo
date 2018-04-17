@@ -186,14 +186,21 @@ class SaleData extends Authenticatable
 
 
         //For Generating the Invoice number
-        $invoice_number = $this->generateInvoiceNumber();
-        $saledata = new SaleData;
-        if(isset($models['client_gstn']) && !empty($models['client_gstn'])) {
+        $invoice_number = $this->generateInvoiceSeries();
+        //$invoice_number = $this->generateNewInvoiceNumber();
+       // $saledata = new SaleData;
+       /* if(isset($models['client_gstn']) && !empty($models['client_gstn'])) {
             $saledata->client_gstn =  $models['client_gstn'];
         }else {
             $saledata->client_gstn = 'NONE';
+        }*/
+
+        if(isset($models['client_gstn']) && !empty($models['client_gstn'])) {
+            $client_gstn =  $models['client_gstn'];
+        }else {
+            $client_gstn = 'NONE';
         }
-        $saledata->created_at = date('Y-m-d H:i:s');
+        /*$saledata->created_at = date('Y-m-d H:i:s');
         $saledata->invoice_number = $invoice_number;
         $saledata->voucher_id = $models['voucher_id'];
         $saledata->voucher_code = $models['voucher_code'];
@@ -204,9 +211,29 @@ class SaleData extends Authenticatable
         $saledata->amount_paid = $models['amount_paid'];
         $saledata->number_of_voucher = $models['number_of_voucher'];
         $saledata->updated_at = date('Y-m-d H:i:s');
-        $saledataId = $saledata->save();
+        $saledataId = $saledata->save();*/
 
-        if ($saledataId) {
+        $saledata =  SaleData::create([
+            'client_gstn' => $client_gstn,
+            'created_at' => date('Y-m-d H:i:s'),
+            'invoice_number' => $invoice_number,
+            'voucher_id' => $models['voucher_id'],
+            'voucher_code' => $models['voucher_code'],
+            'instamojo_fee' => $models['instamojo_fee'],
+            'enquiry_id' => $models['enquiry_id'],
+            'payment_code' => $models['payment_code'],
+            'rate' => $models['rate'],
+            'amount_paid' => $models['amount_paid'],
+            'number_of_voucher' => $models['number_of_voucher'],
+            'updated_at' => date('Y-m-d H:i:s'),
+        ]);
+
+        if ($saledata) {
+            $invoice_data = [];
+            $invoice_data['invoice_number'] = $saledata->invoice_number;
+            $invoice_data['sale_id'] = $saledata->id;
+            $invoiceSeries = new OnlineInvoiceSeries();
+            $invoiceSeries->insertInvoiceData($invoice_data);
             return $saledata;
         } else {
             return false;
@@ -393,4 +420,16 @@ class SaleData extends Authenticatable
         return (!empty($result)) ? $result[0]: [];
     }
 
+    /**
+     * @return string
+     *
+     * @desc generate the invoice number
+     */
+    public function generateInvoiceSeries()
+    {
+        $onlineInvoiceSeries = new OnlineInvoiceSeries();
+        $invoice_number = $onlineInvoiceSeries->getLastInsertedInvoiceId();
+        $current_year = date('Y');
+        return 'INV_'.$current_year.'_V_'.$invoice_number;
+    }
 }

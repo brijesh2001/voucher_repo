@@ -15,7 +15,8 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         //
         Commands\UpdateUnusedVoucher::class,
-        Commands\InformVoucherOver::class
+        Commands\InformVoucherOver::class,
+        Commands\UpdateInvoiceNumber::class
     ];
 
     /**
@@ -32,6 +33,8 @@ class Kernel extends ConsoleKernel
             ->everyTenMinutes();
         $schedule->command('inform:owner')
             ->everyThirtyMinutes();
+        $schedule->command('update:invoice')
+            ->everyTenMinutes();
     }
 
     /**

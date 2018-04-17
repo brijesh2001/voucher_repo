@@ -83,6 +83,7 @@
                                             <th>CGST</th>
                                             <th>IGST</th>
                                             <th>After GST</th>
+                                            <th>Payment Type</th>
                                             <th>State</th>
                                             <th>Actions</th>
                                             <th>PDF Download</th>
@@ -93,6 +94,7 @@
                                         </thead>
                                         <thead>
                                         <tr>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>

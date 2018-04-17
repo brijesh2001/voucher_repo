@@ -94,6 +94,19 @@
                                 </div>
 
                                 <div class="form-group">
+                                    <label class="col-sm-4 control-label">Payment Type <span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <select class="form-control input-sm required" name="payment_type" id="payment_type">
+                                            <option value="">Payment Type</option>
+                                                    <option value="Online Payment" @if('Online Payment' == $details->payment_type){{"selected"}}@endif>Online Payment</option>
+                                                    <option value="Bank Payment" @if('Bank Payment' == $details->payment_type){{"selected"}}@endif>Bank Payment</option>
+                                                    <option value="Cash On Hand" @if('Cash On Hand' == $details->payment_type){{"selected"}}@endif>Cash On Hand</option>
+                                                    <option value="Cash Deposit" @if('Cash Deposit' == $details->payment_type){{"selected"}}@endif>Cash Deposit</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
                                     <label class="col-sm-4 control-label">State <span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
                                         <select class="form-control input-sm required" name="state" id="state">
