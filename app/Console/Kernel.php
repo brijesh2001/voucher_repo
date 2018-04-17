@@ -33,8 +33,8 @@ class Kernel extends ConsoleKernel
             ->everyTenMinutes();
         $schedule->command('inform:owner')
             ->everyThirtyMinutes();
-        $schedule->command('update:invoice')
-            ->everyTenMinutes();
+        //$schedule->command('update:invoice')
+          //  ->everyTenMinutes();
     }
 
     /**
