@@ -11,7 +11,7 @@
 @section('content')
     <div class="be-content">
         <div class="page-head">
-            <h2>Purchase {{trans('app.management')}}</h2>
+            <h2>Discount Link {{trans('app.management')}}</h2>
             <ol class="breadcrumb">
                 <li><a href="{{url('/dashboard')}}">{{trans('app.admin_home')}}</a></li>
                 <li><a href="{{url('/agent/list')}}">Agent {{trans('app.management')}}</a></li>
