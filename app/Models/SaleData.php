@@ -210,7 +210,7 @@ class SaleData extends Authenticatable
         $saledataId = $saledata->save();
         if ($saledataId) {
             $invoice_data = [];
-            $invoice_data['invoice_number'] = $saledata->invoice_number;
+            $invoice_data['invoice_number'] = $invoice_number;
             $invoice_data['sale_id'] = $saledata->id;
             $invoiceSeries = new OnlineInvoiceSeries();
             $invoiceSeries->insertInvoiceData($invoice_data);
