@@ -218,7 +218,7 @@ class SaleDataController extends Controller
             $row[] = number_format(($amount_paid*100)/118,2);
             $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'SGST:'.number_format($IGST/2,2) : '-' ;
             $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'CGST:'.number_format($IGST/2,2) : '-' ;
-            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? '-' :  'IGST:' .$IGST;
+            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? '-' :  'IGST:'.number_format($IGST,2);
             $row[] = $saledataData->amount_paid;
             $row[] =  $saledataData->state ;
             $row[] = view('datatable.pdf', ['module' => "agent",'type' => 'online', 'id' => $saledataData->id])->render();
