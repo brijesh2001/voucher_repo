@@ -13,7 +13,7 @@ use App\Models\State;
 use Mail;
 use App\Mail\SuccessMail;
 use Kyranb\Footprints\TrackRegistrationAttribution;
-use Spatie\Sitemap\SitemapGenerator;
+
 
 
 class LoginController extends Controller
@@ -236,8 +236,4 @@ class LoginController extends Controller
         return view('front.buy',$data);
     }
 
-    public function sitemap()
-    {
-        SitemapGenerator::create('https://www.ptevouchercode.com')->writeToFile(storage_path());
-    }
 }
