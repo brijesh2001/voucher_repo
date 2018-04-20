@@ -238,6 +238,6 @@ class LoginController extends Controller
 
     public function sitemap()
     {
-        $variable = SitemapGenerator::create('host.voucher.com')->writeToFile(storage_path().DIRECTORY_SEPARATOR.'logs');
+        SitemapGenerator::create('https://www.ptevouchercode.com')->writeToFile(storage_path());
     }
 }
