@@ -115,16 +115,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         <priority>0.64</priority>
     </url>
     <url>
-        <loc>https://www.ptevouchercode.com/blog/page/2/</loc>
-        <lastmod>2018-04-20T04:12:20+00:00</lastmod>
-        <priority>0.64</priority>
-    </url>
-    <url>
-        <loc>https://www.ptevouchercode.com/blog/page/3/</loc>
-        <lastmod>2018-04-20T04:12:20+00:00</lastmod>
-        <priority>0.64</priority>
-    </url>
-    <url>
         <loc>https://www.ptevouchercode.com/blog/pte-pros-cons/</loc>
         <lastmod>2018-04-20T04:12:20+00:00</lastmod>
         <priority>0.64</priority>
@@ -146,11 +136,6 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
     </url>
     <url>
         <loc>https://www.ptevouchercode.com/blog/mistakes-avoid-pte-academic-exam/</loc>
-        <lastmod>2018-04-20T04:12:20+00:00</lastmod>
-        <priority>0.51</priority>
-    </url>
-    <url>
-        <loc>https://www.ptevouchercode.com/?utm_source=blog</loc>
         <lastmod>2018-04-20T04:12:20+00:00</lastmod>
         <priority>0.51</priority>
     </url>
@@ -179,6 +164,4 @@ echo '<?xml version="1.0" encoding="UTF-8"?>';
         <lastmod>2018-04-20T04:12:20+00:00</lastmod>
         <priority>0.51</priority>
     </url>
-
-
 </urlset>
