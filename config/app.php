@@ -181,6 +181,7 @@ return [
         ConsoleTVs\Charts\ChartsServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         Kyranb\Footprints\FootprintsServiceProvider::class,
+        Spatie\Sitemap\SitemapServiceProvider::class
 
     ],
 

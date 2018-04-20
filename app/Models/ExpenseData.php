@@ -196,9 +196,6 @@ class ExpenseData extends Authenticatable
         $expensedata->before_gst = $models['before_gst'];
         $expensedata->gst = $models['gst'];
         $expensedata->after_gst = $models['after_gst'];
-
-
-
         $expensedata->updated_at = date('Y-m-d H:i:s');
         $expensedataId = $expensedata->save();
 

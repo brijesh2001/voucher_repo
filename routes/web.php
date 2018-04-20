@@ -14,6 +14,7 @@
 Auth::routes();
 
 
+Route::get('/sitemap', 'Auth\LoginController@sitemap');
 Route::get('/', 'Auth\LoginController@welcome');
 Route::get('/infographics', 'Auth\LoginController@infographics');
 Route::get('/refund-policy', 'Auth\LoginController@refundPolicy');

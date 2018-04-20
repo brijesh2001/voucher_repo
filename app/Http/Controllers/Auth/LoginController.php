@@ -13,6 +13,7 @@ use App\Models\State;
 use Mail;
 use App\Mail\SuccessMail;
 use Kyranb\Footprints\TrackRegistrationAttribution;
+use Spatie\Sitemap\SitemapGenerator;
 
 
 class LoginController extends Controller
@@ -235,4 +236,8 @@ class LoginController extends Controller
         return view('front.buy',$data);
     }
 
+    public function sitemap()
+    {
+        $variable = SitemapGenerator::create('host.voucher.com')->writeToFile(storage_path().DIRECTORY_SEPARATOR.'logs');
+    }
 }
