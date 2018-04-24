@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="about-banner-section">
-        <div class="refer-friend" style="width: 100%;height: 700px">
+        <div class="refer-friend" style="width: 100%;height: 630px">
 
         </div>
 
