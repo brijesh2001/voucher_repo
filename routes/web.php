@@ -23,9 +23,11 @@ Route::get('/infographics', 'Auth\LoginController@infographics');
 Route::get('/refund-policy', 'Auth\LoginController@refundPolicy');
 Route::get('/contact-us', 'Auth\LoginController@contactUs');
 Route::get('/thankyou', 'Auth\LoginController@thankYou');
+Route::get('/thankyourefer', 'Auth\LoginController@thankYouRefer');
 Route::get('/about-us', 'Auth\LoginController@aboutUs');
 Route::get('/buy', 'Auth\LoginController@buy');
 Route::post('/send-query', 'Auth\LoginController@sendQuery');
+Route::get('/refer-friend', 'Auth\LoginController@referFriend');
 Route::get('/backend', function () {
     return Redirect::to('login');
 });
@@ -187,4 +189,12 @@ Route::group(['prefix' => 'saledata'], function () {
     Route::post('/invoie-datatable', 'SaleDataController@invoiceDatatable');
     Route::post('/delete', 'SaleDataController@delete');
     Route::get('/download-pdf', 'SaleDataController@downloadpdf')->name('saledata-pdfdownload');
+});
+
+Route::group(['prefix' => 'refer'], function () {
+
+    Route::any('/list', 'ReferController@index');
+    Route::get('/download/{file_name}','ReferController@downloadfile');
+    Route::post('/datatable', 'ReferController@datatable');
+    Route::post('/store', 'ReferController@store');
 });

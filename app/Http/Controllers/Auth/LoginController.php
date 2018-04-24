@@ -187,6 +187,14 @@ class LoginController extends Controller
     {
         return view('front.thankyou');
     }
+    /**
+     * contactUs view page
+     *
+     */
+    public function thankYouRefer()
+    {
+        return view('front.thankyourefer');
+    }
 
     /**
      * contactUs view page
@@ -235,5 +243,15 @@ class LoginController extends Controller
 
         return view('front.buy',$data);
     }
+
+    /**
+     * refer Friend view page
+     *
+     */
+    public function referFriend()
+    {
+        return view('front.referfriend');
+    }
+
 
 }

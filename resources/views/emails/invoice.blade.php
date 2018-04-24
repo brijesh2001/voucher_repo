@@ -1,907 +1,275 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<!DOCTYPE html>
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=8">
-    <title>INVOICE</title>
-    <!-- #include virtual="/convert-pdf-to-html/includes/pdf-to-word-head-tag.htm" -->
-    <style type="text/css">
-
-        body {
-            margin-top: 0px;
-            margin-left: 0px;
-        }
-
-       /* #page_1 {
-            position: relative;
-            overflow: hidden;
-            margin: 21px 0px 40px 20px;
-            padding: 0px;
-            border: none;
-            width: 773px;
-            height: 1062px;
-        }*/
-
-        #page_1 #p1dimg1 {
-            position: absolute;
-            top: 887px;
-            left: 0px;
-            z-index: -1;
-            width: 754px;
-            height: 175px;
-        }
-
-        #page_1 #p1dimg1 #p1img1 {
-            width: 754px;
-            height: 175px;
-        }
-
-        .ft0 {
-            font: 18px 'Arial';
-            color: #82001d;
-            line-height: 21px;
-        }
-
-        .ft1 {
-            font: 12px 'Arial';
-            color: #262626;
-            line-height: 15px;
-        }
-
-        .ft2 {
-            font: 1px 'Arial';
-            line-height: 1px;
-        }
-
-        .ft3 {
-            font: 1px 'Arial';
-            line-height: 7px;
-        }
-
-        .ft4 {
-            font: 11px 'Arial';
-            color: #262626;
-            line-height: 14px;
-        }
-
-        .ft5 {
-            font: 12px 'Arial';
-            color: #595959;
-            line-height: 15px;
-        }
-
-        .ft6 {
-            font: 1px 'Arial';
-            line-height: 13px;
-        }
-
-        .ft7 {
-            font: 12px 'Arial';
-            color: #262626;
-            line-height: 14px;
-        }
-
-        .ft8 {
-            font: 12px 'Arial';
-            color: #262626;
-            line-height: 13px;
-        }
-
-        .ft9 {
-            font: 17px 'Arial';
-            color: #82001d;
-            line-height: 19px;
-        }
-
-        .p0 {
-            text-align: left;
-            margin-top: 0px;
-            margin-bottom: 0px;
-        }
-
-        .p1 {
-            text-align: left;
-            padding-left: 3px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p2 {
-            text-align: left;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p3 {
-            text-align: right;
-            padding-right: 36px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p4 {
-            text-align: right;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p5 {
-            text-align: right;
-            padding-right: 9px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p6 {
-            text-align: left;
-            padding-left: 23px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p7 {
-            text-align: left;
-            padding-left: 80px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p8 {
-            text-align: left;
-            padding-left: 46px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p9 {
-            text-align: right;
-            padding-right: 76px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p10 {
-            text-align: left;
-            padding-left: 33px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p11 {
-            text-align: left;
-            padding-left: 8px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p12 {
-            text-align: left;
-            padding-left: 2px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p13 {
-            text-align: left;
-            padding-left: 32px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p14 {
-            text-align: left;
-            padding-left: 57px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p15 {
-            text-align: right;
-            padding-right: 46px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p16 {
-            text-align: right;
-            padding-right: 13px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p17 {
-            text-align: right;
-            padding-right: 38px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p18 {
-            text-align: right;
-            padding-right: 3px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p19 {
-            text-align: right;
-            padding-right: 17px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p20 {
-            text-align: right;
-            padding-right: 49px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p21 {
-            text-align: right;
-            padding-right: 1px;
-            margin-top: 0px;
-            margin-bottom: 0px;
-            white-space: nowrap;
-        }
-
-        .p22 {
-            text-align: left;
-            padding-right: 471px;
-            margin-top: 213px;
-            margin-bottom: 0px;
-        }
-
-        .p23 {
-            text-align: left;
-            margin-top: 2px;
-            margin-bottom: 0px;
-        }
-
-        .p24 {
-            text-align: left;
-            padding-left: 491px;
-            margin-top: 19px;
-            margin-bottom: 0px;
-        }
-
-        .p25 {
-            text-align: left;
-            padding-left: 319px;
-            margin-top: 100px;
-            margin-bottom: 0px;
-        }
-
-        .p26 {
-            text-align: left;
-            padding-left: 166px;
-            margin-top: 1px;
-            margin-bottom: 0px;
-        }
-
-        .td0 {
-            padding: 0px;
-            margin: 0px;
-            width: 179px;
-            vertical-align: bottom;
-        }
-
-        .td1 {
-            padding: 0px;
-            margin: 0px;
-            width: 125px;
-            vertical-align: bottom;
-        }
-
-        .td2 {
-            padding: 0px;
-            margin: 0px;
-            width: 81px;
-            vertical-align: bottom;
-        }
-
-        .td3 {
-            padding: 0px;
-            margin: 0px;
-            width: 64px;
-            vertical-align: bottom;
-        }
-
-        .td4 {
-            padding: 0px;
-            margin: 0px;
-            width: 220px;
-            vertical-align: bottom;
-        }
-
-        .td5 {
-            padding: 0px;
-            margin: 0px;
-            width: 84px;
-            vertical-align: bottom;
-        }
-
-        .td6 {
-            border-bottom: #82001d 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 64px;
-            vertical-align: bottom;
-        }
-
-        .td7 {
-            border-bottom: #82001d 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 115px;
-            vertical-align: bottom;
-        }
-
-        .td8 {
-            border-bottom: #82001d 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 125px;
-            vertical-align: bottom;
-        }
-
-        .td9 {
-            padding: 0px;
-            margin: 0px;
-            width: 145px;
-            vertical-align: bottom;
-        }
-
-        .td10 {
-            border-bottom: #82001d 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 160px;
-            vertical-align: bottom;
-        }
-
-        .td11 {
-            border-bottom: #82001d 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 60px;
-            vertical-align: bottom;
-        }
-
-        .td12 {
-            border-bottom: #82001d 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 84px;
-            vertical-align: bottom;
-        }
-
-        .td13 {
-            padding: 0px;
-            margin: 0px;
-            width: 115px;
-            vertical-align: bottom;
-        }
-
-        .td14 {
-            padding: 0px;
-            margin: 0px;
-            width: 160px;
-            vertical-align: bottom;
-        }
-
-        .td15 {
-            padding: 0px;
-            margin: 0px;
-            width: 60px;
-            vertical-align: bottom;
-        }
-
-        .td16 {
-            padding: 0px;
-            margin: 0px;
-            width: 206px;
-            vertical-align: bottom;
-        }
-
-        .td17 {
-            padding: 0px;
-            margin: 0px;
-            width: 64px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td18 {
-            padding: 0px;
-            margin: 0px;
-            width: 115px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td19 {
-            padding: 0px;
-            margin: 0px;
-            width: 125px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td20 {
-            padding: 0px;
-            margin: 0px;
-            width: 81px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td21 {
-            padding: 0px;
-            margin: 0px;
-            width: 160px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td22 {
-            padding: 0px;
-            margin: 0px;
-            width: 60px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td23 {
-            padding: 0px;
-            margin: 0px;
-            width: 84px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td24 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 64px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td25 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 115px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td26 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 125px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td27 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 81px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td28 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 160px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td29 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 60px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td30 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 84px;
-            vertical-align: bottom;
-            background: #f9f2f3;
-        }
-
-        .td31 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 64px;
-            vertical-align: bottom;
-        }
-
-        .td32 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 115px;
-            vertical-align: bottom;
-        }
-
-        .td33 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 125px;
-            vertical-align: bottom;
-        }
-
-        .td34 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 81px;
-            vertical-align: bottom;
-        }
-
-        .td35 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 160px;
-            vertical-align: bottom;
-        }
-
-        .td36 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 60px;
-            vertical-align: bottom;
-        }
-
-        .td37 {
-            border-bottom: #9b9b9b 1px solid;
-            padding: 0px;
-            margin: 0px;
-            width: 84px;
-            vertical-align: bottom;
-        }
-
-        .td38 {
-            padding: 0px;
-            margin: 0px;
-            width: 174px;
-            vertical-align: bottom;
-        }
-
-        .td39 {
-            padding: 0px;
-            margin: 0px;
-            width: 239px;
-            vertical-align: bottom;
-        }
-
-        .tr0 {
-            height: 16px;
-        }
-
-        .tr1 {
-            height: 24px;
-        }
-
-        .tr2 {
-            height: 32px;
-        }
-
-        .tr3 {
-            height: 40px;
-        }
-
-        .tr4 {
-            height: 7px;
-        }
-
-        .tr5 {
-            height: 43px;
-        }
-
-        .tr6 {
-            height: 22px;
-        }
-
-        .tr7 {
-            height: 19px;
-        }
-
-        .tr8 {
-            height: 33px;
-        }
-
-        .tr9 {
-            height: 21px;
-        }
-
-        .tr10 {
-            height: 31px;
-        }
-
-        .tr11 {
-            height: 23px;
-        }
-
-        .tr12 {
-            height: 13px;
-        }
-
-        .tr13 {
-            height: 30px;
-        }
-
-        .tr14 {
-            height: 17px;
-        }
-
-        .t0 {
-            width: 753px;
-            margin-top: 6px;
-            font: 12px 'Arial';
-            color: #262626;
-        }
-
-        .t1 {
-            width: 413px;
-            margin-left: 334px;
-            margin-top: 23px;
-            font: 12px 'Arial';
-            color: #262626;
-        }
-
-    </style>
+    <title>Invoice</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 </head>
+<style>
+    body{
+        font-family: Open Sans, Helvetica, Arial, sans-serif;
+        height: 100% !important; margin: 0 !important; padding: 0 !important; width: 100% !important;
+    }
+    hr{
+        color: brown;
+        background: brown;
+        height:1px;
+    }
+</style>
+<body style="background-color:#cccccc;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tr>
+        <td>
+            <table align="center" border="0" cellpadding="0" cellspacing="0" width="700" style="max-width:700px;background:white;padding: 10px;">
+                <tr>
+                    <td align="center">
+                        <table align="center" border="0" width="100%">
+                            <tr>
+                                <td style="color: brown;font-size: 18px;font-weight: bold;">Walkover Web Solutions Private Limited</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="font-size: 11px;font-weight: bold;">
+                            <tr>
+                                <td class="spacer" height="10" style="font-size: 10px; line-height: 10px; margin: 0; padding: 0; height:10px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>GSTIN</td>
+                                <td>23AAACW9768L1ZO</td>
+                                <td>Invoice Date</td>
+                                <td>11-02-2018</td>
+                            </tr>
+                            <tr>
+                                <td class="spacer" height="10" style="font-size: 10px; line-height: 10px; margin: 0; padding: 0; height:10px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>PAN</td>
+                                <td>AAACW9768L</td>
+                                <td>Invoice No.</td>
+                                <td>20180211-13</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spacer" height="30" style="font-size: 30px; line-height: 30px; margin: 0; padding: 0; height:30px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table align="center" border="0"  width="100%">
+                            <tr>
+                                <td style="width:42%">&nbsp;<hr/>&nbsp;</td>
+                                <td style="vertical-align:middle; text-align: center;color: brown;font-size: 18px;">TAX INVOICE</td>
+                                <td style="width:41%">&nbsp;<hr/>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spacer" height="30" style="font-size: 30px; line-height: 30px; margin: 0; padding: 0; height:30px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table align="center" border="0" width="100%" style="font-size: 11px;font-weight: bold;">
+                            <tr>
+                                <td>PTE EDU SERVICES</td>
+                                <td>Billing Address</td>
+                                <td>Shipping Address</td>
+                            </tr>
+                            <tr>
+                                <td style="line-height: 18px;">info@compassoverseas.com<br>
+                                    919725053310
+                                </td>
+                                <td style="line-height: 18px;">27/ Shahikutir Bunglow,<br>
+                                    Nikol<br>
+                                    Gujarat<br><br>
 
-<body>
-<!-- #include virtual="/convert-pdf-to-html/includes/pdf-to-word-body-tag-02242014.htm" -->
-<div id="page_1">
-    <div id="p1dimg1">
-        <IMG src="data:image/jpg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0aHBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCACvAvIDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD3+iiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigCvfWFnqdnJZ39pBd2smN8M8YkRsEEZU8HBAP4Vj/wDCCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNH/CCeD/APoVND/8F0P/AMTXQUUAc/8A8IJ4P/6FTQ//AAXQ/wDxNFdBRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBxP/CUeN/+ien/AMHEP/xNH/CUeN/+ien/AMHEP/xNdtijFBt7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CUeN/wDonp/8HEP/AMTXbYoxQHtI/wAi+9/5nE/8JR43/wCien/wcQ//ABNH/CUeN/8Aonp/8HEP/wATXbYoxQHtI/yL73/mcT/wlHjf/onp/wDBxD/8TR/wlHjf/onp/wDBxD/8TXbYoxQHtI/yL73/AJnE/wDCUeN/+ien/wAHEP8A8TR/wlHjf/onp/8ABxD/APE122KMUB7SP8i+9/5nE/8ACUeN/wDonp/8HEP/AMTR/wAJR43/AOien/wcQ/8AxNdtijFAe0j/ACL73/mcT/wlHjf/AKJ6f/BxD/8AE0f8JR43/wCien/wcQ//ABNdtijFAe0j/Ivvf+ZxP/CUeN/+ien/AMHEP/xNH/CUeN/+ien/AMHEP/xNdtijFAe0j/Ivvf8AmcT/AMJR43/6J6f/AAcQ/wDxNFdtiigPaR/kX3v/ADCiiigxCiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA//9k="
-             alt=""></div>
+                                    GSTIN<br>
+                                    24DQNPP9163D1ZH
+                                </td>
+                                <td style="line-height: 18px;">27/ Shahikutir Bunglow,<br>
+                                    Nikol<br>
+                                    Gujarat<br><br>
 
+                                    GSTIN<br>
+                                    24DQNPP9163D1ZH
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spacer" height="30" style="font-size: 30px; line-height: 30px; margin: 0; padding: 0; height:30px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table align="center" border="0" width="100%" style="font-size: 11px;font-weight: bold;">
+                            <tr>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">Sr No.</td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">Date</td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">Item</td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">HSN/SAC</td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">Taxable Value</td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">IGST</td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">CGST</td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">SGST</td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">Total</td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px;">1</td>
+                                <td style="padding: 15px;">11-02-2018</td>
+                                <td style="padding: 15px;">Promotional Route</td>
+                                <td style="padding: 15px;">998413</td>
+                                <td style="padding: 15px;">4000.00</td>
+                                <td style="padding: 15px;">720.00</td>
+                                <td style="padding: 15px;"></td>
+                                <td style="padding: 15px;"></td>
+                                <td style="padding: 15px;">4720.00</td>
+                            </tr>
 
-    <P class="p0 ft0">PTE EDU SERVICES</P>
-    <table cellpadding=0 cellspacing=0 class="t0">
-        <tr>
-            <td colspan=2 class="tr0 td0"><P class="p1 ft1">GSTIN 24DQNPP9163D1ZH</P></td>
-            <td class="tr0 td1"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr0 td2"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr0 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td colspan=2 class="tr0 td4"><P class="p3 ft1">Invoice Date</P></td>
-            <td class="tr0 td5">
-                <P class="p4 ft1">
-                    <nobr>{{$created_at}}</nobr>
-                </P>
-            </td>
-        </tr>
-        <tr>
-            <td colspan=2 class="tr1 td0"><P class="p1 ft1">PAN</P></td>
-            <td class="tr1 td1"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr1 td2"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr1 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td colspan=2 class="tr1 td4"><P class="p3 ft1">Invoice No.</P></td>
-            <td class="tr1 td5">
-                <P class="p4 ft1">
-                    <nobr>{{$invoice_number}}</nobr>
-                </P>
-            </td>
-        </tr>
-        <tr>
-            <td class="tr2 td6"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr2 td7"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr2 td8"><P class="p2 ft2">&nbsp;</P></td>
-            <td colspan=2 rowspan=2 class="tr3 td9"><P class="p5 ft0">TAX INVOICE</P></td>
-            <td class="tr2 td10"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr2 td11"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr2 td12"><P class="p2 ft2">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td class="tr4 td3"><P class="p2 ft3">&nbsp;</P></td>
-            <td class="tr4 td13"><P class="p2 ft3">&nbsp;</P></td>
-            <td class="tr4 td1"><P class="p2 ft3">&nbsp;</P></td>
-            <td class="tr4 td14"><P class="p2 ft3">&nbsp;</P></td>
-            <td class="tr4 td15"><P class="p2 ft3">&nbsp;</P></td>
-            <td class="tr4 td5"><P class="p2 ft3">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td colspan=2 class="tr5 td0"><P class="p6 ft1">PTE EDU SERVICES</P></td>
-            <td colspan=2 class="tr5 td16"><P class="p7 ft1">Billing Address</P></td>
-            <td class="tr5 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr5 td14"><P class="p8 ft1">Shipping Address</P></td>
-            <td class="tr5 td15"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr5 td5"><P class="p2 ft2">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td colspan=2 class="tr6 td0"><P class="p6 ft4">info@compassoverseas.com</P></td>
-            <td colspan=2 class="tr6 td16"><P class="p7 ft4">27/ Shahikutir Bunglow,</P></td>
-            <td class="tr6 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td colspan=2 class="tr6 td4"><P class="p8 ft1">27/ Shahikutir Bunglow,</P></td>
-            <td class="tr6 td5"><P class="p2 ft2">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td colspan=2 class="tr7 td0"><P class="p9 ft1">919725053310</P></td>
-            <td colspan=2 class="tr7 td16"><P class="p7 ft1">Nikol</P></td>
-            <td class="tr7 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr7 td14"><P class="p8 ft1">Nikol</P></td>
-            <td class="tr7 td15"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr7 td5"><P class="p2 ft2">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td class="tr7 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr7 td13"><P class="p2 ft2">&nbsp;</P></td>
-            <td colspan=2 class="tr7 td16"><P class="p7 ft1">Gujarat</P></td>
-            <td class="tr7 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr7 td14"><P class="p8 ft1">Gujarat</P></td>
-            <td class="tr7 td15"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr7 td5"><P class="p2 ft2">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td class="tr8 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr8 td13"><P class="p2 ft2">&nbsp;</P></td>
-            <td colspan=2 class="tr8 td16"><P class="p7 ft1">GSTIN</P></td>
-            <td class="tr8 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr8 td14"><P class="p8 ft1">GSTIN</P></td>
-            <td class="tr8 td15"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr8 td5"><P class="p2 ft2">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td class="tr9 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr9 td13"><P class="p2 ft2">&nbsp;</P></td>
-            <td colspan=2 class="tr9 td16"><P class="p7 ft1">24DQNPP9163D1ZH</P></td>
-            <td class="tr9 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr9 td14"><P class="p8 ft4">24DQNPP9163D1ZH</P></td>
-            <td class="tr9 td15"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr9 td5"><P class="p2 ft2">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td class="tr3 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr3 td13"><P class="p2 ft2">&nbsp;</P></td>
-            <td colspan=2 class="tr3 td16"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr3 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr3 td14"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr3 td15"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr3 td5"><P class="p2 ft2">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td class="tr10 td17"><P class="p10 ft1">S No.</P></td>
-            <td class="tr10 td18"><P class="p11 ft1">Date</P></td>
-            <td class="tr10 td19"><P class="p12 ft1">Item</P></td>
-            <td class="tr10 td20"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr10 td17"><P class="p2 ft1">HSN/SAC</P></td>
-            <td class="tr10 td21"><P class="p8 ft1">Taxable Value</P></td>
-            <td class="tr10 td22"><P class="p13 ft1">IGST</P></td>
-            <td class="tr10 td23"><P class="p14 ft1">Total</P></td>
-        </tr>
-        <tr>
-            <td class="tr0 td24"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr0 td25"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr0 td26"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr0 td27"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr0 td24"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr0 td28"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr0 td29"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr0 td30"><P class="p2 ft2">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td colspan=2 class="tr11 td0">
-                <P class="p15 ft1">1
-                    <nobr>11-02-2018</nobr>
-                </P>
-            </td>
-            <td colspan=2 class="tr11 td16"><P class="p12 ft5">Promotional Route</P></td>
-            <td class="tr11 td3"><P class="p16 ft1">998413</P></td>
-            <td class="tr11 td14"><P class="p17 ft1">4000.00</P></td>
-            <td class="tr11 td15"><P class="p18 ft1">720.00</P></td>
-            <td class="tr11 td5"><P class="p4 ft1">4720.00</P></td>
-        </tr>
-        <tr>
-            <td class="tr7 td3"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr7 td13"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr7 td1"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr7 td2"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr7 td3"><P class="p19 ft1">(S)</P></td>
-            <td class="tr7 td14"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr7 td15"><P class="p4 ft5">@18.00%</P></td>
-            <td class="tr7 td5"><P class="p2 ft2">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td class="tr12 td31"><P class="p2 ft6">&nbsp;</P></td>
-            <td class="tr12 td32"><P class="p2 ft6">&nbsp;</P></td>
-            <td class="tr12 td33"><P class="p2 ft6">&nbsp;</P></td>
-            <td class="tr12 td34"><P class="p2 ft6">&nbsp;</P></td>
-            <td class="tr12 td31"><P class="p2 ft6">&nbsp;</P></td>
-            <td class="tr12 td35"><P class="p2 ft6">&nbsp;</P></td>
-            <td class="tr12 td36"><P class="p2 ft6">&nbsp;</P></td>
-            <td class="tr12 td37"><P class="p2 ft6">&nbsp;</P></td>
-        </tr>
-        <tr>
-            <td class="tr13 td17"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr13 td18"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr13 td19"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr13 td20"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr13 td17"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr13 td21"><P class="p17 ft1">4000.00</P></td>
-            <td class="tr13 td22"><P class="p4 ft1">720.00</P></td>
-            <td class="tr13 td23"><P class="p4 ft1">4720.00</P></td>
-        </tr>
-        <tr>
-            <td class="tr14 td17"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr14 td18"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr14 td19"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr14 td20"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr14 td17"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr14 td21"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr14 td22"><P class="p2 ft2">&nbsp;</P></td>
-            <td class="tr14 td23"><P class="p2 ft2">&nbsp;</P></td>
-        </tr>
-    </table>
-    <table cellpadding=0 cellspacing=0 class="t1">
-        <tr>
-            <td class="tr0 td38"><P class="p20 ft1">Taxable Amount</P></td>
-            <td class="tr0 td39"><P class="p4 ft1">4000.00</P></td>
-        </tr>
-        <tr>
-            <td class="tr1 td38"><P class="p20 ft1">Total Tax*</P></td>
-            <td class="tr1 td39"><P class="p4 ft1">720.00</P></td>
-        </tr>
-        <tr>
-            <td class="tr1 td38"><P class="p20 ft1">Invoice Total</P></td>
-            <td class="tr1 td39"><P class="p4 ft1">4720.00</P></td>
-        </tr>
-        <tr>
-            <td class="tr1 td38"><P class="p20 ft4">Invoice Total (In words)</P></td>
-            <td class="tr1 td39"><P class="p21 ft4">Four Thousand Seven Hundred Twenty Only</P></td>
-        </tr>
-    </table>
-    <P class="p22 ft7">We declare that this invoice shows the actual price of the services rendered and that all
-        particulars are true and correct.</P>
-    <P class="p24 ft8">Digitally Generated No Signature Required</P>
-    <P class="p23 ft9">Thank you for your business</P>
-    <P class="p25 ft7">PTE EDU SERVICES</P>
-    <P class="p26 ft4">27/ Shahikutir Bunglow,
-        <nobr>Nr-Suryam</nobr>
-        Flora, Nikol, Ahmedabad, Gujarat,
-        <nobr>India-382350</nobr>
-    </P>
-</div>
+                            <tr>
+                                <td style="padding:0px 15px 15px;"></td>
+                                <td style="padding:0px 15px 15px;"></td>
+                                <td style="padding:0px 15px 15px;"></td>
+                                <td style="padding:0px 15px 15px;">(S)</td>
+                                <td style="padding:0px 15px 15px;"></td>
+                                <td style="padding:0px 15px 15px;">@18.00%</td>
+                                <td style="padding:0px 15px 15px;"></td>
+                                <td style="padding:0px 15px 15px;"></td>
+                                <td style="padding:0px 15px 15px;">4720.00</td>
+                            </tr>
+                            <tr>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;"></td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;"></td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;"></td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;"></td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;">4000.00</td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;">720.00</td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;"></td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;"></td>
+                                <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;">4720.00</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spacer" height="30" style="font-size: 30px; line-height: 30px; margin: 0; padding: 0; height:30px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <table align="right" border="0" width="100%" style="font-size: 12px;font-weight: bold;text-align: right;font-size: 10px;">
+                            <tr>
+                                <td>
+                                    <table align="left" border="0" width="40%">
+                                        <tr>
+                                            <td style="padding: 3px 0;">&nbsp;</td>
+                                        </tr>
+                                    </table>
+
+                                    <table align="left" border="0" width="25%">
+                                        <tr>
+                                            <td style="padding: 3px 0;">Taxable Amount</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 3px 0;">Total Tax*</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 3px 0;">Invoice Total</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 3px 0;">Invoice Total (In words)</td>
+                                        </tr>
+                                    </table>
+                                    <table align="right" border="0" width="35%">
+                                        <tr>
+                                            <td style="padding: 3px 0;">4000.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 3px 0;">720.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 3px 0;">4720.00</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 3px 0;">Four Thousand Seven Hundred Twenty Only</td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spacer" height="80" style="font-size: 80px; line-height: 80px; margin: 0; padding: 0; height:80px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center" style="padding-bottom: 80px;">
+                        <table align="left" border="0"  width="49%">
+                            <tr>
+                                <td style="font-size: 10px;font-weight: bold;">
+                                    We declare that this invoice shows the actual price of the<br>
+                                    services rendered and that all particulars are true and<br>
+                                    correct.<br>
+                                    Wire transfer Details: ICICI Bank LTD<br>
+                                    A/c #: 004105012514<br>
+                                    IFSC: ICIC0000041<br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="spacer" height="30" style="font-size: 30px; line-height: 30px; margin: 0; padding: 0; height:30px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td style="color: brown;font-weight: bold;font-size: 14px;">Thank you for your business</td>
+                            </tr>
+                        </table>
+
+                        <table align="right" border="0"width="49%">
+                            <tr>
+                                <td class="spacer" height="90" style="font-size: 90px; line-height: 90px; margin: 0; padding: 0; height:90px;">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td style="border-bottom: 1px solid black;">
+
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td align="center" style="font-size: 10px;font-weight: bold;padding: 5px 0 0 0;">Digitally Generated No Signature Required</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="spacer" height="70" style="font-size: 70px; line-height: 70px; margin: 0; padding: 0; height:70px;">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td align="center" style="">
+                        <table border="0" width="100%">
+                            <tr>
+                                <td height="2" align="center" style="height:2px;line-height:1px;font-size:1px;background-color:brown;" bgcolor="brown"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <table align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
+                            <tr>
+                                <td align="center">
+                                    <p style="text-align: center;font-size: 10px;">Walkover Web Solutions Private Limited<br>
+                                        405-406, Capt. C.S. Naidu Arcade, Near Greater Kailash Hospital, 10/2 Old Palasia, Indore, Madhya Pradesh, India-452018</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </td>
+    </tr>
+</table>
 </body>
 </html>

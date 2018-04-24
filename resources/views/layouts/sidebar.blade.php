@@ -83,6 +83,11 @@
                             <a href="{{url('agent/list')}}">Discount Link Management</a>
                         </li>
                         @endif
+                        @if(in_array("refer_friend",$userPermission))
+                            <li class="{{$referTab or ''}}">
+                                <a href="{{url('refer/list')}}">Refer Friend</a>
+                            </li>
+                        @endif
                         {{--@if(in_array("purchase_data",$userPermission))
                         <li class="{{$purchasedataTab or ''}}">
                             <a href="{{url('purchase/list')}}">Purchase Data</a>

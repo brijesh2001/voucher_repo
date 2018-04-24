@@ -318,8 +318,12 @@ class SaleDataController extends Controller
                    $data['amount_paid'] = $data['rate_after_gst'];
                    $data['created_at '] = $data['payment_date'];
                    $data['invoice_number'] = $data['invoice_no'];
-                    $pdf = PDF::loadView('emails.invoice', $data);
-                    return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
+                   $pdf = PDF::loadView('emails.invoice', $data);
+                   /* $html = view('emails.invoice')->render();
+                    $defaultOptions = PDF::getOptions();
+                    $defaultOptions->setDefaultFont('Courier');*/
+                    //return PDF::setOptions($defaultOptions)->load($html)->download();
+                   return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                 }
             }
         }
