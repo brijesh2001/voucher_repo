@@ -48,7 +48,7 @@
     <div style="background-color:#df4914;padding:5px;">
         <div class="container">
             <div class="" style="float:right;padding-top:25px;padding-left:10px;color:#fff;"><h4>Our Desk executive will
-                    direct contact ypur friend in one working day</h4></div>
+                    direct contact your friend in one working day</h4></div>
             <div class="" style="float:right;">
                 <img style="width:45px;" src={{url('css/front/images/letecoller.png')}}>
             </div>
