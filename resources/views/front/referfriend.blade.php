@@ -12,7 +12,7 @@
 
         <form action="{{url('/refer/store')}}" method="POST">
 
-            <h2 style="text-align: center">Refer Friend</h2>
+            <h2 style="text-align: center">Refer a Friend</h2>
             <div class="frm-grp">
                 <div class="frm-grp"><input style="margin-bottom: 1em;color:#fff;" type="email" name="email"
                                             placeholder="Email" required="" class="form-control2"></div>

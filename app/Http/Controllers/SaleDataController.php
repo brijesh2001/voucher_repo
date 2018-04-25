@@ -297,8 +297,8 @@ class SaleDataController extends Controller
                 $id = $requestData['id'];
                 $data = (array)$this->saledata->getSaleDataFromId($id);
                 if(!empty($data)) {
-                    $rateBeforeGst = $data['amount_paid']*100/118;
-                    $IGST = $data['amount_paid'] -  $rateBeforeGst;
+                    $data['rate_before_gst'] = $data['amount_paid']*100/118;
+                    $IGST = $data['amount_paid'] -  $data['rate_before_gst'];
                     if($data['state_id'] == 5){
                         $cgstSgst = $IGST/2;
                         $data['cgst'] = $data['sgst'] = number_format($cgstSgst,2);
@@ -307,6 +307,8 @@ class SaleDataController extends Controller
                         $data['cgst'] = $data['sgst'] = 0;
                         $data['igst'] = number_format($IGST,2);
                     }
+                    $data['word_amount'] = $this->getIndianCurrency($data['amount_paid']);
+                    $data['created_at'] = date("d-m-Y", strtotime($data['created_at']));
                     $pdf = PDF::loadView('emails.invoice', $data);
                     return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                 }
@@ -316,17 +318,49 @@ class SaleDataController extends Controller
                 if(!empty($data)) {
                     //typecasting the variable like above array for pdf download
                    $data['amount_paid'] = $data['rate_after_gst'];
-                   $data['created_at '] = $data['payment_date'];
+                   $data['created_at'] = date("d-m-Y", strtotime($data['payment_date']));
+                   //$data['created_at '] = $data['payment_date'];
                    $data['invoice_number'] = $data['invoice_no'];
+                   $data['word_amount'] = $this->getIndianCurrency($data['rate_after_gst']);
                    $pdf = PDF::loadView('emails.invoice', $data);
-                   /* $html = view('emails.invoice')->render();
-                    $defaultOptions = PDF::getOptions();
-                    $defaultOptions->setDefaultFont('Courier');*/
-                    //return PDF::setOptions($defaultOptions)->load($html)->download();
                    return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                 }
             }
         }
     }
+
+    function getIndianCurrency($number)
+    {
+        $decimal = round($number - ($no = floor($number)), 2) * 100;
+        $hundred = null;
+        $digits_length = strlen($no);
+        $i = 0;
+        $str = array();
+        $words = array(0 => '', 1 => 'one', 2 => 'two',
+            3 => 'three', 4 => 'four', 5 => 'five', 6 => 'six',
+            7 => 'seven', 8 => 'eight', 9 => 'nine',
+            10 => 'ten', 11 => 'eleven', 12 => 'twelve',
+            13 => 'thirteen', 14 => 'fourteen', 15 => 'fifteen',
+            16 => 'sixteen', 17 => 'seventeen', 18 => 'eighteen',
+            19 => 'nineteen', 20 => 'twenty', 30 => 'thirty',
+            40 => 'forty', 50 => 'fifty', 60 => 'sixty',
+            70 => 'seventy', 80 => 'eighty', 90 => 'ninety');
+        $digits = array('', 'hundred','thousand','lakh', 'crore');
+        while( $i < $digits_length ) {
+            $divider = ($i == 2) ? 10 : 100;
+            $number = floor($no % $divider);
+            $no = floor($no / $divider);
+            $i += $divider == 10 ? 1 : 2;
+            if ($number) {
+                $plural = (($counter = count($str)) && $number > 9) ? 's' : null;
+                $hundred = ($counter == 1 && $str[0]) ? ' and ' : null;
+                $str [] = ($number < 21) ? $words[$number].' '. $digits[$counter]. $plural.' '.$hundred:$words[floor($number / 10) * 10].' '.$words[$number % 10]. ' '.$digits[$counter].$plural.' '.$hundred;
+            } else $str[] = null;
+        }
+        $Rupees = implode('', array_reverse($str));
+        $paise = ($decimal) ? "." . ($words[$decimal / 10] . " " . $words[$decimal % 10]) . ' Paise' : '';
+        return ($Rupees ? $Rupees . 'Rupees ' : '') . $paise;
+    }
+
 
 }
