@@ -37,7 +37,7 @@ class Kernel extends ConsoleKernel
         //$schedule->command('update:invoice')
           //  ->everyTenMinutes();
         $schedule->command('send:referfriend')
-            ->dailyAt('10:00');
+            ->dailyAt('14:30');
     }
 
     /**
