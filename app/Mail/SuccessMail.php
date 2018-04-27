@@ -53,6 +53,10 @@ class SuccessMail extends Mailable
             $to = $this->successData['email'];
             $view = 'emails.agent';
             $subject = 'PTE Voucher Code Special Discount Link';
+        }elseif ($this->successData['type'] == 'refer') {
+            $to = $this->successData['email'];
+            $view = 'emails.referfriend';
+            $subject = 'Refer a Friend PTE VoucherCode';
         }
 
         return $this->view($view)

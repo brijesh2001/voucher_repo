@@ -181,7 +181,8 @@ return [
         ConsoleTVs\Charts\ChartsServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
         Kyranb\Footprints\FootprintsServiceProvider::class,
-        Spatie\Sitemap\SitemapServiceProvider::class
+        Spatie\Sitemap\SitemapServiceProvider::class,
+        //Vsmoraes\Pdf\PdfServiceProvider::class
 
     ],
 
@@ -234,6 +235,7 @@ return [
         'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Footprints'   => Kyranb\Footprints\FootprintsFacade::class,
+        //'PDF' => 'Vsmoraes\Pdf\PdfFacade',
 
     ],
 
