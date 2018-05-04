@@ -1,34 +1,12 @@
 /* only small desktops */
 /* tablets */
 /* only small tablets */
-@media (max-width: 1100px) {
-#preheader .leftnavbar-header {
-    width: 30%;
-    color:white;
-    font-size: 12px;
-}
-#preheader .rightnavbar-nav .rightnav-link{
-  font-size: 12px;
-}
-.navbar-expand-lg .navbar-nav .nav-link{
-  font-size: 11px;
-}
-.logo-img {
-    width: 140px;
-}
-}
 @media (min-width: 768px) and (max-width: 991px) {
   #hero-area .contents h1 {
     font-size: 28px;
   }
   #hero-area1 .contents h1 {
     font-size: 28px;
-  }
-  #bannerContainer .contents h1 {
-    font-size: 28px;
-  }
-  #bannerContainer .contents h4 {
-    font-size: 17px;
   }
   .item-boxes h4 {
     font-size: 18px;
@@ -55,24 +33,6 @@
     font-size: 14px;
     line-height: 20px;
   }
-  .navmargin {
-    top: 135px;
-}
-#preheader .leftnavbar-header {
-    width: 100%;
-    text-align: center;
-}
-#preheader #topmain-navbar{
-  width: 100%;
-    text-align: center;
-}
-}
-@media (max-width: 800px) {
- #demo {
-    top: 10px;
-    width: 76%;
-    right: 11.2%;
-}
 }
 
 /* mobile or only mobile */
@@ -86,9 +46,6 @@
   #hero-area1 .contents {
     padding: 100px 0 80px;
   }
-  #bannerContainer .contents {
-    padding: 100px 0 80px;
-  }
   #hero-area .contents h1 {
     font-size: 18px;
     line-height: 30px;
@@ -97,26 +54,11 @@
     font-size: 18px;
     line-height: 30px;
   }
-  #bannerContainer .contents h4 {
-    font-size: 17px;
-  }
   #hero-area1 .contents h2 {
     font-size: 18px;
     line-height: 30px;
   }
   #hero-area1 .contents h3 {
-    font-size: 18px;
-    line-height: 30px;
-  }
-  #bannerContainer .contents h1 {
-    font-size: 18px;
-    line-height: 30px;
-  }
-  #bannerContainer .contents h2 {
-    font-size: 18px;
-    line-height: 30px;
-  }
-  #bannerContainer .contents h3 {
     font-size: 18px;
     line-height: 30px;
   }
@@ -176,33 +118,23 @@
 .navmargin {
     top: 200px;
 }
-#preheader .leftnavbar-header {
+#preheader .navbar-header {
     width: 100%;
     text-align: center;
 }
-#preheader #topmain-navbar{
+#preheader .navbar-header .slicknav_menu{
+	display: none;
+}
+#preheader #main-navbar{
 	width: 100%;
     text-align: center;
 }
 }
 @media (max-width: 500px) {
 .navmargin {
-    top: 157px;
+    top: 140px;
 }
 .navbar-brand img {
-    width: 75%;
-}
-#topmain-navbar .rightnavbar-nav li {
-    width: 100%;
-}
-.rightnavbar-nav{
-  text-align: center;
-}
-.stepscontainer
-{
-  text-align: center;
-}
-.pteForm{
-  top:56%;
+    width: 42%;
 }
 }
