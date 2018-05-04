@@ -4,11 +4,10 @@
 
     <div class="info-section">
         <div class="container">
-            <div class="row">
+
                 <div class="info-img" style="text-align:center;">
                     <img style="width:100%;max-width:940px;" src={{url('css/front/images/inf/i.png')}}>
                 </div>
-            </div>
         </div>
     </div>
 
@@ -32,7 +31,6 @@
                     </h3>
                 </div>
             </div>
-
 
             <div class="row">
                 <div class="col-md-2"></div>

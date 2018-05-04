@@ -12,47 +12,23 @@
 
     <div class="banner-text-agileinfo hidden-xs" style="position:absolute;top:250px;">
 
-        <form action="{{url('send-query')}}" method="POST">
+        <form action="{{url('send-query')}}" id = "ptevouForm" method="POST">
 
 
-            <div class="frm-grp">
-                <div class="frm-grp"><input style="margin-bottom: 1em;color:#fff;" type="text" name="Name"
-                                            placeholder="Name" required="" class="form-control2"></div>
-                <div class="frm-grp"><input style="margin-bottom: 1em;color:#fff;" type="text" name="Mobile"
-                                            placeholder="Mobile" required="" class="form-control2"></div>
-                <div class="frm-grp"><input style="margin-bottom: 1em;color:#fff;" type="email" name="Email"
-                                            placeholder="Email" required="" class="form-control2"></div>
-                <div class="frm-grp"><textarea class="form-control2" name="Message" placeholder="Message"
+
+            <div class="form-group"><input style="margin-bottom: 1em;color:#fff;" type="text" name="Name"
+                                            placeholder="Name" required="" class="form-control"></div>
+            <div class="form-group"><input style="margin-bottom: 1em;color:#fff;" type="text" name="Mobile"
+                                            placeholder="Mobile" required="" class="form-control"></div>
+            <div class="form-group"><input style="margin-bottom: 1em;color:#fff;" type="email" name="Email"
+                                            placeholder="Email" required="" class="form-control"></div>
+            <div class="form-group"><textarea class="form-control" name="Message" placeholder="Message"
                                                style="margin-bottom: 1em;color:#fff;"></textarea></div>
                 <input type="hidden" name="type" value="send_query">
-                <div class="frm-grp"><input type="submit" value="Send" class="btn"
+            <div class="form-group"><input type="submit" value="Send" class="btn"
                                             style="text-align:center;background-color:#df4914;margin-bottom: 1em;color:#fff;front-size:1.2em;width:94%"
                                             type="submit"></div>
-            </div>
-            {{ csrf_field() }}
-        </form>
 
-    </div>
-
-
-    <div class="banner-text-agileinfo visible-xs">
-
-        <form action="{{url('send-query')}}" method="POST">
-
-
-            <div class="frm-grp">
-                <div class="frm-grp"><input style="margin-bottom: 1em;color:#fff;" type="text" name="Name"
-                                            placeholder="Name" required="" class="form-control2"></div>
-                <div class="frm-grp"><input style="margin-bottom: 1em;color:#fff;" type="text" name="Mobile"
-                                            placeholder="Mobile" required="" class="form-control2"></div>
-                <div class="frm-grp"><input style="margin-bottom: 1em;color:#fff;" type="email" name="Email"
-                                            placeholder="Email" required="" class="form-control2"></div>
-                <div class="frm-grp"><textarea class="form-control2" name="Message" placeholder="Message"
-                                               style="margin-bottom: 1em;color:#fff;"></textarea></div>
-                <div class="frm-grp"><input type="submit" value="Send" class="btn"
-                                            style="text-align:center;background-color:#df4914;margin-bottom: 1em;color:#fff;front-size:1.2em;width:94%"
-                                            type="submit"></div>
-            </div>
             {{ csrf_field() }}
         </form>
 
@@ -60,14 +36,5 @@
 
 
     <div class="clearfix"></div>
-    <div style="background-color:#df4914;padding:5px;">
-        <div class="container">
-            <div class="" style="float:right;padding-top:25px;padding-left:10px;color:#fff;"><h4>Our Desk executive will
-                    direct contact you in one working day</h4></div>
-            <div class="" style="float:right;">
-                <img style="width:45px;" src={{url('css/front/images/letecoller.png')}}>
-            </div>
 
-        </div>
-    </div>
 @endsection

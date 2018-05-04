@@ -111,7 +111,7 @@ class LoginController extends Controller
             $data_saved_prize = $detail_model->getData();
             if(!empty($data_saved_prize)) {
                 $data['title'] = $data_saved_prize->page_title;
-                $data['saved_prize'] = $data_saved_prize->saved_prize;
+                $data['saved_prize'] = floor($data_saved_prize->saved_prize);
             }
             //For prize
             $prize_model = new Prize();
@@ -231,7 +231,7 @@ class LoginController extends Controller
             $data_saved_prize = $detail_model->getData();
             if(!empty($data_saved_prize)) {
                 $data['title'] = $data_saved_prize->page_title;
-                $data['saved_prize'] = $data_saved_prize->saved_prize;
+                $data['saved_prize'] = floor($data_saved_prize->saved_prize);
             }
             //For prize
             $prize_model = new Prize();

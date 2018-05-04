@@ -39,31 +39,24 @@
         } </script>
 
 
-    <link rel="stylesheet" href="{{url('css/front/css/bootstrap.css')}}" type="text/css"/>
-    <link rel="stylesheet" href="{{url('css/front/css/style.css')}}" type="text/css"/>
-    <link rel="stylesheet" href="{{url('css/front/ui/jquery-ui.css')}}" type="text/css" />
-    <link rel="stylesheet" href="{{url('css/front/css/flexslider.css')}}" type="text/css"/>
-    <link rel="stylesheet" href="{{url('css/front/css/lightbox.css')}}" type="text/css"/>
-    <link rel="stylesheet" href="{{url('css/front/css/font-awesome.css')}}" type="text/css"/>
-    <link rel="stylesheet" href="{{url('css/front/css/anim.css')}}" type="text/css"/>
-    <link rel="stylesheet" href="{{url('css/front/css/intent.css')}}" type="text/css"/>
 
+    <link rel="stylesheet" href="{{url('css/front/css/bootstrap.min.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{url('css/front/css/font-awesome.min.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{url('css/front/css/line-icons.css')}}" type="text/css" />
+    <link rel="stylesheet" href="{{url('css/front/css/owl.carousel.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{url('css/front/css/owl.theme.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{url('css/front/css/nivo-lightbox.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{url('css/front/css/magnific-popup.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{url('css/front/css/slicknav.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{url('css/front/css/animate.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{url('css/front/css/main.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{url('css/front/css/responsive.css')}}" type="text/css"/>
 
     <!-- font -->
     <link href="//fonts.googleapis.com/css?family=Roboto" rel="stylesheet" media="none">
     <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic'
           rel='stylesheet' type='text/css' media="none">
     <!-- //font -->
-
-    <script src="{{url('css/front/js/jquery-1.11.1.min.js')}}"></script>
-    <script src="{{url('css/front/js/bootstrap.js')}}"></script>
-    <script src="{{url('css/front/js/collapse.js')}}"></script>
-    <script src="{{ asset('css/front/ui/jquery-ui.js') }}"></script>
-    <script src="{{url('css/front/js/carousel.js')}}"></script>
-    <script src="{{url('css/front/js/transition.js')}}"></script>
-    <script src="{{url('css/front/js/button.js')}}"></script>
-    <script src="{{url('css/front/js/dropdown.js')}}"></script>
-
     <script>
         (function (i, s, o, g, r, a, m) {
             i['GoogleAnalyticsObject'] = r;
@@ -82,57 +75,11 @@
     </script>
 
     <style>
-        .alert {
-            padding: 20px;
-            background-color: red;
-            color: white;
-            position: absolute;
-            top: 92px;
-        }
-
-        .alertgreen {
-            padding: 20px;
-            background-color: green;
-            color: white;
-            position: absolute;
-            top: 92px;
-        }
-
-        .closebtn {
-            margin-left: 15px;
-            color: white;
-            font-weight: bold;
-            float: right;
-            font-size: 22px;
-            line-height: 20px;
-            cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .closebtn:hover {
-            color: black;
+        .carousel-inner img {
+            width: 100%;
+            height: 100%;
         }
     </style>
-    <script src="{{url('css/front/js/jquery.flexslider.js')}}"></script>
-    <script type="text/javascript">
-        $(function () {
-            SyntaxHighlighter.all();
-        });
-        $(window).load(function () {
-            $('.flexslider').flexslider({
-                animation: "slide",
-                start: function (slider) {
-                    $('body').removeClass('loading');
-                }
-            });
-        });
-    </script>
-
-    <!-- //FlexSlider-JavaScript -->
-
-
-
-
 
 </head>
 
@@ -145,21 +92,32 @@
 <body>
 
 @include('layouts.front.header')
-<div class="flash-message">
-    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
-        @if(Session::has('alert-' . $msg))
-            <p class="alert alert-{{ $msg }}" style="text-align:center;">{{ Session::get('alert-' . $msg) }} <a href="#"
-                                                                                                                class="close"
-                                                                                                                data-dismiss="alert"
-                                                                                                                aria-label="close">&times;</a>
-            </p>
-        @endif
-    @endforeach
-</div>
+
 @yield('content')
 @include('layouts.front.footer')
 @yield('extra')
 <!-- Scripts -->
+
+<script src="{{url('css/front/js/jquery-min.js')}}"></script>
+<script src="{{url('css/front/js/popper.min.js')}}"></script>
+<script src="{{url('css/front/js/bootstrap.min.js')}}"></script>
+<script src="{{url('css/front/js/jquery.mixitup.js')}}"></script>
+<script src="{{url('css/front/js/nivo-lightbox.js')}}"></script>
+<script src="{{url('css/front/js/owl.carousel.js')}}"></script>
+<script src="{{url('css/front/js/jquery.stellar.min.js')}}"></script>
+<script src="{{url('css/front/js/jquery.nav.js')}}"></script>
+<script src="{{url('css/front/js/scrolling-nav.js')}}"></script>
+<script src="{{url('css/front/js/jquery.easing.min.js')}}"></script>
+<script src="{{url('css/front/js/smoothscroll.js')}}"></script>
+<script src="{{url('css/front/js/jquery.slicknav.js')}}"></script>
+<script src="{{url('css/front/js/wow.js')}}"></script>
+<script src="{{url('css/front/js/jquery.vide.js')}}"></script>
+<script src="{{url('css/front/js/jquery.counterup.min.js')}}"></script>
+<script src="{{url('css/front/js/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{url('css/front/js/waypoints.min.js')}}"></script>
+<script src="{{url('css/front/js/form-validator.min.js')}}"></script>
+<script src="{{url('css/front/js/main.js')}}"></script>
+
 
 @stack('external_script')
 @stack('script')

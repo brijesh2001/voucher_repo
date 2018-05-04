@@ -1,35 +1,90 @@
-<div style="background-color:#0080aa;color:#fff;">
-    <div class="container" style="padding:5px 0 5px 200px;"><p class="hidden-xs" style="float:left;text-align:right;"><i
-                    class="fa fa-certificate" aria-hidden="true"></i> Authorised Re-seller of PTE Voucher</p>
-        <p class="visible-xs" style="float:right;width:270px;text-align:right;"><i class="fa fa-certificate"
-                                                                                   aria-hidden="true"></i> Authorised
-            Re-seller of PTE-A Voucher</p>
-        <p style="float:right;width: 225px;text-align:right;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span
-                    class="glyphicon glyphicon-envelope"></span>info@compassoverseas.com</p>
-        <p style="float:right;margin-left:20px;"><span class="glyphicon glyphicon-earphone"></span> +91-9099-500-925
-        </p>
-        <p style="float:right;">24 X 7 Support</p></div>
-</div>
-<div class="nav-links">
-    <nav class="navbar navbar-inverse">
+<header id="hero-area1" data-stellar-background-ratio="0.2">
+    <div  class="container-fluid" id="preheader">
         <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <ul class="rightnavbar-nav">
+                        <li class="rightnav-item">
+                            <a class="rightnav-link page-scroll" href=""> <i class="fa fa-snowflake-o" aria-hidden="true"></i> &nbsp;Authorised Re-seller of PTE Voucher</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8" id="topmain-navbar">
+                    <ul class="rightnavbar-nav">
+                        <li class="rightnav-item">
+                            <a class="rightnav-link page-scroll blink" href="#">24 X 7 Support</a>
+                        </li>
+                        <li class="rightnav-item">
+                            <a class="rightnav-link page-scroll" href="#"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +91-9099-500-925</a>
+                        </li>
+                        <li class="rightnav-item">
+                            <a class="rightnav-link page-scroll" href="#"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; info@compassoverseas.com</a>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg fixed-top scrolling-navbar indigo navmargin">
+        <div class="container">
+
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"><span
-                            class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                <a href="{{url('/')}}" class="navbar-brand"><img class="img-fulid logo-img" src="{{url('css/front/img/logo.png')}}" alt=""></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">1
+                    <i class="lnr lnr-menu"></i>
                 </button>
-                <a class="navbar-brand" href="https://www.ptevouchercode.com/"><img
-                            src={{url('css/front/images/logo.png')}}></a></div>
-            {{--<a class="navbar-brand" href="https://www.ptevouchercode.com/"><img src={{url('css/front/images/logo.png')}}></a></div>--}}
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav link-effect">
-                    <li><a href={{url('buy')}}>Buy PTE Voucher</a></li>
-                    <li><a href={{url('infographics')}}>PTE Infographic</a></li>
-                    <li><a href={{url('refund-policy')}}>Refund Policy</a></li>
-                    <li><a href="https://www.ptevouchercode.com/blog">Blog</a></li>
-                    <li><a href={{url('about-us')}}>About us</a></li>
-                    <li><a href={{url('contact-us')}}>Contact</a></li>
+            </div>
+            <div class="collapse navbar-collapse" id="main-navbar">
+                <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{{url('/buy')}}">Buy PTE Voucher</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{{url('/infographics')}}">PTE Infographic</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{{url('/refund-policy')}}">Refund Policy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{{url('/blog')}}">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{{url('/about-us')}}">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link page-scroll" href="{{url('/contact-us')}}">Contact Us</a>
+                    </li>
                 </ul>
             </div>
         </div>
+
+
+        <ul class="mobile-menu">
+
+            <li>
+                <a class="page-scroll" href="{{url('/buy')}}">Buy PTE Voucher</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="{{url('/infographics')}}">PTE Infographic</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="{{url('/refund-policy')}}">Refund Policy</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="{{url('/blog')}}">Blog</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="{{url('/about-us')}}">About Us</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="{{url('/contact-us')}}">Contact Us</a>
+            </li>
+        </ul>
+
+
     </nav>
-</div>
+    <!-- Navbar End -->
+</header>
