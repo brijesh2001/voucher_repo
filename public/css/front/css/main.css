@@ -1170,7 +1170,7 @@ button:focus {
 }
 #features .screenshot_leptop {
     position: relative;
-    z-index: 99;
+    /*z-index: 99;*/
     width:100%;
 }
 #features .screenshot_leptop img{
@@ -1185,12 +1185,12 @@ button:focus {
     width: 71%;
     right: 14%;
 }
-#demo .carousel-control-prev{
+/*#demo .carousel-control-prev{
   z-index: 9999;
 }
 #demo .carousel-control-next{
   z-index: 9999;
-}
+}*/
 /* ==========================================================================
   7. Video promo Style
    ========================================================================== */
