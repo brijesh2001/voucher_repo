@@ -627,6 +627,8 @@ button:focus {
 }
 #bannerContainer .contents .headline{
   color:chocolate;
+  padding-top: 16px;
+  margin-bottom: 5px;
 }
 #bannerContainer .contents1 h1 {
   color: #000;
