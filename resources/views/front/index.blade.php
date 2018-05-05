@@ -9,7 +9,7 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-10">
                     <div class="contents text-center">
-                        <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE Voucher Online At ₹ {{$rate or ''}} & Get</h1>
+                        <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE Voucher Online At ₹ {{$rate or ''}} & Get Free</h1>
                         <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">15 Un scored Mock Test</h4>
                         <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">11 Scored Mock Test</h4>
                         <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">5 Offline Mock Test</h4>
@@ -37,7 +37,6 @@
                                 @endforeach
                             </div>
                         </div>
-                        <h1 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Fill up the form to avail this offer</h1>
                         <form class="pay-form" method="post" id="ptevouForm" action="{{url('pte/payment-request')}}">
                             <div class="row">
                                 <div class="col-md-4">
@@ -88,7 +87,7 @@
                                 <input type="hidden" name="user_id" value="{{$user_id or ''}}">
                                 {{ csrf_field() }}
                                 <div class="col-md-12">
-                                    <p>Note: Code will be sent to your email immediately.</p>
+                                    <p style="margin-bottom: 0px;margin-top: -7px">Note: Code will be sent to your email immediately.</p>
                                     <div class="submit-button text-center">
                                         <button class="btn btn-common1" id="submit" type="submit" style="cursor: pointer">Buy Now</button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
