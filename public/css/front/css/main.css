@@ -1830,6 +1830,7 @@ footer {
 /*For infographicd*/
 .info-img {
   text-align: center;
+  margin-top: 100px;
 }
 .info1 h2 {
   margin: 0;
