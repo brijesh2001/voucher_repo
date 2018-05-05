@@ -111,6 +111,7 @@
   #bannerContainer .contents h1 {
     font-size: 18px;
     line-height: 30px;
+    padding-top: 75px !important;
   }
   #bannerContainer .contents h2 {
     font-size: 18px;
