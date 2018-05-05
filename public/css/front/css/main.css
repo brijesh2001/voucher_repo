@@ -560,6 +560,10 @@ button:focus {
   background-color: #0d2b4c;
   padding: 0;
   color: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 99;
 }
 #preheader .rightnavbar-nav .rightnav-link{
   color: #fff;
@@ -812,7 +816,7 @@ button:focus {
 .top-nav-collapse {
   background: #fff;
   z-index: 999999;
-  top: 0px !important;
+  top: 40px;
   padding: 0;
   box-shadow: 0px 3px 6px 3px rgba(0, 0, 0, 0.06);
   -webkit-animation-duration: 1s;
