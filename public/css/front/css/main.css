@@ -1914,8 +1914,8 @@ label.line {
   height: 48px;
 }
 
-.rightnav-item .blink {
-  animation: blink-animation 0.5s steps(5, start) infinite;
+.blink {
+  animation: blink-animation 0.7s steps(5, start) infinite;
   -webkit-animation: blink-animation 0.5s steps(5, start) infinite;
   text-shadow: 5px 7px 20px #000;
   color: #d1681e !important;
@@ -1933,3 +1933,4 @@ label.line {
     visibility: hidden;
   }
 }
+

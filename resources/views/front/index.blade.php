@@ -9,7 +9,7 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-10">
                     <div class="contents text-center">
-                        <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE Voucher Online At ₹ {{$rate or ''}} & Get Free</h1>
+                        <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE Voucher Online At <span class="blink"> ₹ {{$rate or ''}} </span> & Get Free</h1>
                         <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">15 Un scored Mock Test</h4>
                         <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">11 Scored Mock Test</h4>
                         <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">5 Offline Mock Test</h4>
@@ -31,7 +31,7 @@
                             <div class="flash-message">
                                 @foreach (['danger', 'warning', 'success', 'info'] as $msg)
                                     @if(Session::has('alert-' . $msg))
-                                        <p class="alert alert-{{ $msg }}" style="text-align:center;">{{ Session::get('alert-' . $msg) }} <a href="#"
+                                        <p class="alert alert-{{ $msg }}" style="text-align:center;">{{ Session::get('alert-' . $msg) }} <a href="#"></a>
                                         </p>
                                     @endif
                                 @endforeach
