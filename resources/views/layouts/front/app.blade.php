@@ -3,12 +3,12 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Buy PTE Voucher @ ₹ {{$rate or ''}} including GST & Save ₹ {{$saved_prize or ''}} in India</title>
+    <title>Buy PTE Voucher @ ₹ {{$rate or ''}} incl. GST & & Save ₹ {{$saved_prize or ''}} in India</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="L2gJ62ywY2rfXEJ5JMJQm0_k75ys4Omm-TifSdh-V_w"/>
     <meta name="description"
-          content="Book PTE Exam from PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹ {{$saved_prize or ''}} in India. Get 11 Free Mock Test + 15 Un scored + 5 Offline Mock test of PTE exam. Get Instant Discount Voucher in your email."/>
+          content="Book PTE Exam from PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹ {{$saved_prize or ''}} in India. Get 11 Scored + 15 Unscored + 5 Offline Mock Test FREE for practice. Get Instant Discount Voucher in your email."/>
     <meta name="keywords"
           content="PTE Promo Code, PTE Exam Voucher, PTE Exam Discount Voucher, PTE Discount Voucher Code"/>
     <meta property="og:title" content="PTE Voucher Code - Book PTE Exam Online ₹ {{$rate or ''}}- Lowest Price in India"/>
@@ -17,16 +17,15 @@
     <meta property="og:url" content="https://www.ptevouchercode.com/"/>
     <meta name="author" content="PTEVocuherCode (ptevouchercode.com)"/>
     <meta property="og:image" content="https://www.ptevouchercode.com/css/front/images/logo.png"/>
-
-    <meta property="og:site_name" content="PTEVocuherCode"/>
-    <meta name="publisher" content="PTEVocuherCode"/>
-    <meta name="copyright" content="PTEVocuherCode"/>
+    <meta property="og:site_name" content="PTEVoucherCode"/>
+    <meta name="publisher" content="PTEVoucherCode"/>
+    <meta name="copyright" content="PTEVoucherCode"/>
     <meta name="robots" content="all"/>
     <meta name="rating" content="General"/>
     <meta name="document-rating" content="Safe for Kids"/>
     <meta name="twitter:card" value="summary"/>
     <meta name="twitter:url" value="https://www.ptevouchercode.com/"/>
-    <meta name="twitter:title" value="PTEVocuherCode"/>
+    <meta name="twitter:title" value="PTEVoucherCode"/>
     <meta name="twitter:site" value="@ {{$rate or ''}}PteVoucherCode"/>
     <meta name="twitter:creator" value="@ {{$rate or ''}}PteVoucherCode"/>
     {{--<link rel="shortcut icon" type="image/png" href="https://www.ptevouchercode.com/images/favicon.png"/>--}}
@@ -37,7 +36,6 @@
         function hideURLbar() {
             window.scrollTo(0, 1);
         } </script>
-
 
 
     <link rel="stylesheet" href="{{url('css/front/css/bootstrap.min.css')}}" type="text/css"/>
