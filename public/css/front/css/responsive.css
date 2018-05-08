@@ -77,7 +77,7 @@
     position: static;
   }
   .fixed-top {
-    position:sticky;
+    position:absolute;
   }
 
 }
