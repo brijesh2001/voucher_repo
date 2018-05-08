@@ -66,6 +66,13 @@
   width: 100%;
     text-align: center;
 }
+
+  #preheader {
+    position: static;
+  }
+  .fixed-top {
+    position:sticky;
+  }
 }
 @media (max-width: 800px) {
  #demo {
