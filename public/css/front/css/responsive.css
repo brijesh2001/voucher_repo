@@ -94,7 +94,7 @@
     padding: 100px 0 80px;
   }
   #bannerContainer .contents {
-    padding: 0 0 80px;
+    padding: 50px 0 80px;
   }
   #hero-area .contents h1 {
     font-size: 18px;
@@ -213,7 +213,7 @@
   text-align: center;
 }
 .pteForm{
-  top:32%;
+  top:36%;
 }
   .section {
     padding: 60px 0;
