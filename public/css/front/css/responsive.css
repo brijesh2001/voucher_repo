@@ -66,13 +66,6 @@
   width: 100%;
     text-align: center;
 }
-
-  #preheader {
-    position: static;
-  }
-  .fixed-top {
-    position:sticky;
-  }
 }
 @media (max-width: 800px) {
  #demo {
@@ -101,7 +94,7 @@
     padding: 100px 0 80px;
   }
   #bannerContainer .contents {
-    padding: 50px 0 80px;
+    padding: 0 0 80px;
   }
   #hero-area .contents h1 {
     font-size: 18px;
@@ -201,13 +194,6 @@
 	width: 100%;
     text-align: center;
 }
-
-  #preheader {
-    position: static;
-  }
-  .fixed-top {
-    position:sticky;
-  }
 }
 @media (max-width: 500px) {
 .navmargin {
@@ -227,16 +213,9 @@
   text-align: center;
 }
 .pteForm{
-  top:36%;
+  top:32%;
 }
   .section {
     padding: 60px 0;
   }
-  #preheader {
-    position: static;
-  }
-  .fixed-top {
-    position:sticky;
-  }
-
 }
