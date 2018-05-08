@@ -71,7 +71,15 @@
         ga('create', 'UA-90186854-1', 'auto');
         ga('send', 'pageview');
     </script>
+    <!-- Global site tag (gtag.js) - AdWords: 808244957 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-808244957"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
+        gtag('config', 'AW-808244957');
+    </script>
     <style>
         .carousel-inner img {
             width: 100%;

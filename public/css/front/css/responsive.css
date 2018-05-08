@@ -73,6 +73,13 @@
     width: 76%;
     right: 11.2%;
 }
+  #preheader {
+    position: static;
+  }
+  .fixed-top {
+    position:sticky;
+  }
+
 }
 
 /* mobile or only mobile */
@@ -87,7 +94,7 @@
     padding: 100px 0 80px;
   }
   #bannerContainer .contents {
-    padding: 100px 0 80px;
+    padding: 0 0 80px;
   }
   #hero-area .contents h1 {
     font-size: 18px;
@@ -111,7 +118,6 @@
   #bannerContainer .contents h1 {
     font-size: 18px;
     line-height: 30px;
-    padding-top: 75px !important;
   }
   #bannerContainer .contents h2 {
     font-size: 18px;
@@ -120,6 +126,9 @@
   #bannerContainer .contents h3 {
     font-size: 18px;
     line-height: 30px;
+  }
+  #bannerContainer .contents .headline {
+    padding-top: 0;
   }
   #features .show-box img {
     display: none;
@@ -159,7 +168,7 @@
     float: left;
   }
   #services {
-    padding: 240px 0 35px;
+    padding: 90px 0 35px;
 }
 #demo {
    top: 10px;
@@ -204,6 +213,9 @@
   text-align: center;
 }
 .pteForm{
-  top:56%;
+  top:32%;
 }
+  .section {
+    padding: 60px 0;
+  }
 }
