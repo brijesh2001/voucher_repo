@@ -8,12 +8,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="L2gJ62ywY2rfXEJ5JMJQm0_k75ys4Omm-TifSdh-V_w"/>
     <meta name="description"
-          content="Book PTE Exam from PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹ {{$saved_prize or ''}} in India. Get 11 Scored + 15 Unscored + 5 Offline Mock Test FREE for practice. Get Instant Discount Voucher in your email."/>
+          content="Book PTE Exam from PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹ {{$saved_prize or ''}} in India. Get 15 Scored + 20 Unscored + 5 Offline Mock Test FREE for practice. Get Instant Discount Voucher in your email."/>
     <meta name="keywords"
           content="PTE Promo Code, PTE Exam Voucher, PTE Exam Discount Voucher, PTE Discount Voucher Code"/>
     <meta property="og:title" content="PTE Voucher Code - Book PTE Exam Online ₹ {{$rate or ''}}- Lowest Price in India"/>
     <meta property="og:description"
-          content="Buy PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹.{{$saved_prize or ''}} Book Your Exam at any centre in India & Get 11 Free Mock Test + 15 Un scored + 5 Offline Mock test of PTE exam. Lowest price in India. Get Instant Voucher in your email."/>
+          content="Buy PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹.{{$saved_prize or ''}} Book Your Exam at any centre in India & Get 15 Free Mock Test + 20 Un scored + 5 Offline Mock test of PTE exam. Lowest price in India. Get Instant Voucher in your email."/>
     <meta property="og:url" content="https://www.ptevouchercode.com/"/>
     <meta name="author" content="PTEVocuherCode (ptevouchercode.com)"/>
     <meta property="og:image" content="https://www.ptevouchercode.com/css/front/images/logo.png"/>
