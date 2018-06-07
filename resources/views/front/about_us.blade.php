@@ -82,9 +82,9 @@
                         <p style="color:#999;text-align:center;">Hitesh Patel</p>
                     </div>
                     <div class="col-md-3 .services-grids-w3l p">
-                        <img style="max-height:200px;width:initial;border-radius: 180px;margin-left:30px;" src={{url('css/front/images/brijesh.jpg')}}>
+                        <img style="max-height:200px;width:initial;border-radius: 180px;margin-left:30px;" src={{url('css/front/images/nitin.jpg')}}>
                         <h3>Web Developer</h3>
-                        <p style="color:#999;text-align:center;">Brijesh Dhanani</p>
+                        <p style="color:#999;text-align:center;">Raj Patel</p>
                     </div>
                     <div class="col-md-3 .services-grids-w3l p">
                         <img style="max-height:200px;width:initial;border-radius: 180px;margin-left:30px;" src={{url('css/front/images/nitin.jpg')}}>
