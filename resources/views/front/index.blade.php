@@ -13,7 +13,7 @@
                         <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">20 Un scored Mock Test</h4>
                         <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">22 Scored Mock Test</h4>
                         <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">5 Offline Mock Test</h4>
-                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Free Refrence Material</h4>
+                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Free Reference Material</h4>
                     </div>
                 </div>
                 <div class="col-md-10 pteForm">
