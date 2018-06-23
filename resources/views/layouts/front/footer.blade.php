@@ -7,7 +7,7 @@
                         <h3>Contact <span>With us</span></h3>
                         <div class="contact-address">
                             <p><b>PTE Voucher Code</b><br>
-                                21, Shyam Arcade, Near Gangotri <br>Bunglows,, Opp. Dominos Pizza, <br>Nikol, Surya Nagar, Nikol, <br>Ahmedabad, Gujarat 382350 </p>
+                                415 - Vishala Supreme, <br>Opp. Torrent Power<br>S.P Ring Road - New Nikol <br>Ahmedabad, Gujarat 382350 </p>
                             <p class="phone">Phone: <span>+91-9099-500-925</span></p>
                             <p class="email">E-mail: <span>info@compassoverseas.com</span></p>
                         </div>
