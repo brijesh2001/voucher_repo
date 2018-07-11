@@ -74,8 +74,11 @@
                                 <li class="{{$addNewAgentPaymentTab or ''}}">
                                     <a href="{{url('offline/add-new-agent')}}">{{trans('app.add_new_agent_payment')}}</a>
                                 </li>
-                                <li class="{{$addExistingAgentPaymentTab or ''}}">
+                                <li class="{{$offlineAgentPaymentTab or ''}}">
                                     <a href="{{url('offline/list')}}">Offline Payment List</a>
+                                </li>
+                                <li class="{{$addExistingAgentPaymentTab or ''}}">
+                                    <a href="{{url('offline/add-existing-agent-payment')}}">Add Existing Agent Data</a>
                                 </li>
                             </ul>
                         </li>

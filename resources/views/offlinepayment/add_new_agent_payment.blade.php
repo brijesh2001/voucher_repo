@@ -54,7 +54,7 @@
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label">Payment Date<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
-                                        <input type="text" name="payment_date" id="payment_date" placeholder="Payment Date" class="form-control input-sm required" value="{{old('payment_date')}}" />
+                                        <input type="text" name="payment_date" id="payment_date" placeholder="Payment Date" class="form-control input-sm required" value="{{old('payment_date')}}" autocomplete="off" />
                                     </div>
                                 </div>
 

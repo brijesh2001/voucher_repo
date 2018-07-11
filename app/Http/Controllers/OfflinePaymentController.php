@@ -45,7 +45,7 @@ class OfflinePaymentController extends Controller
          */
         $data['offlinePaymentData'] = $this->offlinePayment->getCollection();
         $data['offlinePaymentManagementTab'] = "active open";
-        $data['addExistingAgentPaymentTab'] = "active";
+        $data['offlineAgentPaymentTab'] = "active";
         return view('offlinepayment.existing_agent_list', $data);
     }
 
@@ -76,7 +76,7 @@ class OfflinePaymentController extends Controller
      */
     public function addExistingAgentPayment()
     {
-        $data['agentData'] = $this->offlinePayment->getCollection();
+        $data['agentData'] = $this->offlinePayment->getUniqueOfflineAgent();
         $data['state'] = $this->state->getCollection();
         $data['offlinePaymentManagementTab'] = "active open";
         $data['addExistingAgentPaymentTab'] = "active";
@@ -211,6 +211,16 @@ class OfflinePaymentController extends Controller
                     'transaction_id' => 'required',
                 );
             }
+        if ($mode == 'add-existing-agent') {
+            $rules = array(
+                'user_id' => 'required',
+                'number_of_voucher' => 'required',
+                'voucher_code' => 'required',
+                'rate_after_gst' => 'required',
+                'payment_date' => 'required',
+                'transaction_id' => 'required',
+            );
+        }
 
             $validator = Validator::make($data, $rules);
 
@@ -231,6 +241,7 @@ class OfflinePaymentController extends Controller
         }
 
     /**
+     * Store new agent payment
      * @param Request $request
      * @return $this|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|mixed
      */
@@ -264,6 +275,57 @@ class OfflinePaymentController extends Controller
                 return redirect('offline/add-new-agent')->withInput();
             }
         }
+
+    /**
+     * Store new agent payment
+     * @param Request $request
+     * @return $this|\Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector|mixed
+     */
+    public function storeExistingAgentPayment(request $request)
+    {
+
+        $validations = $this->customeValidate($request->all(), 'add-existing-agent');
+        if ($validations) {
+            return $validations;
+        }
+
+        // Start Communicate with database
+        DB::beginTransaction();
+        try {
+            $requestData = $request->all();
+            if(isset($requestData['user_id']) && !empty ($requestData['user_id'])) {
+                $sotredAgentData = $this->offlinePayment->getOfflinePaymentByField($requestData['user_id'],'id');
+                if(!empty($sotredAgentData)) {
+                    $requestData['name'] = $sotredAgentData->name;
+                    $requestData['email'] = $sotredAgentData->email;
+                    $requestData['mobile'] = $sotredAgentData->mobile;
+                    $requestData['gstn'] = $sotredAgentData->gstn;
+                    $requestData['state'] = $sotredAgentData->state;
+                    $addagent = $this->offlinePayment->storeNewAgentPayment($requestData);
+                    DB::commit();
+                }else {
+
+                    return false;
+                }
+
+            }
+         } catch (\Exception $e) {
+            //exception handling
+            DB::rollback();
+            $errorMessage = '<a target="_blank" href="https://stackoverflow.com/search?q=' . $e->getMessage() . '">' . $e->getMessage() . '</a>';
+            $request->session()->flash('alert-danger', $errorMessage);
+            return redirect('offline/add-existing-agent-payment')->withInput();
+
+        }
+        if ($addagent) {
+            //Event::fire(new SendMail($addprize));
+            $request->session()->flash('alert-success', __('app.default_add_success', ["module" => __('app.offline_payment_managment')]));
+            return redirect('offline/list');
+        } else {
+            $request->session()->flash('alert-danger', __('app.default_error', ["module" => __('app.offline_payment_managment'), "action" => __('app.add')]));
+            return redirect('offline/add-existing-agent-payment')->withInput();
+        }
+    }
 
 
         /**
@@ -387,4 +449,20 @@ class OfflinePaymentController extends Controller
 
     }
 
+    public function getAllAgent(request $request)
+    {
+        $requestData = $request->all();
+        if(!empty($requestData['term'])) {
+            $material = $this->offlinePayment->getAllAgent($requestData['term']);
+
+            $data=array();
+            foreach ($material as $product) {
+                $data[]=array('value'=>$product->name,'id'=>$product->id);
+            }
+            if(count($data))
+                return $data;
+            else
+                return ['value'=>'No Result Found','id'=>''];
+        }
+    }
 }

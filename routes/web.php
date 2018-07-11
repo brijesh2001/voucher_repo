@@ -180,6 +180,7 @@ Route::group(['prefix' => 'offline'], function () {
     Route::post('/update-agent-payment', 'OfflinePaymentController@update');
     Route::post('/datatable', 'OfflinePaymentController@datatable');
     Route::post('/delete', 'OfflinePaymentController@delete');
+    Route::post('/get_all_agent', 'OfflinePaymentController@getAllAgent');
 });
 
 Route::group(['prefix' => 'saledata'], function () {

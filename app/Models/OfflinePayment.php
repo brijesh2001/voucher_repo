@@ -343,4 +343,23 @@ class OfflinePayment extends Authenticatable
         return (!empty($result)) ? $result[0]: [];
     }
 
+
+    /**
+     * Get the Offline agent payment data
+     *
+     * */
+    public function  getUniqueOfflineAgent()
+    {
+        $result = DB::select('SELECT DISTINCT rate_after_gst,name,id,email FROM tbl_offline_payment ORDER BY id');
+        return $result;
+    }
+
+    /**
+     * get all agent data by payment
+     * */
+
+    public function getAllAgent($term)
+    {
+        return OfflinePayment::where('name','LIKE','%'.$term.'%')->get();
+    }
 }

@@ -30,7 +30,7 @@
                             @endif
                             <form action="{{url('/offline/store-existing-agent-payment')}}" name="app_add_form" id="app_form" style="border-radius: 0px;" method="post" class="form-horizontal group-border-dashed">
 
-                                <div class="form-group">
+                                {{--<div class="form-group">
                                     <label class="col-sm-4 control-label">Agent List <span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
                                         <select class="form-control input-sm required" name="user_id" id="user_id">
@@ -41,6 +41,26 @@
                                                 @endforeach
                                             @endif
                                         </select>
+                                    </div>
+                                </div>--}}
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Agent List <span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="select_user_id" id="select_user_id" placeholder="Agent List" class="form-control input-sm" required value = ""/>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Payment Date<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="payment_date" id="payment_date" placeholder="Payment Date" class="form-control input-sm required" value="{{old('payment_date')}}" autocomplete="off" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Voucher Code<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="voucher_code" id="voucher_code" placeholder="Voucher Code" class="form-control input-sm required" value="{{old('voucher_code')}}" />
                                     </div>
                                 </div>
 
@@ -54,18 +74,37 @@
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label">Rate<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
-                                        <input type="text" name="rate" id="rate" placeholder="Rate" class="form-control input-sm required" value="{{old('rate')}}" />
+                                        <input type="text" name="rate_after_gst" id="rate_after_gst" placeholder="Rate" class="form-control input-sm required" value="{{old('rate_after_gst')}}" />
                                     </div>
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-4 control-label">Payment Id<span class="error">*</span></label>
+                                    <label class="col-sm-4 control-label">Transaction Id<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
-                                        <input type="text" name="payment_id" id="payment_id" placeholder="Payment Id" class="form-control input-sm required" value="{{old('payment_id')}}" />
+                                        <input type="text" name="transaction_id" id="transaction_id" placeholder="Transaction Id" class="form-control input-sm " value="{{old('transaction_id')}}" />
                                     </div>
                                 </div>
 
+                                {{--<div class="form-group">
+                                    <label class="col-sm-4 control-label">GSTN<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="gstn" id="gstn" placeholder="GSTN" class="form-control input-sm" maxlength="15" value="{{old('gstn')}}" />
+                                    </div>
+                                </div>--}}
 
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Payment Type<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <select name="payment_type" class="form-control input-sm required" id="payment_type">
+                                            <option value="">{{trans('app.select')}}</option>
+                                            <option value="Online Payment">Online Payment</option>
+                                            <option value="Bank Payment">Bank Payment</option>
+                                            <option value="Cash On Hand">Cash On Hand</option>
+                                            <option value="Cash Deposit">Cash Deposit</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <input type="hidden" name="user_id" id = "user_id" value="">
                                 {{ csrf_field() }}
 
                                 <div class="col-sm-6 col-md-8 savebtn">
@@ -82,4 +121,38 @@
         </div>
     </div>
 @endsection
+@push('externalJsLoad')
+<script src="{{url('js/plugins/jquery.datetimepicker.js')}}" type="text/javascript"></script>
+<script>
+    $( function() {
+        $( "#payment_date" ).datepicker({dateFormat: 'dd-mm-yy'});
+    } );
+
+    $(document).ready(function() {
+
+        $("#select_user_id").autocomplete({
+            source: function(request, response) {
+                $.ajax({
+                    url: '{{url('offline/get_all_agent')}}',
+                    type:"POST",
+                    dataType: "json",
+                    data: {
+                        term : request.term,
+                        _token: csrf_token
+                    },
+                    success: function(data) {
+                        response(data);
+
+                    }
+                });
+            },
+            minLength: 3,
+            select: function( event, ui ) {
+                $('#user_id').val(ui.item.id);
+            }
+        });
+    });
+</script>
+@endpush
+
 

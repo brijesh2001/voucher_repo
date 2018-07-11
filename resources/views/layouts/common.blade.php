@@ -33,6 +33,7 @@
     <link rel="stylesheet" type="text/css" href="{{url('css/plugins/jquery.loadmask.css')}}" />
     {{--<link rel="stylesheet" type="text/css" href="{{url('css/plugins/responsive.dataTables.min.css')}}" />--}}
     <link rel="stylesheet" type="text/css" href="{{url('css/plugins/select.dataTables.min.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{url('css/plugins/jquery.ui.autocomplete.css')}}" />
     <link rel="stylesheet" href="{{url('css/style.css')}}" type="text/css" />
     <link rel="stylesheet" href="{{url('css/custom.css')}}" type="text/css" />
     <link rel="stylesheet" href="{{url('css/plugins/font-awesome.min.css')}}" type="text/css" />
