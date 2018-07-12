@@ -3,7 +3,8 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Buy PTE Voucher @ ₹ {{$rate or ''}} Only & 47 Mock Test with 22 Evaluation Free @ ₹9660* Only</title>
+    <title>Buy PTE Voucher + 47 Mock Tests with 22 Evaluations @ ₹9660* Only</title>
+    {{--<title>Buy PTE Voucher @ ₹ {{$rate or ''}} Only & 47 Mock Test with 22 Evaluation Free @ ₹9660* Only</title>--}}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="L2gJ62ywY2rfXEJ5JMJQm0_k75ys4Omm-TifSdh-V_w"/>
