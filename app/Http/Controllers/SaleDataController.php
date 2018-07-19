@@ -462,7 +462,7 @@ class SaleDataController extends Controller
                 $filepath = public_path(). DIRECTORY_SEPARATOR.'online/'.$folder_name;
                 if (!file_exists($filepath)) {
                     //mkdir($filepath,0777);
-                    File::makeDirectory($filepath, 777);
+                    File::makeDirectory($filepath, 777,true);
                 }
                 $onlineSaleData = $this->saledata->gettheSaleData($start_date,$end_date);
                 if(!empty($onlineSaleData)) {
