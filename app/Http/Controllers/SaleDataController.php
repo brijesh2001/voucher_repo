@@ -12,6 +12,8 @@ use Hash;
 use DB;
 use Excel;
 use PDF;
+use Storage;
+use Zipper;
 class SaleDataController extends Controller
 {
 
@@ -310,6 +312,7 @@ class SaleDataController extends Controller
                     $data['word_amount'] = $this->getIndianCurrency($data['amount_paid']);
                     $data['created_at'] = date("d-m-Y", strtotime($data['created_at']));
                     $pdf = PDF::loadView('emails.invoice', $data);
+                    //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
                     return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                 }
             }elseif ($requestData['type'] == 'offline') {
@@ -323,6 +326,7 @@ class SaleDataController extends Controller
                    $data['invoice_number'] = $data['invoice_no'];
                    $data['word_amount'] = $this->getIndianCurrency($data['rate_after_gst']);
                    $pdf = PDF::loadView('emails.invoice', $data);
+                    //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
                    return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                 }
             }
@@ -362,5 +366,157 @@ class SaleDataController extends Controller
         return ($Rupees ? $Rupees . 'Rupees ' : '') . $paise;
     }
 
+    /**
+     * For Creating the zip file for the online customer
+     * */
 
+    public function createZipOfOnlineCustomer()
+    {
+
+        $data['saledataManagementTab'] = "active open";
+        $data['onlineZipTab'] = "active";
+        return view('saledata.onlinezip', $data);
+    }
+
+    /**
+     * For Creating the zip file for the Offline customer
+     * */
+
+    public function createZipOfOfflineCustomer()
+    {
+
+        $data['saledataManagementTab'] = "active open";
+        $data['offlineZipTab'] = "active";
+        return view('saledata.offlinezip', $data);
+    }
+
+    /**
+     * For Generating the Zip file
+     * */
+    public function generateZip(request $request)
+    {
+        $requestData = $request->all();
+        if(!empty($requestData)) {
+            $start_date = date('Y-m-d 00:00:00', strtotime(trim($requestData['to'])));
+            $end_date = date('Y-m-d 23:59:59', strtotime(trim($requestData['from'])));
+
+            //For Offline Data
+            if($requestData['type'] == 'offline') {
+
+                $folder_name = date('Y-m-d', strtotime(trim($requestData['to'])));
+                $filepath = public_path(). DIRECTORY_SEPARATOR.'agent/'.$folder_name;
+                $offlineinvoiceData = $this->offlinePayment->gettheOfflineData($start_date,$end_date);
+                if (!file_exists($filepath)) {
+                    mkdir($filepath,777,true);
+                }
+
+                if(!empty($offlineinvoiceData)) {
+                    foreach ($offlineinvoiceData as $offlineinvoic) {
+                        if(file_exists($filepath.'/'.$offlineinvoic->invoice_no.'.pdf')){
+                            $fileFullPath = $filepath.'/'.$offlineinvoic->invoice_no.'.pdf';
+                            $this->deleteFilesIfExist($fileFullPath);
+                        }
+                        $data['amount_paid'] = $offlineinvoic->rate_after_gst;
+                        $data['name'] = $offlineinvoic->name;
+                        $data['email'] = $offlineinvoic->email;
+                        $data['mobile'] = $offlineinvoic->mobile;
+                        $data['state_name'] = $offlineinvoic->state_name;
+                        $data['voucher_code'] = $offlineinvoic->voucher_code;
+                        $data['created_at'] = date("d-m-Y", strtotime($offlineinvoic->payment_date));
+                        $data['igst'] = $offlineinvoic->igst;
+                        $data['cgst'] = $offlineinvoic->cgst;
+                        $data['sgst'] = $offlineinvoic->sgst;
+                        $data['amount_paid'] = $offlineinvoic->amount_paid;
+                        $data['invoice_number'] = $offlineinvoic->invoice_no;
+                        $data['rate_before_gst'] = $offlineinvoic->rate_before_gst;
+                        $data['state_name'] = $offlineinvoic->state_name;
+                        $data['word_amount'] = $this->getIndianCurrency($offlineinvoic->rate_after_gst);
+                        $pdf = PDF::loadView('emails.invoice', $data);
+                        $pdf->save($filepath.'/'.$offlineinvoic->invoice_no.'.pdf');
+                        //return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
+                    }
+
+                    $files = glob(public_path('agent'.DIRECTORY_SEPARATOR.$folder_name.'/*'));
+                    $zipfileName = public_path() . DIRECTORY_SEPARATOR.$folder_name.DIRECTORY_SEPARATOR.'agent'.DIRECTORY_SEPARATOR.$folder_name.'.zip';
+                    if(file_exists($zipfileName)){
+                        $this->deleteFilesIfExist($zipfileName);
+                    }
+                    if(count($files) > 0) {
+                        Zipper::make('agent/'.$folder_name.'/'.$folder_name.'.zip')->add($files)->close();
+                        return response()->download(public_path('agent/'.$folder_name.'/'.$folder_name.'.zip'));
+                    }else {
+                        $request->session()->flash('alert-danger', 'No files found');
+                        return redirect('saledata/create-offline-zip');
+                    }
+
+                }
+
+            }
+
+            //PDF Generation for online sale data
+
+            if($requestData['type'] == 'online') {
+
+                $folder_name = date('Y-m-d', strtotime(trim($requestData['to'])));
+                $filepath = public_path(). DIRECTORY_SEPARATOR.'online/'.$folder_name;
+                if (!file_exists($filepath)) {
+                    mkdir($filepath,777,true);
+                }
+                $onlineSaleData = $this->saledata->gettheSaleData($start_date,$end_date);
+                if(!empty($onlineSaleData)) {
+                    foreach ($onlineSaleData as $online) {
+                        $data['rate_before_gst'] = $online->amount_paid * 100/118;
+                        $IGST = $online->amount_paid -  $data['rate_before_gst'];
+                        if($online->state_id == 5){
+                            $cgstSgst = $IGST/2;
+                            $data['cgst'] = $data['sgst'] = number_format($cgstSgst,2);
+                            $data['igst'] = 0;
+                        }else {
+                            $data['cgst'] = $data['sgst'] = 0;
+                            $data['igst'] = number_format($IGST,2);
+                        }
+                        $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
+                        $data['amount_paid'] = $online->amount_paid;
+                        $data['created_at'] = date("d-m-Y", strtotime($online->created_at));
+                        $data['name'] = $online->name;
+                        $data['email'] = $online->email;
+                        $data['mobile'] = $online->mobile;
+                        $data['state_name'] = $online->state_name;
+                        $data['voucher_code'] = $online->voucher_code;
+                        $data['invoice_number'] = $online->invoice_number;
+                        $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
+                        $pdf = PDF::loadView('emails.invoice', $data);
+                        $pdf->save($filepath.'/'.$online->invoice_number.'.pdf');
+                        //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
+
+                    }
+
+                    $files = glob(public_path('online'.DIRECTORY_SEPARATOR.$folder_name.'/*'));
+                    $zipfileName = public_path() . DIRECTORY_SEPARATOR.$folder_name.DIRECTORY_SEPARATOR.'online'.DIRECTORY_SEPARATOR.$folder_name.'.zip';
+                    if(file_exists($zipfileName)){
+                        $this->deleteFilesIfExist($zipfileName);
+                    }
+                    if(count($files) > 0) {
+                        Zipper::make('online/'.$folder_name.'/'.$folder_name.'.zip')->add($files)->close();
+                        return response()->download(public_path('online/'.$folder_name.'/'.$folder_name.'.zip'));
+                    }else {
+                        $request->session()->flash('alert-danger', 'No files found');
+                        return redirect('saledata/create-online-zip');
+                    }
+
+
+                }
+            }
+        }
+    }
+
+    /**
+     * Check and delete files
+     *
+     * */
+
+    public function deleteFilesIfExist($filePath)
+    {
+        return Storage::delete($filePath);
+    }
 }

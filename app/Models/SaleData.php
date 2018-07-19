@@ -412,4 +412,16 @@ class SaleData extends Authenticatable
         $current_year = date('Y');
         return 'INV_'.$current_year.'_V_'.$invoice_number;
     }
+
+    /**
+     * Get the offline data by date range
+     * */
+    public function gettheSaleData($start_date,$end_date)
+    {
+        return SaleData::whereBetween('tbl_sale_data.created_at', [$start_date, $end_date])
+            ->leftjoin('tbl_enquiry','tbl_enquiry.id','=','tbl_sale_data.enquiry_id')
+            ->leftjoin('tbl_state','tbl_state.id','=','tbl_enquiry.state')
+            ->select('tbl_state.name as state_name','tbl_enquiry.state as state_id','tbl_enquiry.name','tbl_enquiry.email','tbl_enquiry.mobile', 'tbl_sale_data.*')
+            ->get();
+    }
 }

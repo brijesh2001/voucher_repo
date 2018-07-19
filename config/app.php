@@ -163,6 +163,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */
@@ -183,6 +184,7 @@ return [
         Kyranb\Footprints\FootprintsServiceProvider::class,
         Spatie\Sitemap\SitemapServiceProvider::class,
         //Vsmoraes\Pdf\PdfServiceProvider::class
+        Chumper\Zipper\ZipperServiceProvider::class,
 
     ],
 
@@ -235,6 +237,7 @@ return [
         'Charts' => ConsoleTVs\Charts\Facades\Charts::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
         'Footprints'   => Kyranb\Footprints\FootprintsFacade::class,
+        'Zipper' => Chumper\Zipper\Zipper::class
         //'PDF' => 'Vsmoraes\Pdf\PdfFacade',
 
     ],

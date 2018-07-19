@@ -64,6 +64,12 @@
                                 <li class="{{$invoicedataTab or ''}}">
                                     <a href="{{url('saledata/invoice-list')}}">{{trans('app.invoice_data')}}</a>
                                 </li>
+                                <li class="{{$offlineZipTab or ''}}">
+                                    <a href="{{url('saledata/create-offline-zip')}}">Generate Agent Data Zip</a>
+                                </li>
+                                <li class="{{$onlineZipTab or ''}}">
+                                    <a href="{{url('saledata/create-online-zip')}}">Generate Online Customer zip</a>
+                                </li>
                             </ul>
                         </li>
                         @endif

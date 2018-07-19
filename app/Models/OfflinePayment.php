@@ -362,4 +362,14 @@ class OfflinePayment extends Authenticatable
     {
         return OfflinePayment::where('name','LIKE','%'.$term.'%')->get();
     }
+
+    /**
+     * Get the offline data by date range
+     * */
+    public function gettheOfflineData($start_date,$end_date)
+    {
+       return OfflinePayment::whereBetween('payment_date', [$start_date, $end_date])
+                                ->leftjoin('tbl_state','tbl_state.id','=','tbl_offline_payment.state')
+                                ->select('tbl_state.name as state_name', 'tbl_offline_payment.*')->get();
+    }
 }

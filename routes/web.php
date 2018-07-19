@@ -190,6 +190,9 @@ Route::group(['prefix' => 'saledata'], function () {
     Route::post('/invoie-datatable', 'SaleDataController@invoiceDatatable');
     Route::post('/delete', 'SaleDataController@delete');
     Route::get('/download-pdf', 'SaleDataController@downloadpdf')->name('saledata-pdfdownload');
+    Route::get('/create-online-zip', 'SaleDataController@createZipOfOnlineCustomer');
+    Route::get('/create-offline-zip', 'SaleDataController@createZipOfOfflineCustomer');
+    Route::post('/generate-zip', 'SaleDataController@generateZip');
 });
 
 Route::group(['prefix' => 'refer'], function () {
