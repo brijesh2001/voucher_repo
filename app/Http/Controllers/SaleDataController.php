@@ -14,6 +14,7 @@ use Excel;
 use PDF;
 use Storage;
 use Zipper;
+use File;
 class SaleDataController extends Controller
 {
 
@@ -460,7 +461,8 @@ class SaleDataController extends Controller
                 $folder_name = date('Y-m-d', strtotime(trim($requestData['to'])));
                 $filepath = public_path(). DIRECTORY_SEPARATOR.'online/'.$folder_name;
                 if (!file_exists($filepath)) {
-                    mkdir($filepath,777,true);
+                    //mkdir($filepath,0777);
+                    File::makeDirectory($filepath, 777);
                 }
                 $onlineSaleData = $this->saledata->gettheSaleData($start_date,$end_date);
                 if(!empty($onlineSaleData)) {
