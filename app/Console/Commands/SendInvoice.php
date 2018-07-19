@@ -56,7 +56,7 @@ class SendInvoice extends Command
             $folder_name = date('Y-m-d', strtotime(trim($date)));
             $filepath = public_path(). DIRECTORY_SEPARATOR.'attachment/'.$folder_name;
             if (!file_exists($filepath)) {
-                mkdir($filepath,777,true);
+                mkdir($filepath,0777,true);
             }
             foreach ($onlineSaleData as $online) {
                 if(file_exists($filepath.'/'.$online->invoice_number.'.pdf')){
