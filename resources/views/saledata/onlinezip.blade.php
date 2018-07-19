@@ -11,7 +11,7 @@
 @section('content')
     <div class="be-content">
         <div class="page-head">
-            <h2>Download Agent Zip</h2>
+            <h2>Download Online Customer Zip</h2>
             <ol class="breadcrumb">
                 <li><a href="{{url('/dashboard')}}">{{trans('app.admin_home')}}</a></li>
                 <li><a href="{{url('/saledata/create-online-zip')}}">Zip {{trans('app.management')}}</a></li>
