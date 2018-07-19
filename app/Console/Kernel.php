@@ -18,6 +18,7 @@ class Kernel extends ConsoleKernel
         Commands\InformVoucherOver::class,
         //Commands\UpdateInvoiceNumber::class
         Commands\ReferFriend::class,
+        Commands\SendInvoice::class,
     ];
 
     /**
@@ -38,6 +39,8 @@ class Kernel extends ConsoleKernel
           //  ->everyTenMinutes();
         $schedule->command('send:referfriend')
             ->dailyAt('10:00');
+        $schedule->command('send:invoice')
+            ->dailyAt('13:30');
     }
 
     /**

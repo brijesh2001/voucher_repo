@@ -465,6 +465,10 @@ class SaleDataController extends Controller
                 $onlineSaleData = $this->saledata->gettheSaleData($start_date,$end_date);
                 if(!empty($onlineSaleData)) {
                     foreach ($onlineSaleData as $online) {
+                        if(file_exists($filepath.'/'.$online->invoice_number.'.pdf')){
+                            $fileFullPath = $filepath.'/'.$online->invoice_number.'.pdf';
+                            $this->deleteFilesIfExist($fileFullPath);
+                        }
                         $data['rate_before_gst'] = $online->amount_paid * 100/118;
                         $IGST = $online->amount_paid -  $data['rate_before_gst'];
                         if($online->state_id == 5){
