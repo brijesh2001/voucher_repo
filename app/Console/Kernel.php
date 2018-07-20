@@ -40,7 +40,7 @@ class Kernel extends ConsoleKernel
         $schedule->command('send:referfriend')
             ->dailyAt('10:00');
         $schedule->command('send:invoice')
-            ->dailyAt('13:30');
+            ->dailyAt('11:00');
     }
 
     /**
