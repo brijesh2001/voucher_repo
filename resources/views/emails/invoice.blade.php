@@ -110,7 +110,7 @@
                             <tr>
                                 <td style="padding: 15px;">1</td>
                                 <td style="padding: 15px;">{{$created_at}}</td>
-                                <td style="padding: 15px;">{{$voucher_code}}</td>
+                                <td style="padding: 15px;">{!!$voucher_code!!}</td>
                                 <td style="padding: 15px;">8532</td>
                                 <td style="padding: 15px;">{{number_format($rate_before_gst,2)}}</td>
                                 <td style="padding: 15px;">{{$igst}}</td>

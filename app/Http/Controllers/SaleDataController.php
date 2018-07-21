@@ -310,6 +310,7 @@ class SaleDataController extends Controller
                         $data['cgst'] = $data['sgst'] = 0;
                         $data['igst'] = number_format($IGST,2);
                     }
+                    $data['voucher_code'] = str_replace(',', '<br />', $data['voucher_code']);
                     $data['word_amount'] = $this->getIndianCurrency($data['amount_paid']);
                     $data['created_at'] = date("d-m-Y", strtotime($data['created_at']));
                     $pdf = PDF::loadView('emails.invoice', $data);
@@ -422,7 +423,8 @@ class SaleDataController extends Controller
                         $data['email'] = $offlineinvoic->email;
                         $data['mobile'] = $offlineinvoic->mobile;
                         $data['state_name'] = $offlineinvoic->state_name;
-                        $data['voucher_code'] = $offlineinvoic->voucher_code;
+                        //$data['voucher_code'] = $offlineinvoic->voucher_code;
+                        $data['voucher_code'] = str_replace(',', '<br />', $offlineinvoic->voucher_code);
                         $data['created_at'] = date("d-m-Y", strtotime($offlineinvoic->payment_date));
                         $data['igst'] = $offlineinvoic->igst;
                         $data['cgst'] = $offlineinvoic->cgst;
@@ -488,7 +490,8 @@ class SaleDataController extends Controller
                         $data['email'] = $online->email;
                         $data['mobile'] = $online->mobile;
                         $data['state_name'] = $online->state_name;
-                        $data['voucher_code'] = $online->voucher_code;
+                        //$data['voucher_code'] = $online->voucher_code;
+                        $data['voucher_code'] = str_replace(',', '<br />', $online->voucher_code);
                         $data['invoice_number'] = $online->invoice_number;
                         $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
                         $pdf = PDF::loadView('emails.invoice', $data);
