@@ -80,7 +80,8 @@ class SendInvoice extends Command
                 $data['email'] = $online->email;
                 $data['mobile'] = $online->mobile;
                 $data['state_name'] = $online->state_name;
-                $data['voucher_code'] = $online->voucher_code;
+                //$data['voucher_code'] = $online->voucher_code;
+                $data['voucher_code'] = str_replace(',', '<br />', $online->voucher_code);
                 $data['invoice_number'] = $online->invoice_number;
                 $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
                 $pdf = PDF::loadView('emails.invoice', $data);
