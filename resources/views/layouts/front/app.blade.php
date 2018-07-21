@@ -3,13 +3,13 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>Buy PTE Voucher + 47 Mock Tests with 22 Evaluations @ ₹9660* Only</title>
+    <title>Buy PTE Voucher + 47 Mock Tests with 22 Evaluations @ ₹9745* Only</title>
     {{--<title>Buy PTE Voucher @ ₹ {{$rate or ''}} Only & 47 Mock Test with 22 Evaluation Free @ ₹9660* Only</title>--}}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="L2gJ62ywY2rfXEJ5JMJQm0_k75ys4Omm-TifSdh-V_w"/>
     <meta name="description"
-          content="Book PTE Exam from PTE Voucher Code at ₹ 9660* & Save ₹ 1702 in India. Get 47 Mock Tests with 22 Evaluations Free. Get Instant Discount Voucher in your email. Limited Time Offer!"/>
+          content="Book PTE Exam from PTE Voucher Code at ₹ 9745* & Save ₹ 1602 in India. Get 47 Mock Tests with 22 Evaluations Free. Get Instant Discount Voucher in your email. Limited Time Offer!"/>
     {{--<meta name="description"
           content="Book PTE Exam from PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹ {{$saved_prize or ''}} in India. Get 47 Mock Tests with 22 Evaluations Free. Get Instant Discount Voucher in your email."/>--}}
     <meta name="keywords"
