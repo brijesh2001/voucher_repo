@@ -250,7 +250,7 @@
                             <tr>
                                 <td align="center">
                                     <p style="text-align: center;font-size: 10px;">PTE EDU SERVICES<br>
-                                        Shahi Kutir Bunglows,27 B/H Vrundavan Party Plot, Nr. Suryam Flora, Nikol, Ahmedabad</p>
+                                        Shahi Kutir Bunglows,27 B/H Vrundavan Party Plot, Nr. Suryam Flora, Nikol, Ahmedabad <br> Email: pteeduservices@gmail.com. Phone : +91 97250 53310</p>
                                 </td>
                             </tr>
                         </table>
