@@ -79,7 +79,7 @@
             </div>
             <div class="col-lg-6 col-sm-6 col-xs-12">
                 <div class="copyright">
-                    <p>© 2018 ptevouchercode.com All Rights Reserved<a rel="nofollow" href="#"></a></p>
+                    <p>© 2018 ptevouchercode.com All Rights Reserved<a rel="nofollow" href="#"></a> || <a href="{{url('terms')}}"style=color:#fff>Terms & Condition</a></p>
                 </div>
             </div>
         </div>

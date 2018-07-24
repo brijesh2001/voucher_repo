@@ -252,6 +252,14 @@ class LoginController extends Controller
     {
         return view('front.referfriend');
     }
+    /**
+     * refer Friend view page
+     *
+     */
+    public function terms()
+    {
+        return view('front.terms');
+    }
 
 
 }

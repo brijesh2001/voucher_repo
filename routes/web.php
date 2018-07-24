@@ -28,6 +28,7 @@ Route::get('/about-us', 'Auth\LoginController@aboutUs');
 Route::get('/buy', 'Auth\LoginController@buy');
 Route::post('/send-query', 'Auth\LoginController@sendQuery');
 Route::get('/refer-friend', 'Auth\LoginController@referFriend');
+Route::get('/terms', 'Auth\LoginController@terms');
 Route::get('/backend', function () {
     return Redirect::to('login');
 });
