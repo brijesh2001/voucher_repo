@@ -280,11 +280,11 @@ class PteController extends Controller
                                 $admin_email_data['voucher_to_send'] = implode(",", $voucher_to_send);
                                 Mail::send(new SuccessMail($admin_email_data));
 
-                                sleep(3);
+                                /*sleep(3);
                                 $mock_test_mail = [];
                                 $mock_test_mail['type'] = 'mock_test';
                                 $mock_test_mail['email'] = $email;
-                                Mail::send(new SuccessMail($mock_test_mail));
+                                Mail::send(new SuccessMail($mock_test_mail));*/
 
                                 $final_voucher_sms = implode(",", $voucher_to_send);
 

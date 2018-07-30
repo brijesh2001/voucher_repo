@@ -10,10 +10,7 @@
                 <div class="col-md-10">
                     <div class="contents text-center">
                         <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE Voucher Online At  ₹ {{$rate or ''}}  & Get Free</h1>
-                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">20 Un scored Mock Test</h4>
-                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">22 Scored Mock Test</h4>
-                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">5 Offline Mock Test</h4>
-                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Free Reference Material</h4>
+                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">11 Scored Mock Test</h4>
                     </div>
                 </div>
                 <div class="col-md-10 pteForm">
@@ -381,7 +378,7 @@
                         <div class="testimonial-item">
                             <img src="https://www.ptevouchercode.com/css/front/images/c4.png" alt="Client Testimonoal" />
                             <div class="testimonial-text">
-                                <p>Nice deal,got good discount on PTE exam voucher + also got 5 test for practice + awesome customer service.</p>
+                                <p>Nice deal,got good discount on PTE exam voucher  + awesome customer service.</p>
                                 <h3>SYED IMAD</h3>
                                 <!-- <span>Fondor of Jalmori</span> -->
                             </div>
