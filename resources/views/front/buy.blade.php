@@ -9,10 +9,7 @@
                 <div class="col-md-10">
                     <div class="contents text-center">
                         <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE Voucher Online At ₹ {{$rate or ''}} & Get Free</h1>
-                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">20 Un scored Mock Test</h4>
-                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">15 Scored Mock Test</h4>
-                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">5 Offline Mock Test</h4>
-                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">Free Refrence Material</h4>
+                        <h4 class="wow fadeInDown" data-wow-duration="1000ms" data-wow-delay="0.3s">11 scored Mock Test</h4>
                     </div>
                 </div>
                 <div class="col-md-10 pteForm">
