@@ -38,6 +38,9 @@
 /* ==========================================================================
    2. GENERAL
    ========================================================================== */
+.top-class {
+  margin-top: 50px !important;
+}
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
@@ -59,6 +62,7 @@ p {
 a:hover, a:focus {
   color: #21bbee;
 }
+
 
 a {
   -webkit-transition: all 0.2s linear;
