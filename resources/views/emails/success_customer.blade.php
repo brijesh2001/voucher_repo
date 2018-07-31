@@ -226,10 +226,10 @@
                                             <tr>
                                                 <td background="{{url('css/front/images/square1.png')}}" align="center" width="100%" style="font-family: Open Sans, Helvetica, Arial, sans-serif; font-size: 18px; font-weight: bold;height: 185px;background-repeat: no-repeat;background-size: 100% 100%;">
                                                     <p style="margin: 10px;">
-                                                        <a href="#" target="_blank" style="text-decoration: none; color: #ffffff;">Valid Up To</a>
+                                                        <a href="#" target="_blank" style="text-decoration: none; color: #ffffff;">Valid for</a>
                                                     </p>
                                                     <p style="margin: 10px;">
-                                                        <a href="#" target="_blank" style="text-decoration: none; color: #ffffff;">12 Month Of Purchase</a>
+                                                        <a href="#" target="_blank" style="text-decoration: none; color: #ffffff;">11 Month from Purchase Date</a>
                                                     </p>
                                                 </td>
                                             </tr>

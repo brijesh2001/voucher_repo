@@ -7,10 +7,9 @@ Dear Hitesh,
 
 Enquiry form the customer
 
-Name : {{$successData['name'] or ''}}
-Email : {{$successData['email'] or ''}}
-Mobile : {{$successData['mobile'] or ''}}
-Message : {{$successData['message'] or ''}}
+Name : {{$successData['name'] or ''}}<br/>
+Email : {{$successData['email'] or ''}}<br/>
+Message : {{$successData['message'] or ''}}<br/>
 
 
 </body>

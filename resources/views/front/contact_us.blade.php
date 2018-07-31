@@ -10,7 +10,7 @@
 
     </div>
 
-    <div class="banner-text-agileinfo hidden-xs" style="position:absolute;top:250px;">
+    {{--<div class="banner-text-agileinfo hidden-xs" style="position:absolute;top:250px;">
 
         <form action="{{url('send-query')}}" id = "ptevouForm" method="POST">
 
@@ -32,7 +32,7 @@
             {{ csrf_field() }}
         </form>
 
-    </div>
+    </div>--}}
 
 
     <div class="clearfix"></div>
