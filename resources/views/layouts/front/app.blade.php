@@ -130,6 +130,14 @@
 
 @stack('external_script')
 @stack('script')
-
+<script>
+    $(document).ready(function() {
+        $("[href]").each(function() {
+            if (this.href == window.location.href) {
+                $(this).addClass("active");
+            }
+        });
+    });
+</script>
 </body>
 </html>
