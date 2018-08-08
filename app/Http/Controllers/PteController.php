@@ -329,7 +329,7 @@ class PteController extends Controller
      */
     public function sendSms($voucher_code,$mobile)
     {
-        $sms = "Your PTE Exam Voucher Code : $voucher_code\nPlease share ptevouchercode.com to your friends & help them to save money on PTE Exam Booking\nRegards\nHitesh Patel";
+        $sms = "Your PTE Exam Voucher Code : $voucher_code\nPlease share ptevouchercode.com to your friends & help them to save money on PTE Exam Booking\nCheers";
         //Your authentication key
         $authKey = "134556AZbJqzDsxSk585abcb1";
 
