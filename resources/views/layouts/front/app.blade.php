@@ -19,7 +19,7 @@
           content="Buy PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹.{{$saved_prize or ''}} Book Your Exam at any centre in India & Get 11 Mock Tests with 11 Evaluations Free. Lowest price in India. Get Instant Voucher in your email."/>
     <meta property="og:url" content="https://www.ptevouchercode.com/"/>
     <meta name="author" content="PTEVocuherCode (ptevouchercode.com)"/>
-    <meta property="og:image" content="https://www.ptevouchercode.com/css/front/images/logo.png"/>
+    <meta property="og:image" content="{{url('css/front/images/logo.png')}}"/>
     <meta property="og:site_name" content="PTEVoucherCode"/>
     <meta name="publisher" content="PTEVoucherCode"/>
     <meta name="copyright" content="PTEVoucherCode"/>
