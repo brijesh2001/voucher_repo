@@ -253,7 +253,7 @@ class LoginController extends Controller
         return view('front.referfriend');
     }
     /**
-     * refer Friend view page
+     * terms view page
      *
      */
     public function terms()
@@ -261,5 +261,13 @@ class LoginController extends Controller
         return view('front.terms');
     }
 
+    /**
+     * privacy view page
+     *
+     */
+    public function privacy()
+    {
+        return view('front.privacy');
+    }
 
 }

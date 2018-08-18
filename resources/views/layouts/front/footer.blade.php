@@ -64,7 +64,7 @@
     <div class="container">
         <div class="row">
             <!-- Footer Links -->
-            <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="col-lg-4 col-sm-4 col-xs-12">
                 <ul class="footer-links">
                     <li>
                         <a href="{{url('/')}}">Homepage</a>
@@ -77,9 +77,9 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="col-lg-8 col-sm-8 col-xs-12">
                 <div class="copyright">
-                    <p>© 2018 ptevouchercode.com All Rights Reserved<a rel="nofollow" href="#"></a> || <a href="{{url('terms')}}"style=color:#fff>Terms & Condition</a></p>
+                    <p>© 2018 ptevouchercode.com All Rights Reserved<a rel="nofollow" href="#"></a> || <a href="{{url('terms')}}"style=color:#fff>Terms & Condition</a> || <a href="{{url('privacy')}}"style=color:#fff>Privacy Policy</a></p>
                 </div>
             </div>
         </div>

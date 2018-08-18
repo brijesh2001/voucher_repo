@@ -29,7 +29,9 @@
 
                         <ul style="padding-top: 20px">
                             <li>
-                                <p>This set of “Terms and Conditions” regulates to use the services offered by “PTE VOUCHER CODE”. By reading this, we imply that you are well aware with our work process and give your consent to use your information as per our need. It is basically a form of agreement between us and the user to ensure the transparent work process.
+                                <p>
+                                    PTEVoucherCode is entity operating under the name of <a href ='https://www.compassoverseas.com/terms-and-condition/' target="_blank">Compass Overseas</a>. Henceforth, all the terms and conditions of Compass Overseas will be applicable to PTEVoucherCode by default.
+                                    This set of “Terms and Conditions” regulates to use the services offered by “PTE VOUCHER CODE”. By reading this, we imply that you are well aware with our work process and give your consent to use your information as per our need. It is basically a form of agreement between us and the user to ensure the transparent work process.
                                     Please, read out “Terms and Conditions” agreement carefully before using our services. PTE VOUCHER CODE sticks to the industry’s legal and user-friendly work practices, thus seek its clients’ attention to our terms and conditions.
                                     PTE VOUCHER CODE holds all the rights to change/modify/ amend the below-mentioned terms and conditions at any point of the time. If it happens, all the changes would be updated on your official website. We request you to keep on checking it from time to time to ensure that you remain aware of this.
 
