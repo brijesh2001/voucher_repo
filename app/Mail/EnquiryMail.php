@@ -19,11 +19,13 @@ class EnquiryMail extends Mailable
     public $enquiryData;
     public $user_name;
     public $type;
-    public function __construct($enquiryData,$type)
+    public $state;
+    public function __construct($enquiryData,$type,$state)
     {
         //
         $this->enquiryData = $enquiryData;
         $this->type = $type;
+        $this->state = $state;
     }
 
     /**

@@ -201,10 +201,17 @@ class Enquiry extends Authenticatable
         $enquiry->updated_by = 1;
         $enquiry->updated_at = date('Y-m-d H:i:s');
         $enquiryId = $enquiry->save();
+        $state = new State();
+        $state_data = $state->getStateByField($models['state'],'id');
+        if(!empty($state_data)) {
+            $state_name = $state_data->name;
+        }else {
+            $state_name = '';
+        }
         if ($enquiryId) {
-            Mail::send(new EnquiryMail($enquiry,'customer'));
+            Mail::send(new EnquiryMail($enquiry,'customer',$state_name));
             sleep(5);
-            Mail::send(new EnquiryMail($enquiry,'admin'));
+            Mail::send(new EnquiryMail($enquiry,'admin',$state_name));
 
             return $enquiry;
         } else {

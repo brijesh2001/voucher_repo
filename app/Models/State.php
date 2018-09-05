@@ -39,5 +39,16 @@ class State extends Authenticatable
         return $State->get();
     }
 
-    
+    /**
+     * get Enquiry By fieldname getEnquiryByField
+     *
+     * @param mixed $id
+     * @param string $field_name
+     * @return mixed
+     */
+    public function getStateByField($id, $field_name)
+    {
+        return State::where($field_name, $id)->first();
+    }
+
 }
