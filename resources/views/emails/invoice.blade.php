@@ -39,7 +39,7 @@
                             </tr>
                             <tr>
                                 <td>GSTIN</td>
-                                <td>24DQNPPD9163D1ZH</td>
+                                <td>24DQNPP9163D1ZH</td>
                                 <td>Invoice Date</td>
                                 <td>{{$created_at}}</td>
                             </tr>
