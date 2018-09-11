@@ -301,6 +301,7 @@ class SaleDataController extends Controller
                 $data = (array)$this->saledata->getSaleDataFromId($id);
                 if(!empty($data)) {
                     $data['rate_before_gst'] = $data['amount_paid']*100/118;
+                    $data['gstn'] = $data['client_gstn'];
                     $IGST = $data['amount_paid'] -  $data['rate_before_gst'];
                     if($data['state_id'] == 5){
                         $cgstSgst = $IGST/2;
@@ -430,6 +431,7 @@ class SaleDataController extends Controller
                         $data['cgst'] = $offlineinvoic->cgst;
                         $data['sgst'] = $offlineinvoic->sgst;
                         $data['amount_paid'] = $offlineinvoic->amount_paid;
+                        $data['gstn'] = $offlineinvoic->gstn;
                         $data['invoice_number'] = $offlineinvoic->invoice_no;
                         $data['rate_before_gst'] = $offlineinvoic->rate_before_gst;
                         $data['state_name'] = $offlineinvoic->state_name;
@@ -459,7 +461,6 @@ class SaleDataController extends Controller
             //PDF Generation for online sale data
 
             if($requestData['type'] == 'online') {
-
                 $folder_name = date('Y-m-d', strtotime(trim($requestData['to'])));
                 $filepath = public_path(). DIRECTORY_SEPARATOR.'online/'.$folder_name;
                 if (!file_exists($filepath)) {
@@ -490,7 +491,9 @@ class SaleDataController extends Controller
                         $data['email'] = $online->email;
                         $data['mobile'] = $online->mobile;
                         $data['state_name'] = $online->state_name;
+                        $data['gstn'] = $online->client_gstn;
                         //$data['voucher_code'] = $online->voucher_code;
+                        dd($data);
                         $data['voucher_code'] = str_replace(',', '<br />', $online->voucher_code);
                         $data['invoice_number'] = $online->invoice_number;
                         $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);

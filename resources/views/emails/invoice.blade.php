@@ -80,7 +80,8 @@
                             </tr>
                             <tr>
                                 <td style="line-height: 18px;">{{$email}}<br>
-                                    {{$mobile}}
+                                    {{$mobile}}<br>
+                                    GSTIN : {{$gstn}}
                                 </td>
                                 <td style="line-height: 18px;">{{$state_name}},<br>
                                 </td>
