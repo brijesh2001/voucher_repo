@@ -219,9 +219,9 @@ class SaleDataController extends Controller
             $row[] = $saledataData->number_of_voucher;
             $row[] = $saledataData->payment_code;
             $row[] = number_format(($amount_paid*100)/118,2);
-            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'SGST:'.number_format($IGST/2,2) : '-' ;
-            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? 'CGST:'.number_format($IGST/2,2) : '-' ;
-            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? '-' :  'IGST:'.number_format($IGST,2);
+            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? number_format($IGST/2,2) : '-' ;
+            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? number_format($IGST/2,2) : '-' ;
+            $row[] = (isset($saledataData->Enquiry) && $saledataData->Enquiry->state == 5) ? '-' : number_format($IGST,2);
             $row[] = $saledataData->amount_paid;
             $row[] =  $saledataData->state ;
             $row[] = view('datatable.pdf', ['module' => "agent",'type' => 'online', 'id' => $saledataData->id])->render();
@@ -264,9 +264,9 @@ class SaleDataController extends Controller
             $row['Number Of Voucher'] = $requestData->number_of_voucher;
             $row['Transaction Id'] = $requestData->payment_code;
             $row['Before GST'] =  number_format(($amount_paid*100)/118,2);
-            $row['SGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? 'SGST:'.number_format($IGST/2,2): '-' ;
-            $row['CGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? 'CGST:'.number_format($IGST/2,2) : '-' ;
-            $row['IGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? '-' :  number_format($IGST,2);
+            $row['SGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? number_format($IGST/2,2): '' ;
+            $row['CGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? number_format($IGST/2,2) : '' ;
+            $row['IGST'] = (isset($requestData->Enquiry) && $requestData->Enquiry->state == 5) ? '' :  number_format($IGST,2);
             $row['After GST'] = $requestData->amount_paid;
             $row['State'] =  $requestData->state ;
             $appData[] = $row;
@@ -493,7 +493,7 @@ class SaleDataController extends Controller
                         $data['state_name'] = $online->state_name;
                         $data['gstn'] = $online->client_gstn;
                         //$data['voucher_code'] = $online->voucher_code;
-                        dd($data);
+
                         $data['voucher_code'] = str_replace(',', '<br />', $online->voucher_code);
                         $data['invoice_number'] = $online->invoice_number;
                         $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
