@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-site-verification" content="L2gJ62ywY2rfXEJ5JMJQm0_k75ys4Omm-TifSdh-V_w"/>
     <meta name="description"
-          content="Book PTE Exam from PTE Voucher Code at ₹ 9745* & Save ₹ 1602 in India. Get 11 Mock Tests with 11 Evaluations Free. Get Instant Discount Voucher in your email. Limited Time Offer!"/>
+          content="Book PTE Exam from PTE Voucher Code at ₹ 9745* & Save ₹ 1801 in India. Get 11 Mock Tests with 11 Evaluations Free. Get Instant Discount Voucher in your email. Limited Time Offer!"/>
     {{--<meta name="description"
           content="Book PTE Exam from PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹ {{$saved_prize or ''}} in India. Get 47 Mock Tests with 22 Evaluations Free. Get Instant Discount Voucher in your email."/>--}}
     <meta name="keywords"
