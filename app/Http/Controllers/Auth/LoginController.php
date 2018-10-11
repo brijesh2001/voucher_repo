@@ -121,6 +121,8 @@ class LoginController extends Controller
             }
         }
 
+        $data['title_text'] = 'Buy PTE Voucher + 11 Mock Tests with Evaluations @ ₹9745* Only';
+        $data['meta_description'] = 'Book PTE Exam from PTE Voucher Code at ₹ 9745* & Save ₹ 1801 in India. Get 11 Mock Tests with Evaluations Free. Get Instant Discount Voucher in your email. Limited Time Offer!';
         return view('front.index',$data);
     }
     public function hello()
@@ -137,7 +139,9 @@ class LoginController extends Controller
      */
     public function refundPolicy()
     {
-        return view('front.refund_policy');
+        $data['title_text'] = 'Voucher Refund Policy - PTEVoucherCode';
+        $data['meta_description'] = 'Administration and cancellation fees applies on any other PTE voucher refund request. Email us';
+        return view('front.refund_policy',$data);
     }
 
     /**
@@ -146,7 +150,9 @@ class LoginController extends Controller
      */
     public function contactUs()
     {
-        return view('front.contact_us');
+        $data['title_text'] = 'Contact Us - PTEVoucherCode';
+        $data['meta_description'] = 'If you need any help, feel free to contact us';
+        return view('front.contact_us',$data);
     }
 
     /**
@@ -155,7 +161,9 @@ class LoginController extends Controller
      */
     public function infographics()
     {
-        return view('front.infographics');
+        $data['title_text'] = 'Infographic By PTEVoucherCode';
+        $data['meta_description'] = 'Infographic for PTE exam voucher code and examination information by PTEVoucherCode.';
+        return view('front.infographics',$data);
     }
     /**
      * contactUs view page
@@ -163,7 +171,9 @@ class LoginController extends Controller
      */
     public function aboutUs()
     {
-        return view('front.about_us');
+        $data['title_text'] = 'About Us - PTEVoucherCode';
+        $data['meta_description'] = 'Know about PTEVoucherCode.';
+        return view('front.about_us',$data);
     }
 
 
@@ -241,6 +251,8 @@ class LoginController extends Controller
             }
         }
 
+        $data['title_text'] = 'Buy PTE Voucher @ ₹9575* Only - Get 11 Scored Mock Test Free';
+        $data['meta_description'] = 'Want to book PTE Academic Exam online? Buy PTE Voucher online at ₹9575* & Save 2001 and get 11 Scored mock tests FREE. Limited Time Offer!';
         return view('front.buy',$data);
     }
 
@@ -258,7 +270,9 @@ class LoginController extends Controller
      */
     public function terms()
     {
-        return view('front.terms');
+        $data['title_text'] = 'Buy PTE Voucher @ ₹9575* Only - Get 11 Scored Mock Test Free';
+        $data['meta_description'] = 'Want to book PTE Academic Exam online? Buy PTE Voucher online at ₹9575* & Save 2001 and get 11 Scored mock tests FREE. Limited Time Offer!';
+        return view('front.terms',$data);
     }
 
     /**
@@ -267,7 +281,9 @@ class LoginController extends Controller
      */
     public function privacy()
     {
-        return view('front.privacy');
+        $data['title_text'] = 'Buy PTE Voucher @ ₹9575* Only - Get 11 Scored Mock Test Free';
+        $data['meta_description'] = 'Want to book PTE Academic Exam online? Buy PTE Voucher online at ₹9575* & Save 2001 and get 11 Scored mock tests FREE. Limited Time Offer!';
+        return view('front.privacy',$data);
     }
 
 }
