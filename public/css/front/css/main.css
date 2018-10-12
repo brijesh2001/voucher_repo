@@ -38,9 +38,7 @@
 /* ==========================================================================
    2. GENERAL
    ========================================================================== */
-.top-class {
-  margin-top: 50px !important;
-}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #333;
@@ -632,7 +630,7 @@ button:focus {
 #bannerContainer .contents .headline{
   color:chocolate;
   padding-top: 16px;
-  margin-bottom: 5px;
+  margin-bottom: 20px;
 }
 #bannerContainer .contents1 h1 {
   color: #000;

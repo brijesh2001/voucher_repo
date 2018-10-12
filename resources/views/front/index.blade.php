@@ -10,7 +10,8 @@
                 <div class="col-md-10">
                     <div class="contents text-center">
                         <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE Voucher Online At  ₹ {{$rate or ''}}  & Get Free</h1>
-                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">11 Scored Mock Test</h4>
+                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">11 Scored Mock Test Free</h4>
+                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">Get the best real time platform with updated question banks</h4>
                     </div>
                 </div>
                 <div class="col-md-10 pteForm">
@@ -101,24 +102,7 @@
     </section>
 
 
-    <!-- Services Section Start -->
-    <section id="services" class="section">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">About <span>Us</span></h2>
-                <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-                <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">PTEVoucherCode is an e-commerce venture by Compass Overseas that has been serving the Education sector for more than 4 years.</p>
-            </div>
-            <div class="row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="item-boxes wow fadeInDown" data-wow-delay="0.2s">
-                        <p>Since the inauguration of Compass Overseas on December 15, 2013, the company has continually worked for students and professional by helping, assisting, guiding and letting them achieve their goals of staying or studying in foreign Countries. Compass Migration and Education Consultant is acting as a ladder of success for thousands of students who are thriving towards their goals of better educational facilities and thus, the better career. Candidates of PTE Academic are given special discounts and guidance for study material so that they can stay in developed countries like USA, UK, Canada and New Zealand for success Endeavor of gaining skills, knowledge and a better life!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Services Section End -->
+
 
     <!-- Features Section Start -->
 
@@ -311,7 +295,24 @@
     </section>
     <!-- End Video Promo Section -->
 
-
+    <!-- Services Section Start -->
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">About <span>Us</span></h2>
+                <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+                <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">PTEVoucherCode is an e-commerce venture by Compass Overseas that has been serving the Education sector for more than 4 years.</p>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-sm-12">
+                    <div class="item-boxes wow fadeInDown" data-wow-delay="0.2s">
+                        <p>Since the inauguration of Compass Overseas on December 15, 2013, the company has continually worked for students and professional by helping, assisting, guiding and letting them achieve their goals of staying or studying in foreign Countries. Compass Migration and Education Consultant is acting as a ladder of success for thousands of students who are thriving towards their goals of better educational facilities and thus, the better career. Candidates of PTE Academic are given special discounts and guidance for study material so that they can stay in developed countries like USA, UK, Canada and New Zealand for success Endeavor of gaining skills, knowledge and a better life!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section End -->
 
     <!-- Counter Section Start -->
     <div class="counters section" data-stellar-background-ratio="0.5">
