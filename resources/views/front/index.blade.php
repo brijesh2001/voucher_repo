@@ -10,7 +10,7 @@
                 <div class="col-md-10">
                     <div class="contents text-center">
                         <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE Voucher Online At  ₹ {{$rate or ''}}  & Get Free</h1>
-                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">11 Scored Mock Test Free</h4>
+                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">25 Scored Mock Test Free</h4>
                         <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">Get the best real time platform with updated question banks</h4>
                     </div>
                 </div>
@@ -85,7 +85,7 @@
                                 <input type="hidden" name="user_id" value="{{$user_id or ''}}">
                                 {{ csrf_field() }}
                                 <div class="col-md-12">
-                                    <p style="margin-bottom: 0px;margin-top: -7px">PTE Voucher Price : 9745 + 1754 (18% GST) = {{$rate or ''}} INR</p>
+                                    <p style="margin-bottom: 0px;margin-top: -7px">PTE Voucher Price : 9830 + 1769 (18% GST) = {{$rate or ''}} INR</p>
                                     <div class="submit-button text-center">
                                         <button class="btn btn-common1" id="submit" type="submit" style="cursor: pointer">Buy Now</button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
@@ -215,7 +215,7 @@
                 </span>
                             <div class="text">
                                 <h4>Lowest Price</h4>
-                                <p>PTE Academic Cost Rs. 13,101 in India. Purchase Voucher Code & Save Rs. {{$saved_prize or ''}}</p>
+                                <p>PTE Academic Cost Rs. 13,303 in India. Purchase Voucher Code & Save Rs. {{$saved_prize or ''}}</p>
                             </div>
                         </div>
                         <div class="box-item left">
@@ -286,7 +286,7 @@
                         <h2 class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">Buy PTE Academic Voucher Code ₹ {{$rate or ''}} Get ₹ {{$saved_prize or ''}} Discount</h2>
                         <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">For Your Successful Academic and Career Endeavors, We Partner You at The Least Costs! We provide you a reliable and pocket-friendly option to take one of the best English proficiency Pearson Test i.e. PTE Exam. We Provide Complete Assistance, Guidance, And Numerous Handbooks and Supporting Material to Help You Clear the Exam in The First Attempt Itself. </p>
                         <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">We Are Known for Giving Our Best and Unmatched Services to Students Who Dream High. With Us, You Will Get the Best Value for Your Money and That Too at Reasonable Price as We Are Authorized Sellers of PTE Exam Vouchers. </p>
-                        <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">On Booking Your PTE Exam Through Us, You Will Be Getting the Highest Discount on Your Application Fee in India. For Further Countenance, We Are Providing 11 Scored Mock Test Papers And Experts Counseling for Beginners. If You Are Looking for An Opportunity to Study in Foreign, Then Look Further Because PteVoucherCode Is the Best Destination to Make Your Offshore Study Dreams Come True.</p>
+                        <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">On Booking Your PTE Exam Through Us, You Will Be Getting the Highest Discount on Your Application Fee in India. For Further Countenance, We Are Providing 25 Scored Mock Test Papers And Experts Counseling for Beginners. If You Are Looking for An Opportunity to Study in Foreign, Then Look Further Because PteVoucherCode Is the Best Destination to Make Your Offshore Study Dreams Come True.</p>
 
                     </div>
                 </div>

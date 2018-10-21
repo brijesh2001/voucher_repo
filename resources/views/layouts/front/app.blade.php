@@ -16,7 +16,7 @@
           content="PTE Promo Code, PTE Exam Voucher, PTE Exam Discount Voucher, PTE Discount Voucher Code"/>
     <meta property="og:title" content="PTE Voucher Code - Book PTE Exam Online ₹ {{$rate or ''}}- Lowest Price in India"/>
     <meta property="og:description"
-          content="Buy PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹.{{$saved_prize or ''}} Book Your Exam at any centre in India & Get 11 Mock Tests with Evaluations Free. Lowest price in India. Get Instant Voucher in your email."/>
+          content="Buy PTE Voucher Code at ₹ {{$rate or ''}} & Save ₹.{{$saved_prize or ''}} Book Your Exam at any centre in India & Get 25 Mock Tests with Evaluations Free. Lowest price in India. Get Instant Voucher in your email."/>
     <meta property="og:url" content="https://www.ptevouchercode.com/"/>
     <meta name="author" content="PTEVocuherCode (ptevouchercode.com)"/>
     <meta property="og:image" content="{{url('css/front/images/logo.png')}}"/>

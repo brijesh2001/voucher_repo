@@ -9,7 +9,8 @@
                 <div class="col-md-10">
                     <div class="contents text-center">
                         <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE Voucher Online At ₹ {{$rate or ''}} & Get Free</h1>
-                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">11 scored Mock Test</h4>
+                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">25 scored Mock Test</h4>
+                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">Get the best real time platform with updated question banks</h4>
                     </div>
                 </div>
                 <div class="col-md-10 pteForm">
@@ -83,7 +84,7 @@
                                 <input type="hidden" name="user_id" value="{{$user_id or ''}}">
                                 {{ csrf_field() }}
                                 <div class="col-md-12">
-                                    <p style="margin-bottom: 0px;margin-top: -7px">Note: Code will be sent to your email immediately.</p>
+                                    <p style="margin-bottom: 0px;margin-top: -7px">PTE Voucher Price : 9830 + 1769 (18% GST) = {{$rate or ''}} INR</p>
                                     <div class="submit-button text-center">
                                         <button class="btn btn-common1" id="submit" type="submit" style="cursor: pointer">Buy Now</button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
