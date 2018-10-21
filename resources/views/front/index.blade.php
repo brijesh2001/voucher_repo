@@ -215,7 +215,7 @@
                 </span>
                             <div class="text">
                                 <h4>Lowest Price</h4>
-                                <p>PTE Academic Cost Rs. 13,303 in India. Purchase Voucher Code & Save Rs. {{$saved_prize or ''}}</p>
+                                <p>PTE Academic Cost Rs. 13,300 in India. Purchase Voucher Code & Save Rs. {{$saved_prize or ''}}</p>
                             </div>
                         </div>
                         <div class="box-item left">
@@ -301,7 +301,7 @@
             <div class="section-header">
                 <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">About <span>Us</span></h2>
                 <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-                <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">PTEVoucherCode is an e-commerce venture by Compass Overseas that has been serving the Education sector for more than 4 years.</p>
+                <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">PTEVoucherCode is an e-commerce venture by Compass Overseas that has been serving the Education sector for more than 5 years.</p>
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">
