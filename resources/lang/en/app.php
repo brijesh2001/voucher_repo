@@ -96,6 +96,12 @@ return [
     'offline' => 'Offline',
     'add_new_agent_payment' => 'Add new agent payment',
     'add_existing_agent_payment' => 'Add existing agent payment',
+
+    'overseas_payment_managment' => 'Overseas Payment',
+    'overseas' => 'Overseas',
+
+    'pgoffline_payment_managment' => 'PTE GURUS Offline Payment',
+    'pgoffline' => 'PTE GURUS Offline',
     
     //Front Detail Management
     'sale_data_managment' => 'Sale Data Management',

@@ -185,6 +185,32 @@ Route::group(['prefix' => 'offline'], function () {
     Route::post('/get_all_agent', 'OfflinePaymentController@getAllAgent');
 });
 
+Route::group(['prefix' => 'overseas'], function () {
+    Route::any('/list', 'OverseasPaymentController@index');
+    Route::get('/add-new-agent', 'OverseasPaymentController@addNewAgentPayment');
+    Route::post('/store-new-agent-payment', 'OverseasPaymentController@storeNewAgentPayment');
+    Route::get('/edit/{id}', 'OverseasPaymentController@edit');
+    Route::post('/update-agent-payment', 'OverseasPaymentController@update');
+    Route::post('/datatable', 'OverseasPaymentController@datatable');
+    Route::post('/delete', 'OverseasPaymentController@delete');
+    Route::post('/get_all_agent', 'OverseasPaymentController@getAllAgent');
+    Route::get('/download-pdf', 'OverseasPaymentController@downloadpdf')->name('overseas-pdfdownload');
+});
+
+Route::group(['prefix' => 'pgoffline'], function () {
+    Route::any('/list', 'PGOfflinePaymentController@index');
+    Route::get('/add-new-agent', 'PGOfflinePaymentController@addNewAgentPayment');
+    Route::get('/add-existing-agent-payment', 'PGOfflinePaymentController@addExistingAgentPayment');
+    Route::post('/store-new-agent-payment', 'PGOfflinePaymentController@storeNewAgentPayment');
+    Route::post('/store-existing-agent-payment', 'PGOfflinePaymentController@storeExistingAgentPayment');
+    Route::get('/edit/{id}', 'PGOfflinePaymentController@edit');
+    Route::post('/update-agent-payment', 'PGOfflinePaymentController@update');
+    Route::post('/datatable', 'PGOfflinePaymentController@datatable');
+    Route::post('/delete', 'PGOfflinePaymentController@delete');
+    Route::post('/get_all_agent', 'PGOfflinePaymentController@getAllAgent');
+    Route::post('/send-mail', 'PGOfflinePaymentController@sendMail');
+});
+
 Route::group(['prefix' => 'saledata'], function () {
     Route::any('/list', 'SaleDataController@index');
     Route::any('/invoice-list', 'SaleDataController@invoiceList');

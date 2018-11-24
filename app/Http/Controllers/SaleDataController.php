@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\OfflinePayment;
+use App\Models\PGOfflinePayment;
 use Illuminate\Http\Request;
 use App\Models\SaleData;
 use App\Models\Role;
@@ -21,18 +22,20 @@ class SaleDataController extends Controller
     protected $saledata;
     protected $role;
     protected $offlinePayment;
+    protected $pgofflinePayment;
 
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct(SaleData $saledata, Role $role,OfflinePayment $offlinePayment)
+    public function __construct(SaleData $saledata, Role $role,OfflinePayment $offlinePayment,PGOfflinePayment $pgofflinePayment)
     {
         $this->middleware(['auth', 'checkRole']);
         $this->saledata = $saledata;
         $this->role = $role;
         $this->offlinePayment = $offlinePayment;
+        $this->pgofflinePayment = $pgofflinePayment;
     }
 
     /**
@@ -331,6 +334,24 @@ class SaleDataController extends Controller
                    $pdf = PDF::loadView('emails.invoice', $data);
                     //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
                    return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
+                }
+            }
+
+            elseif ($requestData['type'] == 'pgoffline') {
+                $id = $requestData['id'];
+                $data = (array)$this->pgofflinePayment->getPGOfflinePaymentForPdfDownload($id);
+                if(!empty($data)) {
+                    //typecasting the variable like above array for pdf download
+                    $data['amount_paid'] = $data['rate_after_gst'];
+                    $data['voucher_code'] = $data['item'];
+                    $data['number_of_voucher'] = $data['detail'];
+                    $data['created_at'] = date("d-m-Y", strtotime($data['payment_date']));
+                    //$data['created_at '] = $data['payment_date'];
+                    $data['invoice_number'] = $data['invoice_no'];
+                    $data['word_amount'] = $this->getIndianCurrency($data['rate_after_gst']);
+                    $pdf = PDF::loadView('emails.invoice', $data);
+                    //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
+                    return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                 }
             }
         }

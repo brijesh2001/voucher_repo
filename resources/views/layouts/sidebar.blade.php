@@ -92,6 +92,35 @@
                             <a href="{{url('agent/list')}}">Discount Link Management</a>
                         </li>
                         @endif
+
+                        @if(in_array("agent_data",$userPermission))
+                            <li class="parent {{$OverseasPaymentManagementTab or ''}}" title="{{trans('app.overseas_payment_managment')}}"><a href="#"><i
+                                            class="icon mdi mdi-quote mdi-18px"></i><span>PG Overseas Payment</span></a>
+                                <ul class="sub-menu">
+                                    <li class="{{$addNewOverseasPaymentTab or ''}}">
+                                        <a href="{{url('overseas/add-new-agent')}}">Add New Payment</a>
+                                    </li>
+                                    <li class="{{$offlineOverseasPaymentTab or ''}}">
+                                        <a href="{{url('overseas/list')}}">Overseas Payment List</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
+
+                        @if(in_array("agent_data",$userPermission))
+                            <li class="parent {{$PGOfflinePaymentManagementTab or ''}}" title="PTE GURUS PAYMENT"><a href="#"><i
+                                            class="icon mdi mdi-quote mdi-18px"></i><span>PG India Payment</span></a>
+                                <ul class="sub-menu">
+                                    <li class="{{$addNewPGPaymentTab or ''}}">
+                                        <a href="{{url('pgoffline/add-new-agent')}}">Add Payment</a>
+                                    </li>
+                                    <li class="{{$pgofflineAgentPaymentTab or ''}}">
+                                        <a href="{{url('pgoffline/list')}}">PG India Payment List</a>
+                                    </li>
+                                </ul>
+                            </li>
+                        @endif
+
                         @if(in_array("refer_friend",$userPermission))
                             <li class="{{$referTab or ''}}">
                                 <a href="{{url('refer/list')}}">Refer Friend</a>
