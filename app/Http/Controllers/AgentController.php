@@ -132,7 +132,7 @@ class AgentController extends Controller
     /**
      * Display the specified agent.
      *
-     * @param  integer $id
+     * @param  integer $idphp
      * @return \Illuminate\Http\Response
      */
     public function edit($id)

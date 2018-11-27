@@ -183,6 +183,7 @@ Route::group(['prefix' => 'offline'], function () {
     Route::post('/datatable', 'OfflinePaymentController@datatable');
     Route::post('/delete', 'OfflinePaymentController@delete');
     Route::post('/get_all_agent', 'OfflinePaymentController@getAllAgent');
+    Route::post('/send-mail', 'OfflinePaymentController@sendMail');
 });
 
 Route::group(['prefix' => 'overseas'], function () {

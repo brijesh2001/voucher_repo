@@ -135,6 +135,7 @@ class OverseasPaymentController extends Controller
             $row[] = $overseasPaymentData->mobile;
             $row[] = $overseasPaymentData->lut;
             $row[] = $overseasPaymentData->item;
+            $row[] = $overseasPaymentData->dollor_amount_paid;
             $row[] = $overseasPaymentData->amount;
             $row[] = $overseasPaymentData->transaction_id;
             $row[] = $overseasPaymentData->payment_type;
@@ -171,6 +172,8 @@ class OverseasPaymentController extends Controller
                 'mobile' => 'required',
                 'item' => 'required',
                 'amount' => 'required',
+                'dollor_amount_paid' => 'required',
+                'dollor_amount_received' => 'required',
                 'payment_date' => 'required',
 
             );
@@ -183,6 +186,8 @@ class OverseasPaymentController extends Controller
                     'mobile' => 'required',
                     'item' => 'required',
                     'amount' => 'required',
+                    'dollor_amount_paid' => 'required',
+                    'dollor_amount_received' => 'required',
                     'payment_date' => 'required',
                 );
             }
@@ -335,7 +340,11 @@ class OverseasPaymentController extends Controller
             $row['Item'] = $requestData->item;
             $row['Package Detail'] = $requestData->detail;
             $row['Transaction Id'] = $requestData->transaction_id;
-            $row['Amount'] =  $requestData->amount;
+            $row['Dollar Amount paid'] = $requestData->dollor_amount_paid;
+            $row['Dollar Amount received'] = $requestData->dollor_amount_received;
+            $row['Rs Amount'] =  $requestData->amount;
+            $row['Country'] =  $requestData->country;
+            $row['Address'] =  $requestData->address;
             $row['Payment Type'] = $requestData->payment_type;
             $appData[] = $row;
         }

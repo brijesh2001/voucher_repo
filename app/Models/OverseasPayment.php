@@ -26,7 +26,7 @@ class OverseasPayment extends Authenticatable
      */
     protected $fillable = [
         'email', 'name','mobile', 'payment_date','invoice_no','lut','item','detail','transaction_id',
-        'amount','payment_type'
+        'amount','payment_type','address','country','dollor_amount_received','dollor_amount_paid'
     ];
 
     
@@ -194,6 +194,10 @@ class OverseasPayment extends Authenticatable
            'item' => $models['item'],
            'detail' => $models['detail'],
            'transaction_id' => $models['transaction_id'],
+           'address' => $models['address'],
+           'country' => $models['country'],
+           'dollor_amount_received' => $models['dollor_amount_received'],
+           'dollor_amount_paid' => $models['dollor_amount_paid'],
            'amount' => round($models['amount'],2),
            'created_at' => date('Y-m-d H:i:s'),
            'updated_at' => date('Y-m-d H:i:s'),
@@ -258,6 +262,10 @@ class OverseasPayment extends Authenticatable
         $agent_data->item = $models['item'];
         $agent_data->detail = $models['detail'];
         $agent_data->transaction_id = $models['transaction_id'];
+        $agent_data->dollor_amount_paid = $models['dollor_amount_paid'];
+        $agent_data->dollor_amount_received = $models['dollor_amount_received'];
+        $agent_data->country = $models['country'];
+        $agent_data->address = $models['address'];
         $agent_data->amount = round($models['amount'],2);
         $agent_data->updated_at = date('Y-m-d H:i:s');
         $promoId = $agent_data->save();

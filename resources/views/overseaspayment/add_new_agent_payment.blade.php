@@ -73,9 +73,23 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label class="col-sm-4 control-label">Amount<span class="error">*</span></label>
+                                    <label class="col-sm-4 control-label">Dollar Amount Paid<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
-                                        <input type="text" name="amount" id="amount" placeholder="Amount" class="form-control input-sm required" value="{{old('amount')}}" />
+                                        <input type="text" name="dollor_amount_paid" id="dollor_amount_paid" placeholder="Dollar Amount Paid" class="form-control input-sm required" value="{{old('dollor_amount_paid')}}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Dollar Amount Received<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="dollor_amount_received" id="dollor_amount_received" placeholder="Dollar Amount Received" class="form-control input-sm required" value="{{old('dollor_amount_received')}}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Rs Amount<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="amount" id="amount" placeholder="Rs Amount" class="form-control input-sm required" value="{{old('amount')}}" />
                                     </div>
                                 </div>
 
@@ -89,7 +103,21 @@
                                 <div class="form-group">
                                     <label class="col-sm-4 control-label">LUT/GSTN<span class="error">*</span></label>
                                     <div class="col-sm-6 col-md-4">
-                                        <input type="text" name="lut" id="lut" placeholder="LUT/GSTN" class="form-control input-sm" maxlength="15" value="{{old('lut')}}" />
+                                        <input type="text" name="lut" id="lut" placeholder="LUT/GSTN" class="form-control input-sm" value="{{old('lut')}}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Address<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="address" id="address" placeholder="Address" class="form-control input-sm"  value="{{old('address')}}" />
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Country<span class="error">*</span></label>
+                                    <div class="col-sm-6 col-md-4">
+                                        <input type="text" name="country" id="country" placeholder="Country" class="form-control input-sm"  value="{{old('country')}}" />
                                     </div>
                                 </div>
 

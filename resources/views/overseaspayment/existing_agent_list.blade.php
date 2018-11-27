@@ -75,6 +75,7 @@
                                             <th>Mobile</th>
                                             <th>LUT</th>
                                             <th>Item</th>
+                                            <th>Dolloar Amount Paid</th>
                                             <th>Amount</th>
                                             <th>Trans Id</th>
                                             <th>Payment Type</th>
@@ -87,6 +88,7 @@
                                         </thead>
                                         <thead>
                                         <tr>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>

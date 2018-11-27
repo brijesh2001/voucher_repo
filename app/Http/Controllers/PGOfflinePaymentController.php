@@ -456,10 +456,6 @@ class PGOfflinePaymentController extends Controller
                     $customer_email_data['file_path'] = $filename;
                     Mail ::send(new InvoiceMail($customer_email_data));
                     sleep(2);
-
-
-
-
             }
 
             Mail ::send(new InvoiceMail($data));

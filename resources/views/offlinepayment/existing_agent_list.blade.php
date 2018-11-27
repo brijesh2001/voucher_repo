@@ -87,6 +87,7 @@
                                             <th>State</th>
                                             <th>Actions</th>
                                             <th>PDF Download</th>
+                                            <th>Send Invoice</th>
 
 
                                         </tr>
@@ -94,6 +95,7 @@
                                         </thead>
                                         <thead>
                                         <tr>
+                                            <td></td>
                                             <td></td>
                                             <td></td>
                                             <td></td>
@@ -150,6 +152,22 @@
             $('#export_excel').val('1');
             dataTable.ajax.reload();
             $('#export_excel').val('0');
+        });
+
+    });
+
+    $(document).on('click','.send',function(){
+
+        var id = $(this).attr('rel');
+        $.ajax({
+            type: "POST",
+            url: app.config.SITE_PATH + 'offline/send-mail',
+            data: {id: id, _token: csrf_token},
+            success: function (response) {
+                if (response.statusCode == "1") {
+                    alert('mail send');
+                }
+            }
         });
 
     });
