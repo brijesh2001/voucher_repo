@@ -509,6 +509,7 @@ class OfflinePaymentController extends Controller
                     $data['cgst'] = $data['sgst'] = 0;
                     $data['igst'] = number_format($IGST,2);
                 }
+                $data['gstn'] = $online->gstn;
                 $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
                 $data['amount_paid'] = $online->amount_paid;
                 $data['created_at'] = date("d-m-Y", strtotime($online->created_at));
