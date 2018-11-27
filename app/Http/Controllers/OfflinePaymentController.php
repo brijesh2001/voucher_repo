@@ -481,53 +481,36 @@ class OfflinePaymentController extends Controller
         $request_data = $request->all();
         $id = $request_data['id'];
         $date = Carbon::yesterday()->format('Y-m-d');
-        $online = $this->offlinePayment->getOfflinePaymentByField($id, 'id');
+        $data = (array)$this->offlinePayment->getOfflinePaymentForPdfDownload($id);
 
-        if(!empty($online)) {
-            if(count($online) > 0) {
+        if(!empty($data)) {
+            if(count($data) > 0) {
                 $folder_name = date('Y-m-d', strtotime(trim($date)));
                 $filepath = public_path(). DIRECTORY_SEPARATOR.'attachment/offline/'.$folder_name;
                 if (!file_exists($filepath)) {
                     mkdir($filepath,0777,true);
                 }
 
-                if(file_exists($filepath.'/'.$online->invoice_no.'.pdf')){
-                    $fileFullPath = $filepath.'/'.$online->invoice_no.'.pdf';
+                if(file_exists($filepath.'/'.$data['invoice_no'].'.pdf')){
+                    $fileFullPath = $filepath.'/'.$data['invoice_no'].'.pdf';
                     $this->deleteFilesIfExist($fileFullPath);
                 }
-                if(file_exists($filepath.'/'.$online->invoice_no.'.pdf')){
-                    $fileFullPath = $filepath.'/'.$online->invoice_no.'.pdf';
+                if(file_exists($filepath.'/'.$data['invoice_no'].'.pdf')){
+                    $fileFullPath = $filepath.'/'.$data['invoice_no'].'.pdf';
                     $this->deleteFilesIfExist($fileFullPath);
                 }
-                $data['rate_before_gst'] = $online->amount_paid * 100/118;
-                $IGST = $online->amount_paid -  $data['rate_before_gst'];
-                if($online->state_id == 5){
-                    $cgstSgst = $IGST/2;
-                    $data['cgst'] = $data['sgst'] = number_format($cgstSgst,2);
-                    $data['igst'] = 0;
-                }else {
-                    $data['cgst'] = $data['sgst'] = 0;
-                    $data['igst'] = number_format($IGST,2);
-                }
-                $data['gstn'] = $online->gstn;
-                $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
-                $data['amount_paid'] = $online->amount_paid;
-                $data['created_at'] = date("d-m-Y", strtotime($online->created_at));
-                $data['name'] = $online->name;
-                $data['email'] = $online->email;
-                $data['mobile'] = $online->mobile;
-                $data['state_name'] = $online->state_name;
-                //$data['voucher_code'] = $online->voucher_code;
-                $data['voucher_code'] = str_replace(',', '<br />', $online->voucher_code);
-                $data['invoice_number'] = $online->invoice_no;
-                $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
+                $data['amount_paid'] = $data['rate_after_gst'];
+                $data['created_at'] = date("d-m-Y", strtotime($data['payment_date']));
+                //$data['created_at '] = $data['payment_date'];
+                $data['invoice_number'] = $data['invoice_no'];
+                $data['word_amount'] = $this->getIndianCurrency($data['rate_after_gst']);
 
                 $pdf = PDF::loadView('emails.invoice', $data);
-                $pdf->save($filepath.'/'.$online->invoice_no.'.pdf');
+                $pdf->save($filepath.'/'.$data['invoice_no'].'.pdf');
                 //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
-                $filename = $filepath.'/'.$online->invoice_no.'.pdf';
+                $filename = $filepath.'/'.$data['invoice_no'].'.pdf';
                 $customer_email_data = [];
-                $customer_email_data['email'] = $online->email;
+                $customer_email_data['email'] = $data['email'];
                 $customer_email_data['file_path'] = $filename;
                 Mail ::send(new InvoiceMail($customer_email_data));
                 sleep(2);

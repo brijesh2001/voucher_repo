@@ -87,7 +87,7 @@
                                             <th>State</th>
                                             <th>Actions</th>
                                             <th>PDF Download</th>
-                                            <th>Email Send</th>
+                                            {{--<th>Email Send</th>--}}
 
 
                                         </tr>
@@ -114,7 +114,7 @@
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td></td>
+                                           {{-- <td></td>--}}
                                             <input type="hidden" name="filterExport[export_excel]"  id="export_excel" value="0" />
                                         </tr>
                                         </thead>
