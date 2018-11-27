@@ -482,7 +482,8 @@ class OfflinePaymentController extends Controller
         $id = $request_data['id'];
         $date = Carbon::yesterday()->format('Y-m-d');
         $online = $this->offlinePayment->getOfflinePaymentByField($id, 'id');
-        if(!empty($data)) {
+
+        if(!empty($online)) {
             if(count($online) > 0) {
                 $folder_name = date('Y-m-d', strtotime(trim($date)));
                 $filepath = public_path(). DIRECTORY_SEPARATOR.'attachment/offline/'.$folder_name;
@@ -490,12 +491,12 @@ class OfflinePaymentController extends Controller
                     mkdir($filepath,0777,true);
                 }
 
-                if(file_exists($filepath.'/'.$online->invoice_number.'.pdf')){
-                    $fileFullPath = $filepath.'/'.$online->invoice_number.'.pdf';
+                if(file_exists($filepath.'/'.$online->invoice_no.'.pdf')){
+                    $fileFullPath = $filepath.'/'.$online->invoice_no.'.pdf';
                     $this->deleteFilesIfExist($fileFullPath);
                 }
-                if(file_exists($filepath.'/'.$online->invoice_number.'.pdf')){
-                    $fileFullPath = $filepath.'/'.$online->invoice_number.'.pdf';
+                if(file_exists($filepath.'/'.$online->invoice_no.'.pdf')){
+                    $fileFullPath = $filepath.'/'.$online->invoice_no.'.pdf';
                     $this->deleteFilesIfExist($fileFullPath);
                 }
                 $data['rate_before_gst'] = $online->amount_paid * 100/118;
@@ -517,20 +518,19 @@ class OfflinePaymentController extends Controller
                 $data['state_name'] = $online->state_name;
                 //$data['voucher_code'] = $online->voucher_code;
                 $data['voucher_code'] = str_replace(',', '<br />', $online->voucher_code);
-                $data['invoice_number'] = $online->invoice_number;
+                $data['invoice_number'] = $online->invoice_no;
                 $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
+
                 $pdf = PDF::loadView('emails.invoice', $data);
-                $pdf->save($filepath.'/'.$online->invoice_number.'.pdf');
+                $pdf->save($filepath.'/'.$online->invoice_no.'.pdf');
                 //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
-                $filename = $filepath.'/'.$online->invoice_number.'.pdf';
+                $filename = $filepath.'/'.$online->invoice_no.'.pdf';
                 $customer_email_data = [];
                 $customer_email_data['email'] = $online->email;
                 $customer_email_data['file_path'] = $filename;
                 Mail ::send(new InvoiceMail($customer_email_data));
                 sleep(2);
             }
-
-            Mail ::send(new InvoiceMail($data));
             return [
                 'statusCode' => 1
             ];
