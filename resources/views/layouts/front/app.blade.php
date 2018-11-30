@@ -3,7 +3,7 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <title>{{$title_text}}</title>
+    <title>{{$title_text or ''}}</title>
     {{--<title>Buy PTE Voucher @ ₹ {{$rate or ''}} Only & 47 Mock Test with 22 Evaluation Free @ ₹9660* Only</title>--}}
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
