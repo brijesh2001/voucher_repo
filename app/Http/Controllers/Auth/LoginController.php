@@ -195,7 +195,9 @@ class LoginController extends Controller
      */
     public function thankYou()
     {
-        return view('front.thankyou');
+        $data['title_text'] = 'Buy PTE Voucher @ ₹9830* - Get 15 Scored Mock Test With Evaluations';
+        $data['meta_description'] = 'Buy PTE Voucher Code at ₹9830*  & Save ₹1701. Book Your PTE Exam at any centre in India & Get 15 Mock Tests with Evaluations Free. Lowest price in India. Get Instant Voucher in your email.';
+        return view('front.thankyou',$data);
     }
     /**
      * contactUs view page
