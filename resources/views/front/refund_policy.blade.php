@@ -36,9 +36,9 @@
                             </li>
                         </ul>
 
-                        <h3>
+                        <p>
                             To avail a return of your paid voucher at PTEVoucherCode, you need to fill up a Return Form.
-                        </h3>
+                        </p>
                         <h4>
                             The format is as below:</h4>
                         <ul>
@@ -54,7 +54,7 @@
                         <h3>
                             How much refund will you get?
                         </h3>
-                        <h4>
+                        <p>
                             You are entitled to avail only 50% amount of your total cost once you apply for the refund before 7 days prior to the scheduled exam date. However, any request made less than this time limit will be crashed and won’t get entertained.
                             If you haven’t purchased a PTE coupon from us then you are entitled to only 50% of refund. You need to provide your contact details like name, e-mail address and contact number to reach you out. You understand that the information should be right and genuine.
                             You need to pay an extra 25% of the original cost of the coupon in case you want to reschedule your exam.
@@ -62,7 +62,7 @@
                             Note- We don’t pay you back in cash. Your refunded amount would be credited into your bank account with 7-10 working days. So, cross-check all the bank details beforehand. We are not responsible for any damage or loss caused by false information.
 
 
-                        </h4>
+                        </p>
 
 
                         <h2 style="text-align: center">For More Information, Contact us on</h2>
