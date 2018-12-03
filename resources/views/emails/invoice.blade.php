@@ -81,7 +81,7 @@
                             <tr>
                                 <td style="line-height: 18px;">{{$email}}<br>
                                     {{$mobile}}<br>
-                                    GSTIN : {{$gstn}}
+                                    GSTIN : {{$gstn or ''}}
                                 </td>
                                 <td style="line-height: 18px;">{{$state_name}},<br>
                                 </td>
