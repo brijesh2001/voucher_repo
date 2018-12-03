@@ -120,6 +120,13 @@
                             </ul>
                         </p>
                         <h3>
+                            Late Booking Charge
+                        </h3>
+                        <ul>
+                            If you are the exam date within 48 Hours of the exam day then you will have to pay 25% of the exam fees( which will be varied) as per the Pearson Policy.
+                            Please note we are not charging any extra free our voucher will work in any case if you are selecting any date after the 48 Hours of booking day and exam date.
+                        </ul>
+                        <h3>
                             Disclaimer
                         </h3>
                         <p>
