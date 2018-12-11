@@ -28,6 +28,7 @@
                             <tr>
                                 <td style="color: brown;font-size: 18px;font-weight: bold;">PTE EDU SERVICES</td>
                             </tr>
+
                         </table>
                     </td>
                 </tr>
@@ -50,6 +51,10 @@
                                 <td>Invoice No.</td>
                                 <td>{{$invoice_number}}</td>
                             </tr>
+                            <tr>
+                                <td>LUT/Bond No.: AD241218000835B </td>
+                                <td>From:	01-04-2018	To:	31-03-2019 </td>
+                            </tr>
                         </table>
                     </td>
                 </tr>
@@ -63,6 +68,9 @@
                                 <td style="width:42%">&nbsp;<hr/>&nbsp;</td>
                                 <td style="vertical-align:middle; text-align: center;color: brown;font-size: 18px;">TAX INVOICE</td>
                                 <td style="width:41%">&nbsp;<hr/>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td style="color: black;font-size: 10px;">SUPPLY MEANT FOR EXPORT/SUPPLY TO SEZ UNIT OR SEZ DEVELOPER FOR AUTHORISED OPERATIONS UNDER BOND OR LETTER OF UNDERTAKING WITHOUT PAYMENT OF IGST</td>
                             </tr>
                         </table>
                     </td>
