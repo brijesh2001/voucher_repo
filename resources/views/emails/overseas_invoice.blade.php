@@ -83,12 +83,16 @@
                         <table align="center" border="0" width="100%" style="font-size: 11px;font-weight: bold;">
                             <tr>
                                 <td>{{$name}}</td>
+                                <td>Billing Address</td>
                             </tr>
                             <tr>
                                 <td style="line-height: 18px;">{{$email}}<br>
                                     {{$mobile}}<br>
                                 </td>
+                                <td style="line-height: 18px;">{{$address}},<br>{{$country}}
+                                </td>
                             </tr>
+
                         </table>
                     </td>
                 </tr>
