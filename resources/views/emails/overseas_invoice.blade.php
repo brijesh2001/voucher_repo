@@ -56,10 +56,6 @@
                             </tr>
                             <tr>
                                 <td>LUT/Bond No.: AD241218000835B </td>
-
-                            </tr>
-                            <td class="spacer" height="10" style="font-size: 10px; line-height: 10px; margin: 0; padding: 0; height:10px;">&nbsp;</td>
-                            <tr>
                                 <td>From:	01-04-2018	To:	31-03-2019 </td>
                             </tr>
                         </table>
