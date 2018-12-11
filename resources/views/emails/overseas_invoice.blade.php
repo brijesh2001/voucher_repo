@@ -52,7 +52,14 @@
                                 <td>{{$invoice_number}}</td>
                             </tr>
                             <tr>
+                                <td class="spacer" height="10" style="font-size: 10px; line-height: 10px; margin: 0; padding: 0; height:10px;">&nbsp;</td>
+                            </tr>
+                            <tr>
                                 <td>LUT/Bond No.: AD241218000835B </td>
+
+                            </tr>
+                            <td class="spacer" height="10" style="font-size: 10px; line-height: 10px; margin: 0; padding: 0; height:10px;">&nbsp;</td>
+                            <tr>
                                 <td>From:	01-04-2018	To:	31-03-2019 </td>
                             </tr>
                         </table>
@@ -69,10 +76,9 @@
                                 <td style="vertical-align:middle; text-align: center;color: brown;font-size: 18px;">TAX INVOICE</td>
                                 <td style="width:41%">&nbsp;<hr/>&nbsp;</td>
                             </tr>
-                            <tr>
-                                <td style="color: black;font-size: 10px;">SUPPLY MEANT FOR EXPORT/SUPPLY TO SEZ UNIT OR SEZ DEVELOPER FOR AUTHORISED OPERATIONS UNDER BOND OR LETTER OF UNDERTAKING WITHOUT PAYMENT OF IGST</td>
-                            </tr>
+
                         </table>
+                    <td style="color: black;font-size: 10px;">SUPPLY MEANT FOR EXPORT/SUPPLY TO SEZ UNIT OR SEZ DEVELOPER FOR AUTHORISED OPERATIONS UNDER BOND OR LETTER OF UNDERTAKING WITHOUT PAYMENT OF IGST</td>
                     </td>
                 </tr>
                 <tr>
