@@ -76,6 +76,9 @@
                         </table>
 
                     </td>
+
+                </tr>
+                <tr>
                     <td style="color: black;font-size: 10px;">SUPPLY MEANT FOR EXPORT/SUPPLY TO SEZ UNIT OR SEZ DEVELOPER FOR AUTHORISED OPERATIONS UNDER BOND OR LETTER OF UNDERTAKING WITHOUT PAYMENT OF IGST</td>
                 </tr>
                 <tr>
