@@ -435,7 +435,7 @@ class OverseasPaymentController extends Controller
             } else $str[] = null;
         }
         $Rupees = implode('', array_reverse($str));
-        $paise = ($decimal) ? "and" . ($words[$decimal / 10] . " " . $words[$decimal % 10]) . ' cent' : '';
+        $paise = ($decimal) ? "and " . ($words[$decimal / 10] . " " . $words[$decimal % 10]) . ' cent' : '';
         return ($Rupees ? $Rupees . 'Dollars ' : '') . $paise;
     }
 
