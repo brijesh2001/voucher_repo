@@ -396,7 +396,7 @@ class OverseasPaymentController extends Controller
                     $data['created_at'] = date("d-m-Y", strtotime($data['payment_date']));
                     //$data['created_at '] = $data['payment_date'];
                     $data['invoice_number'] = $data['invoice_no'];
-                    $data['word_amount'] = $this->getIndianCurrency($data['amount']);
+                    $data['word_amount'] = $this->getIndianCurrency($data['dollor_amount_paid']);
                     $pdf = PDF::loadView('emails.overseas_invoice', $data);
                     //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
                     return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
@@ -434,7 +434,7 @@ class OverseasPaymentController extends Controller
             } else $str[] = null;
         }
         $Rupees = implode('', array_reverse($str));
-        $paise = ($decimal) ? "." . ($words[$decimal / 10] . " " . $words[$decimal % 10]) . ' Paise' : '';
+        $paise = ($decimal) ? "." . ($words[$decimal / 10] . " " . $words[$decimal % 10]) . ' cent' : '';
         return ($Rupees ? $Rupees . 'Dollars ' : '') . $paise;
     }
 
