@@ -42,7 +42,7 @@ class OverseasInvoiceSeries extends Authenticatable
 
     public function insertInvoiceData($data)
     {
-         OfflineInvoiceSeries::create([
+        OverseasInvoiceSeries::create([
              'invoice_number' => $data['invoice_number'],
              'sale_id' => $data['sale_id'],
              'created_at' => date('Y-m-d H:i:s'),
