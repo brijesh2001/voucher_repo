@@ -192,7 +192,7 @@ class PGOfflinePayment extends Authenticatable
            'mobile' => $models['mobile'],
            'gstn' => $models['gstn'],
            'payment_type' => $models['payment_type'],
-           'hsn' => '8532',
+           'hsn' => '9992',
            'item' => $models['item'],
            'detail' => $models['detail'],
            'transaction_id' => $models['transaction_id'],

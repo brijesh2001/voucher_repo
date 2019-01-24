@@ -192,7 +192,7 @@ class OfflinePayment extends Authenticatable
            'mobile' => $models['mobile'],
            'gstn' => $models['gstn'],
            'payment_type' => $models['payment_type'],
-           'hsn' => '8532',
+           'hsn' => '9992',
            'voucher_code' => $models['voucher_code'],
            'number_of_voucher' => $models['number_of_voucher'],
            'transaction_id' => $models['transaction_id'],
