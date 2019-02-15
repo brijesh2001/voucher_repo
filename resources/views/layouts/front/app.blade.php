@@ -107,7 +107,7 @@
 @yield('extra')
 <!-- Scripts -->
 
-<script src="{{url('css/front/js/jquery-min.js')}}"></script>
+{{--<script src="{{url('css/front/js/jquery-min.js')}}"></script>
 <script src="{{url('css/front/js/popper.min.js')}}"></script>
 <script src="{{url('css/front/js/bootstrap.min.js')}}"></script>
 <script src="{{url('css/front/js/jquery.mixitup.js')}}"></script>
@@ -124,7 +124,9 @@
 <script src="{{url('css/front/js/jquery.counterup.min.js')}}"></script>
 <script src="{{url('css/front/js/jquery.magnific-popup.min.js')}}"></script>
 <script src="{{url('css/front/js/waypoints.min.js')}}"></script>
-<script src="{{url('css/front/js/form-validator.min.js')}}"></script>
+<script src="{{url('css/front/js/form-validator.min.js')}}"></script>--}}
+
+<script src="{{url('css/front/js/all.js')}}"></script>
 <script src="{{url('css/front/js/main.js')}}"></script>
 
 
