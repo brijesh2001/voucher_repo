@@ -9,27 +9,32 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-10">
                     <div class="contents text-center">
-                        <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE Voucher Online At  ₹ {{$rate or ''}}  & Get Free</h1>
-                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">15 Scored Mock Test Free</h4>
-                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">Get the best real time platform with updated question banks</h4>
+                        <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE
+                            Voucher Online At ₹ {{$rate or ''}} & Get Free</h1>
+                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">15 Scored
+                            Mock Test Free</h4>
+                        <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">Get the
+                            best real time platform with updated question banks</h4>
                     </div>
                 </div>
                 <div class="col-md-10 pteForm">
                     <div class="contents1 text-center">
                         <div class="help-block with-errors">
-                        @if (count($errors) > 0)
-                            <div class="alert alert-danger">
-                                <ul id = 'error-list'>
-                                    @foreach ($errors->all() as $error)
-                                        <li>{{ $error }}</li>
-                                    @endforeach
-                                </ul>
-                            </div>
-                        @endif
+                            @if (count($errors) > 0)
+                                <div class="alert alert-danger">
+                                    <ul id='error-list'>
+                                        @foreach ($errors->all() as $error)
+                                            <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                            @endif
                             <div class="flash-message">
                                 @foreach (['danger', 'warning', 'success', 'info'] as $msg)
                                     @if(Session::has('alert-' . $msg))
-                                        <p class="alert alert-{{ $msg }}" style="text-align:center;">{{ Session::get('alert-' . $msg) }} <a href="#"></a>
+                                        <p class="alert alert-{{ $msg }}"
+                                           style="text-align:center;">{{ Session::get('alert-' . $msg) }} <a
+                                                    href="#"></a>
                                         </p>
                                     @endif
                                 @endforeach
@@ -52,19 +57,25 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name" name="name" value="{{$name or ''}}" placeholder="Name" required data-error="Please enter your name">
+                                        <input type="text" class="form-control" id="name" name="name"
+                                               value="{{$name or ''}}" placeholder="Name" required
+                                               data-error="Please enter your name">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="mobile" name="mobile" value="{{$mobile or ''}}" placeholder="Mobile No." maxlength="10" minlength="10" required data-error="Please enter your mobile no.">
+                                        <input type="text" class="form-control" id="mobile" name="mobile"
+                                               value="{{$mobile or ''}}" placeholder="Mobile No." maxlength="10"
+                                               minlength="10" required data-error="Please enter your mobile no.">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input type="email" placeholder="Email" id="email" class="form-control" value="{{$email or ''}}" name="email" required data-error="Please enter your email">
+                                        <input type="email" placeholder="Email" id="email" class="form-control"
+                                               value="{{$email or ''}}" name="email" required
+                                               data-error="Please enter your email">
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
@@ -72,7 +83,7 @@
                                     <div class="form-group">
                                         <select class="form-control" name="number_of_voucher" id="number_of_voucher"
                                                 value="{{old('number_of_voucher')}}" required>
-                                            <option value= "">QTY.No of Discounted PTE Voucher</option>
+                                            <option value="">QTY.No of Discounted PTE Voucher</option>
                                             <option value="1">1</option>
                                             <option value="2">2</option>
                                             <option value="3">3</option>
@@ -85,9 +96,12 @@
                                 <input type="hidden" name="user_id" value="{{$user_id or ''}}">
                                 {{ csrf_field() }}
                                 <div class="col-md-12">
-                                    <p style="margin-bottom: 0px;margin-top: -7px">PTE Voucher Price : 10339 + 1861 (18% GST) = {{$rate or ''}} INR</p>
+                                    <p style="margin-bottom: 0px;margin-top: -7px">PTE Voucher Price : 10339 + 1861 (18%
+                                        GST) = {{$rate or ''}} INR</p>
                                     <div class="submit-button text-center">
-                                        <button class="btn btn-common1" id="submit" type="submit" style="cursor: pointer">Buy Now</button>
+                                        <button class="btn btn-common1" id="submit" type="submit"
+                                                style="cursor: pointer">Buy Now
+                                        </button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                                         <div class="clearfix"></div>
                                     </div>
@@ -174,13 +188,15 @@
                     </h2>
                     <ul>
                         <li>Buy a Voucher Code from ptevouchercode.com.</li>
-                        <li>Create your ACCOUNT on <a href="https://www.pearsonpte.com/book" target="_blank"> pearsonpte.com/book</a></li>
+                        <li>Create your ACCOUNT on <a href="https://www.pearsonpte.com/book" target="_blank">
+                                pearsonpte.com/book</a></li>
                         <li>Login to pearsonpte.com using your Username and Password</li>
                         <li>Enter your preferred date, location and other details</li>
                         <li>Enter Voucher Code on the payment page.</li>
                         <li>Receive CONFIRMATION email from PTE about your test booking.</li>
                     </ul>
-                    <a href="#" class="btn btn-common wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms" style="border: 1px solid red;background: darkred;">BOOK NOW</a>
+                    <a href="#" class="btn btn-common wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms"
+                       style="border: 1px solid red;background: darkred;">BOOK NOW</a>
                 </div>
 
             </div>
@@ -193,9 +209,11 @@
     <section id="featuresnew" class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Why <span>Us</span></h2>
+                <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">Why
+                    <span>Us</span></h2>
                 <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-                <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">100 % customer satisfaction with 24 x 7 Customer support.</p>
+                <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">100 % customer
+                    satisfaction with 24 x 7 Customer support.</p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -215,7 +233,8 @@
                 </span>
                             <div class="text">
                                 <h4>Lowest Price</h4>
-                                <p>PTE Academic Cost Rs. 13,300 in India. Purchase Voucher Code & Save Rs. {{$saved_prize or ''}}</p>
+                                <p>PTE Academic Cost Rs. 13,300 in India. Purchase Voucher Code & Save
+                                    Rs. {{$saved_prize or ''}}</p>
                             </div>
                         </div>
                         <div class="box-item left">
@@ -224,7 +243,9 @@
                 </span>
                             <div class="text">
                                 <h4>High Success Rate</h4>
-                                <p>Featured at <a href="https://www.instamojo.com/blog/pte-voucher-code-making-pte-exams-cheaper-india/" target="_blank"> Instamojo.com </a> due to high success rate.</p>
+                                <p>Featured at <a
+                                            href="https://www.instamojo.com/blog/pte-voucher-code-making-pte-exams-cheaper-india/"
+                                            target="_blank"> Instamojo.com </a> due to high success rate.</p>
                             </div>
                         </div>
                     </div>
@@ -283,10 +304,23 @@
                 </div>
                 <div class="col-lg-8 video-promotext-right">
                     <div class="video-promo-content">
-                        <h2 class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">Buy PTE Academic Voucher Code ₹ {{$rate or ''}} Get ₹ {{$saved_prize or ''}} Discount</h2>
-                        <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">For Your Successful Academic and Career Endeavors, We Partner You at The Least Costs! We provide you a reliable and pocket-friendly option to take one of the best English proficiency Pearson Test i.e. PTE Exam. We Provide Complete Assistance, Guidance, And Numerous Handbooks and Supporting Material to Help You Clear the Exam in The First Attempt Itself. </p>
-                        <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">We Are Known for Giving Our Best and Unmatched Services to Students Who Dream High. With Us, You Will Get the Best Value for Your Money and That Too at Reasonable Price as We Are Authorized Sellers of PTE Exam Vouchers. </p>
-                        <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">On Booking Your PTE Exam Through Us, You Will Be Getting the Highest Discount on Your Application Fee in India. For Further Countenance, We Are Providing 15 Scored Mock Test Papers And Experts Counseling for Beginners. If You Are Looking for An Opportunity to Study in Foreign, Then Look Further Because PteVoucherCode Is the Best Destination to Make Your Offshore Study Dreams Come True.</p>
+                        <h2 class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">Buy PTE Academic
+                            Voucher Code ₹ {{$rate or ''}} Get ₹ {{$saved_prize or ''}} Discount</h2>
+                        <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">For Your Successful
+                            Academic and Career Endeavors, We Partner You at The Least Costs! We provide you a reliable
+                            and pocket-friendly option to take one of the best English proficiency Pearson Test i.e. PTE
+                            Exam. We Provide Complete Assistance, Guidance, And Numerous Handbooks and Supporting
+                            Material to Help You Clear the Exam in The First Attempt Itself. </p>
+                        <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">We Are Known for Giving
+                            Our Best and Unmatched Services to Students Who Dream High. With Us, You Will Get the Best
+                            Value for Your Money and That Too at Reasonable Price as We Are Authorized Sellers of PTE
+                            Exam Vouchers. </p>
+                        <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">On Booking Your PTE Exam
+                            Through Us, You Will Be Getting the Highest Discount on Your Application Fee in India. For
+                            Further Countenance, We Are Providing 15 Scored Mock Test Papers And Experts Counseling for
+                            Beginners. If You Are Looking for An Opportunity to Study in Foreign, Then Look Further
+                            Because PteVoucherCode Is the Best Destination to Make Your Offshore Study Dreams Come
+                            True.</p>
 
                     </div>
                 </div>
@@ -299,14 +333,24 @@
     <section id="services" class="section">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">About <span>Us</span></h2>
+                <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">About
+                    <span>Us</span></h2>
                 <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-                <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">PTEVoucherCode is an e-commerce venture by Compass Overseas that has been serving the Education sector for more than 5 years.</p>
+                <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">PTEVoucherCode
+                    is an e-commerce venture by Compass Overseas that has been serving the Education sector for more
+                    than 5 years.</p>
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="item-boxes wow fadeInDown" data-wow-delay="0.2s">
-                        <p>Since the inauguration of Compass Overseas on December 15, 2013, the company has continually worked for students and professional by helping, assisting, guiding and letting them achieve their goals of staying or studying in foreign Countries. Compass Migration and Education Consultant is acting as a ladder of success for thousands of students who are thriving towards their goals of better educational facilities and thus, the better career. Candidates of PTE Academic are given special discounts and guidance for study material so that they can stay in developed countries like USA, UK, Canada and New Zealand for success Endeavor of gaining skills, knowledge and a better life!</p>
+                        <p>Since the inauguration of Compass Overseas on December 15, 2013, the company has continually
+                            worked for students and professional by helping, assisting, guiding and letting them achieve
+                            their goals of staying or studying in foreign Countries. Compass Migration and Education
+                            Consultant is acting as a ladder of success for thousands of students who are thriving
+                            towards their goals of better educational facilities and thus, the better career. Candidates
+                            of PTE Academic are given special discounts and guidance for study material so that they can
+                            stay in developed countries like USA, UK, Canada and New Zealand for success Endeavor of
+                            gaining skills, knowledge and a better life!</p>
                     </div>
                 </div>
             </div>
@@ -377,41 +421,46 @@
                 <div class="col-md-12">
                     <div class="touch-slider owl-carousel owl-theme">
                         <div class="testimonial-item">
-                            <img src="https://www.ptevouchercode.com/css/front/images/c4.png" alt="Client Testimonoal" />
+                            <img src="https://www.ptevouchercode.com/css/front/images/c4.png" alt="Client Testimonoal"/>
                             <div class="testimonial-text">
-                                <p>Nice deal,got good discount on PTE exam voucher  + awesome customer service.</p>
+                                <p>Nice deal,got good discount on PTE exam voucher + awesome customer service.</p>
                                 <h3>SYED IMAD</h3>
                                 <!-- <span>Fondor of Jalmori</span> -->
                             </div>
                         </div>
                         <div class="testimonial-item">
-                            <img src="https://www.ptevouchercode.com/css/front/images/c3.png" alt="Client Testimonoal" />
+                            <img src="https://www.ptevouchercode.com/css/front/images/c3.png" alt="Client Testimonoal"/>
                             <div class="testimonial-text">
-                                <p>Many many thanks to Compass Overseas to help me a lot by <br>providing a large no. of tests that were very beneficial for me.</p>
+                                <p>Many many thanks to Compass Overseas to help me a lot by <br>providing a large no. of
+                                    tests that were very beneficial for me.</p>
                                 <h3>RAVI CHAND GADE</h3>
                                 <!-- <span>President Lexo Inc</span> -->
                             </div>
                         </div>
                         <div class="testimonial-item">
-                            <img src="https://www.ptevouchercode.com/css/front/images/c2.png" alt="Client Testimonoal" />
+                            <img src="https://www.ptevouchercode.com/css/front/images/c2.png" alt="Client Testimonoal"/>
                             <div class="testimonial-text">
-                                <p>Thanks Compass Overseas for the great help.The executive staff is <br>really good and proactive at helping the students to<br> purchase the PTE exam vouchers".</p>
+                                <p>Thanks Compass Overseas for the great help.The executive staff is <br>really good and
+                                    proactive at helping the students to<br> purchase the PTE exam vouchers".</p>
                                 <h3>PAANI VERMA</h3>
                                 <!--  <span>CEO Optima Inc</span> -->
                             </div>
                         </div>
                         <div class="testimonial-item">
-                            <img src="https://www.ptevouchercode.com/css/front/images/c5.png" alt="Client Testimonoal" />
+                            <img src="https://www.ptevouchercode.com/css/front/images/c5.png" alt="Client Testimonoal"/>
                             <div class="testimonial-text">
-                                <p>Thanks to CompassOverseas for giving me such a wonderful opportunity<br> to purchase at very lower rates , and indeed the test papers <br>are really good and helpful.</p>
+                                <p>Thanks to CompassOverseas for giving me such a wonderful opportunity<br> to purchase
+                                    at very lower rates , and indeed the test papers <br>are really good and helpful.
+                                </p>
                                 <h3>THATTALA RAJYALAKSHMI</h3>
                                 <!-- <span>CEO & Founder</span> -->
                             </div>
                         </div>
                         <div class="testimonial-item">
-                            <img src="https://www.ptevouchercode.com/css/front/images/c1.png" alt="Client Testimonoal" />
+                            <img src="https://www.ptevouchercode.com/css/front/images/c1.png" alt="Client Testimonoal"/>
                             <div class="testimonial-text">
-                                <p>Excellent service from Compass Overseas and I have taken PTE <br>test voucher and immediately they have mailed me free <br>PTE preparation material.</p>
+                                <p>Excellent service from Compass Overseas and I have taken PTE <br>test voucher and
+                                    immediately they have mailed me free <br>PTE preparation material.</p>
                                 <h3>Jyotika</h3>
                                 <!-- <span>CEO & Founder</span> -->
                             </div>
@@ -476,10 +525,6 @@
 @endpush--}}
 @push('script')
 <script>
-    $('#ptevouForm').submit(function() {
-        if ($('#error-list li').length == 0) {
-           $('#loader').css('display','block');
-        }
-    });
+    $("#ptevouForm").submit(function(){0==$("#error-list li").length&&$("#loader").css("display","block")});
 </script>
 @endpush

@@ -33,12 +33,9 @@
     <meta name="twitter:creator" value="@ {{$rate or ''}}PteVoucherCode"/>
     {{--<link rel="shortcut icon" type="image/png" href="https://www.ptevouchercode.com/images/favicon.png"/>--}}
     <link rel="shortcut icon" type="image/png" href="{{url('css/front/images/favicon.png')}}"/>
-    <script type="application/x-javascript"> addEventListener("load", function () {
-            setTimeout(hideURLbar, 0);
-        }, false);
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        } </script>
+    <script>
+        function hideURLbar(){window.scrollTo(0,1)}addEventListener("load",function(){setTimeout(hideURLbar,0)},!1);
+    </script>
 
 
     {{--<link rel="stylesheet" href="{{url('css/front/css/bootstrap.min.css')}}" type="text/css"/>
@@ -85,10 +82,7 @@
         gtag('config', 'AW-808244957');
     </script>
     <style>
-        .carousel-inner img {
-            width: 100%;
-            height: 100%;
-        }
+        .carousel-inner img{width:100%;height:100%}
     </style>
 
 </head>
@@ -134,13 +128,7 @@
 @stack('external_script')
 @stack('script')
 <script>
-    $(document).ready(function() {
-        $("[href]").each(function() {
-            if (this.href == window.location.href) {
-                $(this).addClass("active");
-            }
-        });
-    });
+    $(document).ready(function(){$("[href]").each(function(){this.href==window.location.href&&$(this).addClass("active")})});
 </script>
 </body>
 </html>
