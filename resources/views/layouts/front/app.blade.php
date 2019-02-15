@@ -41,7 +41,7 @@
         } </script>
 
 
-    <link rel="stylesheet" href="{{url('css/front/css/bootstrap.min.css')}}" type="text/css"/>
+    {{--<link rel="stylesheet" href="{{url('css/front/css/bootstrap.min.css')}}" type="text/css"/>
     <link rel="stylesheet" href="{{url('css/front/css/font-awesome.min.css')}}" type="text/css"/>
     <link rel="stylesheet" href="{{url('css/front/css/line-icons.css')}}" type="text/css" />
     <link rel="stylesheet" href="{{url('css/front/css/owl.carousel.css')}}" type="text/css"/>
@@ -49,7 +49,8 @@
     <link rel="stylesheet" href="{{url('css/front/css/nivo-lightbox.css')}}" type="text/css"/>
     <link rel="stylesheet" href="{{url('css/front/css/magnific-popup.css')}}" type="text/css"/>
     <link rel="stylesheet" href="{{url('css/front/css/slicknav.css')}}" type="text/css"/>
-    <link rel="stylesheet" href="{{url('css/front/css/animate.css')}}" type="text/css"/>
+    <link rel="stylesheet" href="{{url('css/front/css/animate.css')}}" type="text/css"/>--}}
+    <link rel="stylesheet" href="{{url('css/front/css/all.css')}}" type="text/css"/>
     <link rel="stylesheet" href="{{url('css/front/css/main.css')}}" type="text/css"/>
     <link rel="stylesheet" href="{{url('css/front/css/responsive.css')}}" type="text/css"/>
 @stack('css')
