@@ -131,7 +131,7 @@
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-xs-6">
                     <div class="screenshot_leptop">
-                        <img class="img-responsive" src="{{url('css/front/img/lappy3.png')}}" alt="Laptop">
+                        <img class="img-responsive" src="{{url('css/front/img/lappy3.png')}}" alt="PTE Exam Platform">
                     </div>
                     <div id="demo" class="carousel slide" data-ride="carousel">
 
@@ -149,25 +149,25 @@
                         <!-- The slideshow -->
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="{{url('css/front/img/step1.png')}}" alt="" width="1100" height="500">
+                                <img src="{{url('css/front/img/step1.png')}}" alt="PTE login" width="1100" height="500">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{url('css/front/img/step2.png')}}" alt="" width="1100" height="500">
+                                <img src="{{url('css/front/img/step2.png')}}" alt="Pearson Registration" width="1100" height="500">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{url('css/front/img/step3.png')}}" alt="" width="1100" height="500">
+                                <img src="{{url('css/front/img/step3.png')}}" alt="Pearson fill detail" width="1100" height="500">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{url('css/front/img/step4.png')}}" alt="" width="1100" height="500">
+                                <img src="{{url('css/front/img/step4.png')}}" alt="Pearson confirm details" width="1100" height="500">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{url('css/front/img/step5.png')}}" alt="" width="1100" height="500">
+                                <img src="{{url('css/front/img/step5.png')}}" alt="Pearson Schedule dates" width="1100" height="500">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{url('css/front/img/step6.png')}}" alt="" width="1100" height="500">
+                                <img src="{{url('css/front/img/step6.png')}}" alt="Pearson Confirm mail" width="1100" height="500">
                             </div>
                             <div class="carousel-item">
-                                <img src="{{url('css/front/img/step7.png')}}" alt="" width="1100" height="500">
+                                <img src="{{url('css/front/img/step7.png')}}" alt="Pearson Thank you" width="1100" height="500">
                             </div>
                         </div>
 
@@ -253,7 +253,7 @@
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                     <div class="show-box wow fadeInDown animated" data-wow-offset="10">
 
-                        <img src="{{url('css/front/img/features/feature.jpg')}}" alt="">
+                        <img src="{{url('css/front/img/features/feature.jpg')}}" alt="PTE Feature">
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -421,7 +421,7 @@
                 <div class="col-md-12">
                     <div class="touch-slider owl-carousel owl-theme">
                         <div class="testimonial-item">
-                            <img src="https://www.ptevouchercode.com/css/front/images/c4.png" alt="Client Testimonoal"/>
+                            <img src="https://www.ptevouchercode.com/css/front/images/c4.png" alt="Client Testimonial"/>
                             <div class="testimonial-text">
                                 <p>Nice deal,got good discount on PTE exam voucher + awesome customer service.</p>
                                 <h3>SYED IMAD</h3>
@@ -429,7 +429,7 @@
                             </div>
                         </div>
                         <div class="testimonial-item">
-                            <img src="https://www.ptevouchercode.com/css/front/images/c3.png" alt="Client Testimonoal"/>
+                            <img src="https://www.ptevouchercode.com/css/front/images/c3.png" alt="Client Testimonial"/>
                             <div class="testimonial-text">
                                 <p>Many many thanks to Compass Overseas to help me a lot by <br>providing a large no. of
                                     tests that were very beneficial for me.</p>
@@ -438,7 +438,7 @@
                             </div>
                         </div>
                         <div class="testimonial-item">
-                            <img src="https://www.ptevouchercode.com/css/front/images/c2.png" alt="Client Testimonoal"/>
+                            <img src="https://www.ptevouchercode.com/css/front/images/c2.png" alt="Client Testimonial"/>
                             <div class="testimonial-text">
                                 <p>Thanks Compass Overseas for the great help.The executive staff is <br>really good and
                                     proactive at helping the students to<br> purchase the PTE exam vouchers".</p>
@@ -457,7 +457,7 @@
                             </div>
                         </div>
                         <div class="testimonial-item">
-                            <img src="https://www.ptevouchercode.com/css/front/images/c1.png" alt="Client Testimonoal"/>
+                            <img src="https://www.ptevouchercode.com/css/front/images/c1.png" alt="Client Testimonial"/>
                             <div class="testimonial-text">
                                 <p>Excellent service from Compass Overseas and I have taken PTE <br>test voucher and
                                     immediately they have mailed me free <br>PTE preparation material.</p>
