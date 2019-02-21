@@ -47,7 +47,7 @@
                             S.P Ring Road - New Nikol
                             Ahmedabad, Gujarat 382350.
                             Or
-                            info@ptevouchercode.com
+                            help@ptevouchercode.com
                             We will take immediate actions accordingly.
 
 

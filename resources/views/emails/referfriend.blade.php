@@ -137,7 +137,7 @@
                                         <p style="margin:10px">
                                             For Any Assistance, Please get in touch with us.<br>
                                             Phone : +91-9099-500-925<br>
-                                            Email : <a href="mailto:info@ptevouchercode.com">info@ptevouchercode.com</a>
+                                            Email : <a href="mailto:help@ptevouchercode.com">help@ptevouchercode.com</a>
                                         </p>
 
                                     </td>
