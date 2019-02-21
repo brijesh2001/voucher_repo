@@ -66,7 +66,7 @@
 
 
                         <h2 style="text-align: center">For More Information, Contact us on</h2>
-                        <h4 style="text-align: center">info@compassoverseas.com</h4>
+                        <h4 style="text-align: center">info@ptevouchercode.com</h4>
                         <h4 style="text-align: center">Ph:+91-9099-500-925</h4>
                         <h4 style="text-align: center">Disclaimer</h4>
                         <p>The PTE Voucher Code is given to the candidate on booking test online or over the phone call. We will never ask for your Credit card, debit card or other confidential details. CompassOverseas is not responsible if the candidate is not able to use the PTE Academic (Pearson Test of English (Academic)) Score Card for visa application or any other cause. Please check with the responsible authorities to confirm score for candidature.

@@ -128,7 +128,7 @@
 
                                             <td valign="top" class="mcnTextContent" style="padding-top: 0;padding-right: 18px;padding-bottom: 9px;padding-left: 18px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;word-break: break-word;color: #202020;font-family: Helvetica;font-size: 16px;line-height: 150%;text-align: left;">
 
-                                                <span style="color:#FFF0F5">If you have any questions or concerns Please call us in anytime&nbsp;on&nbsp;<strong>+91-9099-500-925</strong>&nbsp;or email anytime on&nbsp;</span><a href="mailto:info@compassoverseas.com" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;"><span style="color:#FFF0F5">info@compassoverseas.com</span></a>
+                                                <span style="color:#FFF0F5">If you have any questions or concerns Please call us in anytime&nbsp;on&nbsp;<strong>+91-9099-500-925</strong>&nbsp;or email anytime on&nbsp;</span><a href="mailto:info@ptevouchercode.com" target="_blank" style="mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;color: #2BAADF;font-weight: normal;text-decoration: underline;"><span style="color:#FFF0F5">info@ptevouchercode.com</span></a>
                                             </td>
                                         </tr>
                                         </tbody></table>

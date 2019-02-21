@@ -291,7 +291,7 @@
                                     <p style="margin: 10px;">
                                         For Any Assistance, Please get in touch with us.<br>
                                         Phone : +91-9099-500-925<br>
-                                        Email : info@compassoverseas.com<br>
+                                        Email : info@ptevouchercode.com<br>
                                         Site : <a href="https://www.ptevouchercode.com/" target="_blank">www.ptevouchercode.com</a>
                                     </p>
 

@@ -18,7 +18,7 @@
                             <a class="rightnav-link page-scroll" href="#"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +91-9099-500-925</a>
                         </li>
                         <li class="rightnav-item">
-                            <a class="rightnav-link page-scroll" href="#"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; info@compassoverseas.com</a>
+                            <a class="rightnav-link page-scroll" href="#"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; info@ptevouchercode.com</a>
                         </li>
 
 
