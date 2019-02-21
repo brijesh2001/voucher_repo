@@ -38,15 +38,15 @@ class EnquiryMail extends Mailable
 
         if($this->type == 'customer') {
             $to = $this->enquiryData->email;
-            $address = 'info@compassoverseas.com';
+            $address = 'info@ptevouchercode.com';
             $name = 'PTEVoucherCode.com';
             $subject = 'Thank you';
             $view = 'emails.enquiry';
         }elseif ($this->type == 'admin') {
-            $address = 'info@compassoverseas.com';
+            $address = 'info@ptevouchercode.com';
             $name = 'PTEVoucherCode.com';
             $subject = $this->enquiryData->name . 'Inquiry';
-            $to = 'info@compassoverseas.com';
+            $to = 'info@ptevouchercode.com';
             $view = 'emails.admin_enquiry';
         }
 

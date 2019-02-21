@@ -31,7 +31,7 @@ class InvoiceMail extends Mailable
     public function build()
     {
 
-        $address = 'info@compassoverseas.com';
+        $address = 'info@ptevouchercode.com';
         $name = 'PTEVoucherCode.com';
             $to = $this->successData['email'];
             $file = $this->successData['file_path'];
