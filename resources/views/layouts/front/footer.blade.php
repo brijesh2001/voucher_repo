@@ -9,7 +9,7 @@
                             <p><b>PTE Voucher Code</b><br>
                                 415 - Vishala Supreme, <br>Opp. Torrent Power<br>S.P Ring Road - New Nikol <br>Ahmedabad, Gujarat 382350 </p>
                             <p class="phone">Phone: <span>+91-9099-500-925</span></p>
-                            <p class="email">E-mail: <span>info@ptevouchercode.com</span></p>
+                            <p class="email">E-mail: <span>help@ptevouchercode.com</span></p>
                         </div>
                         <div class="social-icons">
                             <ul>

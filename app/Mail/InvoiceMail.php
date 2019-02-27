@@ -31,19 +31,19 @@ class InvoiceMail extends Mailable
     public function build()
     {
 
-        $address = 'info@ptevouchercode.com';
+        $address = 'help@ptevouchercode.com';
         $name = 'PTEVoucherCode.com';
 
-            $to_final_array = [];
+            //$to_final_array = [];
             $to = $this->successData['email'];
-            $to_admin = 'info@ptevouchercode.com';
-            array_push($to_final_array,$to,$to_admin);
+            //$to_admin = 'help@ptevouchercode.com';
+           //array_push($to_final_array,$to,$to_admin);
             $file = $this->successData['file_path'];
             $view = 'emails.invoice_send';
             $subject = 'PTE Voucher Code GST Invoice';
 
         return $this->view($view)
-            ->to($to_final_array)
+            ->to($to)
             ->from($address, $name)
             ->replyTo($address, $name)
             ->subject($subject)
