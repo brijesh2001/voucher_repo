@@ -36,6 +36,28 @@
     <script>
         function hideURLbar(){window.scrollTo(0,1)}addEventListener("load",function(){setTimeout(hideURLbar,0)},!1);
     </script>
+    <script type="application/ld+json">
+        {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "url": "https://www.ptevouchercode.com",
+  "image": "http://host.voucher.com/css/front/img/logo.png",
+  "description": "PTE voucher code",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "reviewCount": "15",
+    "bestRating": "5",
+    "worstRating": "4.5"
+  },
+  "contactPoint": [
+    { "@type": "ContactPoint",
+      "telephone": "+91-909-950-0925",
+      "contactType": "customer service"
+    }
+  ]
+}
+    </script>
 
 
     {{--<link rel="stylesheet" href="{{url('css/front/css/bootstrap.min.css')}}" type="text/css"/>

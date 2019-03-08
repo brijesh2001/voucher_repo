@@ -80,6 +80,11 @@
             <div class="col-lg-8 col-sm-8 col-xs-12">
                 <div class="copyright">
                     <p>© 2018 ptevouchercode.com All Rights Reserved<a rel="nofollow" href="#"></a> || <a href="{{url('terms')}}"style=color:#fff>Terms & Condition</a> || <a href="{{url('privacy')}}"style=color:#fff>Privacy Policy</a></p>
+                    <p><center><div itemtype="http://data-vocabulary.org/Review" itemscope=""> <span itemtype="http://data-vocabulary.org/Organization" itemscope="" itemprop="itemreviewed">&nbsp;<a href="https://www.google.co.in/maps/dir/23.0465536,72.6409216/pte+voucher+code/@23.0450431,72.6428143,14z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x395e8719642aefa3:0x71e55c2c905d16b8!2m2!1d72.6802062!2d23.046148">Authorised PTE Voucher reseller</a><span>&nbsp;</span></span> <span style="color: #E7711B !important;"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></span> <span itemprop="reviewer" style="color:#fff;">Reviewed by 56 Users
+ Rated: </span> <span itemtype="http://data-vocabulary.org/Rating" itemscope="" itemprop="rating" style="color:#fff;"> <span itemprop="value">4.8</span>
+/ <span itemprop="best">5</span>
+</span>
+                        </div></center></p>
                 </div>
             </div>
         </div>
