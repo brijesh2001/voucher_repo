@@ -173,7 +173,7 @@
                 <h3 class="info-p cen">Get Discount on Booking With us</h3>
                 <h4 class="info-p">
                     <ul class="info-ul">
-                        <li>visit <a href="http://pearsonpte.com/book">pearsonpte.com/book</a> &amp; Create Account</li>
+                        <li>visit <a href="http://pearsonpte.com/book" target="_blank">pearsonpte.com/book</a> &amp; Create Account</li>
                         <li>Choose a Exam date</li>
                         <li>Enter Voucher Code</li>
                         <li>Get confirmation E-mail and it's done</li>

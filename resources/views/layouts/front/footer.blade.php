@@ -15,7 +15,7 @@
                             <ul>
                                 <li class="facebook"><a href="https://www.facebook.com/PTEVoucherCode" target="_blank"><i class="fa fa-facebook"></i></a></li>
                                 <li class="twitter"><a href="https://twitter.com/PteVoucherCode" target="_blank"><i class="fa fa-twitter"></i></a></li>
-                                <li class="google-plus"><a href="https://plus.google.com/107058175992570744375?hl=en" target="_blank"><i class="fa fa-google-plus"></i></a></li>
+                                {{--<li class="google-plus"><a href="https://plus.google.com/107058175992570744375?hl=en" target="_blank"><i class="fa fa-google-plus"></i></a></li>--}}
                             </ul>
                         </div>
                     </div>
