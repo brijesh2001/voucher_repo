@@ -41,7 +41,7 @@
   "@context": "https://schema.org",
   "@type": "Organization",
   "url": "https://www.ptevouchercode.com",
-  "image": "http://host.voucher.com/css/front/img/logo.png",
+  "image": "http://www.ptevouchercode.com/css/front/img/logo.png",
   "description": "PTE voucher code",
   "aggregateRating": {
     "@type": "AggregateRating",
