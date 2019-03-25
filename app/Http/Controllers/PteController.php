@@ -110,6 +110,7 @@ class PteController extends Controller
         //$addpromo = $this->promo->addPromo($request->all());
         $unused_voucher = $this->promo->getUnusedVoucher();
         if ($buying_quantity > $unused_voucher) {
+
             $request->session()->flash('alert-danger', 'Total number of voucher available is ' . $unused_voucher);
             return redirect('/')->withInput();
         }
@@ -427,7 +428,7 @@ class PteController extends Controller
         //get response
         $response = curl_exec($ch);
         $result = json_decode($response);
-        return $result;
+        return $result->code;
     }
 
     /**
