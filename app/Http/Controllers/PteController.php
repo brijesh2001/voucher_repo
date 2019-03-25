@@ -97,8 +97,7 @@ class PteController extends Controller
            $this->createEnquiry($generate_code,$request_data);
 
         }else{
-
-            $this->createEnquiry($response_code,$request_data);
+            $this->createEnquiry($response_code->code,$request_data);
         }
 
         // For adding the enquiry and the contact to the CRM Ends here
@@ -512,7 +511,8 @@ class PteController extends Controller
 
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
-        curl_exec($ch);
+        $response = curl_exec($ch);
+        dd($response);
         curl_close($ch);
     }
 
