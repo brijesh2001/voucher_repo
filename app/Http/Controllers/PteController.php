@@ -87,6 +87,25 @@ class PteController extends Controller
         if ($validations) {
             return $validations;
         }
+
+       // For adding the enquiry and the contact to the CRM Starts here
+        $response_code = $this->checkContactCode($request_data);
+
+        if($response_code->code == null){
+
+           $generate_code =  $this->createContact($request_data);
+           $this->createEnquiry($generate_code,$request_data);
+
+        }else{
+
+            $this->createEnquiry($response_code,$request_data);
+        }
+
+        // For adding the enquiry and the contact to the CRM Ends here
+
+
+        //Now the process of the voucher buying will start
+
         $buying_quantity = intval($request_data['number_of_voucher']);
         //$addpromo = $this->promo->addPromo($request->all());
         $unused_voucher = $this->promo->getUnusedVoucher();
@@ -377,6 +396,123 @@ class PteController extends Controller
             echo 'error:' . curl_error($ch);
         }
 
+        curl_close($ch);
+    }
+
+    /**
+     * @param $requestData
+     * @return mixed
+     * @desc For checking the code is generated or not
+     */
+
+    public function checkContactCode($requestData)
+    {
+
+        $email = $requestData['email'];
+        $mobile = $requestData['mobile'];
+        $url = "http://crm.compassoverseas.com/crm/api/api.php?API_TOKEN=compass_crm_5556&PIN=8569&action=get_contact&email=$email&cont=$mobile";
+
+        // init the resource
+        $ch = curl_init();
+        curl_setopt_array($ch, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST => true,
+
+            //,CURLOPT_FOLLOWLOCATION => true
+        ));
+
+        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+        //get response
+        $response = curl_exec($ch);
+        $result = json_decode($response);
+        return $result;
+    }
+
+    /**
+     * @param $requestData
+     * @return int
+     * @desc For adding the contact if the contact is new to the system
+     */
+    public function createContact($requestData)
+    {
+        $email = $requestData['email'];
+        $mobile = $requestData['mobile'];
+        $name = $requestData['name'];
+        $contact_unique_code = rand(1,100000);
+
+        $url="http://crm.compassoverseas.com/crm/api/api.php?API_TOKEN=compass_crm_5556&PIN=8569&action=save_contact";
+        // init the resource
+        $ch = curl_init();
+        curl_setopt_array($ch, array(
+            CURLOPT_URL => $url,
+            CURLOPT_RETURNTRANSFER => true,
+            CURLOPT_POST => true,
+
+            //,CURLOPT_FOLLOWLOCATION => true
+        ));
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HEADER, FALSE);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+        $payload = Array(
+            'p_cont' => $mobile,
+            'p_email' => $email,
+            'name' => $name,
+            'source' => 'VoucherCode.com',
+            'code' => $contact_unique_code,
+            'mode' => 'create',
+        );
+
+
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
+        curl_exec($ch);
+        curl_close($ch);
+
+        return $contact_unique_code;
+
+    }
+
+    public function createEnquiry($generate_code,$request_data)
+    {
+
+        //for getting the rate
+        $current_prize_data = $this->prize->getFirstPrize();
+        if (count($current_prize_data) > 0) {
+            $rate = $current_prize_data->rate;
+        } else {
+            $rate = -1;
+        }
+        $product_payload = array();
+        $product_payload[] = array('code'=>'V','qty'=>$request_data['number_of_voucher'],'rate'=>$rate,'note'=>'');
+
+        $enquiry_code = rand(1,100000);
+
+
+        //Curl Request for adding the enquiry
+        $ch = curl_init();
+        $url="http://crm.compassoverseas.com/crm/api/api.php?API_TOKEN=compass_crm_5556&PIN=8569&action=create_lead";
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HEADER, FALSE);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+        $payload = Array(
+            'contact' => $generate_code,
+            'code' => $enquiry_code,
+            'source' => 'VoucherCode.com',
+            'tags' => '',
+            'title' => 'Enquiry for Voucher',
+            'description' => '',
+            'note' => '',
+            'products' => json_encode($product_payload,true)
+        );
+
+
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
+        curl_exec($ch);
         curl_close($ch);
     }
 
