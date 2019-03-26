@@ -512,7 +512,6 @@ class PteController extends Controller
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
         $response = curl_exec($ch);
-        dd($response);
         curl_close($ch);
     }
 
