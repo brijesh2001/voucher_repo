@@ -318,9 +318,9 @@
                                                 <a href="https://www.facebook.com/PTEVoucherCode" target="_blank"><img src="{{url('css/front/images/icon-facebook.png')}}" alt="alt_text" border="0" style="display:block;height:22px;"></a>
                                             </td>
                                             <td class="stack-column-center spacer" valign="top" width="20" height="30" style="font-size:30px;line-height:30px;margin:0;padding:0;height:30px;"> </td>
-                                            <td>
+                                            {{--<td>
                                                 <a href="https://plus.google.com/107058175992570744375?hl=en" target="_blank"><img src="{{url('css/front/images/gplus-icon.png')}}" alt="alt_text" border="0" style="display:block;height:22px;"></a>
-                                            </td>
+                                            </td>--}}
                                             <td class="stack-column-center spacer" valign="top" width="20" height="30" style="font-size:30px;line-height:30px;margin:0;padding:0;height:30px;"> </td>
                                             <td>
                                                 <a href="https://twitter.com/PteVoucherCode" target="_blank"><img src="{{url('css/front/images/icon-twitter.png')}}" alt="alt_text" border="0" style="display:block;height:22px;"></a>
