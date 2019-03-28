@@ -15,6 +15,7 @@ use App\Models\Pte;
 use Validator;
 use DB;
 use Mail;
+use Illuminate\Support\Facades\Session;
 
 
 class PteController extends Controller
@@ -88,20 +89,9 @@ class PteController extends Controller
             return $validations;
         }
 
-       // For adding the enquiry and the contact to the CRM Starts here
-        $response_code = $this->checkContactCode($request_data);
-
-        if($response_code->code == null){
-
-           $generate_code =  $this->createContact($request_data);
-           $this->createEnquiry($generate_code,$request_data);
-
-        }else{
-            $this->createEnquiry($response_code->code,$request_data);
-        }
 
         // For adding the enquiry and the contact to the CRM Ends here
-
+        $this->createEnquiry($request_data);
 
         //Now the process of the voucher buying will start
 
@@ -165,6 +155,8 @@ class PteController extends Controller
         $result = json_decode($response, true);
         if(isset($result["payment_request"]["id"])) {
             $request_data['payment_request_id'] = $result["payment_request"]["id"];
+            //For adding the log to the CRM:
+            $this->paymentLog($request_data['payment_request_id']);
         }else {
             $request->session()->flash('alert-danger', 'Problem occurred while creating payment id please try after some time');
             return redirect('/')->withInput(); 
@@ -318,6 +310,7 @@ class PteController extends Controller
                                 $sale_data_entry['amount_paid'] = $amount_paid;
                                 $sale_data_entry['number_of_voucher'] = $number_of_voucher;
                                 $sale_data = $this->saleData->addSaleData($sale_data_entry);
+                                $this->successLead();
                                 if($sale_data) {
 
                                     return redirect('/thankyou');
@@ -399,82 +392,11 @@ class PteController extends Controller
     }
 
     /**
-     * @param $requestData
-     * @return mixed
-     * @desc For checking the code is generated or not
+     * @param $request_data
+     * @desc for adding the enquiry in CRM
      */
 
-    public function checkContactCode($requestData)
-    {
-
-        $email = $requestData['email'];
-        $mobile = $requestData['mobile'];
-        $url = "http://crm.compassoverseas.com/crm/api/api.php?API_TOKEN=compass_crm_5556&PIN=8569&action=get_contact&email=$email&cont=$mobile";
-
-        // init the resource
-        $ch = curl_init();
-        curl_setopt_array($ch, array(
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_POST => true,
-
-            //,CURLOPT_FOLLOWLOCATION => true
-        ));
-
-        curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-        //get response
-        $response = curl_exec($ch);
-        $result = json_decode($response);
-        return $result;
-    }
-
-    /**
-     * @param $requestData
-     * @return int
-     * @desc For adding the contact if the contact is new to the system
-     */
-    public function createContact($requestData)
-    {
-        $email = $requestData['email'];
-        $mobile = $requestData['mobile'];
-        $name = $requestData['name'];
-        $contact_unique_code = rand(1,100000);
-
-        $url="http://crm.compassoverseas.com/crm/api/api.php?API_TOKEN=compass_crm_5556&PIN=8569&action=save_contact";
-        // init the resource
-        $ch = curl_init();
-        curl_setopt_array($ch, array(
-            CURLOPT_URL => $url,
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_POST => true,
-
-            //,CURLOPT_FOLLOWLOCATION => true
-        ));
-        curl_setopt($ch, CURLOPT_URL, $url);
-        curl_setopt($ch, CURLOPT_HEADER, FALSE);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
-        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
-        $payload = Array(
-            'p_cont' => $mobile,
-            'p_email' => $email,
-            'name' => $name,
-            'source' => 'VoucherCode.com',
-            'code' => $contact_unique_code,
-            'mode' => 'create',
-        );
-
-
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
-        curl_exec($ch);
-        curl_close($ch);
-
-        return $contact_unique_code;
-
-    }
-
-    public function createEnquiry($generate_code,$request_data)
+    public function createEnquiry($request_data)
     {
 
         //for getting the rate
@@ -489,6 +411,18 @@ class PteController extends Controller
 
         $enquiry_code = rand(1,100000);
 
+        //Session variable for unique enquire code
+        Session::put('stored_code', 'value');
+        session(['stored_code' => $enquiry_code]);
+
+        $contact_code = rand(1,1000000);
+
+        $contact_json = array('datasource'=>'VoucherCode.com',
+                                'personal_contact'=>$request_data['mobile'],
+                                'personal_email' =>$request_data['email'],
+                                'contact_name' => $request_data['name'],
+                                'contact_code' => $contact_code);
+
 
         //Curl Request for adding the enquiry
         $ch = curl_init();
@@ -498,9 +432,9 @@ class PteController extends Controller
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
         $payload = Array(
-            'contact' => $generate_code,
+            'contact' => json_encode($contact_json,true),
             'code' => $enquiry_code,
-            'source' => 'VoucherCode.com',
+            'datasource' => 'VoucherCode.com',
             'tags' => '',
             'title' => 'Enquiry for Voucher',
             'description' => '',
@@ -508,6 +442,59 @@ class PteController extends Controller
             'products' => json_encode($product_payload,true)
         );
 
+
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
+        $response = curl_exec($ch);
+        curl_close($ch);
+    }
+
+    /**
+     * @desc for adding the success entry in CRM
+     */
+    public function successLead(){
+
+        $ch = curl_init();
+        $url="http://crm.compassoverseas.com/crm/api/api.php?API_TOKEN=compass_crm_5556&PIN=8569&action=close_lead";
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HEADER, FALSE);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+         $value = Session::get('stored_code');
+        $payload = Array(
+            'lead_code' => $value,
+            'reason' => 'sale',
+        );
+
+
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
+        $response = curl_exec($ch);
+        curl_close($ch);
+    }
+
+    /**
+     * @param $payment_request_id
+     *
+     * @desc for addin the entry of payment log in CRM
+     */
+
+    public function paymentLog($payment_request_id)
+    {
+        $ch = curl_init();
+        $url="http://crm.compassoverseas.com/crm/api/api.php?API_TOKEN=compass_crm_5556&PIN=8569&action=record_action";
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_HEADER, FALSE);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
+        $value = Session::get('stored_code');
+        $payload = Array(
+            'lead_code' => $value,
+            'action_type' => 'payment_log',
+            'action_title' => 'Payment Initiate',
+            'action_description' => $payment_request_id,
+
+        );
 
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
