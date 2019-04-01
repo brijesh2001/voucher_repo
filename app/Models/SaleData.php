@@ -409,8 +409,8 @@ class SaleData extends Authenticatable
     {
         $onlineInvoiceSeries = new OnlineInvoiceSeries();
         $invoice_number = $onlineInvoiceSeries->getLastInsertedInvoiceId();
-        $current_year = date('Y');
-        return 'INV-'.$current_year.'-V-'.$invoice_number;
+        //$current_year = date('Y');
+        return 'INV/1920/V'.$invoice_number;
     }
 
     /**

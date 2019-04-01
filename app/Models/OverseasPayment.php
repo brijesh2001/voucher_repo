@@ -226,8 +226,8 @@ class OverseasPayment extends Authenticatable
             $returnData['invoice_no'] = $data['invoice_no'];
         }else {
             $invoice_number = $invoiceSeries->getLastInsertedInvoiceId();
-            $current_year = date('Y');
-            $returnData['invoice_no'] = $current_year.'-PGEXP-'.$invoice_number;
+            //$current_year = date('Y');
+            $returnData['invoice_no'] = 'INV/1920/PGEXP'.$invoice_number;;
         }
         return $returnData;
     }

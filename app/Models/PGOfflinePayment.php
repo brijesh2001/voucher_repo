@@ -242,8 +242,8 @@ class PGOfflinePayment extends Authenticatable
                 $returnData['invoice_no'] = $data['invoice_no'];
             }else {
                 $invoice_number = $invoiceSeries->getLastInsertedInvoiceId();
-                $current_year = date('Y');
-                $returnData['invoice_no'] = $current_year.'-PGIND-'.$invoice_number;
+                //$current_year = date('Y');
+                $returnData['invoice_no'] = 'INV/1920/PGIND'.$invoice_number;
             }
 
         }
