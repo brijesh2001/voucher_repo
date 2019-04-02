@@ -436,8 +436,9 @@ class SaleDataController extends Controller
 
                 if(!empty($offlineinvoiceData)) {
                     foreach ($offlineinvoiceData as $offlineinvoic) {
-                        if(file_exists($filepath.'/'.$offlineinvoic->invoice_no.'.pdf')){
-                            $fileFullPath = $filepath.'/'.$offlineinvoic->invoice_no.'.pdf';
+                        $replaced_file_name = str_replace('/',''-'',$offlineinvoic->invoice_no);
+                        if(file_exists($filepath.'/'.$replaced_file_name.'.pdf')){
+                            $fileFullPath = $filepath.'/'.$replaced_file_name.'.pdf';
                             $this->deleteFilesIfExist($fileFullPath);
                         }
                         $data['amount_paid'] = $offlineinvoic->rate_after_gst;
@@ -458,7 +459,7 @@ class SaleDataController extends Controller
                         $data['state_name'] = $offlineinvoic->state_name;
                         $data['word_amount'] = $this->getIndianCurrency($offlineinvoic->rate_after_gst);
                         $pdf = PDF::loadView('emails.invoice', $data);
-                        $pdf->save($filepath.'/'.$offlineinvoic->invoice_no.'.pdf');
+                        $pdf->save($filepath.'/'.$replaced_file_name.'.pdf');
                         //return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                     }
 
@@ -482,6 +483,7 @@ class SaleDataController extends Controller
             //PDF Generation for online sale data
 
             if($requestData['type'] == 'online') {
+
                 $folder_name = date('Y-m-d', strtotime(trim($requestData['to'])));
                 $filepath = public_path(). DIRECTORY_SEPARATOR.'online/'.$folder_name;
                 if (!file_exists($filepath)) {
@@ -491,8 +493,9 @@ class SaleDataController extends Controller
                 $onlineSaleData = $this->saledata->gettheSaleData($start_date,$end_date);
                 if(!empty($onlineSaleData)) {
                     foreach ($onlineSaleData as $online) {
-                        if(file_exists($filepath.'/'.$online->invoice_number.'.pdf')){
-                            $fileFullPath = $filepath.'/'.$online->invoice_number.'.pdf';
+                        $replaced_file_name = str_replace('/',''-'',$online->invoice_number);
+                        if(file_exists($filepath.'/'.$replaced_file_name.'.pdf')){
+                            $fileFullPath = $filepath.'/'.$replaced_file_name.'.pdf';
                             $this->deleteFilesIfExist($fileFullPath);
                         }
                         $data['rate_before_gst'] = $online->amount_paid * 100/118;
@@ -519,7 +522,7 @@ class SaleDataController extends Controller
                         $data['invoice_number'] = $online->invoice_number;
                         $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
                         $pdf = PDF::loadView('emails.invoice', $data);
-                        $pdf->save($filepath.'/'.$online->invoice_number.'.pdf');
+                        $pdf->save($filepath.'/'.$replaced_file_name.'.pdf');
                         //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
 
                     }

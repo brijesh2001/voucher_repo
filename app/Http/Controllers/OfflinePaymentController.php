@@ -492,12 +492,13 @@ class OfflinePaymentController extends Controller
                     mkdir($filepath,0777,true);
                 }
 
-                if(file_exists($filepath.'/'.$data['invoice_no'].'.pdf')){
-                    $fileFullPath = $filepath.'/'.$data['invoice_no'].'.pdf';
+                $replaced_file_name = str_replace('/',''-'',$data['invoice_no']);
+                if(file_exists($filepath.'/'.$replaced_file_name.'.pdf')){
+                    $fileFullPath = $filepath.'/'.$replaced_file_name.'.pdf';
                     $this->deleteFilesIfExist($fileFullPath);
                 }
-                if(file_exists($filepath.'/'.$data['invoice_no'].'.pdf')){
-                    $fileFullPath = $filepath.'/'.$data['invoice_no'].'.pdf';
+                if(file_exists($filepath.'/'.$replaced_file_name.'.pdf')){
+                    $fileFullPath = $filepath.'/'.$replaced_file_name.'.pdf';
                     $this->deleteFilesIfExist($fileFullPath);
                 }
                 $data['amount_paid'] = $data['rate_after_gst'];
@@ -507,9 +508,9 @@ class OfflinePaymentController extends Controller
                 $data['word_amount'] = $this->getIndianCurrency($data['rate_after_gst']);
 
                 $pdf = PDF::loadView('emails.invoice', $data);
-                $pdf->save($filepath.'/'.$data['invoice_no'].'.pdf');
+                $pdf->save($filepath.'/'.$replaced_file_name.'.pdf');
                 //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
-                $filename = $filepath.'/'.$data['invoice_no'].'.pdf';
+                $filename = $filepath.'/'.$replaced_file_name.'.pdf';
                 $customer_email_data = [];
                 $customer_email_data['email'] = $data['email'];
                 $customer_email_data['file_path'] = $filename;
