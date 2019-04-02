@@ -59,7 +59,7 @@ class SendInvoice extends Command
                 mkdir($filepath,0777,true);
             }
             foreach ($onlineSaleData as $online) {
-                $replaced_file_name = str_replace('/',''-'',$online->invoice_number);
+                $replaced_file_name = str_replace('/','-',$online->invoice_number);
                 if(file_exists($filepath.'/'.$replaced_file_name.'.pdf')){
                     $fileFullPath = $filepath.'/'.$replaced_file_name.'.pdf';
                     $this->deleteFilesIfExist($fileFullPath);

@@ -436,7 +436,7 @@ class SaleDataController extends Controller
 
                 if(!empty($offlineinvoiceData)) {
                     foreach ($offlineinvoiceData as $offlineinvoic) {
-                        $replaced_file_name = str_replace('/',''-'',$offlineinvoic->invoice_no);
+                        $replaced_file_name = str_replace('/','-',$offlineinvoic->invoice_no);
                         if(file_exists($filepath.'/'.$replaced_file_name.'.pdf')){
                             $fileFullPath = $filepath.'/'.$replaced_file_name.'.pdf';
                             $this->deleteFilesIfExist($fileFullPath);
@@ -493,7 +493,7 @@ class SaleDataController extends Controller
                 $onlineSaleData = $this->saledata->gettheSaleData($start_date,$end_date);
                 if(!empty($onlineSaleData)) {
                     foreach ($onlineSaleData as $online) {
-                        $replaced_file_name = str_replace('/',''-'',$online->invoice_number);
+                        $replaced_file_name = str_replace('/','-',$online->invoice_number);
                         if(file_exists($filepath.'/'.$replaced_file_name.'.pdf')){
                             $fileFullPath = $filepath.'/'.$replaced_file_name.'.pdf';
                             $this->deleteFilesIfExist($fileFullPath);

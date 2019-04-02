@@ -492,7 +492,7 @@ class OfflinePaymentController extends Controller
                     mkdir($filepath,0777,true);
                 }
 
-                $replaced_file_name = str_replace('/',''-'',$data['invoice_no']);
+                $replaced_file_name = str_replace('/','-',$data['invoice_no']);
                 if(file_exists($filepath.'/'.$replaced_file_name.'.pdf')){
                     $fileFullPath = $filepath.'/'.$replaced_file_name.'.pdf';
                     $this->deleteFilesIfExist($fileFullPath);
