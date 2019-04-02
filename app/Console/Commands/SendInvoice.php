@@ -59,8 +59,9 @@ class SendInvoice extends Command
                 mkdir($filepath,0777,true);
             }
             foreach ($onlineSaleData as $online) {
-                if(file_exists($filepath.'/'.$online->invoice_number.'.pdf')){
-                    $fileFullPath = $filepath.'/'.$online->invoice_number.'.pdf';
+                $replaced_file_name = str_replace('/',''-'',$online->invoice_number);
+                if(file_exists($filepath.'/'.$replaced_file_name.'.pdf')){
+                    $fileFullPath = $filepath.'/'.$replaced_file_name.'.pdf';
                     $this->deleteFilesIfExist($fileFullPath);
                 }
                 $data['rate_before_gst'] = $online->amount_paid * 100/118;
@@ -85,9 +86,10 @@ class SendInvoice extends Command
                 $data['invoice_number'] = $online->invoice_number;
                 $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
                 $pdf = PDF::loadView('emails.invoice', $data);
-                $pdf->save($filepath.'/'.$online->invoice_number.'.pdf');
+
+                $pdf->save($filepath.'/'.$replaced_file_name.'.pdf');
                 //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
-                $filename = $filepath.'/'.$online->invoice_number.'.pdf';
+                $filename = $filepath.'/'.$replaced_file_name.'.pdf';
                 $customer_email_data = [];
                 $customer_email_data['email'] = $online->email;
                 $customer_email_data['file_path'] = $filename;
