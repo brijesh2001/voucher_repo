@@ -310,7 +310,8 @@ class PteController extends Controller
                                 $sale_data_entry['amount_paid'] = $amount_paid;
                                 $sale_data_entry['number_of_voucher'] = $number_of_voucher;
                                 $sale_data = $this->saleData->addSaleData($sale_data_entry);
-                                $this->successLead();
+
+                                $this->successLead($sale_data_entry);
                                 if($sale_data) {
 
                                     return redirect('/thankyou');
@@ -452,7 +453,7 @@ class PteController extends Controller
     /**
      * @desc for adding the success entry in CRM
      */
-    public function successLead(){
+    public function successLead($sale_data_entry){
 
         $ch = curl_init();
         $url="http://crm.compassoverseas.com/crm/api/api.php?API_TOKEN=compass_crm_5556&PIN=8569&action=close_lead";
@@ -461,9 +462,10 @@ class PteController extends Controller
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
          $value = Session::get('stored_code');
+        $a = implode(",", $sale_data_entry);
         $payload = Array(
             'lead_code' => $value,
-            'reason' => 'sale',
+            'reason' => $a,
         );
 
 
