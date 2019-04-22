@@ -127,6 +127,12 @@
                             Please note we are not charging any extra free our voucher will work in any case if you are selecting any date after the 48 Hours of booking day and exam date.
                         </ul>
                         <h3>
+                            For GST Invoice Bill
+                        </h3>
+                        <ul>
+                            Our system is providing GST invoice bill and sending it to the customer on the next day. If you want the GST invoice on your companies name, please ensure to enter name of your company while buying the voucher. If you are failed to enter the companies details, the further alteration in the GST invoice will not be entertained.
+                        </ul>
+                        <h3>
                             Disclaimer
                         </h3>
                         <p>
