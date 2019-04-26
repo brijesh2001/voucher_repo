@@ -42,7 +42,7 @@
                         <p>
                             When you register with us, we ask for some basic details like name, address, DOB, e-mail address, contact number and so on as part of our operations. In addition, when you make any purchase at PteVoucherCode, we require your Debit/Credit card number, OTP, and other transactions related details in order to complete the payment. Getting all these details are the part of our buying and selling process and we make sure that all the details that you share with us are safe and secure. To assure you this, we would like to announce you that we are a strict adherent of Data Protection Rules.
                             We seek your consent while gathering all the information. Once you provide us your constant we imply that you allow us to use your information for all the buying and selling process. However, you are free to withdraw your consent at any point in time by writing to us at:
-                            415 - Vishala Supreme,
+                            306 - Vishala Supreme,
                             Opp. Torrent Power
                             S.P Ring Road - New Nikol
                             Ahmedabad, Gujarat 382350.
