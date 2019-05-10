@@ -338,12 +338,12 @@
                 <hr class="lines wow zoomIn" data-wow-delay="0.3s">
                 <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">PTEVoucherCode
                     is an e-commerce venture by Compass Overseas that has been serving the Education sector for more
-                    than 5 years.</p>
+                    than 4 years.</p>
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">
                     <div class="item-boxes wow fadeInDown" data-wow-delay="0.2s">
-                        <p>Since the inauguration of Compass Overseas on December 15, 2013, the company has continually
+                        <p>Since the inauguration of Compass Overseas, the company has continually
                             worked for students and professional by helping, assisting, guiding and letting them achieve
                             their goals of staying or studying in foreign Countries. Compass Migration and Education
                             Consultant is acting as a ladder of success for thousands of students who are thriving
