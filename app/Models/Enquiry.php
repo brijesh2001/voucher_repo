@@ -26,7 +26,7 @@ class Enquiry extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'email', 'name','mobile','number_of_voucher','rate','payment_request_id', 'created_by', 'updated_by'
+        'email', 'name','mobile','number_of_voucher','rate','payment_request_id', 'created_by', 'updated_by','client_gstn'
     ];
 
     
@@ -187,12 +187,18 @@ class Enquiry extends Authenticatable
         }else {
             $payment_request_id = 'OFFLINE';
         }
+        if(isset($models['client_gstn']) && !empty($models['client_gstn'])) {
+            $client_gstn = $models['client_gstn'];
+        }else {
+            $client_gstn = '-';
+        }
         $enquiry->email = $models['email'];
         $enquiry->name = $models['name'];
         $enquiry->mobile = $models['mobile'];
         $enquiry->number_of_voucher = $models['number_of_voucher'];
         $enquiry->rate = $models['rate'];
         $enquiry->state = $models['state'];
+        $enquiry->client_gstn = $client_gstn;
         $enquiry->payment_request_id = $payment_request_id;
         $enquiry->created_at = date('Y-m-d H:i:s');
         $enquiry->created_by = 1;

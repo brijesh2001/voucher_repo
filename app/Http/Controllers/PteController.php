@@ -238,6 +238,7 @@ class PteController extends Controller
                             $name = $user_detail->name;
                             $mobile = $user_detail->mobile;
                             $rate = $user_detail->rate;
+                            $client_gstn = $user_detail->client_gstn;
                             $actual_amount = intval($number_of_voucher) * intval($rate);
                             if ($amount_paid != $actual_amount) {
                                 $request->session()->flash('alert-danger', 'Payment amount is not matching the voucher total amount');
@@ -309,6 +310,7 @@ class PteController extends Controller
                                 $sale_data_entry['rate'] = $rate;
                                 $sale_data_entry['amount_paid'] = $amount_paid;
                                 $sale_data_entry['number_of_voucher'] = $number_of_voucher;
+                                $sale_data_entry['client_gstn'] = $client_gstn;
                                 $sale_data = $this->saleData->addSaleData($sale_data_entry);
 
                                 $this->successLead($sale_data_entry);
