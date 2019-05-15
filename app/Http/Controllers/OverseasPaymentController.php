@@ -398,7 +398,12 @@ class OverseasPaymentController extends Controller
                     $data['invoice_number'] = $data['invoice_no'];
                     $data['word_amount'] = $this->getIndianCurrency($data['dollor_amount_paid']);
                     $data['amount'] = $data['dollor_amount_paid'];
-                    $pdf = PDF::loadView('emails.overseas_invoice', $data);
+                    $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('14-05-2019')));
+                    if(date('Y-m-d 00:00:00', strtotime(trim($data['created_at']))) < $check_date_for_older_invoice){
+                        $pdf = PDF::loadView('emails.invoice', $data);
+                    }else{
+                        $pdf = PDF::loadView('emails.new_invoice', $data);
+                    }
                     //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
                     return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                 }
