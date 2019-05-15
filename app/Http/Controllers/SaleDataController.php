@@ -317,8 +317,8 @@ class SaleDataController extends Controller
                     $data['voucher_code'] = str_replace(',', '<br />', $data['voucher_code']);
                     $data['word_amount'] = $this->getIndianCurrency($data['amount_paid']);
                     $data['created_at'] = date("d-m-Y", strtotime($data['created_at']));
-                    
-                    $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('13-05-2019')));
+
+                    $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('14-05-2019')));
                     if(date('Y-m-d 00:00:00', strtotime(trim($data['created_at']))) < $check_date_for_older_invoice){
                         $pdf = PDF::loadView('emails.invoice', $data);
                     }else{
@@ -338,8 +338,12 @@ class SaleDataController extends Controller
                    //$data['created_at '] = $data['payment_date'];
                    $data['invoice_number'] = $data['invoice_no'];
                    $data['word_amount'] = $this->getIndianCurrency($data['rate_after_gst']);
-                   $pdf = PDF::loadView('emails.invoice', $data);
-                    //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
+                    $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('14-05-2019')));
+                    if(date('Y-m-d 00:00:00', strtotime(trim($data['created_at']))) < $check_date_for_older_invoice){
+                        $pdf = PDF::loadView('emails.invoice', $data);
+                    }else{
+                        $pdf = PDF::loadView('emails.new_invoice', $data);
+                    } //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
                    return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                 }
             }
@@ -356,7 +360,12 @@ class SaleDataController extends Controller
                     //$data['created_at '] = $data['payment_date'];
                     $data['invoice_number'] = $data['invoice_no'];
                     $data['word_amount'] = $this->getIndianCurrency($data['rate_after_gst']);
-                    $pdf = PDF::loadView('emails.invoice', $data);
+                    $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('14-05-2019')));
+                    if(date('Y-m-d 00:00:00', strtotime(trim($data['created_at']))) < $check_date_for_older_invoice){
+                        $pdf = PDF::loadView('emails.invoice', $data);
+                    }else{
+                        $pdf = PDF::loadView('emails.new_invoice', $data);
+                    }
                     //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
                     return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                 }
@@ -465,7 +474,12 @@ class SaleDataController extends Controller
                         $data['rate_before_gst'] = $offlineinvoic->rate_before_gst;
                         $data['state_name'] = $offlineinvoic->state_name;
                         $data['word_amount'] = $this->getIndianCurrency($offlineinvoic->rate_after_gst);
-                        $pdf = PDF::loadView('emails.invoice', $data);
+                        $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('14-05-2019')));
+                        if(date('Y-m-d 00:00:00', strtotime(trim($data['created_at']))) < $check_date_for_older_invoice){
+                            $pdf = PDF::loadView('emails.invoice', $data);
+                        }else{
+                            $pdf = PDF::loadView('emails.new_invoice', $data);
+                        }
                         $pdf->save($filepath.'/'.$replaced_file_name.'.pdf');
                         //return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
                     }
@@ -528,7 +542,12 @@ class SaleDataController extends Controller
                         $data['voucher_code'] = str_replace(',', '<br />', $online->voucher_code);
                         $data['invoice_number'] = $online->invoice_number;
                         $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
-                        $pdf = PDF::loadView('emails.invoice', $data);
+                        $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('14-05-2019')));
+                        if(date('Y-m-d 00:00:00', strtotime(trim($data['created_at']))) < $check_date_for_older_invoice){
+                            $pdf = PDF::loadView('emails.invoice', $data);
+                        }else{
+                            $pdf = PDF::loadView('emails.new_invoice', $data);
+                        }
                         $pdf->save($filepath.'/'.$replaced_file_name.'.pdf');
                         //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
 

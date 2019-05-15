@@ -86,7 +86,12 @@ class SendInvoice extends Command
                 $data['voucher_code'] = str_replace(',', '<br />', $online->voucher_code);
                 $data['invoice_number'] = $online->invoice_number;
                 $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
-                $pdf = PDF::loadView('emails.invoice', $data);
+                $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('14-05-2019')));
+                if(date('Y-m-d 00:00:00', strtotime(trim($data['created_at']))) < $check_date_for_older_invoice){
+                    $pdf = PDF::loadView('emails.invoice', $data);
+                }else{
+                    $pdf = PDF::loadView('emails.new_invoice', $data);
+                }
 
                 $pdf->save($filepath.'/'.$replaced_file_name.'.pdf');
                 //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
