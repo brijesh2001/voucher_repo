@@ -81,6 +81,7 @@ class SendInvoice extends Command
                 $data['email'] = $online->email;
                 $data['mobile'] = $online->mobile;
                 $data['state_name'] = $online->state_name;
+                $data['gstn'] = $online->client_gstn;
                 //$data['voucher_code'] = $online->voucher_code;
                 $data['voucher_code'] = str_replace(',', '<br />', $online->voucher_code);
                 $data['invoice_number'] = $online->invoice_number;

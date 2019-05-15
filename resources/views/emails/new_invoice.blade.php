@@ -251,7 +251,7 @@
                             <tr>
                                 <td align="center">
                                     <p style="text-align: center;font-size: 10px;">PTE EDU SERVICES<br>
-                                        Shahi Kutir Bunglows,27 B/H Vrundavan Party Plot, Nr. Suryam Flora, Nikol, Ahmedabad <br> Email: pteeduservices@gmail.com. Phone : +91 9099500925</p>
+                                        306 / Vishala Supreme,Opp. Torrent Power S.P. Ring Road - New Nikol, Ahmedabad Gujarat - 382350 <br> Email: pteeduservices@gmail.com. Phone : +91 9099500925</p>
                                 </td>
                             </tr>
                         </table>
