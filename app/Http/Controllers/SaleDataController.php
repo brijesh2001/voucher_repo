@@ -318,7 +318,7 @@ class SaleDataController extends Controller
                     $data['word_amount'] = $this->getIndianCurrency($data['amount_paid']);
                     $data['created_at'] = date("d-m-Y", strtotime($data['created_at']));
                     $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('13-05-2019')));
-                    if($data['created_at'] < $check_date_for_older_invoice){
+                    if($check_date_for_older_invoice < date('Y-m-d 00:00:00', strtotime(trim($data['created_at'])))){
                         $pdf = PDF::loadView('emails.invoice', $data);
                     }else{
                         $pdf = PDF::loadView('emails.new_invoice', $data);
