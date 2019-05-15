@@ -26,7 +26,7 @@
                     <td align="center">
                         <table align="center" border="0" width="100%">
                             <tr>
-                                <td style="color: brown;font-size: 18px;font-weight: bold;">PTE EDU SERVICES</td>
+                                <td style="color: rgba(15, 27, 165, 0.7);font-size: 18px;font-weight: bold;">PTE EDU SERVICES</td>
                             </tr>
                         </table>
                     </td>
@@ -61,7 +61,7 @@
                         <table align="center" border="0"  width="100%">
                             <tr>
                                 <td style="width:42%">&nbsp;<hr/>&nbsp;</td>
-                                <td style="vertical-align:middle; text-align: center;color: brown;font-size: 18px;">TAX INVOICE</td>
+                                <td style="vertical-align:middle; text-align: center;color: rgba(15, 27, 165, 0.7);font-size: 18px;">TAX INVOICE</td>
                                 <td style="width:41%">&nbsp;<hr/>&nbsp;</td>
                             </tr>
                         </table>
@@ -213,7 +213,7 @@
                                 <td class="spacer" height="30" style="font-size: 30px; line-height: 30px; margin: 0; padding: 0; height:30px;">&nbsp;</td>
                             </tr>
                             <tr>
-                                <td style="color: brown;font-weight: bold;font-size: 14px;">Thank you for your business</td>
+                                <td style="color: rgba(15, 27, 165, 0.7);font-weight: bold;font-size: 14px;">Thank you for your business</td>
                             </tr>
                         </table>
 
@@ -240,7 +240,7 @@
                     <td align="center" style="">
                         <table border="0" width="100%">
                             <tr>
-                                <td height="2" align="center" style="height:2px;line-height:1px;font-size:1px;background-color:brown;" bgcolor="brown"></td>
+                                <td height="2" align="center" style="height:2px;line-height:1px;font-size:1px;background-color:rgba(15, 27, 165, 0.7);" bgcolor="rgba(15, 27, 165, 0.7)"></td>
                             </tr>
                         </table>
                     </td>
