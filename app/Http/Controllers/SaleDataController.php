@@ -317,6 +317,11 @@ class SaleDataController extends Controller
                     $data['voucher_code'] = str_replace(',', '<br />', $data['voucher_code']);
                     $data['word_amount'] = $this->getIndianCurrency($data['amount_paid']);
                     $data['created_at'] = date("d-m-Y", strtotime($data['created_at']));
+                    echo $data['created_at'];
+                    echo'<br>';
+                    echo"-";
+                    echo date('Y-m-d 00:00:00', strtotime(trim($data['created_at'])));
+                    die();
                     $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('13-05-2019')));
                     if($check_date_for_older_invoice < date('Y-m-d 00:00:00', strtotime(trim($data['created_at'])))){
                         $pdf = PDF::loadView('emails.invoice', $data);
