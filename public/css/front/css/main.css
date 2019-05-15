@@ -898,6 +898,18 @@ button:focus {
   }
 }
 
+@media (min-width: 481px) and (max-width: 767px) {
+#hide_mobile{
+  display: none;
+}
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+  #hide_mobile{
+    display: none;
+  }
+}
 .navbar-toggler {
   display: none;
 }
@@ -914,6 +926,7 @@ button:focus {
   .navbar-header {
     width: 100%;
   }
+
   .navbar-brand {
     position: absolute;
     padding: 10px;
