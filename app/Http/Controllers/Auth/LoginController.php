@@ -121,8 +121,8 @@ class LoginController extends Controller
             }
         }
 
-        $data['title_text'] = 'Buy PTE Voucher + 15 Mock Tests with Evaluations @ ₹10339* Only';
-        $data['meta_description'] = 'Book PTE Exam from PTE Voucher Code at ₹ 10339* & Save ₹ 1100 in India. Get 15 Mock Tests with Evaluations Free. Get Instant Discount Voucher in your email. Limited Time Offer!';
+        $data['title_text'] = 'Buy PTE Voucher + 15 Mock Tests with Evaluations @ 10381* Only';
+        $data['meta_description'] = 'Book PTE Exam from PTE Voucher Code at ₹ 10381* & Save ₹ 1050 in India. Get 15 Mock Tests with Evaluations Free. Get Instant Discount Voucher in your email. Limited Time Offer!';
         return view('front.index',$data);
     }
     public function hello()
@@ -195,8 +195,8 @@ class LoginController extends Controller
      */
     public function thankYou()
     {
-        $data['title_text'] = 'Buy PTE Voucher @ ₹10339* - Get 15 Scored Mock Test With Evaluations';
-        $data['meta_description'] = 'Buy PTE Voucher Code at ₹10339*  & Save ₹1100. Book Your PTE Exam at any centre in India & Get 15 Mock Tests with Evaluations Free. Lowest price in India. Get Instant Voucher in your email.';
+        $data['title_text'] = 'Buy PTE Voucher @ ₹10381* - Get 15 Scored Mock Test With Evaluations';
+        $data['meta_description'] = 'Buy PTE Voucher Code at ₹10381*  & Save ₹1050. Book Your PTE Exam at any centre in India & Get 15 Mock Tests with Evaluations Free. Lowest price in India. Get Instant Voucher in your email.';
         return view('front.thankyou',$data);
     }
     /**
@@ -253,8 +253,8 @@ class LoginController extends Controller
             }
         }
 
-        $data['title_text'] = 'Buy PTE Voucher @ ₹10339* - Get 15 Scored Mock Test With Evaluations';
-        $data['meta_description'] = 'Buy PTE Voucher Code at ₹10339*  & Save ₹1100. Book Your PTE Exam at any centre in India & Get 15 Mock Tests with Evaluations Free. Lowest price in India. Get Instant Voucher in your email.';
+        $data['title_text'] = 'Buy PTE Voucher @ ₹10381* - Get 15 Scored Mock Test With Evaluations';
+        $data['meta_description'] = 'Buy PTE Voucher Code at ₹10381*  & Save ₹1050. Book Your PTE Exam at any centre in India & Get 15 Mock Tests with Evaluations Free. Lowest price in India. Get Instant Voucher in your email.';
         return view('front.buy',$data);
     }
 
@@ -272,8 +272,8 @@ class LoginController extends Controller
      */
     public function terms()
     {
-        $data['title_text'] = 'Buy PTE Voucher @ ₹10339* Only - Get 15 Scored Mock Test Free';
-        $data['meta_description'] = 'Want to book PTE Academic Exam online? Buy PTE Voucher online at ₹10339* & Save 1100 and get 15 Scored mock tests FREE. Limited Time Offer!';
+        $data['title_text'] = 'Buy PTE Voucher @ ₹10381* Only - Get 15 Scored Mock Test Free';
+        $data['meta_description'] = 'Want to book PTE Academic Exam online? Buy PTE Voucher online at ₹10381* & Save 1050 and get 15 Scored mock tests FREE. Limited Time Offer!';
         return view('front.terms',$data);
     }
 
@@ -283,8 +283,8 @@ class LoginController extends Controller
      */
     public function privacy()
     {
-        $data['title_text'] = 'Buy PTE Voucher @ ₹10339* Only - Get 15 Scored Mock Test Free';
-        $data['meta_description'] = 'Want to book PTE Academic Exam online? Buy PTE Voucher online at ₹10339* & Save 1100 and get 15 Scored mock tests FREE. Limited Time Offer!';
+        $data['title_text'] = 'Buy PTE Voucher @ ₹10381* Only - Get 15 Scored Mock Test Free';
+        $data['meta_description'] = 'Want to book PTE Academic Exam online? Buy PTE Voucher online at ₹10381* & Save 1050 and get 15 Scored mock tests FREE. Limited Time Offer!';
         return view('front.privacy',$data);
     }
 

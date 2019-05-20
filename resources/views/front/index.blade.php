@@ -103,7 +103,7 @@
                                 <input type="hidden" name="user_id" value="{{$user_id or ''}}">
                                 {{ csrf_field() }}
                                 <div class="col-md-12">
-                                    <p id="hide_mobile" style="margin-bottom: 0px;margin-top: -7px">PTE Voucher Price : 10339 + 1861 (18%
+                                    <p id="hide_mobile" style="margin-bottom: 0px;margin-top: -7px">PTE Voucher Price : 10381 + 1869 (18%
                                         GST) = {{$rate or ''}} INR</p>
                                     <div class="submit-button text-center">
                                         <button class="btn btn-common1" id="submit" type="submit"
