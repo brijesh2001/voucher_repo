@@ -115,6 +115,24 @@
         </tr>
 
         <tr>
+            <td colspan="3" style="text-align:left;">
+                Declaration:
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3" style="text-align:left;">
+                1) We declare that this invoice shows actual price of the goods and/or services described and that all particulars are true and correct.
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="3" style="text-align:left;">
+                2) Errors and Omissions in this invoice shall be subject to the jurisdiction of the Ahmedabad
+            </td>
+        </tr>
+
+        <tr>
             <td style="text-align:left;">
             </td>
             <td></td>
