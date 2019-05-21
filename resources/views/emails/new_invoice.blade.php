@@ -45,7 +45,7 @@
             </td>
         </tr>
         </thead>
-
+        <tbody>
         <tr>
             <td style="border:1px solid; padding: 4px;margin-right:10px;width:46%">
                 To,<br>
@@ -111,10 +111,12 @@
             </table>
 
         </tr>
+        </tbody>
         <tfoot>
         <tr>
             <td style="text-align:left;">
             </td>
+            <td></td>
             <td style="text-align:right;">
                 For PTE EDU Services<br>
                 <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:300px;"><br>
