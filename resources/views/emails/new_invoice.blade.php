@@ -39,7 +39,8 @@
                 <span style="font-weight:bold"> PTE EDU Service </span><br>
                 306, Vishala Supreme, <br>
                 Opp. Torrent Power,S.P. Ring Road,<br>
-                Nikol - 382350 Ahmedabad Gujarat <br>
+                Nikol - 382350 Ahmedabad Gujarat. <br>
+                pteeduservices@gmail.com<br>
                 <span style="font-weight:bold">GSTIN :24DQNPP9163D1Z </span>
 
             </td>
@@ -128,7 +129,7 @@
 
         <tr>
             <td colspan="3" style="text-align:left;">
-                2) Errors and Omissions in this invoice shall be subject to the jurisdiction of the Ahmedabad
+                2) Errors and Omissions in this invoice shall be subject to the jurisdiction of the Ahmedabad.
             </td>
         </tr>
 
