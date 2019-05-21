@@ -111,21 +111,20 @@
                     <th style="padding:2.5px;border:none;background-color:gray;border-top:1px solid" >{{$amount_paid}}</th>
                 </tr>
             </table>
-            <table>
-                <tr>
-                    <td style="text-align:left;">
-                    </td>
-                    <td style="text-align:right;">
-                        For PTE EDU Services<br>
-                        <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:300px;"><br>
-                        Signature of Authorized person
-                    </td>
-                </tr>
-
-            </table>
 
         </tr>
 
+    </table>
+    <table>
+        <tr>
+            <td style="text-align:left;">
+            </td>
+            <td style="text-align:right;">
+                For PTE EDU Services<br>
+                <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:300px;"><br>
+                Signature of Authorized person
+            </td>
+        </tr>
     </table>
 </div>
 </body>
