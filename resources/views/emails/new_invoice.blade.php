@@ -31,7 +31,7 @@
         <thead>
         <tr>
             <td style="text-align:left;">
-                <img src="{{url('css/front/img/pteeduservices.png')}}" style="width:100%; max-width:300px;">
+                <img src="{{url('css/front/img/pteeduservices.jpg')}}" style="width:100%; max-width:300px;">
             </td>
             <td></td>
             <td style="text-align:left;">
@@ -63,57 +63,55 @@
             </td>
         </tr>
         <tr>
-            <td>
-                <table style="width: 100%; margin-top: 10px; font-size: 0.8em;border-collapse: collapse;" border="1px">
-                    <tr align="center">
-                        <th style="padding:2.5px; width: 55%;border:none;background-color:gray;border-bottom:1px solid">DESCRIPTION</th>
-                        <th style="padding:2.5px;border:none;background-color:gray;border-bottom:1px solid">HSN/SAC</th>
-                        <th style="padding:2.5px;border:none;background-color:gray;border-bottom:1px solid" >Rate per Item</th>
-                        <th style="padding:2.5px;border:none;background-color:gray;border-bottom:1px solid" >AMOUNT</th>
-                    </tr>
-                    <tr>
-                        <td style="border:none;border-right:1px solid;padding:2.5px;">
-                            {!!$voucher_code!!}
-                        </td>
-                        <td style="text-align:center; padding:10px;border:none;border-right:1px solid">9992</td>
-                        <td style="text-align:center;padding:10px;border:none;border-right:1px solid;">{{number_format($rate_before_gst,2)}}</td>
-                        <td style="text-align:center;padding:10px;border:none;border-bottom:1px solid">{{number_format($rate_before_gst,2)}}</td>
-                    </tr>
+            <table style="width: 100%; margin-top: 10px; font-size: 0.8em;border-collapse: collapse;" border="1px">
+                <tr align="center">
+                    <th style="padding:2.5px; width: 55%;border:none;background-color:gray;border-bottom:1px solid">DESCRIPTION</th>
+                    <th style="padding:2.5px;border:none;background-color:gray;border-bottom:1px solid">HSN/SAC</th>
+                    <th style="padding:2.5px;border:none;background-color:gray;border-bottom:1px solid" >Rate per Item</th>
+                    <th style="padding:2.5px;border:none;background-color:gray;border-bottom:1px solid" >AMOUNT</th>
+                </tr>
+                <tr>
+                    <td style="border:none;border-right:1px solid;padding:2.5px;">
+                        {!!$voucher_code!!}
+                    </td>
+                    <td style="text-align:center; padding:10px;border:none;border-right:1px solid">9992</td>
+                    <td style="text-align:center;padding:10px;border:none;border-right:1px solid;">{{number_format($rate_before_gst,2)}}</td>
+                    <td style="text-align:center;padding:10px;border:none;border-bottom:1px solid">{{number_format($rate_before_gst,2)}}</td>
+                </tr>
 
-                    <tr>
-                        <td style="border:none;border-right:1px solid">Total:</td>
-                        <td style="border:none;border-right:1px solid"></td>
-                        <td style="border:none;border-right:1px solid"></td>
-                        <td style="text-align:center;padding:10px;border:none">{{number_format($rate_before_gst,2)}}</td>
-                    </tr>
-                    <tr>
-                        <td style="border:none;border-right:1px solid;padding:2.5px;">IGST:</td>
-                        <td style="border:none;border-right:1px solid"></td>
-                        <td style="border:none;border-right:1px solid"></td>
-                        <td style="text-align:center;padding:10px;border:none">{{$igst}}</td>
-                    </tr>
-                    <tr>
-                        <td style="border:none;border-right:1px solid;padding:2.5px;">CGST:</td>
-                        <td style="border:none;border-right:1px solid"></td>
-                        <td style="border:none;border-right:1px solid"></td>
-                        <td style="text-align:center;padding:10px;border:none">{{$cgst}}</td>
-                    </tr>
-                    <tr>
-                        <td style="border:none;border-right:1px solid;padding:2.5px;">SGST:</td>
-                        <td style="border:none;border-right:1px solid"></td>
-                        <td style="border:none;border-right:1px solid"></td>
-                        <td style="text-align:center;padding:10px;border:none">{{$sgst}}</td>
-                    </tr>
+                <tr>
+                    <td style="border:none;border-right:1px solid">Total:</td>
+                    <td style="border:none;border-right:1px solid"></td>
+                    <td style="border:none;border-right:1px solid"></td>
+                    <td style="text-align:center;padding:10px;border:none">{{number_format($rate_before_gst,2)}}</td>
+                </tr>
+                <tr>
+                    <td style="border:none;border-right:1px solid;padding:2.5px;">IGST:</td>
+                    <td style="border:none;border-right:1px solid"></td>
+                    <td style="border:none;border-right:1px solid"></td>
+                    <td style="text-align:center;padding:10px;border:none">{{$igst}}</td>
+                </tr>
+                <tr>
+                    <td style="border:none;border-right:1px solid;padding:2.5px;">CGST:</td>
+                    <td style="border:none;border-right:1px solid"></td>
+                    <td style="border:none;border-right:1px solid"></td>
+                    <td style="text-align:center;padding:10px;border:none">{{$cgst}}</td>
+                </tr>
+                <tr>
+                    <td style="border:none;border-right:1px solid;padding:2.5px;">SGST:</td>
+                    <td style="border:none;border-right:1px solid"></td>
+                    <td style="border:none;border-right:1px solid"></td>
+                    <td style="text-align:center;padding:10px;border:none">{{$sgst}}</td>
+                </tr>
 
 
-                    <tr align="center" class="gray">
-                        <th style="padding:2.5px; background-color:gray; width: 55%;border:none;border-top:1px solid">Amount (in words): {{$word_amount}}</th>
-                        <th style="padding:2.5px;border:none;background-color:gray;border-top:1px solid"></th>
-                        <th style="padding:2.5px;border:none;background-color:gray;border-top:1px solid" ></th>
-                        <th style="padding:2.5px;border:none;background-color:gray;border-top:1px solid" >{{$amount_paid}}</th>
-                    </tr>
-                </table>
-            </td>
+                <tr align="center" class="gray">
+                    <th style="padding:2.5px; background-color:gray; width: 55%;border:none;border-top:1px solid">Amount (in words): {{$word_amount}}</th>
+                    <th style="padding:2.5px;border:none;background-color:gray;border-top:1px solid"></th>
+                    <th style="padding:2.5px;border:none;background-color:gray;border-top:1px solid" ></th>
+                    <th style="padding:2.5px;border:none;background-color:gray;border-top:1px solid" >{{$amount_paid}}</th>
+                </tr>
+            </table>
 
         </tr>
         <tr>
