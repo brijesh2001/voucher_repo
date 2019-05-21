@@ -32,7 +32,7 @@
         <thead>
         <tr>
             <td style="text-align:left;">
-                <img src="{{url('css/front/img/pteeduservices.jpg')}}" style="width:100%; max-width:300px;">
+                <img src="{{url('css/front/img/pteeduservices.png')}}" style="width:100%; max-width:300px;">
             </td>
             <td></td>
             <td style="text-align:left;">
