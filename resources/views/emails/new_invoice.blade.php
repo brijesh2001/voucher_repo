@@ -38,10 +38,8 @@
             <td style="text-align:left;">
                 <span style="font-weight:bold"> PTE EDU Service </span><br>
                 306, Vishala Supreme, <br>
-                Opp. Torrent Power,<br>
-                S.P. Ring Road,<br>
+                Opp. Torrent Power,S.P. Ring Road,<br>
                 Nikol - 382350 Ahmedabad Gujarat <br>
-
                 <span style="font-weight:bold">GSTIN :24DQNPP9163D1Z </span>
 
             </td>
