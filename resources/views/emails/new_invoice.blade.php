@@ -114,18 +114,21 @@
 
         </tr>
         <tr>
-            <table>
-                <tr>
-                    <td style="text-align:left;">
-                    </td>
-                    <td style="text-align:right;">
-                        For PTE EDU Services<br>
-                        <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:300px;"><br>
-                        Signature of Authorized person
-                    </td>
-                </tr>
+            <td>
+                <table>
+                    <tr>
+                        <td style="text-align:left;">
+                        </td>
+                        <td style="text-align:right;">
+                            For PTE EDU Services<br>
+                            <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:300px;"><br>
+                            Signature of Authorized person
+                        </td>
+                    </tr>
 
-            </table>
+                </table>
+            </td>
+
 
         </tr>
     </table>
