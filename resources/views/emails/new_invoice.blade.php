@@ -28,7 +28,7 @@
 <body>
 <div class="invoice-box">
     <table class="table-fix" cellpadding="0" cellspacing="0">
-        <caption style = "font-size: 22px;font-weight:bold;padding: 10px">TAX INVOICE</caption>
+        <caption style = "font-size: 22px;font-weight:bold;">TAX INVOICE</caption>
         <thead>
         <tr>
             <td style="text-align:left;">
