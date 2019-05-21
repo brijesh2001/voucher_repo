@@ -32,7 +32,7 @@
         <thead>
         <tr>
             <td style="text-align:left;">
-                <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:300px;">
+                <img src="{{url('css/front/img/pteeduservices.jpg')}}" style="width:100%; max-width:300px;">
             </td>
             <td></td>
             <td style="text-align:left;">
@@ -113,15 +113,20 @@
             </table>
 
         </tr>
-        <tr align="right">
+        <tr>
+            <table>
+                <tr>
+                    <td style="text-align:left;">
+                    </td>
+                    <td style="text-align:right;">
+                        For PTE EDU Services<br>
+                        <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:300px;"><br>
+                        Signature of Authorized person
+                    </td>
+                </tr>
 
-            <td style="text-align:left;">
-            </td>
-            <td style="text-align:right;">
-                For PTE EDU Services<br>
-                <img src="{{url('css/front/img/signature.png')}}"><br>
-                Signature of Authorized person
-            </td>
+            </table>
+
         </tr>
     </table>
 </div>
