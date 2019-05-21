@@ -120,7 +120,7 @@
             <td></td>
             <td style="text-align:right;">
                 For PTE EDU Services<br>
-                <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:200px;max-height:150px"><br>
+                <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:150px;max-height:80px"><br>
                 Signature of Authorized person
             </td>
         </tr>
