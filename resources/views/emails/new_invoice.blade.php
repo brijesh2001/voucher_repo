@@ -114,13 +114,22 @@
 
     </table>
     <table>
-        <tr>
+        {{--<tr>
             <td style="text-align:left;">
             </td>
             <td style="text-align:right;">
                 For PTE EDU Services<br>
                 <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:300px;"><br>
                 Signature of Authorized person
+            </td>
+        </tr>--}}
+        <tr>
+            <td style="text-align:left;">
+
+            </td>
+            <td></td>
+            <td style="text-align:left;">
+                <img src="{{url('css/front/img/pteeduservices.png')}}" style="width:100%; max-width:300px;">
             </td>
         </tr>
     </table>
