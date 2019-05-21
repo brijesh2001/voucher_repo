@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -31,7 +32,7 @@
         <thead>
         <tr>
             <td style="text-align:left;">
-                <img src="{{url('css/front/img/pteeduservices.jpg')}}" style="width:100%; max-width:300px;">
+                <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:300px;">
             </td>
             <td></td>
             <td style="text-align:left;">
@@ -41,7 +42,7 @@
                 S.P. Ring Road,<br>
                 Nikol - 382350 Ahmedabad Gujarat <br>
 
-                <span style="font-weight:bold">GSTIN : <span>
+                <span style="font-weight:bold">GSTIN :24DQNPP9163D1Z </span>
 
             </td>
         </tr>
@@ -103,8 +104,6 @@
                     <td style="border:none;border-right:1px solid"></td>
                     <td style="text-align:center;padding:10px;border:none">{{$sgst}}</td>
                 </tr>
-
-
                 <tr align="center" class="gray">
                     <th style="padding:2.5px; background-color:gray; width: 55%;border:none;border-top:1px solid">Amount (in words): {{$word_amount}}</th>
                     <th style="padding:2.5px;border:none;background-color:gray;border-top:1px solid"></th>
@@ -114,25 +113,16 @@
             </table>
 
         </tr>
-        <tr>
-           <td>
-               <table style="margin-top:10px">
-                   <thead>
-                   <tr>
-                       <td style="text-align:left;">
-                       </td>
-                       <td style="text-align:right;">
-                           For PTE EDU Services<br>
-                           <img src="{{url('css/front/img/signature.png')}}" style="width:100%; max-width:300px;"><br>
-                           Signature of Authorized person
-                       </td>
-                   </tr>
-                   </thead>
-               </table>
-           </td>
+        <tr align="right">
+
+            <td style="text-align:left;">
+            </td>
+            <td style="text-align:right;">
+                For PTE EDU Services<br>
+                <img src="{{url('css/front/img/signature.png')}}"><br>
+                Signature of Authorized person
+            </td>
         </tr>
-
-
     </table>
 </div>
 </body>
