@@ -399,6 +399,7 @@ class OverseasPaymentController extends Controller
                     $data['word_amount'] = $this->getIndianCurrency($data['dollor_amount_paid']);
                     $data['amount'] = $data['dollor_amount_paid'];
                     $data['state_name'] = $data['country'];
+                    $data['voucher_code'] = $data['item'];
                     $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('14-05-2019')));
                     if(date('Y-m-d 00:00:00', strtotime(trim($data['created_at']))) < $check_date_for_older_invoice){
                         $pdf = PDF::loadView('emails.invoice', $data);
