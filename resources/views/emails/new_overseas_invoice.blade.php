@@ -77,21 +77,21 @@
                             {!!$voucher_code!!}
                         </td>
                         <td style="text-align:center; padding:10px;border:none;border-right:1px solid">9992</td>
-                        <td style="text-align:center;padding:10px;border:none;border-right:1px solid;">{{number_format($rate_before_gst,2)}}</td>
-                        <td style="text-align:center;padding:10px;border:none;border-bottom:1px solid">{{number_format($rate_before_gst,2)}}</td>
+                        <td style="text-align:center;padding:10px;border:none;border-right:1px solid;">{{number_format($amount,2)}}</td>
+                        <td style="text-align:center;padding:10px;border:none;border-bottom:1px solid">{{number_format($amount,2)}}</td>
                     </tr>
 
                     <tr>
                         <td style="border:none;border-right:1px solid">Total:</td>
                         <td style="border:none;border-right:1px solid"></td>
                         <td style="border:none;border-right:1px solid"></td>
-                        <td style="text-align:center;padding:10px;border:none">{{number_format($rate_before_gst,2)}}</td>
+                        <td style="text-align:center;padding:10px;border:none">{{number_format($amount,2)}}</td>
                     </tr>
                     <tr align="center" class="gray">
                         <th style="padding:3px; background-color:gray; width: 55%;border:none;border-top:1px solid">Amount (in words): {{$word_amount}}</th>
                         <th style="padding:3px;border:none;background-color:gray;border-top:1px solid"></th>
                         <th style="padding:3px;border:none;background-color:gray;border-top:1px solid" ></th>
-                        <th style="padding:3px;border:none;background-color:gray;border-top:1px solid" >{{$amount_paid}}</th>
+                        <th style="padding:3px;border:none;background-color:gray;border-top:1px solid" >{{$amount}}</th>
                     </tr>
                 </table>
             </td>
