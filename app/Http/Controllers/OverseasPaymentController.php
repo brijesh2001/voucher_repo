@@ -402,9 +402,9 @@ class OverseasPaymentController extends Controller
                     $data['voucher_code'] = $data['item'];
                     $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('14-05-2019')));
                     if(date('Y-m-d 00:00:00', strtotime(trim($data['created_at']))) < $check_date_for_older_invoice){
-                        $pdf = PDF::loadView('emails.invoice', $data);
+                        $pdf = PDF::loadView('emails.overseas_invoice', $data);
                     }else{
-                        $pdf = PDF::loadView('emails.new_invoice', $data);
+                        $pdf = PDF::loadView('emails.new_overseas_invoice', $data);
                     }
                     //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
                     return $pdf->setPaper('a4')->download($data['invoice_number'].'.pdf');
