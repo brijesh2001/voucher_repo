@@ -41,7 +41,7 @@
                 Opp. Torrent Power,S.P. Ring Road,<br>
                 Nikol - 382350 Ahmedabad Gujarat. <br>
                 pteeduservices@gmail.com<br>
-                <span style="font-weight:bold">GSTIN :24DQNPP9163D1Z </span>
+                <span style="font-weight:bold">GSTIN : 24DQNPP9163D1ZH </span>
 
             </td>
         </tr>

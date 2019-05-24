@@ -391,7 +391,7 @@ class SaleData extends Authenticatable
     public function getSaleDataFromId($id)
     {
 
-        $result =  DB::select('select tbs.*,tbq.name,tbq.email,tbq.mobile,tbs.created_at,ss.name as state_name,ss.id as state_id 
+        $result =  DB::select('select tbs.*,tbq.name,tbq.email,tbq.mobile,tbs.created_at,ss.name as state_name,ss.id as state_id,tbq.client_gstn 
                             from tbl_sale_data tbs
                             LEFT JOIN tbl_enquiry tbq ON tbq.id = tbs.enquiry_id
                             LEFT JOIN tbl_state ss ON ss.id = tbq.state
@@ -421,7 +421,7 @@ class SaleData extends Authenticatable
         return SaleData::whereBetween('tbl_sale_data.created_at', [$start_date, $end_date])
             ->leftjoin('tbl_enquiry','tbl_enquiry.id','=','tbl_sale_data.enquiry_id')
             ->leftjoin('tbl_state','tbl_state.id','=','tbl_enquiry.state')
-            ->select('tbl_state.name as state_name','tbl_enquiry.state as state_id','tbl_enquiry.name','tbl_enquiry.email','tbl_enquiry.mobile', 'tbl_sale_data.*')
+            ->select('tbl_state.name as state_name','tbl_enquiry.state as state_id','tbl_enquiry.name','tbl_enquiry.email','tbl_enquiry.mobile','tbl_enquiry.client_gstn', 'tbl_sale_data.*')
             ->get();
     }
 }

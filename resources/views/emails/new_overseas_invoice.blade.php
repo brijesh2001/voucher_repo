@@ -41,7 +41,7 @@
                 Opp. Torrent Power,S.P. Ring Road,<br>
                 Nikol - 382350 Ahmedabad Gujarat. <br>
                 pteeduservices@gmail.com<br>
-                <span style="font-weight:bold">GSTIN :24DQNPP9163D1Z </span><br>
+                <span style="font-weight:bold">GSTIN :24DQNPP9163D1ZH </span><br>
                 <span style="font-weight:bold"> LUT/Bond No.: AD240319012264F</span><br>
                 From:	01-04-2019	To:	31-03-2020
 
