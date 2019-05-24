@@ -510,12 +510,16 @@ class OfflinePaymentController extends Controller
                 $check_date_for_older_invoice = date('Y-m-d 00:00:00', strtotime(trim('14-05-2019')));
                 if(date('Y-m-d 00:00:00', strtotime(trim($data['created_at']))) < $check_date_for_older_invoice){
                     $pdf = PDF::loadView('emails.invoice', $data);
+                    $pdf->save($filepath.'/'.$replaced_file_name.'.pdf');
+                    //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
+                    $filename = $filepath.'/'.$replaced_file_name.'.pdf';
                 }else{
                     $pdf = PDF::loadView('emails.new_invoice', $data);
+                    $pdf->save($filepath.'/'.$replaced_file_name.'.pdf');
+                    //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
+                    $filename = $filepath.'/'.$replaced_file_name.'.pdf';
                 }
-                $pdf->save($filepath.'/'.$replaced_file_name.'.pdf');
-                //Storage::put($data['invoice_number'].'.pdf', $pdf->output());
-                $filename = $filepath.'/'.$replaced_file_name.'.pdf';
+                
                 $customer_email_data = [];
                 $customer_email_data['email'] = $data['email'];
                 $customer_email_data['file_path'] = $filename;
