@@ -421,7 +421,7 @@ class SaleData extends Authenticatable
         return SaleData::whereBetween('tbl_sale_data.created_at', [$start_date, $end_date])
             ->leftjoin('tbl_enquiry','tbl_enquiry.id','=','tbl_sale_data.enquiry_id')
             ->leftjoin('tbl_state','tbl_state.id','=','tbl_enquiry.state')
-            ->select('tbl_state.name as state_name','tbl_enquiry.state as state_id','tbl_enquiry.name','tbl_enquiry.email','tbl_enquiry.mobile','tbl_enquiry.client_gstn', 'tbl_sale_data.*')
+            ->select('tbl_state.name as state_name','tbl_enquiry.state as state_id','tbl_enquiry.name','tbl_enquiry.email','tbl_enquiry.mobile','tbl_enquiry.client_gstn as client_gstn', 'tbl_sale_data.*')
             ->get();
     }
 }
