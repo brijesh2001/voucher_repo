@@ -430,7 +430,7 @@ class PteController extends Controller
             'name' => $request_data['name'],
             'number' => $request_data['mobile'],
             'country_iso' => 'IN',
-            'product_id' => '2',
+            'product_id' => 2,
             'product' => 'Enquiry for '.$request_data['number_of_voucher'],
             'price' => $rate,
             'lead_category' => 2,
