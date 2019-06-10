@@ -156,7 +156,7 @@ class PteController extends Controller
         if(isset($result["payment_request"]["id"])) {
             $request_data['payment_request_id'] = $result["payment_request"]["id"];
             //For adding the log to the CRM:
-            $this->paymentLog($request_data['payment_request_id']);
+            $this->paymentLog($request_data);
         }else {
             $request->session()->flash('alert-danger', 'Problem occurred while creating payment id please try after some time');
             return redirect('/')->withInput(); 
@@ -313,7 +313,13 @@ class PteController extends Controller
                                 $sale_data_entry['client_gstn'] = $client_gstn;
                                 $sale_data = $this->saleData->addSaleData($sale_data_entry);
 
-                                $this->successLead($sale_data_entry);
+                                //Preparing for CRM
+                                $crm_data = [];
+                                $crm_data['email'] = $email;
+                                $crm_data['success_data'] = 'Voucher Code: '.$raw_voucher_id. 'TransactionId: '.$payment_id;
+
+
+                                $this->successLead($crm_data);
                                 if($sale_data) {
 
                                     return redirect('/thankyou');
@@ -403,52 +409,38 @@ class PteController extends Controller
     {
 
         //for getting the rate
+        //$rate = 12250;
         $current_prize_data = $this->prize->getFirstPrize();
         if (count($current_prize_data) > 0) {
             $rate = $current_prize_data->rate;
         } else {
             $rate = -1;
         }
-        $product_payload = array();
-        $product_payload[] = array('code'=>'V','qty'=>$request_data['number_of_voucher'],'rate'=>$rate,'note'=>'');
 
-        $enquiry_code = rand(1,100000);
-
-        //Session variable for unique enquire code
-        Session::put('stored_code', 'value');
-        session(['stored_code' => $enquiry_code]);
-
-        $contact_code = rand(1,1000000);
-
-        $contact_json = array('datasource'=>'VoucherCode.com',
-                                'personal_contact'=>$request_data['mobile'],
-                                'personal_email' =>$request_data['email'],
-                                'contact_name' => $request_data['name'],
-                                'contact_code' => $contact_code);
-
-
-        //Curl Request for adding the enquiry
+        //New CRM Curl Request
         $ch = curl_init();
-        $url="http://crm.compassoverseas.com/crm/api/api.php?API_TOKEN=compass_crm_5556&PIN=8569&action=create_lead";
+        $url="http://crm.compassoverseas.com/api/add-crm-lead";
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
         $payload = Array(
-            'contact' => json_encode($contact_json,true),
-            'code' => $enquiry_code,
-            'datasource' => 'VoucherCode.com',
-            'tags' => '',
-            'title' => 'Enquiry for Voucher',
-            'description' => '',
-            'note' => '',
-            'products' => json_encode($product_payload,true)
+            'api_token' => 'dqsRaH6hj3YMzfbf5tzsdSukcHHeJhM1At4kp6PTEs4SxK8KKuNBEkFrK40s',
+            'name' => $request_data['name'],
+            'number' => $request_data['mobile'],
+            'country_iso' => 'IN',
+            'product_id' => '2',
+            'product' => 'Enquiry for '.$request_data['number_of_voucher'],
+            'price' => $rate,
+            'lead_category' => 2,
+            'email' => $request_data['email'],
+            'status_id' => 1,
+            'lead_owner' => ''
         );
-
-
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
         $response = curl_exec($ch);
+        //dd($response);
         curl_close($ch);
     }
 
@@ -458,19 +450,16 @@ class PteController extends Controller
     public function successLead($sale_data_entry){
 
         $ch = curl_init();
-        $url="http://crm.compassoverseas.com/crm/api/api.php?API_TOKEN=compass_crm_5556&PIN=8569&action=close_lead";
+        $url="http://crm.compassoverseas.com/api/convert";
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
-         $value = Session::get('stored_code');
-        $a = implode(",", $sale_data_entry);
         $payload = Array(
-            'lead_code' => $value,
-            'reason' => $a,
+            'api_token' => 'Sl4F5ZsyqYPzUCbF42oEsbZxbg3PEbjXLYztulNVcNfKgtuNI5Hwf9GuM9qt',
+            'email' => $sale_data_entry['email'],
+            'success_data' => $sale_data_entry['success_data']
         );
-
-
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
         $response = curl_exec($ch);
@@ -483,23 +472,20 @@ class PteController extends Controller
      * @desc for addin the entry of payment log in CRM
      */
 
-    public function paymentLog($payment_request_id)
+    public function paymentLog($requestData)
     {
+        //New Payment Log for CRM
         $ch = curl_init();
-        $url="http://crm.compassoverseas.com/crm/api/api.php?API_TOKEN=compass_crm_5556&PIN=8569&action=record_action";
+        $url="http://crm.compassoverseas.com/api/add-payment-log";
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
-        $value = Session::get('stored_code');
         $payload = Array(
-            'lead_code' => $value,
-            'action_type' => 'payment_log',
-            'action_title' => 'Payment Initiate',
-            'action_description' => $payment_request_id,
-
+            'api_token' => 'dqsRaH6hj3YMzfbf5tzsdSukcHHeJhM1At4kp6PTEs4SxK8KKuNBEkFrK40s',
+            'email' => $requestData['email'],
+            'transaction_id' => $requestData['payment_request_id']
         );
-
         curl_setopt($ch, CURLOPT_POST, true);
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
         $response = curl_exec($ch);
