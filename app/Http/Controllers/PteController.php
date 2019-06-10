@@ -456,7 +456,7 @@ class PteController extends Controller
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
         curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);
         $payload = Array(
-            'api_token' => 'Sl4F5ZsyqYPzUCbF42oEsbZxbg3PEbjXLYztulNVcNfKgtuNI5Hwf9GuM9qt',
+            'api_token' => 'dqsRaH6hj3YMzfbf5tzsdSukcHHeJhM1At4kp6PTEs4SxK8KKuNBEkFrK40s',
             'email' => $sale_data_entry['email'],
             'success_data' => $sale_data_entry['success_data']
         );
