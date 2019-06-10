@@ -316,7 +316,8 @@ class PteController extends Controller
                                 //Preparing for CRM
                                 $crm_data = [];
                                 $crm_data['email'] = $email;
-                                $crm_data['success_data'] = 'Voucher Code: '.$raw_voucher_id. 'TransactionId: '.$payment_id;
+                                $crm_data['success_data'] = 'Voucher Code: '.$sale_data_entry['voucher_code']. 'TransactionId: '.$payment_id
+                                                            .'Amount Paid: '.$amount_paid.'Client GSTN: '.$client_gstn.'Gateway Fees: '.$instamojo_fee;
 
 
                                 $this->successLead($crm_data);
