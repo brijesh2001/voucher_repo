@@ -316,9 +316,8 @@ class PteController extends Controller
                                 //Preparing for CRM
                                 $crm_data = [];
                                 $crm_data['email'] = $email;
-                                $crm_data['success_data'] = 'Voucher Code: '.$sale_data_entry['voucher_code']. 'TransactionId: '.$payment_id
-                                                            .'Amount Paid: '.$amount_paid.'Client GSTN: '.$client_gstn.'Gateway Fees: '.$instamojo_fee;
-
+                                $crm_data['success_data'] = '<br>Voucher Code: </br>'.$sale_data_entry['voucher_code']. '<br> TransactionId:</br> '.$payment_id
+                                    .'<br>Amount Paid: </br> '.$amount_paid.'<br>Client GSTN: </br> '.$client_gstn.'<br>Gateway Fees: </br> '.$instamojo_fee;
 
                                 $this->successLead($crm_data);
                                 if($sale_data) {
@@ -431,7 +430,7 @@ class PteController extends Controller
             'number' => $request_data['mobile'],
             'country_iso' => 'IN',
             'product_id' => 2,
-            'product' => 'Enquiry for '.$request_data['number_of_voucher'],
+            'product' => 'Quantity of voucher - '.$request_data['number_of_voucher'],
             'price' => $rate,
             'lead_category' => 2,
             'email' => $request_data['email'],
