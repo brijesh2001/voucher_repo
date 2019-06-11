@@ -195,7 +195,7 @@
                     </h2>
                     <ul>
                         <li>Buy a Voucher Code from ptevouchercode.com.</li>
-                        <li>Create your ACCOUNT on <a href="https://www.pearsonpte.com/book" target="_blank">
+                        <li>Create your ACCOUNT on <a href="https://www.pearsonpte.com/book"rel="nofollow">
                                 pearsonpte.com/book</a></li>
                         <li>Login to pearsonpte.com using your Username and Password</li>
                         <li>Enter your preferred date, location and other details</li>
@@ -252,7 +252,7 @@
                                 <h4>High Success Rate</h4>
                                 <p>Featured at <a
                                             href="https://www.instamojo.com/blog/pte-voucher-code-making-pte-exams-cheaper-india/"
-                                            target="_blank"> Instamojo.com </a> due to high success rate.</p>
+                                            rel="nofollow"> Instamojo.com </a> due to high success rate.</p>
                             </div>
                         </div>
                     </div>
