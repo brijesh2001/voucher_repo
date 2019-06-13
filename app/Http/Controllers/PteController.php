@@ -419,7 +419,7 @@ class PteController extends Controller
 
         //New CRM Curl Request
         $ch = curl_init();
-        $url="http://crm.compassoverseas.com/api/add-crm-lead";
+        $url="https://crm.compassoverseas.com/api/add-crm-lead";
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -450,7 +450,7 @@ class PteController extends Controller
     public function successLead($sale_data_entry){
 
         $ch = curl_init();
-        $url="http://crm.compassoverseas.com/api/convert";
+        $url="https://crm.compassoverseas.com/api/convert";
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -476,7 +476,7 @@ class PteController extends Controller
     {
         //New Payment Log for CRM
         $ch = curl_init();
-        $url="http://crm.compassoverseas.com/api/add-payment-log";
+        $url="https://crm.compassoverseas.com/api/add-payment-log";
         curl_setopt($ch, CURLOPT_URL, $url);
         curl_setopt($ch, CURLOPT_HEADER, FALSE);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
