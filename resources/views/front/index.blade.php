@@ -478,6 +478,330 @@
         </div>
     </div>
 
+
+    <section id="faq" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">FAQ
+                    <span>'S</span></h2>
+                <hr class="lines wow zoomIn" data-wow-delay="0.3s">
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <!-- Nav tabs category -->
+                    <ul class="nav nav-tabs faq-cat-tabs">
+                        <li class="active"><a href="#faq-cat-1" data-toggle="tab"><i class="glyphicon glyphicon-user"></i>General FAQs</a></li>
+                        <li><a href="#faq-cat-2" data-toggle="tab"><i class="glyphicon glyphicon-plus"></i>Voucher Processing and Booking</a></li>
+                        <li><a href="#faq-cat-3" data-toggle="tab"><i class="glyphicon glyphicon-plus"></i>PTE Refund Policy & other details</a></li>
+                        <li><a href="#faq-cat-4" data-toggle="tab"><i class="glyphicon glyphicon-plus"></i>Rescheduling process & charges</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content faq-cat-content">
+
+                        <div class="tab-pane active in fade" id="faq-cat-1">
+                            <div class="panel-group" id="accordion-cat-1">
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-1">
+                                            <h4 class="panel-title">
+                                               How and where to buy the PTE Voucher?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-1-sub-1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Go to the website: https://www.ptevouchercode.com/ in order to avail the voucher code on discounted rates. All you need to fill your required details along with payment on this website to grab the PTE voucher.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-2">
+                                            <h4 class="panel-title">
+                                                Why should I buy PTE Voucher from PTEVoucherCode?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-1-sub-2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            PTEVoucherCode offers highest discounts and easy way to schedule PTE Academic Exam. To avoid hassles, you should buy from the best PTE Exam Voucher website i.e. PTEVoucherCode
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-3">
+                                            <h4 class="panel-title">
+                                               What will be the validity of PTE voucher to redeem on its website?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-1-sub-3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            You can redeem it anytime till 11 months from the date of purchase at any center across India.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-1" href="#faq-cat-1-sub-4">
+                                            <h4 class="panel-title">
+                                                What will be the validity of PTE voucher to redeem on its website?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-1-sub-4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            •	For education purpose, all countries accept PTE.<br>
+                                            •	For Migration and PR, only Australia and NZ accept the PTE Academic.<br>
+                                            •	For more details, you can check on this link: http://pearsonpte.com/test-takers/accepts/
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="faq-cat-2">
+                            <div class="panel-group" id="accordion-cat-2">
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-1">
+                                            <h4 class="panel-title">
+                                               How to apply the purchased voucher on to the Pearson website?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-2-sub-1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Very first, you need to go on www.pearsonpte.com. Then, you need to click on the “BOOK NOW” and you will find the “SIGN IN” button so just click on that.
+                                            After that, you will see a column with the option of “Schedule Exam” and you need to click on that.
+                                            Now click on search button to select your preferred centers. You need to select at least 5 exam centers along with your suitable date and time slot. Now click on “SELECT APPOINTMENT”.
+                                            After clicking on the select appointment, you will see some registration questions. The next step goes to scroll down your page to view the voucher tab where you need to apply your voucher code. So, click on “APPLY VOUCHER”.
+                                            As soon as you click on “APPLY VOUCHER”, you will see that you have redeemed the discounted voucher code. Now it’s time to click on the checkbox to be agreed for terms and conditions and then finally click on “CONFIRM ORDER”.
+                                            After confirmation, you will receive a confirmation email immediately from Pearson on your given email id. Now, it’s done.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-2">
+                                            <h4 class="panel-title">
+                                                Is PTE test genuine?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-2-sub-2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Yes, it is. Various individuals are taking benefit through this English language test and making their dream come true to study and work abroad.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-3">
+                                            <h4 class="panel-title">
+                                                What is the actual fee for PTE in India?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-2-sub-3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            The actual cost what you have to pay is Rs. 13,300 but you can avail the discounts through the voucher code in order to save on your test fee.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-2-sub-4">
+                                            <h4 class="panel-title">
+                                               Is this voucher valid across India?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-2-sub-4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Yes, it is valid for all the centers in all over the India.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="faq-cat-3">
+                            <div class="panel-group" id="accordion-cat-3">
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-3" href="#faq-cat-3-sub-1">
+                                            <h4 class="panel-title">
+                                                What is the refund policy in case of cancellation?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-3-sub-1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            PTE refunds 50% of the amount if you cancel before 7 days of your test date. Check more details <a href="{{url('/refund-policy')}}">here</a> .
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-3" href="#faq-cat-3-sub-2">
+                                            <h4 class="panel-title">
+                                                Is there any difference between PTE general and PTE exam?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-3-sub-2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Well, only PTE Academic is valid for all the Visa applications and PTE General doesn’t work for visa applications.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-3-sub-3">
+                                            <h4 class="panel-title">
+                                                Can anyone use this voucher which is bought on my name?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-3-sub-3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Yes, anyone can use it. It is kind of general voucher that anyone can buy and anyone can use.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-3-sub-4">
+                                            <h4 class="panel-title">
+                                                What if I gift this voucher to my friend or relative?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-3-sub-4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Yes, you can gift your voucher to anyone to be redeemed.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="faq-cat-4">
+                            <div class="panel-group" id="accordion-cat-4">
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-3" href="#faq-cat-4-sub-1">
+                                            <h4 class="panel-title">
+                                                What is the process and charge if I reschedule my PTE exam?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-4-sub-1" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            You can directly visit the PTE website to reschedule your exam but before seven days of your previously scheduled exam date. The charges will be informed by PTE directly on the PTE website as there is no voucher provided for rescheduling your exam.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-3" href="#faq-cat-4-sub-2">
+                                            <h4 class="panel-title">
+                                                Can I change my exam center later after buying the PTE voucher code?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-4-sub-2" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Yes, you can easily change your exam center later as per your availability.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-4-sub-3">
+                                            <h4 class="panel-title">
+                                                After my PTE exam, when and where can I get my result?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-4-sub-3" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Your result will be declared within 5 official days. In case, if you don’t get your result in 5 days, you can call on the toll-free number. 0008004402020
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-4-sub-4">
+                                            <h4 class="panel-title">
+                                                What if I’m traveling to another country and want to exchange the voucher with that country and agreed to pay a difference amount?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-4-sub-4" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Well, vouchers are country specific so, you can only use the voucher in the same country where you bought from.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-4-sub-5">
+                                            <h4 class="panel-title">
+                                                What if I bought a PTE voucher and it will not work?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-4-sub-5" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            Well, it never happened previously and if it happens then, certainly there will be a technical issue and will be resolved with the team of PTE.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="panel panel-default panel-faq">
+                                    <div class="panel-heading">
+                                        <a data-toggle="collapse" data-parent="#accordion-cat-2" href="#faq-cat-4-sub-6">
+                                            <h4 class="panel-title">
+                                                Where to call for any assistance?
+                                                <span class="pull-right"><i class="glyphicon glyphicon-plus"></i></span>
+                                            </h4>
+                                        </a>
+                                    </div>
+                                    <div id="faq-cat-4-sub-6" class="panel-collapse collapse">
+                                        <div class="panel-body">
+                                            You can call the customer care no. 0008004402020 during official days from Monday to Friday between 9 a.m. to 5 p.m. in India.
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 @endsection
 
 {{--@section('extra')

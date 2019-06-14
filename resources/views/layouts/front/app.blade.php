@@ -59,6 +59,7 @@
 }
     </script>
 
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
     {{--<link rel="stylesheet" href="{{url('css/front/css/bootstrap.min.css')}}" type="text/css"/>
     <link rel="stylesheet" href="{{url('css/front/css/font-awesome.min.css')}}" type="text/css"/>
