@@ -17,8 +17,7 @@
     </section>
     <div id = "about-us-section" style="margin: 50px 0 30px 0;">
         <div class="container">
-            <h3>PTEVoucherCode is an e-commerce venture by Compass Overseas that has been serving the Education sector
-                for more than 4 years.</h3>
+            <h3>PTEVoucherCode is an e-commerce venture by Compass Overseas that has been serving the Education sector.</h3>
             <label class="line"></label>
             <p style="text-align: justify;width:90%;margin:auto;">Since the inauguration of <a
                         href="http://compassoverseas.com" target="_blank">Compass Overseas</a>.The
