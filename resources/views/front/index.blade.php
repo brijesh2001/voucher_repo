@@ -344,8 +344,7 @@
                     <span>Us</span></h2>
                 <hr class="lines wow zoomIn" data-wow-delay="0.3s">
                 <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">PTEVoucherCode
-                    is an e-commerce venture by Compass Overseas that has been serving the Education sector for more
-                    than 4 years.</p>
+                    is an e-commerce venture by Compass Overseas that has been serving the Education sector.</p>
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">

@@ -21,7 +21,7 @@
                 for more than 4 years.</h3>
             <label class="line"></label>
             <p style="text-align: justify;width:90%;margin:auto;">Since the inauguration of <a
-                        href="http://compassoverseas.com" target="_blank">Compass Overseas</a> on December 15, 2013, the
+                        href="http://compassoverseas.com" target="_blank">Compass Overseas</a>.The
                 company has continually worked for students and professional by helping, assisting, guiding and letting
                 them achieve their goals of staying or studying in foreign Countries. Compass Migration and Education
                 Consultant is acting as a ladder of success for thousands of students who are thriving towards their
