@@ -229,7 +229,7 @@
                                                         <a href="#" target="_blank" style="text-decoration: none; color: #ffffff;">Valid for</a>
                                                     </p>
                                                     <p style="margin: 10px;">
-                                                        <a href="#" target="_blank" style="text-decoration: none; color: #ffffff;">11 Month from Purchase Date</a>
+                                                        <a href="#" target="_blank" style="text-decoration: none; color: #ffffff;">10 Months from Purchase Date</a>
                                                     </p>
                                                 </td>
                                             </tr>

@@ -541,7 +541,7 @@
                                     </div>
                                     <div id="faq-cat-1-sub-3" class="panel-collapse collapse">
                                         <div class="panel-body">
-                                            You can redeem it anytime till 11 months from the date of purchase at any center across India.
+                                            You can redeem it anytime till 10 months from the date of purchase at any center across India.
                                         </div>
                                     </div>
                                 </div>
