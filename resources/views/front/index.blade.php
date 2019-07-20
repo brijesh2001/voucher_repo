@@ -9,7 +9,7 @@
             <div class="row justify-content-md-center">
                 <div class="col-md-10">
                     <div class="contents text-center">
-                        <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">Buy PTE
+                        <h1 class="wow fadeInDown headline" data-wow-duration="1000ms" data-wow-delay="0.3s">PTE
                             Voucher Online At ₹ {{$rate or ''}} & Get Free</h1>
                         <h4 class="wow fadeInDown top-class" data-wow-duration="1000ms" data-wow-delay="0.3s">15 Scored
                             Mock Test Free</h4>
