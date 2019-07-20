@@ -199,7 +199,7 @@
                                 pearsonpte.com/book</a></li>
                         <li>Login to pearsonpte.com using your Username and Password</li>
                         <li>Enter your preferred date, location and other details</li>
-                        <li>Enter Voucher Code on the payment page.</li>
+                        <li>Enter PTE Voucher Code on the payment page.</li>
                         <li>Receive CONFIRMATION email from PTE about your test booking.</li>
                     </ul>
                     <a href="#" class="btn btn-common wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="400ms"
@@ -311,8 +311,7 @@
                 </div>
                 <div class="col-lg-8 video-promotext-right">
                     <div class="video-promo-content">
-                        <h2 class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">Buy PTE Academic
-                            Voucher Code ₹ {{$rate or ''}} Get ₹ {{$saved_prize or ''}} Discount</h2>
+                        <h2 class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">Buy PTE Voucher Code ₹ {{$rate or ''}} Get ₹ {{$saved_prize or ''}} Discount</h2>
                         <p class="wow zoomIn" data-wow-duration="1000ms" data-wow-delay="100ms">For Your Successful
                             Academic and Career Endeavors, We Partner You at The Least Costs! We provide you a reliable
                             and pocket-friendly option to take one of the best English proficiency Pearson Test i.e. PTE
@@ -343,8 +342,8 @@
                 <h2 class="section-title wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">About
                     <span>Us</span></h2>
                 <hr class="lines wow zoomIn" data-wow-delay="0.3s">
-                <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">PTEVoucherCode
-                    is an e-commerce venture by Compass Overseas that has been serving the Education sector.</p>
+                <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">PTE Voucher Code
+                    is an e-commerce venture by Compass Overseas that has been serving the Education sector and providing PTE voucher at lowest price.</p>
             </div>
             <div class="row">
                 <div class="col-md-12 col-sm-12">
@@ -465,7 +464,7 @@
                         <div class="testimonial-item">
                             <img src="https://www.ptevouchercode.com/css/front/images/c1.png" alt="Client Testimonial"/>
                             <div class="testimonial-text">
-                                <p>Excellent service from Compass Overseas and I have taken PTE <br>test voucher and
+                                <p>Excellent service from Compass Overseas and I have taken PTE voucher<br> and
                                     immediately they have mailed me free <br>PTE preparation material.</p>
                                 <h3>Jyotika</h3>
                                 <!-- <span>CEO & Founder</span> -->

@@ -121,8 +121,8 @@ class LoginController extends Controller
             }
         }
 
-        $data['title_text'] = 'Buy PTE Voucher + 15 Mock Tests with Evaluations @ 10381* Only';
-        $data['meta_description'] = 'Book PTE Exam from PTE Voucher Code at ₹ 10381* & Save ₹ 1050 in India. Get 15 Mock Tests with Evaluations Free. Get Instant Discount Voucher in your email. Limited Time Offer!';
+        $data['title_text'] = 'PTE Voucher + 15 Mock Tests with FREE Evaluations @ 10381*';
+        $data['meta_description'] = 'Buy PTE Voucher Online from PTEVoucherCode in India & Save Rs.1050 & Get 15 PTE Scored Mock Tests with Free Evaluations.';
         return view('front.index',$data);
     }
     public function hello()
