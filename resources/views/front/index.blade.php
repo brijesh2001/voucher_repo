@@ -95,8 +95,8 @@
                                 </div>
                                 <div class="col-md-4">
                                     <div class="form-group">
-                                        <input type="text" placeholder="GST No If any" id="client_gstn" class="form-control"
-                                               value="{{$client_gstn or ''}}" pattern="[a-zA-Z0-9-]+" maxlength="15" minlength="15" name="client_gstn">
+                                        {{--<input type="text" placeholder="GST No If any" id="client_gstn" class="form-control"
+                                               value="{{$client_gstn or ''}}" pattern="[a-zA-Z0-9-]+" maxlength="15" minlength="15" name="client_gstn">--}}
                                         <div class="help-block with-errors"></div>
                                     </div>
                                 </div>
