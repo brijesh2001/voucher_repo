@@ -22,7 +22,7 @@
     <tr>
         <td>
             <table align="center" border="0" cellpadding="0" cellspacing="0" width="480" style="max-width:700px;background:white;padding-right: 10px;">
-                <tr align="center">
+                <tr>
                     <td align="center">
                         <table align="center" border="0" width="100%">
                             <tr>
@@ -40,15 +40,17 @@
                             <tr>
                                 <td>GSTIN</td>
                                 <td>24DQNPP9163D1ZH</td>
-                                <td>Invoice Date</td>
-                                <td>{{$created_at}}</td>
+                                <td>Invoice No.</td>
+                                <td>{{$invoice_number}}</td>
                             </tr>
                             <tr>
                                 <td class="spacer" height="10" style="font-size: 10px; line-height: 10px; margin: 0; padding: 0; height:10px;">&nbsp;</td>
                             </tr>
                             <tr>
-                                <td>Invoice No.</td>
-                                <td>{{$invoice_number}}</td>
+                                <td>State: </td>
+                                <td>Gujarat (24)</td>
+                                <td>Invoice Date</td>
+                                <td>{{$created_at}}</td>
                             </tr>
                         </table>
                     </td>
@@ -74,18 +76,25 @@
                     <td align="center">
                         <table align="center" border="0" width="100%" style="font-size: 11px;font-weight: bold;">
                             <tr>
-                                <td>{{$name}}</td>
+                                <td>To,{{$name}}</td>
                                 <td>Billing Address</td>
                                 <td>Shipping Address</td>
                             </tr>
                             <tr>
                                 <td style="line-height: 18px;">{{$email}}<br>
                                     {{$mobile}}<br>
-                                    GSTIN : {{$gstn or ''}}
+                                    GSTIN : {{$client_gstn or ''}}
                                 </td>
-                                <td style="line-height: 18px;">{{$state_name}},<br>
+                                <td style="line-height: 18px;">{{$state_name}}({{$code}}),<br>
                                 </td>
-                                <td style="line-height: 18px;">{{$state_name}}<br>
+                                <td style="line-height: 18px;">{{$state_name}} ({{$code}})<br>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td style="line-height: 18px;">Country of Supply: India<br>
+                                </td>
+                                <td style="line-height: 18px;">Place of Supply: {{$state_name}} ({{$code}})<br>
                                 </td>
                             </tr>
                         </table>
@@ -99,7 +108,6 @@
                         <table align="center" border="0" width="100%" style="font-size: 11px;font-weight: bold;">
                             <tr>
                                 <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">Sr No.</td>
-                                <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">Date</td>
                                 <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">Item</td>
                                 <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">HSN/SAC</td>
                                 <td bgcolor="#eeeeee" style="padding: 15px;border-bottom: 2px solid #cccccc;">Taxable Value</td>
@@ -110,29 +118,15 @@
                             </tr>
                             <tr>
                                 <td style="padding: 15px;">1</td>
-                                <td style="padding: 15px;">{{$created_at}}</td>
                                 <td style="padding: 15px;">{!!$voucher_code!!}</td>
                                 <td style="padding: 15px;">9992</td>
                                 <td style="padding: 15px;">{{number_format($rate_before_gst,2)}}</td>
-                                <td style="padding: 15px;">{{$igst}}</td>
-                                <td style="padding: 15px;">{{$cgst}}</td>
-                                <td style="padding: 15px;">{{$sgst}}</td>
+                                <td style="padding: 15px;">{{$igst}}<br>@if($igst > 0)@18.00%@else @endif</td>
+                                <td style="padding: 15px;">{{$cgst}}<br>@if($cgst > 0)@9.00%@else @endif</td>
+                                <td style="padding: 15px;">{{$sgst}}<br>@if($sgst > 0)@9.00%@else @endif</td>
                                 <td style="padding: 15px;">{{$amount_paid}}</td>
                             </tr>
-
                             <tr>
-                                <td style="padding:0px 15px 15px;"></td>
-                                <td style="padding:0px 15px 15px;"></td>
-                                <td style="padding:0px 15px 15px;"></td>
-                                <td style="padding:0px 15px 15px;">(S)</td>
-                                <td style="padding:0px 15px 15px;"></td>
-                                <td style="padding:0px 15px 15px;">@if($igst > 0)@18.00%@else 0.00 @endif</td>
-                                <td style="padding:0px 15px 15px;">@if($cgst > 0)@9.00%@else 0.00 @endif</td>
-                                <td style="padding:0px 15px 15px;">@if($sgst > 0)@9.00%@else 0.00 @endif</td>
-                                <td style="padding:0px 15px 15px;">{{$amount_paid}}</td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;"></td>
                                 <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;"></td>
                                 <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;"></td>
                                 <td bgcolor="#eeeeee" style="padding: 15px;border-top: 2px solid #cccccc;"></td>
@@ -200,13 +194,9 @@
                         <table align="left" border="0"  width="49%">
                             <tr>
                                 <td style="font-size: 10px;font-weight: bold;">
-                                    We declare that this invoice shows the actual price of the<br>
-                                    services rendered and that all particulars are true and<br>
-                                    correct.<br>
-                                    Wire transfer Details: YES BANK<br>
-                                    Current Account<br>
-                                    A/c #: 099763300000184<br>
-                                    IFSC: YESB0000007<br>
+                                    1. Errors and Omissions in this invoice shall be subject to the jurisdiction of the Ahmedabad.<br>
+                                    2. Any alteration to the invoice should be bring to the notice within 5 Days of the purchase.<br>
+
                                 </td>
                             </tr>
                             <tr>
@@ -251,7 +241,9 @@
                             <tr>
                                 <td align="center">
                                     <p style="text-align: center;font-size: 10px;">PTE EDU SERVICES<br>
-                                        Shahi Kutir Bunglows,27 B/H Vrundavan Party Plot, Nr. Suryam Flora, Nikol, Ahmedabad <br> Email: pteeduservices@gmail.com. Phone : +91 9099500925</p>
+                                        306, Vishala Supreme,
+                                        Opp. Torrent Power,S.P. Ring Road,
+                                        Nikol - 382350 Ahmedabad Gujarat. <br> Email: pteeduservices@gmail.com</p>
                                 </td>
                             </tr>
                         </table>
