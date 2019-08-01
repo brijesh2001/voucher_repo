@@ -76,6 +76,7 @@ class SendInvoice extends Command
                 }
                 $data['word_amount'] = $this->getIndianCurrency($online->amount_paid);
                 $data['amount_paid'] = $online->amount_paid;
+                $data['code'] = $online->code;
                 $data['created_at'] = date("d-m-Y", strtotime($online->created_at));
                 $data['name'] = $online->name;
                 $data['email'] = $online->email;
