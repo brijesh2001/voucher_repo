@@ -12,9 +12,6 @@
                 <div class="col-md-8" id="topmain-navbar">
                     <ul class="rightnavbar-nav">
                         <li class="rightnav-item">
-                            <a class="rightnav-link page-scroll blink" href="#">24 X 7 Support</a>
-                        </li>
-                        <li class="rightnav-item">
                             <a class="rightnav-link page-scroll" href="#"><i class="fa fa-phone" aria-hidden="true"></i>&nbsp; +91-9099-500-925</a>
                         </li>
                         <li class="rightnav-item">

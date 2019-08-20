@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-lg-6 col-sm-6 col-xs-12">
                     <div class="contact-block">
-                            <form action="{{url('send-query')}}" id = "contactForm" method="POST">
+                            <form action="" id = "contactForm" method="POST">
                             <div class="row">
                                 <div class="col-md-12">
                                     <div class="form-group">
@@ -42,7 +42,6 @@
                                         <div class="help-block with-errors"></div>
                                     </div>
                                     <div class="submit-button text-center">
-                                        <button class="btn btn-common" id="submit" type="submit">Send Message</button>
                                         <div id="msgSubmit" class="h3 text-center hidden"></div>
                                         <div class="clearfix"></div>
                                     </div>
