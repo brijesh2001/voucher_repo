@@ -335,7 +335,7 @@ class PGOfflinePayment extends Authenticatable
      */
     public function getPGOfflinePaymentForPdfDownload($id)
     {
-        $result =  DB::select('select tbo.*, ss.name as state_name,ss.id as state_id 
+        $result =  DB::select('select tbo.*, ss.name as state_name,ss.id as state_id,ss.code as code 
                             from tbl_pgoffline_payment tbo
                             LEFT JOIN tbl_state ss ON ss.id = tbo.state
                             where tbo.id = :id',
@@ -370,6 +370,6 @@ class PGOfflinePayment extends Authenticatable
     {
        return PGOfflinePayment::whereBetween('payment_date', [$start_date, $end_date])
                                 ->leftjoin('tbl_state','tbl_state.id','=','tbl_pgoffline_payment.state')
-                                ->select('tbl_state.name as state_name', 'tbl_pgoffline_payment.*')->get();
+                                ->select('tbl_state.name as state_name','tbl_state.code as code', 'tbl_pgoffline_payment.*')->get();
     }
 }
