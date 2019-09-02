@@ -76,12 +76,12 @@
 
                     {{ csrf_field() }}
                     <div class="col-md-12 flex_center">
-                        <button id="rzp-button1" class="btn btn-success pybtnnew" style="border: 1px solid #FFF; background-color: #8dbd35;padding: 8px 40px;">
+                        <button id="rzp-button1" class="btn btn-success pybtnnew" style="border: 1px solid #FFF; background-color: #8dbd35;padding: 8px 40px;float: left">
                             PAY NOW
                         </button>
 
 
-                        <div class="back_button" style="padding-left: 20px">
+                        <div class="back_button" style="padding-left: 20px;float: left">
                             <a class="btn btn-info" href="{!! URL::previous() !!}">GO BACK</a>
                         </div>
 
