@@ -571,7 +571,7 @@ class PteController extends Controller
             ];
 
             $razorpayOrder = $api->order->create($orderData);
-            $request_data['transaction_id'] = $razorpayOrderId = $razorpayOrder['id'];
+            $request_data['payment_id'] = $request_data['transaction_id'] = $razorpayOrderId = $razorpayOrder['id'];
             $this-> paymentLog($request_data);
 
             //Updating the payment_request_id as enquiry is generated first and then from that we are taking enquiry id to feed
