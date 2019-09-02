@@ -79,10 +79,12 @@
                         <button id="rzp-button1" class="btn btn-success pybtnnew" style="border: 1px solid #FFF; background-color: #8dbd35;padding: 8px 40px;">
                             PAY NOW
                         </button>
+
+                        <a style="padding-left: 20px" class="btn btn-info" href="{!! URL::previous() !!}">GO BACK</a>
                     </div>
 
                     <div class="col-md-12 flex_center backbtn_mrgup">
-                        <a class="btn btn-info" href="{!! URL::previous() !!}">GO BACK</a>
+
 
                         <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
                         <input type="hidden" name="razorpay_signature"  id="razorpay_signature" >
