@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="main_content" style="background-color:#c1c1c100 ">
+
         <!--<div class="row">
             <div class="col-md-12">
                 <div class="page-header">
@@ -91,13 +91,16 @@
                             <!--  <div class="col-md-2"></div>-->
 
                         </div>
-                        <div class="col-md-12">
-                            <div class="col-md-2"></div>
-                            <div class="col-md-8">
-                                <h5 style="color:red;padding-top:10px;padding-bottom: 10px;">Note: Please verify the email
-                                    and number as code will be send to mention details</h5>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-8">
+                                        <h5 style="color:red;padding-top:10px;padding-bottom: 10px;">Note: Please verify the email
+                                            and number as code will be send to mention details</h5>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
+
                         <input type="hidden" name="razorpay_payment_id" id="razorpay_payment_id">
                         <input type="hidden" name="razorpay_signature"  id="razorpay_signature" >
                         <input type="hidden" name="enquiry_id"  value="{{$enquiry_id}}">
@@ -106,7 +109,6 @@
                 </div>
             </div>
         </div>
-    </div>
 
 @endsection
 @push('script')
