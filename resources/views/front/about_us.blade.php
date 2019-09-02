@@ -41,13 +41,6 @@
                             <p style="text-align:center;">More than 25,000 students have yet used our services.</p>
                         </div>
                         <div class="col-md-3 .services-grids-w3l p">
-                            <img style="max-height:200px;width:initial;border-radius: 180px;margin-left:30px;" src={{url('css/front/images/int.jpg')}}>
-
-                            <p style="text-align:center;">Featured at <a target="_blank"
-                                                                         href='https://www.instamojo.com/blog/pte-voucher-code-making-pte-exams-cheaper-india/'rel="nofollow">Instamojo.com</a>
-                                due to high success rate.</p>
-                        </div>
-                        <div class="col-md-3 .services-grids-w3l p">
 
                             <img style="max-height:200px;width:initial;border-radius: 180px;margin-left:30px;" src={{url('css/front/images/abt2.jpg')}}>
                             <p style="text-align:center;">100% Customer Satisfaction.</p>
