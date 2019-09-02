@@ -80,7 +80,11 @@
                             PAY NOW
                         </button>
 
-                        <a style="padding-left: 20px" class="btn btn-info" href="{!! URL::previous() !!}">GO BACK</a>
+
+                        <div class="back_button" style="padding-left: 20px">
+                            <a class="btn btn-info" href="{!! URL::previous() !!}">GO BACK</a>
+                        </div>
+
                     </div>
 
                     <div class="col-md-12 flex_center backbtn_mrgup">

@@ -1928,8 +1928,8 @@ label.line {
 #number_of_voucher{
   height: 48px;
 }
-#razorpayform .form-control {
-color:#000000;
+.pte-frm .form-control {
+color:#000000 !important;
 }
 
 .blink {
