@@ -586,7 +586,7 @@ class PteController extends Controller
                 "key"               => config('custom.razor_key'),
                 "amount"            => $razorpayAmount,
                 "name"              => $enquiry_data->name,
-                "description"       => "Voucher Payment",
+                "description"       => "Voucher Payment From Voucher code",
                 "image"             => "https://www.ptevouchercode.com/css/front/img/logo.png",
                 "prefill"           => [
                     "name"              => $enquiry_data->name,
