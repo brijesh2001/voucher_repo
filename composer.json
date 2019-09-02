@@ -9,14 +9,18 @@
         "laravel/framework": "5.4.*",
         "consoletvs/charts": "5.*",
         "doctrine/dbal": "^2.5",
-        "barryvdh/laravel-dompdf": "^0.8.2"
+        "kyranb/footprints": "dev-master",
+        "chumper/zipper": "1.0",
+        "spatie/laravel-sitemap": "2.4.0",
+        "razorpay/razorpay": "2.*"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "phpunit/phpunit": "~5.7",
         "symfony/css-selector": "3.1.*",
-        "symfony/dom-crawler": "3.1.*"
+        "symfony/dom-crawler": "3.1.*",
+        "barryvdh/laravel-dompdf": "^0.8.2"
     },
     "autoload": {
         "classmap": [
