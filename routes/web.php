@@ -40,6 +40,7 @@ Route::group(['prefix' => 'pte'], function () {
     //Route::post('/payment', 'PteController@payment');
     Route::post('/payment-request', 'PteController@createPaymentRequest');
     Route::get('/redirect', 'PteController@checkPaymentStatus');
+    Route::post('/pay', 'PteController@confirmPayment');
     Route::post('/confirm', 'PteController@createOrder');
 });
 
