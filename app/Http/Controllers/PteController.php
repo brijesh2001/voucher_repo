@@ -159,7 +159,7 @@ class PteController extends Controller
         if(isset($result["payment_request"]["id"])) {
             $request_data['payment_request_id'] = $result["payment_request"]["id"];
             //For adding the log to the CRM:
-            $this->paymentLog($request_data);
+            //$this->paymentLog($request_data);
         }else {
             $request->session()->flash('alert-danger', 'Problem occurred while creating payment id please try after some time');
             return redirect('/')->withInput(); 
@@ -571,8 +571,8 @@ class PteController extends Controller
             ];
 
             $razorpayOrder = $api->order->create($orderData);
-            $request_data['payment_id'] = $request_data['transaction_id'] = $razorpayOrderId = $razorpayOrder['id'];
-            $this-> paymentLog($request_data);
+            $request_data['transaction_id'] = $razorpayOrderId = $razorpayOrder['id'];
+            //$this-> paymentLog($request_data);
 
             //Updating the payment_request_id as enquiry is generated first and then from that we are taking enquiry id to feed
             // in the receipt_id above for creating the order. before it will add just offline payment by default but it will update later
