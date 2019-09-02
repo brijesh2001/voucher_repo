@@ -1929,6 +1929,64 @@ label.line {
   height: 48px;
 }
 
+/*New confirm page design*/
+
+.lmtdoffertext_confr {
+  font-weight: bold;
+  text-align: center;
+  font-family: inherit;
+  margin-bottom: 6px;
+  letter-spacing: normal;
+}
+.checkimg {
+  margin-top: 23px;
+  width: 70px;
+  margin-bottom: 20px;
+  border-radius: 30px;
+}
+.nmlable {
+  text-transform: uppercase;
+  font-size: 12px;
+  /* font-weight: 600; */
+  font-family: inherit;
+  color: #868686;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+  margin-left: 1px;
+}
+.flex_center {
+  display: flex;
+  justify-content: center;
+}
+.flot_non {
+  float: unset;
+}
+.mgauto {
+  margin: 0 auto;
+}
+.pybtnnew {
+  border: 0px solid #FFF !important;
+  background-color: #0aa06e !important;
+  padding: 0px !important;
+  width: 200px;
+  height: 50px;
+  font-size: 18px !important;
+  box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+  /* box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);*/
+  margin-top: 12px;
+}
+.boxconf {
+  box-shadow: 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.frmct_pad {
+  padding-top: 5px !important;
+}
+.backbtn_mrgup {
+  margin-top: 15px;
+}
+
 .blink {
   animation: blink-animation 0.7s steps(5, start) infinite;
   -webkit-animation: blink-animation 0.5s steps(5, start) infinite;

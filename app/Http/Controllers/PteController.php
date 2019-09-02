@@ -16,6 +16,9 @@ use Validator;
 use DB;
 use Mail;
 use Illuminate\Support\Facades\Session;
+use Razorpay\Api\Utility;
+use Razorpay\Api\Api;
+use Razorpay\Api\Errors\SignatureVerificationError;
 
 
 class PteController extends Controller
@@ -490,6 +493,266 @@ class PteController extends Controller
         curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($payload));
         $response = curl_exec($ch);
         curl_close($ch);
+    }
+
+
+    /**
+     * New Payment gateway of razor pay
+     * @param  \Illuminate\Http\Request $request
+     * @return \Illuminate\Http\Response
+     * */
+    public function createOrder(Request $request)
+    {
+        $request_data = $request->all();
+        $validations = $this->customeValidate($request->all());
+        if ($validations) {
+            return $validations;
+        }
+
+        // For adding the enquiry and the contact to the CRM Starts here
+
+        $this->createEnquiry($request_data);
+        // For adding the enquiry and the contact to the CRM Ends here
+
+        // Checking whether voucher are available as demand
+        $buying_quantity = intval($request_data['number_of_voucher']);
+        $unused_voucher = $this->promo->getUnusedVoucher();
+        if ($buying_quantity > $unused_voucher) {
+            $request->session()->flash('alert-danger', 'Total number of voucher available is ' . $unused_voucher);
+            return redirect('/')->withInput();
+        }
+            $current_prize_data = $this->prize->getFirstPrize();
+            if (count($current_prize_data) > 0) {
+                $current_prize = $current_prize_data->rate;
+                $request_data['rate'] = $current_prize_data->rate;
+                $request_data['amount'] = $buying_quantity * $current_prize;
+            } else {
+                $request->session()->flash('alert-danger', 'Voucher prize is not available please visit after some time');
+                return redirect('/')->withInput();
+            }
+
+
+        // For adding the enquiry
+
+        $enquiry_data = $this->enquiry->addEnquiry($request_data);
+        if ($enquiry_data) {
+            $number_of_voucher = $enquiry_data->number_of_voucher;
+            $receipt_id = $enquiry_data->id;
+            $voucher_id = [];
+            $voucher_data = $this->promo->getVoucherByCount($number_of_voucher);
+            if (count($voucher_data) > 0) {
+                foreach ($voucher_data as $voucher) {
+                    $voucher_id[] = $voucher->id;
+                    $request_promo = [];
+                    $request_promo['status'] = 2;
+                    $request_promo['id'] = $voucher->id;
+                    $this->promo->updateStatus($request_promo);
+                }
+            }
+            $voucher_id = implode(",", $voucher_id);
+
+            //For adding the voucher code to the mediator table
+            $request_pending_data = [];
+            $request_pending_data['voucher_id'] = $voucher_id;
+            $request_pending_data['enquiry_id'] = $enquiry_data->id;
+            $this->pendingVoucher->addPendingVoucher($request_pending_data);
+
+            // For creating the order
+
+            $api = new Api(config('custom.razor_key'), config('custom.razor_secret'));
+
+            $razorpayAmount = $request_data['amount'] * 100;
+
+            $orderData = [
+                'receipt'         => $receipt_id,
+                'amount'          => $request_data['amount'] * 100, // 2000 rupees in paise
+                'currency'        => 'INR',
+                'payment_capture' => 1 // auto capture
+            ];
+
+            $razorpayOrder = $api->order->create($orderData);
+            $request_data['transaction_id'] = $razorpayOrderId = $razorpayOrder['id'];
+            $this-> paymentLog($request_data);
+
+            //Updating the payment_request_id as enquiry is generated first and then from that we are taking enquiry id to feed
+            // in the receipt_id above for creating the order. before it will add just offline payment by default but it will update later
+
+            //update the payment_request_id
+            $update_enquiry_id['id'] = $receipt_id;
+            $update_enquiry_id['payment_request_id'] = $razorpayOrderId;
+            $this->enquiry->updatePaymentId($update_enquiry_id);
+
+            $data = [
+                "key"               => config('custom.razor_key'),
+                "amount"            => $razorpayAmount,
+                "name"              => $enquiry_data->name,
+                "description"       => "Voucher Payment",
+                "image"             => "https://www.ptevouchercode.com/css/front/img/logo.png",
+                "prefill"           => [
+                    "name"              => $enquiry_data->name,
+                    "email"             => $enquiry_data->email,
+                    "contact"           => $enquiry_data->mobile,
+                ],
+                "notes"             => [
+                ],
+                "theme"             => [
+                    "color"             => "#374593"
+                ],
+                "order_id"          => $razorpayOrderId,
+            ];
+            $finalData['data'] = $data;
+            $finalData['requestData'] = $request_data;
+            $finalData['enquiry_id'] = $receipt_id;
+            $finalData['title_text'] = 'Buy PTE Voucher @ ₹10381* Only - Get 15 Scored Mock Test Free';
+            $finalData['meta_description'] = 'Want to book PTE Academic Exam online? Buy PTE Voucher online at ₹10381* & Save 1050 and get 15 Scored mock tests FREE. Limited Time Offer!';
+            return view('front.confirm',$finalData);
+
+        }
+    }
+
+    /**
+     * @param Request $request
+     * @return $this
+     *
+     * @desc Cofirm payment receieved or not
+     */
+    public  function confirmPayment(Request $request)
+    {
+        $request_data = $request->all();
+        if(!empty($request_data)) {
+            $api = new Api(config('custom.razor_key'), config('custom.razor_secret'));
+
+            $user_detail = $this->enquiry->getEnquiryByField($request_data['enquiry_id'], 'id');
+
+            if (count($user_detail) > 0) {
+                try {
+
+                    $payment = $api->payment->fetch($request_data['razorpay_payment_id']);
+                    $original_amount = $user_detail->rate * $user_detail->number_of_voucher * 100;
+                    if($payment['amount'] != $original_amount) {
+                        $request->session()->flash('alert-danger', 'Amount paid is not equal to original amount, please contact admin');
+                        return redirect('/')->withInput();
+                    }
+                    if($payment['status'] != 'captured') {
+                        $request->session()->flash('alert-danger', 'Your payment is not captured by gateway, Please contact admin');
+                        return redirect('/')->withInput();
+                    }
+
+                    // Now do the final process of sending the voucher code and the email
+
+                    //Initializing all the variable for further usage
+
+                    $amount_paid = $original_amount / 100;
+                    $payment_id = $payment['id'];
+                    $instamojo_fee = $payment['fee'] / 100;
+                    $instamojo_other_tax = $payment['tax'] / 100;
+
+                    $enquiry_id = $user_detail->id;
+                    $number_of_voucher = $user_detail->number_of_voucher;
+                    $email = $user_detail->email;
+                    $name = $user_detail->name;
+                    $mobile = $user_detail->mobile;
+                    $rate = $user_detail->rate;
+                    $client_gstn = $user_detail->client_gstn;
+
+                    $pending_voucher_detail = $this->pendingVoucher->getPendingVoucherByField($enquiry_id, 'enquiry_id');
+                    if (count($pending_voucher_detail) > 0) {
+
+                        //Voucher to send in the mail
+                        $voucher_to_send = [];
+                        $raw_voucher_id = $pending_voucher_detail->voucher_id;
+                        $voucher_id = explode(",", $pending_voucher_detail->voucher_id);
+                        foreach ($voucher_id as $voucher) {
+                            $update_voucher_data = [];
+                            $update_voucher_data['status'] = 1;
+                            $update_voucher_data['id'] = $voucher;
+                            $voucher_data = $this->promo->getPromoByField($voucher,'id');
+                            if(!empty($voucher_data)) {
+                                $voucher_to_send[] = $voucher_data->voucher_code;
+                            }
+                            $this->promo->updateStatus($update_voucher_data);
+                        }
+
+                        // For deleteing the entries from the pending_voucher table
+                        $this->pendingVoucher->deletePendingVoucher($enquiry_id,'enquiry_id');
+
+                        $final_voucher_sms = implode(",", $voucher_to_send);
+
+                        // For sending the SMS to customer
+                        $this->sendSms($final_voucher_sms,$mobile);
+                        $sale_data_entry = [];
+                        $sale_data_entry['voucher_id'] = $raw_voucher_id;
+                        $sale_data_entry['voucher_code'] = implode(",", $voucher_to_send);
+                        $sale_data_entry['instamojo_fee'] = $instamojo_fee;
+                        $sale_data_entry['enquiry_id'] = $enquiry_id;
+                        $sale_data_entry['payment_code'] = $payment_id;
+                        $sale_data_entry['rate'] = $rate;
+                        $sale_data_entry['amount_paid'] = $amount_paid;
+                        $sale_data_entry['number_of_voucher'] = $number_of_voucher;
+                        $sale_data_entry['client_gstn'] = $client_gstn;
+                        $sale_data = $this->saleData->addSaleData($sale_data_entry);
+
+                        //Preparing for CRM
+                        $crm_data = [];
+                        $crm_data['email'] = $email;
+                        $crm_data['success_data'] = 'Voucher Code: '.$sale_data_entry['voucher_code'].
+                            'TransactionId: '.$payment_id.'Amount Paid: '.$amount_paid
+                            .'Client GSTN: '.$client_gstn. 'Gateway Fees: '.$instamojo_fee;
+
+                        $this->successLead($crm_data);
+
+                        //Prepare data for email sending to Customer
+
+                        $customer_email_data = [];
+                        $customer_email_data['email'] = $email;
+                        $customer_email_data['name'] = $name;
+                        $customer_email_data['mobile'] = $mobile;
+                        $customer_email_data['amount_paid'] = $amount_paid;
+                        $customer_email_data['payment_id'] = $payment_id;
+                        $customer_email_data['voucher_to_send'] = implode(",", $voucher_to_send);
+                        $customer_email_data['date'] = date('d-m-Y');
+                        $customer_email_data['type'] = 'customer';
+                        Mail ::send(new SuccessMail($customer_email_data));
+                        //Prepare data for admin
+                        sleep(5);
+                        $admin_email_data = [];
+                        $admin_email_data['email'] = $email;
+                        $admin_email_data['name'] = $name;
+                        $admin_email_data['mobile'] = $mobile;
+                        $admin_email_data['payment_id'] = $payment_id;
+                        $admin_email_data['amount_paid'] = $amount_paid;
+                        $admin_email_data['number_of_voucher'] = $number_of_voucher;
+                        $admin_email_data['instamojo_fee'] = $instamojo_fee;
+                        $admin_email_data['instamojo_other_tax'] = $instamojo_other_tax;
+                        $admin_email_data['date'] = date('d-m-Y');
+                        $admin_email_data['type'] = 'admin';
+                        $admin_email_data['voucher_to_send'] = implode(",", $voucher_to_send);
+                        Mail::send(new SuccessMail($admin_email_data));
+
+                        /*sleep(3);
+                        $mock_test_mail = [];
+                        $mock_test_mail['type'] = 'mock_test';
+                        $mock_test_mail['email'] = $email;
+                        Mail::send(new SuccessMail($mock_test_mail));*/
+
+                        if($sale_data) {
+
+                            return redirect('/thankyou');
+                        }
+                    }
+
+                } catch (\Exception $e) {
+                    $error =   $e->getMessage();
+                    $request->session()->flash('alert-danger', $error);
+                    return redirect('/')->withInput();
+                }
+
+            }
+
+        }else {
+            $request->session()->flash('alert-danger', 'Error occurred, please contact Admin');
+            return redirect('/')->withInput();
+        }
     }
 
 }

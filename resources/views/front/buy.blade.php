@@ -34,7 +34,7 @@
                                 @endforeach
                             </div>
                         </div>
-                        <form class="pay-form" method="post" id="ptevouForm" action="{{url('pte/payment-request')}}">
+                        <form class="pay-form" method="post" id="ptevouForm" action="{{url('pte/confirm')}}">
                             <div class="row">
                                 <div class="col-md-4">
                                     <div class="form-group">

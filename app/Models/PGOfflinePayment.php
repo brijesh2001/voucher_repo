@@ -370,6 +370,6 @@ class PGOfflinePayment extends Authenticatable
     {
        return PGOfflinePayment::whereBetween('payment_date', [$start_date, $end_date])
                                 ->leftjoin('tbl_state','tbl_state.id','=','tbl_pgoffline_payment.state')
-                                ->select('tbl_state.name as state_name','tbl_state.code as code', 'tbl_pgoffline_payment.*')->get();
+                                ->select('tbl_state.name as state_name','tbl_state.code as codefooter', 'tbl_pgoffline_payment.*')->get();
     }
 }

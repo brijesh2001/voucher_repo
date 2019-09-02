@@ -327,5 +327,23 @@ class Enquiry extends Authenticatable
         return $count;
     }
 
+    /**
+     * update Enquiry payment_id
+     *
+     * @param array $models
+     * @return boolean true | false
+     */
+    public function updatePaymentId(array $models = [])
+    {
+        $enquiry = Enquiry::find($models['id']);
+        $enquiry->payment_request_id = $models['payment_request_id'];
+        $enquiry->updated_at = date('Y-m-d H:i:s');
+        $enquriy = $enquiry->save();
+        if ($enquriy)
+            return $enquriy;
+        else
+            return false;
+
+    }
 
 }
