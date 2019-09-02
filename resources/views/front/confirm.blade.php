@@ -76,7 +76,7 @@
 
                     {{ csrf_field() }}
                     <div class="col-md-12 flex_center">
-                        <button id="rzp-button1" class="btn btn-success pybtnnew" style="border: 1px solid #FFF; background-color: #8dbd35;padding: 8px 40px;float: left">
+                        <button id="rzp-button1" class="btn btn-success pybtnnew" style="border: 1px solid #FFF; background-color: #8dbd35;padding: 12px 42px;float: left">
                             PAY NOW
                         </button>
 
