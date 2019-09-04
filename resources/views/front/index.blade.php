@@ -103,7 +103,7 @@
                                 <input type="hidden" name="user_id" value="{{$user_id or ''}}">
                                 {{ csrf_field() }}
                                 <div class="col-md-12">
-                                    <p id="hide_mobile" style="margin-bottom: 0px;margin-top: -7px">PTE Voucher Price : 10381 + 1869 (18%
+                                    <p id="hide_mobile" style="margin-bottom: 0px;margin-top: -7px">PTE Voucher Price : 10593 + 1907 (18%
                                         GST) = {{$rate or ''}} INR</p>
                                     <div class="submit-button text-center">
                                         <button class="btn btn-common1" id="submit" type="submit"
@@ -220,7 +220,7 @@
                     <span>Us</span></h2>
                 <hr class="lines wow zoomIn" data-wow-delay="0.3s">
                 <p class="section-subtitle wow fadeIn" data-wow-duration="1000ms" data-wow-delay="0.3s">100 % customer
-                    satisfaction with 24 x 7 Customer support.</p>
+                    satisfaction with  Customer support.</p>
             </div>
             <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -230,8 +230,8 @@
                   <i class="lnr lnr-rocket"></i>
                 </span>
                             <div class="text">
-                                <h4>24X7 Customer Care</h4>
-                                <p>We are available to assist you on call & Whats App 24X7 on +91-9099-500-925</p>
+                                <h4>Customer Care</h4>
+                                <p>We are available to assist you on call & Whats App  on +91-9099-500-925</p>
                             </div>
                         </div>
                         <div class="box-item left">
@@ -250,9 +250,7 @@
                 </span>
                             <div class="text">
                                 <h4>High Success Rate</h4>
-                                <p>Featured at <a
-                                            href="https://www.instamojo.com/blog/pte-voucher-code-making-pte-exams-cheaper-india/"
-                                            rel="nofollow"> Instamojo.com </a> due to high success rate.</p>
+                                <p> Featured due to high success rate.</p>
                             </div>
                         </div>
                     </div>
