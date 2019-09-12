@@ -322,7 +322,7 @@ class PteController extends Controller
                                 $crm_data['success_data'] = '<br>Voucher Code: </br>'.$sale_data_entry['voucher_code']. '<br> TransactionId:</br> '.$payment_id
                                     .'<br>Amount Paid: </br> '.$amount_paid.'<br>Client GSTN: </br> '.$client_gstn.'<br>Gateway Fees: </br> '.$instamojo_fee;
 
-                                $this->successLead($crm_data);
+                                //$this->successLead($crm_data);
                                 if($sale_data) {
 
                                     return redirect('/thankyou');
@@ -699,7 +699,7 @@ class PteController extends Controller
                             'TransactionId: '.$payment_id.'Amount Paid: '.$amount_paid
                             .'Client GSTN: '.$client_gstn. 'Gateway Fees: '.$instamojo_fee;
 
-                        $this->successLead($crm_data);
+                        //$this->successLead($crm_data);
 
                         //Prepare data for email sending to Customer
 
