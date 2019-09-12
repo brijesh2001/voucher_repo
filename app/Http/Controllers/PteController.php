@@ -408,7 +408,7 @@ class PteController extends Controller
      * @desc for adding the enquiry in CRM
      */
 
-    public function createEnquiry($request_data)
+    /*public function createEnquiry($request_data)
     {
 
         //for getting the rate
@@ -445,7 +445,7 @@ class PteController extends Controller
         $response = curl_exec($ch);
         //dd($response);
         curl_close($ch);
-    }
+    }*/
 
     /**
      * @desc for adding the success entry in CRM
@@ -511,7 +511,7 @@ class PteController extends Controller
 
         // For adding the enquiry and the contact to the CRM Starts here
 
-        $this->createEnquiry($request_data);
+        //$this->createEnquiry($request_data);
         // For adding the enquiry and the contact to the CRM Ends here
 
         // Checking whether voucher are available as demand
