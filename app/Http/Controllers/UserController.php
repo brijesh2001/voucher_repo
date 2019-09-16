@@ -186,7 +186,7 @@ class UserController extends Controller
             'last_name' => 'required|max:50',
             'role_id' => 'required',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:6|max:15|Same:confirm_password'
+            'password' => 'required|min:6|max:20|Same:confirm_password'
         );
 
         if ($mode == "edit") {
@@ -341,9 +341,9 @@ class UserController extends Controller
     public function updatePassword(request $request)
     {
         $rules = array(
-            'old_password' => 'required|min:6|Different:new_password|max:15',
-            'new_password' => 'required|min:6|Same:confirm_password|max:15',
-            'confirm_password' => 'required|min:6|max:15'
+            'old_password' => 'required|min:6|Different:new_password|max:20',
+            'new_password' => 'required|min:6|Same:confirm_password|max:20',
+            'confirm_password' => 'required|min:6|max:20'
         );
 
         $validator = Validator::make($request->all(), $rules);
