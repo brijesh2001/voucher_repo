@@ -36,28 +36,7 @@
     <script>
         function hideURLbar(){window.scrollTo(0,1)}addEventListener("load",function(){setTimeout(hideURLbar,0)},!1);
     </script>
-    <script type="application/ld+json">
-        {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "url": "https://www.ptevouchercode.com",
-  "image": "http://www.ptevouchercode.com/css/front/img/logo.png",
-  "description": "PTE voucher code",
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "5",
-    "reviewCount": "15",
-    "bestRating": "5",
-    "worstRating": "4.5"
-  },
-  "contactPoint": [
-    { "@type": "ContactPoint",
-      "telephone": "+91-909-950-0925",
-      "contactType": "customer service"
-    }
-  ]
-}
-    </script>
+
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 
@@ -80,13 +59,11 @@
           rel='stylesheet' type='text/css' media="none">
     <!-- //font -->
     <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
             new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
             j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-NG5F2FK');
-    </script>
+        })(window,document,'script','dataLayer','GTM-WQQM9KB');</script>
     <!-- End Google Tag Manager -->
     <style>
         .carousel-inner img{width:100%;height:100%}
@@ -101,7 +78,10 @@
     </script>
 
 <body>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQQM9KB"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 @include('layouts.front.header')
 
 @yield('content')
